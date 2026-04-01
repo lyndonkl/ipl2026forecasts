@@ -473,7 +473,9 @@ Built from:
 
 #### 4a. Summary Orientation (Perceive)
 
-Start with the high-level picture so Kushal has context before diving into details:
+Present two things: first the numeric summary (so Kushal sees where the numbers landed), then immediately a plain-language walkthrough of the Step 3 analysis explaining *why* each phase leaned the way it did.
+
+##### Numeric Summary
 
 ```markdown
 ## Kushal's Review
@@ -485,6 +487,61 @@ Start with the high-level picture so Kushal has context before diving into detai
 - Toss Branch A (TEAM1 wins toss): TEAM1 [X.X%] (moved [+/-X.X pp] from base)
 - Toss Branch B (TEAM2 wins toss): TEAM1 [X.X%] (moved [+/-X.X pp] from base)
 - **Combined pre-toss: TEAM1 [X.X%] / TEAM2 [Y.Y%]**
+```
+
+##### Plain-Language Walkthrough of the Scenario Analysis
+
+Immediately after the numeric summary, walk Kushal through the Step 3 analysis in plain language. Follow the same structure as Step 3 — toss branch by toss branch, innings by innings, phase by phase — but describe what the scenario analysis found using cricket language, not math.
+
+For each phase, explain: who has the edge, why (naming the specific players, matchups, or conditions from the scenario analysis that drove it), and roughly how much it matters (use words like "slight," "clear," "decisive" — not numbers).
+
+**Use this format:**
+
+```markdown
+### What the scenario analysis found
+
+**If [TEAM1] wins the toss** (likely chooses to [bat/bowl]):
+
+*[TEAM1] batting first:*
+- **Powerplay:** [e.g., "Slight edge to MI. Rohit has been scoring at a SR of 162 in the powerplay over his last 5 innings, and PBKS' new-ball options beyond Arshdeep are average. But Arshdeep himself keeps this close — he's been taking early wickets consistently."]
+- **Early middle overs:** [e.g., "MI's middle order is solid against spin, and PBKS' spinners have been leaking runs in this phase. Clear MI advantage here."]
+- **Late middle overs:** [e.g., "Even matchup. Both teams' bowling and batting are closely matched in this phase — no meaningful edge either way."]
+- **Death overs:** [e.g., "Slight PBKS edge. Arshdeep's death bowling (economy 7.8 in last 5) is the standout factor. Hardik has been finishing well for MI, but Arshdeep's yorker control gives PBKS the edge."]
+
+*[TEAM2] chasing:*
+- **Powerplay:** [e.g., "Clear MI edge. Bumrah dominates powerplays — his economy of 5.4 and wicket-taking ability means PBKS' top order faces a very different challenge than MI did."]
+- **Early middle overs:** [e.g., "MI's spin options are better suited to this pitch than PBKS' middle-order batters. PBKS have struggled against quality spin in the middle overs recently."]
+- **Late middle overs:** [same pattern]
+- **Death overs:** [same pattern]
+
+*Match-level factors:* [e.g., "Dew expected after 8pm helps the chasing team (PBKS), partially offsetting MI's bowling advantage in the second innings. MI are on a 3-game win streak which gives a small form edge."]
+
+*Net picture for this toss branch:* [e.g., "MI's bowling advantage across most phases, especially Bumrah in the powerplay, outweighs PBKS' death-overs edge through Arshdeep. Dew narrows the gap but doesn't close it. MI favoured at X.X%."]
+
+---
+
+**If [TEAM2] wins the toss** (likely chooses to [bat/bowl]):
+
+*[Repeat same structure — but note how the matchups change when batting order flips]*
+
+*Net picture for this toss branch:* [e.g., "With PBKS batting first, MI lose some of their bowling advantage because Bumrah's powerplay impact is offset by dew not being a factor yet. PBKS' batting is slightly more competitive when setting a total. MI still favoured but narrower at X.X%."]
+
+---
+
+**How the two branches combine:** [e.g., "Since either team is equally likely to win the toss, the final number splits the difference: MI X.X%. The toss swings things by about X points — that's driven mainly by how much dew changes the second-innings bowling equation at this venue."]
+```
+
+**Rules for the plain-language walkthrough:**
+- No sentiment scores, no adjustment point values (no "0.3 pp," "+0.6 for TEAM1"), no formulas
+- Every phase description must reference the specific players, matchups, or conditions from the scenario analysis that drove the assessment — not generic statements
+- Use cricket language: "edge," "advantage," "even matchup," "dominant," "slight," "clear," "decisive"
+- Skip phases that were dead neutral in Step 3 — just note "no meaningful edge" and move on
+- The net picture for each toss branch should read like a short paragraph a cricket analyst would write, not a math summary
+
+**Then transition to the per-adjustment walkthrough:**
+
+```markdown
+---
 
 I'll now walk you through each adjustment one at a time. For each one, I'll show:
 - What the scenario analysis says (the evidence)
