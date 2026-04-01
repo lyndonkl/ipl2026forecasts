@@ -11,3 +11,4 @@
 | 002 | MI vs KKR | 0.1369 | Medium | 0.1369 |
 | 003 | RR vs CSK | 0.2025 | Medium | 0.1588 |
 | 004 | PBKS vs GT | 0.3025 | Medium | 0.1947 |
+| 005 | LSG vs DC | 0.25 | Medium | 0.2157 |

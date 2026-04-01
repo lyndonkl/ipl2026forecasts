@@ -25,6 +25,10 @@ Tracks all actual contract purchases, P&L, and running totals.
 | 003 | $3.34 | $4.00 | +$0.66 | +19.8% |
 | 004 | ~$4.93 | $4.00 | -$0.93 | -18.9% |
 
+## Game 005 Note
+
+- **Game 005:** No trade placed. Edge +3¢ before fees, ~1¢ after 2¢ fee. Below 2¢ minimum threshold. Recommendation was PASS. No market to trade at favorable odds.
+
 ## Notes
 
 - **Game 001:** Thin edge (~1 cent after fee). Model at 63%, breakeven ~66%.

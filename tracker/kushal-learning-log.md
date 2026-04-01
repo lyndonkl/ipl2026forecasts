@@ -199,6 +199,51 @@ Update every 5 games.*
 
 ---
 
+## Game 005 — LSG vs DC (April 1, 2026)
+
+**Prediction:** LSG 50% / DC 50% | **Result:** DC won by 6 wickets (145/4 chasing 142 in 17.1 overs)
+**Brier score:** 0.25 (baseline coin-flip)
+**Kalshi trade:** PASS (no trade placed; edge below 2¢ minimum)
+
+### Kushal's Pre-Match Beliefs
+
+**Coin-flip thesis:** Both teams opening IPL 2026 campaigns with untested rosters at a new-to-IPL-2026 venue. Hasaranga (LSG) fitness uncertain. DC lost Starc to injury but have strong middle-order. Toss advantage critical but unpredictable. Base rates point to near 50/50; confidence Medium.
+
+**Specific player calls:**
+- Markram (world-class form post-T20 WC) expected to dominate powerplay
+- Marsh (196 SR recent) expected to accelerate at top
+- KL Rahul (149.72 SR) expected to stabilize DC chase
+- Nissanka (IPL debut but 192 SR T20 WC form) unknown ceiling but promising
+- Kuldeep (IPL 2025 elite, WC weaker) middle-overs dominance likely vs LSG spin-weak attack
+
+**What I noticed live:**
+- [Kushal to fill in post-match]
+
+**My strongest pre-match belief:**
+- 50/50 was the honest call. Too many unknowns to lean either way with confidence.
+
+**What surprised me:**
+- **LSG powerplay collapse (15/4).** Markram 9 off 7 (dismissed early), Marsh 8 off 4 (lbw). Fresh pitch seam movement neutralized form advantage entirely. Predictions assumed form >> conditions; reality: conditions >> form in first 6 overs on fresh surface.
+- **Hasaranga confirmed absent.** Hamstring strain verified post-match. Removes LSG's #7 batter + leg-spin depth simultaneously.
+- **Sameer Rizvi 70* unforecast.** Reserve DC talent became match-winner. Unproven middle-order in low-scoring chase is a crux variable we didn't decompose.
+- **Natarajan 3/29 when batters were set.** We called him "90 kph, no express threat." On fresh pitch, he was deadly. Trade-off: low velocity but high seam → economy 8.5 with 3 wickets.
+- **DC chase caution (33/4 powerplay) then aggression (Rizvi 148 SR mid-overs).** Scoring 142, DC didn't panic in early collapse; knew target was gettable with Rizvi's middle-order explosiveness.
+
+**One thing I'd weight differently next time:**
+- **Score ranges for unproven lineups need collapse probability factored in.** Ekana average 187; fresh pitch elevates normally. But add 2+ UNKNOWN CEILING players (Hasaranga, Nissanka both on radar) and the floor should drop 15-20 runs. 165–175 predicted, 141 actual = miss, but a -20 adjustment makes it 145–175 and we'd be close.
+- **Fresh pitch on IPL 2026 debut venues = seam-assist magnitude upgrade.** Ekana called "balanced"; result was seam-dominated powerplay. Future April pitches at first-year venues need revised benchmarks.
+- **Reserve/backup players in 130-160 targets.** Prediction focused on top 5-6 established players. Rizvi at #5 as junior talent became MOTM. In low-scoring chases, widen the "who could deliver 40+" prediction to include #5-#6 order. Unproven can out-deliver established if setup allows.
+
+**Bias I caught in myself:**
+- **Confidence anchoring:** 50/50 + Medium confidence felt balanced, so I didn't push harder on directional adjustments. But Hasaranga absence + fresh pitch seam should have pointed DC +4pp even before locking. Shaded back to 50 too aggressively under the guise of "uncertainty."
+- **Reputation over conditions:** Assumed Markram (elite form) > Natarajan (90 kph). Reality: fresh pitch seam > form in first 6 overs. Conditions are often underweighted in betting narratives; should overweight them in predictions.
+
+**Question I want to explore:**
+- **What threshold of "collapse probability" triggers a 20+ run floor discount?** If 1 UNKNOWN CEILING player → -5 run discount? If 2 players → -15? If unproven lineup + fresh pitch → compound to -20? Need a decision rule.
+- **When should we wait for XI confirmation before locking trade, vs locking prediction pre-XI?** Game 004 (Holder surprise) wiped the trade; Game 005 (Hasaranga absence) compressed the prediction width but was locked pre-confirmation. Is 30-min pre-game XI confirmation worth waiting for on prediction locks? On trades, clearly yes.
+
+---
+
 ## Skill Development Milestones
 
 Track specific forecasting skills as they develop:
