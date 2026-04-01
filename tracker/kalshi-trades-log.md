@@ -1,0 +1,65 @@
+# Kalshi Trades Log
+
+Tracks all actual contract purchases, P&L, and running totals.
+
+### Cross-Links
+- [Predictions Log](predictions-log.md) | [Learning Log](kushal-learning-log.md)
+- [Position Sizing Framework](../context/frameworks/position-sizing.md) | [Market Anchoring](../context/frameworks/market-anchoring.md)
+- Game predictions: [001](../games/game-001-RCB-vs-SRH-2026-03-28/prediction.md) | [002](../games/game-002-MI-vs-KKR-2026-03-29/prediction.md) | [003](../games/game-003-RR-vs-CSK-2026-03-30/prediction.md) | [004](../games/game-004-PBKS-vs-GT-2026-03-31/prediction.md)
+
+## Trades
+
+| Game # | Date | Contract | Price | Qty | Total Cost | Fee | Cost+Fee | Model Prob | Implied Edge | Result | Payout | P&L |
+|--------|------|----------|-------|-----|-----------|-----|----------|-----------|-------------|--------|--------|-----|
+| 001 | 2026-03-28 | RCB Yes | $0.64 | 1 | $0.64 | $0.02 | $0.66 | 63% | ~-1¢/contract (thin, near breakeven) | WON | $1.00 | +$0.34 |
+| 002 | 2026-03-29 | KKR Yes | $0.3267 | 3 | $0.98 | $0.05 | $1.03 | 37% | ~4¢/contract | LOST | $0.00 | -$1.03 |
+| 003 | 2026-03-30 | RR Yes | $0.53 | 3 | $1.59 | $0.06 | $1.65 | 55% | ~2¢/contract (net of fee) | WON | $3.00 | +$1.35 |
+| 004 | 2026-03-31 | GT Yes | $0.51 | 3 | $1.53 | ~$0.06 | ~$1.59 | 55% | ~4¢/contract | LOST | $0.00 | -$1.59 |
+
+## Running P&L
+
+| After Game | Cumulative Invested | Cumulative Payout | Cumulative P&L | ROI |
+|------------|--------------------|--------------------|----------------|-----|
+| 001 | $0.66 | $1.00 | +$0.34 | +51.5% |
+| 002 | $1.69 | $1.00 | -$0.69 | -40.8% |
+| 003 | $3.34 | $4.00 | +$0.66 | +19.8% |
+| 004 | ~$4.93 | $4.00 | -$0.93 | -18.9% |
+
+## Notes
+
+- **Game 001:** Thin edge (~1 cent after fee). Model at 63%, breakeven ~66%.
+  Barely positive EV but it hit. Profit $0.34 on $0.66 invested.
+- **Game 002:** Bought 3 contracts. Model at 37% vs market 31%. Edge ~4¢/contract
+  before fees. Thesis: market overpriced MI, KKR bowling crisis overstated.
+  Thesis was WRONG — bowling was genuinely terrible. Lost full $1.03.
+- **Game 003:** Bought 3 contracts RR Yes at 53¢ (actual order). Market sees ~50/50
+  (overround-adjusted), our model says RR 55%. Edge ~2¢/contract net of fee.
+  Thesis: RR's proven IPL middle-order depth + Jaiswal's elite PP + Bishnoi's
+  leg-spin at Barsapara outweigh CSK's quality openers.
+- **Game 003 result:** RR Yes WON. 3 contracts × $1.00 payout = $3.00. Cost+fee was $1.65.
+  P&L: +$1.35. Thesis confirmed — RR depth + Jaiswal PP + CSK debutant weakness.
+  Kushal sized up to 3 contracts (vs planned 2) at a slightly worse price (53¢ vs 51¢).
+- **Net after 3 games:** Up $0.66 on $3.34 invested (ROI +19.8%). Two wins, one loss.
+  Game 003 win (+$1.35) more than offset Game 002 loss (-$1.03). Solidly profitable.
+- **Game 004:** Bought 3 contracts GT Yes at 51¢. Market ~50.5% GT (overround-adjusted),
+  our model 55% GT. Edge ~4¢/contract. Thesis: GT death-overs structural advantage
+  (Holder 45 death wkts in 2025 + PBKS 5th bowler gap with Ferguson out + Tewatia
+  venue pedigree 36*(18) at Mullanpur). Middle-overs edge goes to PBKS (Chahal > Rashid
+  at this venue) but death edge outweighs. Confidence: Medium. CI: GT 48-62%.
+- **Game 004 result:** GT Yes LOST. PBKS won by 3 wkts. 3 contracts × $0 = $0 payout.
+  Cost+fee was ~$1.59. P&L: -$1.59. **Thesis was wrong:** Holder didn't play (Rabada instead),
+  which collapsed the entire death-overs edge. Connolly 72*(44) MOTM rescued PBKS from 118/6.
+  Arshdeep 0/42 (our "world class" death bowler). Vyshak 3/34 (our "weak link").
+- **Net after 4 games:** Down $0.93 on ~$4.93 invested (ROI -18.9%). Two wins (+$1.69), two losses (-$2.62).
+  Game 004 loss wiped Game 003 gains. XI prediction remains the weakest link.
+
+## Lessons
+
+- Game 001 edge was essentially zero after fees — got lucky it hit
+- Game 002 had real calculated edge but wrong thesis. 3x sizing amplified the loss
+- Position sizing matters: even with positive EV, larger bets increase variance
+- Game 003: first time sizing matches confidence level (Medium → 2 contracts, thin edge)
+- Game 004: XI prediction failure invalidated the thesis. Edge was real IF Holder played — he didn't.
+  Need to discount edge when it depends on unconfirmed XI. Consider: wait for XI before trading?
+- Pattern: 3-contract bets on wrong side are devastating. Two losses at 3 contracts = -$2.62 total.
+  Two wins at 1+3 contracts = +$1.69. Asymmetric downside when sizing up on wrong thesis.

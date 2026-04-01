@@ -1,0 +1,13 @@
+# Brier Scores
+
+### Cross-Links
+- [Predictions Log](predictions-log.md) | [Calibration Review](calibration-review.md)
+- [Calibration Framework](../context/frameworks/calibration-and-brier.md)
+- Game outcomes: [001](../games/game-001-RCB-vs-SRH-2026-03-28/outcome.md) | [002](../games/game-002-MI-vs-KKR-2026-03-29/outcome.md) | [003](../games/game-003-RR-vs-CSK-2026-03-30/outcome.md) | [004](../games/game-004-PBKS-vs-GT-2026-03-31/outcome.md)
+
+| Game # | Teams | Brier Score | Confidence | Running Average |
+|--------|-------|-------------|------------|-----------------|
+| 001 | RCB vs SRH | 0.1369 | Medium | 0.1369 |
+| 002 | MI vs KKR | 0.1369 | Medium | 0.1369 |
+| 003 | RR vs CSK | 0.2025 | Medium | 0.1588 |
+| 004 | PBKS vs GT | 0.3025 | Medium | 0.1947 |

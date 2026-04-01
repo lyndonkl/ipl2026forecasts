@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Game 004 Watchcard — PBKS vs GT</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0f1117; color: #e4e4e7; padding: 12px; max-width: 520px; margin: 0 auto; }
+
+  .header { text-align: center; padding: 12px 0 8px; border-bottom: 2px solid #3b3b4f; margin-bottom: 12px; }
+  .header h1 { font-size: 18px; font-weight: 700; color: #fff; }
+  .header .subtitle { font-size: 12px; color: #9ca3af; margin-top: 2px; }
+  .prediction-bar { display: flex; margin-top: 10px; border-radius: 6px; overflow: hidden; height: 28px; font-size: 13px; font-weight: 600; }
+  .prediction-bar .pbks { background: #dc2626; flex: 45; display: flex; align-items: center; justify-content: center; color: #fff; }
+  .prediction-bar .gt { background: #1d4ed8; flex: 55; display: flex; align-items: center; justify-content: center; color: #fff; }
+  .trade-info { text-align: center; font-size: 11px; color: #9ca3af; margin-top: 6px; }
+  .trade-info span { color: #60a5fa; font-weight: 600; }
+  .confidence { text-align: center; font-size: 10px; color: #6b7280; margin-top: 3px; }
+  .confidence em { color: #9ca3af; font-style: normal; }
+
+  .phase-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: #6b7280; margin: 16px 0 6px; padding-bottom: 4px; border-bottom: 1px solid #2a2a3a; }
+
+  .card { background: #1a1b2e; border-radius: 8px; padding: 10px 12px; margin-bottom: 8px; border-left: 3px solid transparent; }
+  .card.pbks-bat { border-left-color: #dc2626; }
+  .card.gt-bat { border-left-color: #1d4ed8; }
+  .card.pbks-bowl { border-left-color: #f87171; }
+  .card.gt-bowl { border-left-color: #60a5fa; }
+  .card.matchup { border-left-color: #a855f7; }
+
+  .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+  .card-title { font-size: 13px; font-weight: 700; color: #fff; }
+  .card-badge { font-size: 10px; font-weight: 600; padding: 2px 6px; border-radius: 4px; }
+  .badge-pbks { background: #3b1111; color: #f87171; }
+  .badge-gt { background: #1e3a5f; color: #60a5fa; }
+  .badge-neutral { background: #2a2a3a; color: #9ca3af; }
+  .badge-key { background: #3b1764; color: #c084fc; }
+  .badge-edge { background: #14332a; color: #34d399; }
+
+  .watch-item { font-size: 12px; color: #d1d5db; line-height: 1.5; margin-bottom: 4px; padding-left: 12px; position: relative; }
+  .watch-item::before { content: ''; position: absolute; left: 0; top: 7px; width: 5px; height: 5px; border-radius: 50%; background: #4b5563; }
+  .watch-item .stat { color: #60a5fa; font-weight: 600; }
+  .watch-item .alert { color: #f87171; font-weight: 600; }
+  .watch-item .good { color: #34d399; font-weight: 600; }
+  .watch-item .name { color: #fff; font-weight: 600; }
+  .watch-item .warn { color: #fbbf24; font-weight: 600; }
+
+  .scenario-strip { display: flex; gap: 6px; margin: 12px 0; }
+  .scenario { flex: 1; background: #1a1b2e; border-radius: 6px; padding: 8px; text-align: center; }
+  .scenario .label { font-size: 10px; color: #9ca3af; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+  .scenario .prob { font-size: 18px; font-weight: 700; margin: 2px 0; }
+  .scenario .desc { font-size: 10px; color: #6b7280; line-height: 1.3; }
+  .sc-a .prob { color: #60a5fa; }
+  .sc-b .prob { color: #34d399; }
+  .sc-c .prob { color: #f87171; }
+  .sc-d .prob { color: #fbbf24; }
+
+  .pivot-box { background: #1f1235; border: 1px solid #7c3aed; border-radius: 8px; padding: 10px 12px; margin: 12px 0; }
+  .pivot-box .pivot-title { font-size: 11px; font-weight: 700; color: #c084fc; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+  .pivot-box p { font-size: 12px; color: #d1d5db; line-height: 1.5; }
+  .pivot-box .highlight { color: #e9d5ff; font-weight: 600; }
+
+  .edge-box { background: #0f2318; border: 1px solid #16a34a; border-radius: 8px; padding: 10px 12px; margin: 12px 0; }
+  .edge-box .edge-title { font-size: 11px; font-weight: 700; color: #34d399; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+  .edge-box p { font-size: 12px; color: #d1d5db; line-height: 1.5; }
+  .edge-box .highlight { color: #86efac; font-weight: 600; }
+
+  .sub-pred { background: #1a1b2e; border-radius: 8px; padding: 10px 12px; margin-bottom: 8px; }
+  .sub-pred table { width: 100%; font-size: 11px; border-collapse: collapse; }
+  .sub-pred th { text-align: left; color: #6b7280; font-weight: 600; padding: 3px 4px; border-bottom: 1px solid #2a2a3a; }
+  .sub-pred td { padding: 4px; color: #d1d5db; border-bottom: 1px solid #1f1f30; }
+  .sub-pred td:last-child { text-align: right; font-weight: 600; }
+
+  .h2h-strip { display: flex; gap: 4px; margin: 8px 0; }
+  .h2h-item { flex: 1; background: #1a1b2e; border-radius: 4px; padding: 6px; text-align: center; }
+  .h2h-item .val { font-size: 14px; font-weight: 700; }
+  .h2h-item .lbl { font-size: 9px; color: #6b7280; text-transform: uppercase; letter-spacing: 0.5px; }
+  .h2h-pbks .val { color: #f87171; }
+  .h2h-gt .val { color: #60a5fa; }
+  .h2h-draw .val { color: #9ca3af; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>PBKS vs GT — Game 004 Watchcard</h1>
+  <div class="subtitle">Mar 31, 2026 | Mullanpur | 7:30 PM IST</div>
+  <div class="prediction-bar">
+    <div class="pbks">PBKS 45%</div>
+    <div class="gt">GT 55%</div>
+  </div>
+  <div class="trade-info">Kalshi: <span>3× GT Yes @ 51¢</span> | EV +4¢/contract | Edge: 4.5pp vs market</div>
+  <div class="confidence">90% CI: GT 48–62% | Confidence: <em>Medium</em></div>
+</div>
+
+<!-- H2H STRIP -->
+<div class="h2h-strip">
+  <div class="h2h-item h2h-pbks"><div class="val">3</div><div class="lbl">PBKS wins</div></div>
+  <div class="h2h-item h2h-draw"><div class="val">6</div><div class="lbl">Total H2H</div></div>
+  <div class="h2h-item h2h-gt"><div class="val">3</div><div class="lbl">GT wins</div></div>
+</div>
+
+<!-- SCENARIOS -->
+<div class="scenario-strip">
+  <div class="scenario sc-a">
+    <div class="label">GT Dominance</div>
+    <div class="prob">30%</div>
+    <div class="desc">GT top 3 fires, Holder shuts death</div>
+  </div>
+  <div class="scenario sc-b">
+    <div class="label">PBKS Edge</div>
+    <div class="prob">25%</div>
+    <div class="desc">Chahal + Arshdeep control, PBKS depth</div>
+  </div>
+  <div class="scenario sc-c">
+    <div class="label">Death Decides</div>
+    <div class="prob">40%</div>
+    <div class="desc">Close — comes down to overs 16-20</div>
+  </div>
+  <div class="scenario sc-d">
+    <div class="label">Wildcard</div>
+    <div class="prob">5%</div>
+    <div class="desc">Rain / freak collapse</div>
+  </div>
+</div>
+
+<!-- POWERPLAY -->
+<div class="phase-label">Powerplay — Overs 1-6 <span style="float:right; color:#9ca3af; font-weight:400; font-size:10px; text-transform:none; letter-spacing:0">+1% GT</span></div>
+
+<div class="card gt-bat">
+  <div class="card-header">
+    <div class="card-title">GT Batting</div>
+    <span class="card-badge badge-gt">Expected 45-55</span>
+  </div>
+  <div class="watch-item"><span class="name">Gill</span> vs Arshdeep: H2H <span class="stat">51 balls, 64 runs, 1 dismissal</span>. Gill dominates — SR 125 but rarely gets out</div>
+  <div class="watch-item"><span class="name">Sudharsan</span>: PP avg <span class="stat">110</span> in 2025 (IPL history best). Dismissed only <span class="good">3× in 22 PP innings</span></div>
+  <div class="watch-item"><span class="name">Jansen</span> dismissed Gill in <span class="warn">Dec 2025 T20I</span> — chopped on, around the wicket. Watch this over!</div>
+  <div class="watch-item">If Gill passes <span class="good">25 off Arshdeep's PP overs</span> → Scenario A building</div>
+</div>
+
+<div class="card pbks-bat">
+  <div class="card-header">
+    <div class="card-title">PBKS Batting</div>
+    <span class="card-badge badge-pbks">Expected 42-55</span>
+  </div>
+  <div class="watch-item"><span class="name">Arya</span>: PP SR <span class="stat">188.46</span> in 2025 (highest in IPL). Scored <span class="stat">103(42)</span> at this venue vs CSK</div>
+  <div class="watch-item"><span class="name">Prabhsimran</span>: PP SR <span class="stat">164.73</span>. More conventional but steady</div>
+  <div class="watch-item"><span class="name">Siraj</span> has <span class="stat">46 career PP wickets</span> — GT's primary new-ball threat. Arya smashed him for 47(23) in 2025 though</div>
+  <div class="watch-item">If Arya smashes <span class="good">15+ off Siraj's first over</span> → PBKS PP dominance, Scenario B in play</div>
+</div>
+
+<div class="card gt-bowl">
+  <div class="card-header">
+    <div class="card-title">GT PP Bowling</div>
+    <span class="card-badge badge-gt">Siraj = weapon</span>
+  </div>
+  <div class="watch-item"><span class="name">Siraj</span>: <span class="stat">46 career PP wickets</span>. Will target Prabhsimran (RHB, more orthodox)</div>
+  <div class="watch-item"><span class="name">Prasidh</span>: PP eco <span class="stat">7.50</span> in 2025. Disciplined but not a strike bowler early</div>
+  <div class="watch-item"><span class="name">Holder</span>: Unlikely to bowl more than 1 PP over. Saving him for death</div>
+</div>
+
+<div class="card pbks-bowl">
+  <div class="card-header">
+    <div class="card-title">PBKS PP Bowling</div>
+    <span class="card-badge badge-pbks">Jansen = key</span>
+  </div>
+  <div class="watch-item"><span class="name">Arshdeep</span>: <span class="stat">36 of 109 IPL wkts in PP</span>. Elite — but Gill handles him (H2H: 64 off 51)</div>
+  <div class="watch-item"><span class="name">Jansen</span>: Left-arm <span class="stat">140+ kph</span>, steep bounce. Recent Gill dismissal. <span class="warn">Eco 9.50 in PP</span> — takes wkts but leaks</div>
+  <div class="watch-item">3rd seamer (Vyshak/Bartlett) = <span class="alert">weak link</span>. GT openers will target this over</div>
+</div>
+
+<!-- MIDDLE OVERS -->
+<div class="phase-label">Middle Overs — Overs 7-15 <span style="float:right; color:#34d399; font-weight:400; font-size:10px; text-transform:none; letter-spacing:0">+1.5% PBKS</span></div>
+
+<div class="card pbks-bowl">
+  <div class="card-header">
+    <div class="card-title">PBKS Bowling — THE Edge</div>
+    <span class="card-badge badge-edge">PBKS advantage</span>
+  </div>
+  <div class="watch-item"><span class="name">Chahal</span> at Mullanpur: <span class="good">4/28 vs KKR</span> at this exact venue. Knows the conditions</div>
+  <div class="watch-item">Chahal vs <span class="name">Phillips</span>: Bowled him in T20I. Phillips attacks spin but gets caught — <span class="warn">55-45 bowler</span></div>
+  <div class="watch-item">Chahal vs <span class="name">Buttler</span>: Teammates at RR 2022. Buttler SR 140+ vs leg-spin. Mutual respect — <span class="stat">55-45 batter</span></div>
+  <div class="watch-item"><span class="name">Brar</span>: Career eco <span class="stat">7.90</span>. Left-arm orthodox into GT's RHB-heavy middle order</div>
+</div>
+
+<div class="card gt-bowl">
+  <div class="card-header">
+    <div class="card-title">GT Bowling — Rashid Watch</div>
+    <span class="card-badge badge-key">Swing factor</span>
+  </div>
+  <div class="watch-item"><span class="name">Rashid</span> vs <span class="name">Iyer</span>: Career H2H <span class="stat">~87 balls, 5 dismissals, SR ~115</span>. Iyer cautious but gets out regularly</div>
+  <div class="watch-item">BUT Rashid 2025: <span class="alert">9 wkts in 15 games, eco 9.30, 26 sixes conceded, wicketless 7 times</span></div>
+  <div class="watch-item">Rashid vs <span class="name">Connolly</span>: Young Aussie LHB vs elite leg-spin. <span class="alert">No H2H — high risk for Connolly</span></div>
+  <div class="watch-item"><span class="name">Sundar</span>: <span class="alert">Eco 10.09 in 2025</span>. Clear GT weakness. PBKS should target his overs</div>
+  <div class="watch-item">If Rashid goes at <span class="alert">9+ eco in overs 8-12</span> → 2025 decline confirmed, Scenario B strengthens</div>
+  <div class="watch-item">If Rashid takes <span class="good">2 wkts at eco &lt;7</span> → career Rashid is back, swing to Scenario A</div>
+</div>
+
+<div class="card gt-bat">
+  <div class="card-header">
+    <div class="card-title">GT Middle-Order Batting</div>
+    <span class="card-badge badge-gt">Buttler key</span>
+  </div>
+  <div class="watch-item"><span class="name">Buttler</span> at 3: SR <span class="stat">163.03</span> in 2025. If both openers are out, he anchors. If set, he accelerates</div>
+  <div class="watch-item"><span class="name">Phillips</span>: Power hitter but vulnerable to Chahal's googly</div>
+  <div class="watch-item"><span class="name">Shahrukh</span>: SR <span class="stat">179</span> in 2025. Power, but not proven vs quality leg-spin</div>
+  <div class="watch-item">GT are <span class="alert">thin after top 3</span>. If Gill + Sudharsan + Buttler all fail → middle overs collapse risk</div>
+</div>
+
+<div class="card pbks-bat">
+  <div class="card-header">
+    <div class="card-title">PBKS Middle-Order Batting</div>
+    <span class="card-badge badge-pbks">Depth advantage</span>
+  </div>
+  <div class="watch-item"><span class="name">Iyer</span>: <span class="stat">551 runs, SR 177</span> in 2025. Cautious vs Rashid (SR 115 H2H) but should attack given Rashid's decline</div>
+  <div class="watch-item"><span class="name">Connolly</span> at 3: <span class="alert">Can't bowl (back)</span>. Unproven vs world-class leg-spin. High risk if facing Rashid</div>
+  <div class="watch-item"><span class="name">Stoinis</span>: SR <span class="stat">186</span>, 15 sixes. Can attack Sundar's weak overs</div>
+  <div class="watch-item">PBKS bat to 8-9 (Jansen hits long). <span class="good">Depth is their insurance</span></div>
+</div>
+
+<!-- DEATH OVERS -->
+<div class="phase-label">Death Overs — Overs 16-20 <span style="float:right; color:#60a5fa; font-weight:400; font-size:10px; text-transform:none; letter-spacing:0">+5% GT — biggest edge</span></div>
+
+<div class="card gt-bowl">
+  <div class="card-header">
+    <div class="card-title">GT Death Bowling — Holder</div>
+    <span class="card-badge badge-edge">GT's ace</span>
+  </div>
+  <div class="watch-item"><span class="name">Holder</span>: <span class="good">45 of 97 T20 wkts at death in 2025</span> — best in world cricket. Bowls overs 17 + 19</div>
+  <div class="watch-item">Holder vs <span class="name">Stoinis</span>: No H2H but archetype — accurate death bowler vs power hitter. <span class="stat">60-40 bowler</span></div>
+  <div class="watch-item"><span class="name">Prasidh</span>: Purple Cap but <span class="alert">death eco 11.7</span>. Gets wickets but leaks — PBKS will target him</div>
+  <div class="watch-item"><span class="name">Siraj</span> at death: eco <span class="stat">9.00</span>, 3 wkts in 7 death overs 2025. Reasonable backup</div>
+</div>
+
+<div class="card pbks-bowl">
+  <div class="card-header">
+    <div class="card-title">PBKS Death Bowling — Arshdeep</div>
+    <span class="card-badge badge-pbks">World class</span>
+  </div>
+  <div class="watch-item"><span class="name">Arshdeep</span>: India's best death bowler. <span class="stat">5/51 T20I vs NZ (Jan 2026)</span>. Left-arm yorkers into RHB toes</div>
+  <div class="watch-item">Arshdeep vs <span class="name">Shahrukh</span> (RHB): Perfect matchup for Arshdeep — <span class="stat">60-40 bowler</span></div>
+  <div class="watch-item">Arshdeep vs <span class="name">Tewatia</span> (LHB): Angle goes across body — <span class="warn">harder matchup for Arshdeep</span></div>
+  <div class="watch-item"><span class="alert">5th bowler problem:</span> Ferguson OUT, Connolly can't bowl. Stoinis/Vyshak/Bartlett at death = exploitable</div>
+  <div class="watch-item">If PBKS's 5th bowler goes for <span class="alert">15+ in one over</span> → that over decides the match</div>
+</div>
+
+<div class="card gt-bat">
+  <div class="card-header">
+    <div class="card-title">GT Death Batting</div>
+    <span class="card-badge badge-key">Tewatia factor</span>
+  </div>
+  <div class="watch-item"><span class="name">Tewatia</span>: <span class="good">36*(18) at THIS venue in 2024</span> to win. Career finishing: avg 112, SR 163.50</div>
+  <div class="watch-item"><span class="name">Shahrukh</span>: SR <span class="stat">179</span>. Power. Will target non-Arshdeep overs</div>
+  <div class="watch-item"><span class="name">Holder</span>: Can contribute <span class="stat">15-25 quick runs</span> at 7-8 if needed</div>
+  <div class="watch-item">Dew arrives <span class="warn">~9 PM</span> — overs 18-20 of 2nd innings. Arshdeep's grip compromised if chasing</div>
+</div>
+
+<div class="card pbks-bat">
+  <div class="card-header">
+    <div class="card-title">PBKS Death Batting</div>
+    <span class="card-badge badge-pbks">Stoinis the finisher</span>
+  </div>
+  <div class="watch-item"><span class="name">Stoinis</span>: SR <span class="stat">186</span>, 15 sixes, 5 not-outs in 2025. Primary death batter</div>
+  <div class="watch-item">Stoinis vs <span class="name">Holder</span>: <span class="stat">60-40 bowler advantage</span>. Holder's accuracy restricts Stoinis's power</div>
+  <div class="watch-item">Stoinis should <span class="good">target Prasidh</span> (death eco 11.7) — that's where PBKS scores at death</div>
+  <div class="watch-item"><span class="name">Jansen</span>: Can hit, but not a specialist finisher. Left-hander provides variety</div>
+</div>
+
+<!-- PIVOT MOMENT -->
+<div class="pivot-box">
+  <div class="pivot-title">The Decisive Moment</div>
+  <p><span class="highlight">Overs 16-20 — whoever bowls PBKS's 5th bowler over.</span> GT's death batting (Tewatia + Shahrukh) will target that single over from Stoinis/Vyshak/Bartlett. If they concede <span class="highlight">15+ runs</span> in that over, it likely decides the match. Conversely, if <span class="highlight">Arshdeep bowls the 17th AND 19th over</span> and executes his yorkers, PBKS can contain GT. The battle within the battle: Holder's overs vs Arshdeep's overs. Whichever death ace has the better night wins the game.</p>
+</div>
+
+<!-- RASHID KHAN MONITOR -->
+<div class="pivot-box" style="background:#1a1708; border-color:#ca8a04;">
+  <div class="pivot-title" style="color:#fbbf24;">Rashid Khan Monitor — The Swing Variable</div>
+  <p>Rashid Khan is the single biggest uncertainty. His <span class="highlight" style="color:#fde68a;">career says elite</span> (eco ~6.5, 100s of wickets). His <span class="highlight" style="color:#fde68a;">2025 says declining</span> (eco 9.30, 26 sixes, wicketless 7 times). If career-Rashid shows up → GT moves to 58-60%. If 2025-Rashid continues → PBKS middle-overs edge holds and GT stays at 55% or less. Watch his first 2 overs — if he bowls at 7+ eco with no wickets, the decline is real.</p>
+</div>
+
+<!-- MARKET EDGE -->
+<div class="edge-box">
+  <div class="edge-title">Your Edge — GT Yes @ 51¢</div>
+  <p>Market implies GT <span class="highlight">~50.5%</span>. Our model: GT <span class="highlight">55%</span>. Edge: <span class="highlight">+4.5pp</span>. EV: <span class="highlight">+4¢/contract</span> before fees. Three factors the thin early-season market may underweight: (1) Holder's 45 death wkts in 2025, (2) PBKS's structural 5th bowler gap, (3) Tewatia's venue-specific pedigree. Not high conviction — CI includes 48% — but positive EV. 3 contracts at 51¢ = $1.53 invested.</p>
+</div>
+
+<!-- SUB-PREDICTIONS -->
+<div class="phase-label">Sub-Predictions to Track</div>
+
+<div class="sub-pred">
+  <table>
+    <tr><th>Prediction</th><th>Range</th></tr>
+    <tr><td>First innings total</td><td style="color:#9ca3af">165 – 180 (most likely)</td></tr>
+    <tr><td>Full range (venue variance)</td><td style="color:#6b7280">155 – 195</td></tr>
+    <tr><td>Toss winner decision</td><td style="color:#9ca3af">Bat first (55% venue edge)</td></tr>
+    <tr><td>PBKS powerplay</td><td style="color:#f87171">42 – 55</td></tr>
+    <tr><td>GT powerplay</td><td style="color:#60a5fa">45 – 55</td></tr>
+    <tr><td>PBKS death (17-20)</td><td style="color:#f87171">48 – 58</td></tr>
+    <tr><td>GT death (17-20)</td><td style="color:#60a5fa">48 – 62</td></tr>
+    <tr><td>Top scorer GT</td><td style="color:#60a5fa">Gill 35-55 @ SR 140-160</td></tr>
+    <tr><td>Top scorer PBKS</td><td style="color:#f87171">Iyer 30-50 @ SR 145-170</td></tr>
+    <tr><td>Top wickets GT</td><td style="color:#60a5fa">Holder 2-3 wkts, eco 7.5-9.0</td></tr>
+    <tr><td>Top wickets PBKS</td><td style="color:#f87171">Arshdeep 2-3 wkts, eco 7.5-9.0</td></tr>
+    <tr><td>Key matchup</td><td style="color:#c084fc">Rashid restricts Iyer SR&lt;120 but doesn't dismiss him (55%)</td></tr>
+  </table>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Game 003 Watchcard — RR vs CSK</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0f1117; color: #e4e4e7; padding: 12px; max-width: 520px; margin: 0 auto; }
+
+  .header { text-align: center; padding: 12px 0 8px; border-bottom: 2px solid #3b3b4f; margin-bottom: 12px; }
+  .header h1 { font-size: 18px; font-weight: 700; color: #fff; }
+  .header .subtitle { font-size: 12px; color: #9ca3af; margin-top: 2px; }
+  .prediction-bar { display: flex; margin-top: 10px; border-radius: 6px; overflow: hidden; height: 28px; font-size: 13px; font-weight: 600; }
+  .prediction-bar .rr { background: #2563eb; flex: 55; display: flex; align-items: center; justify-content: center; color: #fff; }
+  .prediction-bar .csk { background: #eab308; flex: 45; display: flex; align-items: center; justify-content: center; color: #1a1a2e; }
+  .trade-info { text-align: center; font-size: 11px; color: #9ca3af; margin-top: 6px; }
+  .trade-info span { color: #60a5fa; font-weight: 600; }
+
+  .phase-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: #6b7280; margin: 16px 0 6px; padding-bottom: 4px; border-bottom: 1px solid #2a2a3a; }
+
+  .card { background: #1a1b2e; border-radius: 8px; padding: 10px 12px; margin-bottom: 8px; border-left: 3px solid transparent; }
+  .card.rr-bat { border-left-color: #2563eb; }
+  .card.csk-bat { border-left-color: #eab308; }
+  .card.rr-bowl { border-left-color: #60a5fa; }
+  .card.csk-bowl { border-left-color: #facc15; }
+  .card.matchup { border-left-color: #a855f7; }
+
+  .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+  .card-title { font-size: 13px; font-weight: 700; color: #fff; }
+  .card-badge { font-size: 10px; font-weight: 600; padding: 2px 6px; border-radius: 4px; }
+  .badge-rr { background: #1e3a5f; color: #60a5fa; }
+  .badge-csk { background: #3d3200; color: #facc15; }
+  .badge-neutral { background: #2a2a3a; color: #9ca3af; }
+  .badge-key { background: #3b1764; color: #c084fc; }
+
+  .watch-item { font-size: 12px; color: #d1d5db; line-height: 1.5; margin-bottom: 4px; padding-left: 12px; position: relative; }
+  .watch-item::before { content: ''; position: absolute; left: 0; top: 7px; width: 5px; height: 5px; border-radius: 50%; background: #4b5563; }
+  .watch-item .stat { color: #60a5fa; font-weight: 600; }
+  .watch-item .alert { color: #f87171; font-weight: 600; }
+  .watch-item .good { color: #34d399; font-weight: 600; }
+  .watch-item .name { color: #fff; font-weight: 600; }
+
+  .scenario-strip { display: flex; gap: 6px; margin: 12px 0; }
+  .scenario { flex: 1; background: #1a1b2e; border-radius: 6px; padding: 8px; text-align: center; }
+  .scenario .label { font-size: 10px; color: #9ca3af; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+  .scenario .prob { font-size: 18px; font-weight: 700; margin: 2px 0; }
+  .scenario .desc { font-size: 10px; color: #6b7280; line-height: 1.3; }
+  .sc-a .prob { color: #34d399; }
+  .sc-b .prob { color: #facc15; }
+  .sc-c .prob { color: #f87171; }
+
+  .pivot-box { background: #1f1235; border: 1px solid #7c3aed; border-radius: 8px; padding: 10px 12px; margin: 12px 0; }
+  .pivot-box .pivot-title { font-size: 11px; font-weight: 700; color: #c084fc; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+  .pivot-box p { font-size: 12px; color: #d1d5db; line-height: 1.5; }
+  .pivot-box .highlight { color: #e9d5ff; font-weight: 600; }
+
+  .sub-pred { background: #1a1b2e; border-radius: 8px; padding: 10px 12px; margin-bottom: 8px; }
+  .sub-pred table { width: 100%; font-size: 11px; border-collapse: collapse; }
+  .sub-pred th { text-align: left; color: #6b7280; font-weight: 600; padding: 3px 4px; border-bottom: 1px solid #2a2a3a; }
+  .sub-pred td { padding: 4px; color: #d1d5db; border-bottom: 1px solid #1f1f30; }
+  .sub-pred td:last-child { text-align: right; font-weight: 600; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>RR vs CSK — Game 003 Watchcard</h1>
+  <div class="subtitle">Mar 30, 2026 | Barsapara, Guwahati | 7:30 PM IST</div>
+  <div class="prediction-bar">
+    <div class="rr">RR 55%</div>
+    <div class="csk">CSK 45%</div>
+  </div>
+  <div class="trade-info">Kalshi: <span>2x RR Yes @ 51¢</span> | EV +2¢/contract net | Medium confidence</div>
+</div>
+
+<!-- SCENARIOS -->
+<div class="scenario-strip">
+  <div class="scenario sc-a">
+    <div class="label">Scenario A</div>
+    <div class="prob">40%</div>
+    <div class="desc">Debutants crumble, RR openers fire</div>
+  </div>
+  <div class="scenario sc-b">
+    <div class="label">Scenario B</div>
+    <div class="prob">35%</div>
+    <div class="desc">Even fight, dew decides</div>
+  </div>
+  <div class="scenario sc-c">
+    <div class="label">Scenario C</div>
+    <div class="prob">25%</div>
+    <div class="desc">CSK openers + debutants click</div>
+  </div>
+</div>
+
+<!-- POWERPLAY -->
+<div class="phase-label">Powerplay — Overs 1-6</div>
+
+<div class="card rr-bat">
+  <div class="card-header">
+    <div class="card-title">RR Batting</div>
+    <span class="card-badge badge-rr">Expected 50-65</span>
+  </div>
+  <div class="watch-item"><span class="name">Jaiswal</span> vs Khaleel: H2H <span class="stat">58 off 28 balls, SR 200+</span>. Jaiswal dominates — watch if pattern holds</div>
+  <div class="watch-item"><span class="name">Suryavanshi</span>: PP SR <span class="stat">260-267</span> in 2025. High-risk, high-reward teen</div>
+  <div class="watch-item">If Jaiswal passes <span class="good">30 off Khaleel's overs</span> → Scenario A unfolding</div>
+</div>
+
+<div class="card csk-bat">
+  <div class="card-header">
+    <div class="card-title">CSK Batting</div>
+    <span class="card-badge badge-csk">Expected 42-58</span>
+  </div>
+  <div class="watch-item"><span class="name">Samson</span>: Career opener SR <span class="stat">149</span>. T20 WC SR <span class="stat">198</span>. Knows RR bowlers intimately</div>
+  <div class="watch-item"><span class="name">Gaikwad</span>: First-10-ball SR only <span class="alert">127</span>. Returning from elbow injury — watch for rust</div>
+  <div class="watch-item">If Samson scores <span class="alert">40+ in PP</span> → Scenario C in play</div>
+</div>
+
+<div class="card rr-bowl">
+  <div class="card-header">
+    <div class="card-title">RR Bowling</div>
+    <span class="card-badge badge-neutral">Neutral edge</span>
+  </div>
+  <div class="watch-item"><span class="name">Archer</span> vs Samson (T20I): <span class="stat">3 dismissals</span> but Samson scored 38(14) in WC semi</div>
+  <div class="watch-item"><span class="name">Sandeep</span>: Has dismissed Gaikwad before. 146 career IPL wickets</div>
+</div>
+
+<div class="card csk-bowl">
+  <div class="card-header">
+    <div class="card-title">CSK Bowling</div>
+    <span class="card-badge badge-csk">Khaleel angle</span>
+  </div>
+  <div class="watch-item"><span class="name">Khaleel</span>: PP eco <span class="stat">6.91</span>. Left-arm — but Jaiswal destroys him specifically</div>
+  <div class="watch-item"><span class="name">Overton</span>: <span class="alert">IPL debut</span>. 150+ kph raw pace. Total unknown</div>
+</div>
+
+<!-- MIDDLE OVERS -->
+<div class="phase-label">Middle Overs — Overs 7-15</div>
+
+<div class="card rr-bat">
+  <div class="card-header">
+    <div class="card-title">RR Batting</div>
+    <span class="card-badge badge-rr">Depth advantage</span>
+  </div>
+  <div class="watch-item"><span class="name">Parag</span> vs Noor Ahmad: <span class="stat">48 runs, SR 171, never dismissed</span>. Parag dominates</div>
+  <div class="watch-item">4 proven IPL batters (Parag, Jurel, Hetmyer, Jadeja) vs CSK's spin</div>
+  <div class="watch-item"><span class="name">Jadeja</span> vs old team: 2025 stats <span class="stat">301 runs, SR 135, 10 wickets</span></div>
+</div>
+
+<div class="card csk-bat">
+  <div class="card-header">
+    <div class="card-title">CSK Batting</div>
+    <span class="card-badge badge-csk">Debutant risk</span>
+  </div>
+  <div class="watch-item"><span class="name">Dube</span> vs Bishnoi: <span class="stat">SR 157, 4 sixes</span> in 4 meetings. Dube handles him</div>
+  <div class="watch-item"><span class="name">Kartik Sharma</span>: <span class="alert">IPL debut</span>. Domestic SR 162 but zero IPL exposure</div>
+  <div class="watch-item"><span class="name">Prashant Veer</span>: <span class="alert">IPL debut</span>. SLA bowler who bats. T20 SR 167 domestic</div>
+  <div class="watch-item">If CSK lose <span class="alert">3+ wickets overs 7-15</span> → Scenario A confirmed</div>
+</div>
+
+<div class="card rr-bowl">
+  <div class="card-header">
+    <div class="card-title">RR Bowling</div>
+    <span class="card-badge badge-key">Key phase</span>
+  </div>
+  <div class="watch-item"><span class="name">Bishnoi</span> at Barsapara: <span class="stat">Leg-spin dominates here</span> (Chahal 3/34, Hasaranga 4/35, Varun 2/17)</div>
+  <div class="watch-item">72 career IPL wickets. First spell vs debutants is <span class="good">THE moment</span></div>
+  <div class="watch-item"><span class="name">Jadeja</span> SLA: Eco <span class="stat">8.6</span> in 2025. Knows CSK batters' plans</div>
+</div>
+
+<div class="card csk-bowl">
+  <div class="card-header">
+    <div class="card-title">CSK Bowling</div>
+    <span class="card-badge badge-csk">Noor Ahmad threat</span>
+  </div>
+  <div class="watch-item"><span class="name">Noor Ahmad</span>: <span class="stat">24 wkts, avg 17</span> in IPL 2025. Had a 4/18 spell vs MI</div>
+  <div class="watch-item">Left-arm wrist spin at 92kph. CSK's best weapon</div>
+  <div class="watch-item"><span class="name">Rahul Chahar</span>: Leg-spin but limited 2025 data (1 match for SRH)</div>
+</div>
+
+<!-- DEATH OVERS -->
+<div class="phase-label">Death Overs — Overs 16-20</div>
+
+<div class="card rr-bat">
+  <div class="card-header">
+    <div class="card-title">RR Batting</div>
+    <span class="card-badge badge-rr">Expected 38-52</span>
+  </div>
+  <div class="watch-item"><span class="name">Hetmyer</span>: Death SR <span class="stat">142.85</span> but avg only <span class="alert">15.0</span> — gets out often</div>
+  <div class="watch-item"><span class="name">Jadeja</span>: SR 135. Capable but not elite at 38</div>
+  <div class="watch-item"><span class="name">Shanaka</span>: 102 T20Is. Useful if set, inconsistent otherwise</div>
+</div>
+
+<div class="card csk-bat">
+  <div class="card-header">
+    <div class="card-title">CSK Batting</div>
+    <span class="card-badge badge-csk">Expected 30-48</span>
+  </div>
+  <div class="watch-item"><span class="name">Dube</span>: <span class="stat">122 career IPL sixes</span>. Only proven finisher tonight</div>
+  <div class="watch-item"><span class="name">Overton</span>: T20 bat avg <span class="alert">10.50, SR 101</span>. Not a power hitter</div>
+  <div class="watch-item"><span class="name">Kamboj</span>: <span class="alert">14 runs in 5 IPL innings</span>. Essentially tail</div>
+  <div class="watch-item">If Dube is out before over 16 → CSK death batting collapses</div>
+</div>
+
+<div class="card rr-bowl">
+  <div class="card-header">
+    <div class="card-title">RR Bowling</div>
+    <span class="card-badge badge-neutral">Archer form?</span>
+  </div>
+  <div class="watch-item"><span class="name">Archer</span>: Historically elite at death but 2025 was <span class="alert">worst season</span> (1/49 vs GT)</div>
+  <div class="watch-item">Debutants at death = mismatch in RR's favour if Archer finds rhythm</div>
+</div>
+
+<div class="card csk-bowl">
+  <div class="card-header">
+    <div class="card-title">CSK Bowling</div>
+    <span class="card-badge badge-csk">Thin options</span>
+  </div>
+  <div class="watch-item"><span class="name">Khaleel</span>: Season eco <span class="alert">9.57</span>. Not a death specialist</div>
+  <div class="watch-item"><span class="name">Noor Ahmad</span>: Wrist spin at death is high-risk, high-reward</div>
+  <div class="watch-item">No proven death bowling specialist in CSK's XI tonight</div>
+</div>
+
+<!-- PIVOT MOMENT -->
+<div class="pivot-box">
+  <div class="pivot-title">The Decisive Moment</div>
+  <p><span class="highlight">Overs 7-12 when CSK bat.</span> This is when debutants Kartik Sharma and Prashant Veer most likely face Bishnoi and Jadeja. If CSK navigate this stretch losing <span class="highlight">0-1 wickets</span> → Scenario C (CSK upset). If they lose <span class="highlight">2-3 wickets</span> → Scenario A (RR dominant). This single passage of play is the match.</p>
+</div>
+
+<!-- SUB-PREDICTIONS -->
+<div class="phase-label">Sub-Predictions to Track</div>
+
+<div class="sub-pred">
+  <table>
+    <tr><th>Prediction</th><th>Range</th></tr>
+    <tr><td>First innings total</td><td style="color:#60a5fa">175 – 190</td></tr>
+    <tr><td>Toss winner choice</td><td style="color:#60a5fa">Bowl first</td></tr>
+    <tr><td>RR powerplay</td><td style="color:#60a5fa">50 – 65</td></tr>
+    <tr><td>CSK powerplay</td><td style="color:#facc15">42 – 58</td></tr>
+    <tr><td>RR death (17-20)</td><td style="color:#60a5fa">38 – 52</td></tr>
+    <tr><td>CSK death (17-20)</td><td style="color:#facc15">30 – 48</td></tr>
+    <tr><td>Top scorer RR</td><td style="color:#60a5fa">Jaiswal 35-55 @ SR 145-175</td></tr>
+    <tr><td>Top scorer CSK</td><td style="color:#facc15">Samson 30-50 @ SR 135-165</td></tr>
+    <tr><td>Top wickets RR</td><td style="color:#60a5fa">Bishnoi 1-3 wkts, eco 7.0-8.5</td></tr>
+    <tr><td>Top wickets CSK</td><td style="color:#facc15">Noor Ahmad 1-3 wkts, eco 7.5-9.0</td></tr>
+    <tr><td>Key matchup</td><td style="color:#c084fc">Jaiswal beats Khaleel (65%)</td></tr>
+  </table>
+</div>
+
+</body>
+</html>
