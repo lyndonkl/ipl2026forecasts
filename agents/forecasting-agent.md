@@ -109,22 +109,37 @@ If you believe a factor deserves more than 2.7, it is likely two separate factor
 
 ### 1. Phase Sentiment Scoring
 
-Each phase in the Scenario Analysis has Bullish/Neutral/Bearish probabilities for the batting team. Convert these into a single **phase sentiment score** ranging from -1.0 (strongly favours bowling team) to +1.0 (strongly favours batting team):
+Each phase in the Scenario Analysis has Bullish/Neutral/Bearish probabilities. These are always labeled from the **batting team's perspective** — Bullish means things go well for whoever is batting in that phase, Bearish means things go poorly for the batting team (even if a bowler's dominance is the reason).
+
+This means:
+- **First innings phases:** Bullish = good for the team batting first. A high Bullish probability in the powerplay means the openers are expected to score freely.
+- **Second innings phases:** Bullish = good for the chasing team. A high Bullish probability in the death overs means the chasing team's finishers are expected to get the runs.
+- A bowling team's excellence (e.g., Bumrah taking early wickets) appears as a high **Bearish** probability in that phase, because the batting team is performing poorly.
+
+Convert the B/N/Bear probabilities into a single **phase sentiment score** ranging from -1.0 (strongly favours bowling team) to +1.0 (strongly favours batting team):
 
 ```
 Phase Sentiment = (P(Bullish) × +1) + (P(Neutral) × 0) + (P(Bearish) × -1)
 ```
 
+A positive sentiment means the batting team has an edge in this phase. A negative sentiment means the bowling team has an edge.
+
 Examples:
-- Bullish 45% / Neutral 35% / Bearish 20% → sentiment = +0.25 (slight batting edge)
-- Bullish 20% / Neutral 30% / Bearish 50% → sentiment = -0.30 (moderate bowling edge)
-- Bullish 30% / Neutral 40% / Bearish 30% → sentiment = 0.00 (neutral)
+- Bullish 45% / Neutral 35% / Bearish 20% → sentiment = +0.25 (batting team has a slight edge — perhaps an in-form opener facing average bowling)
+- Bullish 20% / Neutral 30% / Bearish 50% → sentiment = -0.30 (bowling team has a clear edge — perhaps an elite death bowler restricting weak finishers)
+- Bullish 30% / Neutral 40% / Bearish 30% → sentiment = 0.00 (evenly matched — no adjustment)
 
-The sentiment score determines the direction and magnitude of the micro-adjustment for that phase.
+### 2. Translating Sentiment into Win Probability Adjustments
 
-### 2. Sentiment-to-Adjustment Mapping
+The sentiment score tells you which team has the phase edge and how large it is. The next step is to convert that into a micro-adjustment to TEAM1's win probability.
 
-Map the phase sentiment score to a micro-adjustment on the 0.3–2.7 scale:
+**The direction depends on who is batting:**
+- If the batting team in this phase IS TEAM1: positive sentiment means TEAM1 is performing well → adjust **toward TEAM1** (+X for TEAM1)
+- If the batting team in this phase IS TEAM2: positive sentiment means TEAM2 is performing well → adjust **toward TEAM2** (-X for TEAM1)
+
+This is the critical link. In the second innings, the batting team is usually the team that batted second (the chasing team). A Bullish second-innings phase means the chasing team is scoring well, which is BAD for the team that batted first.
+
+Map the absolute sentiment score to a micro-adjustment on the 0.3–2.7 scale:
 
 | Absolute Sentiment | Adjustment | Interpretation |
 |-------------------|------------|----------------|
@@ -135,8 +150,6 @@ Map the phase sentiment score to a micro-adjustment on the 0.3–2.7 scale:
 | 0.40 – 0.49 | 1.5 | Significant lean |
 | 0.50 – 0.69 | 2.0 | Large lean |
 | 0.70 – 1.00 | 2.7 | Maximum lean (very rare in T20) |
-
-Direction: if batting team = TEAM1, positive sentiment → +X for TEAM1. If batting team = TEAM2, positive sentiment → +X for TEAM2 (i.e., -X for TEAM1).
 
 ### 3. Toss-Conditional Branching
 
@@ -318,6 +331,8 @@ Weight: H2H all-time (20%) + H2H at venue (20%) + H2H last 2 seasons (25%) + Rec
 **Load:** scenario-analysis.md from the Scenario Analysis Agent
 
 This is the core of the forecasting method. You build TWO estimates — one for each toss outcome — by working through every phase of both innings and accumulating micro-adjustments from the Scenario Analysis Agent's Bullish/Neutral/Bearish probabilities.
+
+**Perspective reminder:** The Scenario Analysis Agent labels all scenarios from the batting team's perspective. In the first innings, Bullish = good for the batting side. In the second innings (chase), Bullish = good for the chasing side. When converting sentiment to TEAM1's win probability, account for who is batting: if TEAM2 is batting well (Bullish chase), that works against TEAM1.
 
 #### Toss Branch A: [TEAM1] Wins Toss
 
@@ -931,6 +946,31 @@ Sentiment = (0.40 × +1) + (0.35 × 0) + (0.25 × -1) = +0.40 - 0.25 = +0.15
 > **What the scenario analysis says:** "Bullish 40% / Neutral 35% / Bearish 25%. Key driver: Rohit's PP SR 162 vs Arshdeep's PP eco 9.2."
 > **My calculation:** Sentiment +0.15 → 0.3 pp Negligible → +0.3 for MI → 52.0% → **52.3%**
 > **🔍 Calibration question (Player dependency test):** "This adjustment rests on Rohit surviving Arshdeep's first spell. If Rohit falls in the first 2 overs (~30% chance given Arshdeep's powerplay wickets), does MI still have a PP edge?"
+
+---
+
+**Second-innings example (perspective matters here):**
+
+Scenario Analysis says for Death Overs (PBKS chasing, overs 18-20):
+> Bullish 50% / Neutral 35% / Bearish 15%
+> Key driver: PBKS chasing with dew, Klaasen (SR 180, ELITE) vs MI's death bowling (Bumrah rested, Arjun Tendulkar death eco 11.2)
+
+Note: Bullish here means good for PBKS (the batting/chasing team). PBKS = TEAM2.
+
+**Step 1 — Compute sentiment:**
+```
+Sentiment = (0.50 × +1) + (0.35 × 0) + (0.15 × -1) = +0.35
+```
+
+**Step 2 — Map to adjustment:**
+- Absolute sentiment = 0.35 → falls in 0.30-0.39 band → **1.0 pp (Moderate)**
+
+**Step 3 — Determine direction:**
+- Batting team = PBKS = TEAM2. Positive sentiment means TEAM2 has the edge → **-1.0 for TEAM1 (MI)**
+- This is the key step: a Bullish chase phase works AGAINST the team that batted first.
+
+**Step 4 — Apply to running total:**
+- Running total was 54.2% for MI → **53.2%**
 </examples>
 
 ---

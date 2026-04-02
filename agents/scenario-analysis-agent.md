@@ -458,18 +458,54 @@ These boundaries are FIXED. Do not adjust them between games.
 <scenario_definitions>
 ## Scenario Definitions
 
-| Scenario | For Batting Team | For Bowling Team | Typical Driver |
-|----------|-----------------|-----------------|----------------|
-| **Bullish** | Phase goes well — above-par scoring, few wickets lost, set batters in control | Phase goes poorly — economy above average, no wickets, plans not working | Form surge player delivers, pitch suits batting, matchup favours batter |
-| **Neutral** | Phase plays out at or near par — expected scoring, expected wickets | Phase plays out at or near par — economy near average, expected wickets | No dominant force either way, conditions as expected |
-| **Bearish** | Phase goes poorly — below-par scoring, wicket cluster, pressure builds | Phase goes well — economy below average, key wickets, squeeze applied | Form dip player underperforms, pitch suits bowling, matchup favours bowler |
+### Perspective Rule
 
-**Probability assignment rules:**
+Bullish, Neutral, and Bearish are ALWAYS defined from the **batting team's perspective** in every phase. This applies regardless of whether the narrative describes a batting performance or a bowling performance.
+
+When a bowler dominates a phase — taking early wickets, keeping run rate low — that is a **Bearish** outcome for the batting team, because the batting team is performing poorly. When a bowler gets hit for runs and takes no wickets, that is a **Bullish** outcome for the batting team, because the batting team is scoring freely.
+
+The perspective resets between innings because the batting team changes. In the first innings, Bullish means good for the team batting first. In the second innings, Bullish means good for the chasing team. Within a single innings, the perspective never changes — every phase in that innings uses the same batting team as the reference point.
+
+<examples>
+**Correct (perspective locked to batting team):**
+- SRH chasing, Powerplay: "Bullish (35%) — Head and Abhishek attack KKR's new-ball bowling, scoring at 9+ RPO with no wickets lost."
+- SRH chasing, Powerplay: "Bearish (20%) — Bumrah's swing gets both SRH openers in the first 4 overs. SRH are 32/2."
+
+**Incorrect (perspective has drifted to bowling team):**
+- SRH chasing, Powerplay: "Bullish (28%) — KKR pace execute tight, SRH openers hesitant, scoring at 6.5 RPO."
+  → This describes a BAD outcome for SRH (the batting team). It should be labeled Bearish.
+
+**Self-check:** Read each scenario description and ask: "Is the batting team having a good time?" If yes → Bullish. If no → Bearish. If average → Neutral.
+</examples>
+
+### Scenario Definitions Table
+
+| Scenario | What It Means | Score Indicators | Typical Drivers |
+|----------|--------------|------------------|-----------------|
+| **Bullish** | Batting team performs above par in this phase — runs flow, few wickets lost, set batters in control | Score range above par, 0-1 wickets | In-form batter delivers, bowling attack struggles with conditions, matchup favours batting side |
+| **Neutral** | Phase plays out close to par — expected run rate, expected wickets, no side dominates | Score range at par, 1-2 wickets | Balanced matchups, conditions as expected, no standout individual performance |
+| **Bearish** | Batting team performs below par in this phase — runs dry up, wicket clusters, pressure mounts | Score range below par, 2-3+ wickets | In-form bowler delivers, conditions assist bowling, matchup favours bowling side |
+
+### Probability Assignment Rules
+
+**Hard constraints:**
 - Probabilities within each phase MUST sum to 100%
-- No single scenario should be assigned less than 10% (even tail risks are plausible in T20)
-- No single scenario should exceed 60% (nothing is that certain in T20)
-- The Neutral scenario typically anchors at 35-45%, with Bullish and Bearish splitting the remainder based on conditions, form, and matchups
-- If you find yourself assigning >55% to any single scenario, re-examine — you may be overweighting one factor
+- No single scenario below 10% (tail risks are always plausible in T20)
+- No single scenario above 60% (nothing is that certain in T20)
+
+**Form-driven calibration:** The split between Bullish, Neutral, and Bearish must reflect the Player Research Agent's form flags for the players active in each phase. Use this calibration table as a starting point, then adjust based on conditions and matchup specifics:
+
+| Matchup Character | Bullish | Neutral | Bearish | When to Use |
+|-------------------|---------|---------|---------|-------------|
+| Elite-form batters vs average/unknown bowling | 45-55% | 30-35% | 15-20% | Batter has FORM SURGE / ELITE flag, bowler has no strong form signal |
+| Strong-form batters vs strong-form bowlers | 30-35% | 30-35% | 30-35% | Both sides have clear form signals — high variance, outcome uncertain |
+| Average batters vs in-form bowling | 15-20% | 30-35% | 45-55% | Bowler has FORM SURGE / ELITE flag, batter has no strong form signal |
+| Both average / thin form data | 25-30% | 40-45% | 25-30% | Neither side has strong recent form data — Neutral dominates due to uncertainty |
+| One side unknown (debut/new player) | 25-35% | 35-40% | 25-35% | UNKNOWN CEILING flag — wider spread between Bullish and Bearish |
+
+**Neutral should NOT default to 45-50%.** A Neutral above 45% is only justified when form data for both sides is genuinely thin (fewer than 3 recent innings) or when the specific matchup has no clear form-driven edge. When the Player Research Agent has flagged clear form signals (FORM SURGE, FORM DIP, ELITE, VERY STRONG), those signals must shift probability mass toward Bullish or Bearish accordingly.
+
+**Self-check for anchoring bias:** If you find Neutral assigned at 45% or higher in a phase where either side has strong form flags, stop and reconsider. The form data is there to differentiate phases — a uniform Neutral across phases with different form profiles means the form data is being ignored.
 </scenario_definitions>
 
 ---
@@ -544,6 +580,10 @@ These boundaries are FIXED. Do not adjust them between games.
 5. **Wrong XIs invalidated scenarios.** Game 003: 5 of 11 CSK players wrong. If XI confidence is Low, flag prominently and note which scenarios are XI-dependent.
 
 6. **Unknown players were decisive in 3 of 4 games.** Any player with UNKNOWN CEILING flag MUST appear in Scenario Seeds with explicit high-variance framing.
+
+7. **Game 006: Perspective flips in 4 phases.** The Bullish/Bearish labels drifted to the bowling team's perspective in second-innings phases (SRH chasing powerplay, KKR chasing powerplay and death). A "Bullish" scenario that describes the bowling team dominating is mislabeled — it is Bearish for the batting team. The self-check ("Is the batting team having a good time?") catches this.
+
+8. **Game 006: Neutral clustered at 47-54% despite elite form flags.** Abhishek (SR 168), Head (SR 165+), Ishan (SR 210), and Klaasen (SR 180) all had VERY STRONG or ELITE form flags, yet Neutral was assigned 45-54% in their phases. The form-driven calibration table now exists to prevent this. When elite-form batters face average bowling, Bullish should be 45-55%, not 28-35%.
 </lessons>
 
 ---
@@ -610,6 +650,8 @@ The first version names players, cites form stats, and explains the mechanism. T
 - [ ] Each phase has: Players table, Key matchup, Scenario table (Bullish/Neutral/Bearish), Players to watch
 - [ ] Every scenario has a score/run rate range (no vague language)
 - [ ] Every scenario probability is 10-60% and sums to 100% within each phase
+- [ ] Perspective check: re-read every Bullish scenario description and confirm the batting team is having a good outcome. Re-read every Bearish description and confirm the batting team is having a bad outcome. If any label describes a good bowling performance as "Bullish," the labels are inverted — fix before submitting
+- [ ] Neutral check: for every phase where the Player Research Agent flagged FORM SURGE, ELITE, or VERY STRONG for either side, verify Neutral is 40% or below. A Neutral above 45% in a phase with strong form signals indicates anchoring bias
 - [ ] Every player in a phase table has form trend (↑/↓/→) and a key stat
 - [ ] First Innings Score Distribution table present with probabilities summing to ~100%
 - [ ] Chase Summary includes succeed/fail conditions and conditional chase probability
