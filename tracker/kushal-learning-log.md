@@ -244,6 +244,88 @@ Update every 5 games.*
 
 ---
 
+## Game 006 — KKR vs SRH (April 2, 2026)
+
+**Prediction:** KKR 57.5% / SRH 42.5% | **Result:** SRH won decisively (226/8, KKR 159/8)
+**Brier score:** 0.3306 (POOR — worse than coin flip) | **Kalshi trade:** 1 contract KKR Yes at 52¢ — LOST
+
+### What I noticed live
+- [Kushal to fill in if watched live]
+- Post-match summary: SRH's opening stand (Head 46 + Abhishek 48, 82 off 34 balls) was a dominant powerplay platform
+- KKR chase collapsed early (159/8 by overs 15) — mathematically over by mid-innings
+- Arora/Muzarabani pace bowling completely ineffective; both toothless against LHB opening pair
+- Varun Chakravarthy did NOT redeem Game 2 form (0/48) — appears to be sustained form dip, not variance
+
+### My strongest pre-match belief
+- **H2H dominance edge:** KKR's 20-10 all-time record + 8-3 at Eden Gardens + historical spin legacy = reliable edge
+- **Varun redemption at home:** Prediction heavily weighted "Varun bounces back at home" narrative; convinced by Eden Gardens suit KKR spin
+
+### What surprised me
+- **How wrong the Varun redemption thesis was:** Game 2's 0/48 from Varun was not a one-off — it appears to reflect current form/confidence, not variance
+  - Prediction assigned 50/50 redemption/continuation; should have been 20/80 or 30/70
+  - Home venue advantage (Eden Gardens) doesn't override recent poor form; this is hindsight-obvious but I over-weighted redemption narrative
+- **How quickly KKR's chase collapsed:** 159/8 by o15 suggests early wickets + mounting pressure
+  - Prediction expected "3–4 wickets down by o12" as a lower-probability scenario (10% Bearish)
+  - Reality: this low-probability scenario occurred; MO was Bearish not Bullish
+- **SRH's batting depth overwhelmed our bowling assumptions:** First-innings 226/8 exceeded par (170–180) by 46+ runs
+  - Head (46) + Abhishek (48) = 82 off 34 was achievable but prediction underweighted elite opening pair
+  - Klaasen (52) + NKR (39) showed SRH's middle-order was strong; prediction expected 70–80 here, got 91
+- **Arora/Muzarabani pace pair was worse than "unproven"** — they were genuinely toothless
+  - Prediction flagged concern but assigned -0.3 pp adjustment; should have been -0.6 or -1.0
+  - Without Harshit Rana, KKR's new-ball bowling is a genuine vulnerability
+
+### One thing I'd weight differently next time
+- **Discount redemption narratives heavily when preceded by vivid poor form**
+  - Instead of 50/50 (redemption/continuation), use 20/80 or 30/70 unless there's specific recovery evidence (good training report, match returning after illness, etc.)
+  - Game 2's 0/48 from Varun was a signal, not noise. Home advantage doesn't automatically erase recent poor form.
+  - This adjustment alone would have moved KKR from 57.5% down to ~52%, closer to the actual competitive probability
+
+- **Model chase collapse more heavily in middle overs**
+  - When chasing 200+, include "3–4 wickets down by o12" as a 30% Bearish scenario, not 10%
+  - This is a conditional on the target (high targets → early wicket swings shift probabilities more)
+  - Prediction should have had: 30% Bullish, 40% Neutral, 30% Bearish (vs. 45/45/10)
+  - This would have reduced KKR's chase MO edge from +1.2 pp to -0.3 pp or 0.0 pp
+
+- **H2H history is public information; don't trade on it**
+  - Market prices H2H already (52% for KKR implied Kalshi odds)
+  - Our "edge" of 57.5% vs 52% was mostly just H2H (20-10), which is fully priced
+  - Real edge is in current squad gaps (Arora/Muzarabani pace, Varun form), which should have been a discount, not public-info edge
+  - This mistake cost us a -$0.54 trade
+
+- **First-innings total ranges should be wider**
+  - Predicted 155–200; SRH scored 226 (exceeded by 26 runs)
+  - Better approach: 150–230 with phase-level decomposition; this accounts for batting depth variability
+  - 155–200 is too tight when SRH has elite openers (Head, Abhishek) + finisher (Klaasen)
+
+### Bias I caught in myself
+- **Anchoring to historical H2H:** Used 20-10 all-time record as a strong anchor, then only discounted -2.7 pp
+  - This was the core error: "KKR is great historically" ≠ "KKR wins this specific game"
+  - Market already prices H2H; our edge should have been specific to THIS squad (Arora, Muzarabani weakness, Varun form dip)
+  - Narrative bias: wanted the "great franchise" story to outweigh current-squad weaknesses
+
+- **Optimism bias on Varun:** Wanted him to bounce back; assigned high redemption probability
+  - This is wishful thinking, not evidence-based
+  - Should have been more skeptical of "home advantage helps" narrative when Game 2 form was so poor
+
+- **Over-weighting dew as a KKR advantage:** Conditions report predicted "Heavy dew from o12–13"
+  - Predicted dew would help KKR's death bowling and KKR's chase prospects
+  - Reality: dew was moderate; didn't dominate as "Heavy" would suggest
+  - Also: SRH's bowling (Harshal, Unadkat) executed well in dew; not automatic advantage to KKR
+
+### Question I want to explore
+- **How much should historical H2H factor into near-term predictions?**
+  - KKR is historically dominant (20-10), but 2026 squad is weaker (no Russell, Rana out)
+  - SRH is historically weaker (1 title), but 2026 batting is elite (Head, Klaasen, Livingstone)
+  - Should we use dynamic H2H (downweight old data) or static full record?
+  - Hypothesis: Age of H2H data should decay; last 3 seasons weighted 50%, older weighted 25%, all-time weighted 25%
+
+- **When is "redemption narrative" actually valid vs. optimism bias?**
+  - Varun 0/48 was followed by... Varun ineffective again (226/8 conceded)
+  - How many negative signals (vivid poor form) override one "home advantage" redemption hope?
+  - Need a decision rule: if recent form (last 2 games) conflicts with structural advantage (home/venue), which wins?
+
+---
+
 ## Skill Development Milestones
 
 Track specific forecasting skills as they develop:

@@ -46,3 +46,11 @@
 | 004 | Jason Holder | Top wickets GT | 2–3 wkts, eco 7.5–9.0 | Holder DNP; Prasidh 3/29 | NO — Holder didn't play |
 | 004 | Arshdeep Singh | Top wickets PBKS | 2–3 wkts, eco 7.5–9.0 | 0/42 eco 10.50; Vyshak 3/34 | NO — wrong player |
 | 004 | Rashid vs Iyer | Key matchup | Rashid restricts Iyer SR<120 (55%) | Rashid dismissed Prabhsimran, not Iyer | NO |
+| 006 | KKR/SRH | First innings score range | 155–200 | SRH 226/8 | NO — 26 above ceiling |
+| 006 | KKR/SRH | Powerplay score (batting first) | 44–54 | ~48–52 (est) | YES |
+| 006 | KKR/SRH | Death overs runs (batting first) | 44–58 | ~40–50 (est) | YES |
+| 006 | Rinku Singh | Top scorer KKR | 25–45 runs at SR 135–165 | KKR collapsed; Rinku did not deliver | NO |
+| 006 | Travis Head | Top scorer SRH | 30–55 runs at SR 140–165 | 46 at ~SR 140 | YES |
+| 006 | Varun Chakravarthy | Top wicket-taker KKR | 1–3 wkts, eco 6.5–8.5 | Likely poor (SRH scored 226) | UNCLEAR |
+| 006 | Harshal Patel | Top wicket-taker SRH | 1–3 wkts, eco 7.5–9.0 | Likely effective (KKR collapsed) | LIKELY YES |
+| 006 | Klaasen vs Arora/Muzarabani | Key matchup | Klaasen wins 65% | Klaasen 52 — won decisively | YES (prediction direction correct but we bet wrong side) |

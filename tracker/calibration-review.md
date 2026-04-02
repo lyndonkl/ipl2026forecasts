@@ -6,9 +6,9 @@
 
 ---
 
-## 5-Game Review (Games 1-5)
+## 6-Game Review (Games 1-6) — YELLOW FLAG
 
-**Status:** Early-stage monitoring. No threshold triggered yet (0.25 Brier limit), but patterns emerging.
+**Status:** EARLY CALIBRATION WARNING. Last 5-game rolling average 0.2445 (very close to 0.25 threshold). Consecutive poor Brier scores (Games 004–006). Monitoring closely.
 
 ### Brier Score Analysis
 
@@ -19,9 +19,17 @@
 | 003 | RR 55% / CSK 45% | RR won | 0.2025 | Medium |
 | 004 | GT 55% / PBKS 45% | PBKS won | 0.3025 | Medium |
 | 005 | LSG 50% / DC 50% | DC won | 0.25 | Medium |
-| **Running average** | — | — | **0.2157** | — |
+| 006 | KKR 57.5% / SRH 42.5% | SRH won | 0.3306 | Medium |
+| **All-game average (1-6)** | — | — | **0.2266** | — |
+| **Last 5-game average (2-6)** | — | — | **0.2445** | — |
+| **Last 3-game average (4-6)** | — | — | **0.2944** | — |
 
-**Assessment:** Average Brier of 0.2157 is acceptable (below 0.25 "coin-flip" threshold, above 0.15 "excellent" target). Game 004 (0.3025) is the outlier; Game 005 (0.25) is neutral; Games 1-3 are strong (avg 0.1588). **No recalibration due yet.**
+**Assessment:**
+- All-game Brier 0.2266 is acceptable (below 0.25 threshold, trending upward)
+- Last 5-game average 0.2445 is YELLOW FLAG (only 0.5 points below 0.25 trigger threshold)
+- Last 3 games (004–006) all have Brier > 0.25, showing upward trend
+- **Trigger condition:** If next game (007) produces Brier > 0.15, or if 5-game rolling average exceeds 0.25, initiate formal calibration review
+- **Pattern:** Prediction confidence has been consistently Medium; accuracy has declined Games 4–6 after strong Games 1–3
 
 ---
 

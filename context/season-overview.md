@@ -1,6 +1,6 @@
 # IPL 2026 Season Overview
 
-**Last updated:** 2026-03-31 (after Game 004)
+**Last updated:** 2026-04-02 (after Game 006)
 
 ---
 
@@ -25,22 +25,27 @@
 
 ---
 
-## Points Table
+## Points Table (After Game 006)
 
-| Pos | Team | P | W | L | NR | NRR | Pts |
-|-----|------|---|---|---|----|----|-----|
-| 1 | RCB | 1 | 1 | 0 | 0 | +3.100 | 2 |
-| 2 | MI | 1 | 1 | 0 | 0 | +0.150 | 2 |
-| 3 | RR | 1 | 1 | 0 | 0 | +1.300 | 2 |
-| 4 | CSK | 1 | 0 | 1 | 0 | -1.300 | 0 |
-| 5 | DC | 0 | 0 | 0 | 0 | 0.000 | 0 |
-| 6 | GT | 1 | 0 | 1 | 0 | -0.150 | 0 |
-| 7 | KKR | 1 | 0 | 1 | 0 | -0.150 | 0 |
-| 8 | LSG | 0 | 0 | 0 | 0 | 0.000 | 0 |
-| 9 | PBKS | 1 | 1 | 0 | 0 | +0.150 | 2 |
-| 10 | SRH | 1 | 0 | 1 | 0 | -3.100 | 0 |
+| Pos | Team | P | W | L | NR | Pts |
+|-----|------|---|---|---|----|----|
+| 1 | RCB | 1 | 1 | 0 | 0 | 2 |
+| 1 | MI | 1 | 1 | 0 | 0 | 2 |
+| 1 | RR | 1 | 1 | 0 | 0 | 2 |
+| 1 | PBKS | 1 | 1 | 0 | 0 | 2 |
+| 5 | SRH | 2 | 1 | 1 | 0 | 2 |
+| 6 | DC | 1 | 1 | 0 | 0 | 2 |
+| 7 | CSK | 1 | 0 | 1 | 0 | 0 |
+| 7 | GT | 1 | 0 | 1 | 0 | 0 |
+| 7 | KKR | 2 | 0 | 2 | 0 | 0 |
+| 10 | LSG | 1 | 0 | 1 | 0 | 0 |
 
-*Note: NRR values are approximate estimates based on match margins.*
+**Notes:**
+- SRH improved to 1W-1L after defeating KKR decisively (226/8, KKR 159/8)
+- KKR now 0W-2L after loss to SRH; poor start with weakened pace bowling (Rana out, Arora/Muzarabani unproven)
+- RCB, MI, RR, PBKS all 1W-0L; strong openers
+- DC improved to 1W-0L after upset over LSG (50/50 prediction, DC prevailed)
+- CSK, GT sliding after early losses; both 0W-1L
 
 ---
 

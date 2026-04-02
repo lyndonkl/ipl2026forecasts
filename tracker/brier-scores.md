@@ -12,3 +12,4 @@
 | 003 | RR vs CSK | 0.2025 | Medium | 0.1588 |
 | 004 | PBKS vs GT | 0.3025 | Medium | 0.1947 |
 | 005 | LSG vs DC | 0.25 | Medium | 0.2157 |
+| 006 | KKR vs SRH | 0.3306 | Medium | 0.2266 |

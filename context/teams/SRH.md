@@ -2,6 +2,7 @@
 
 ### Game Files
 - [Game 001 vs RCB: Prediction](../../games/game-001-RCB-vs-SRH-2026-03-28/prediction.md) | [Outcome](../../games/game-001-RCB-vs-SRH-2026-03-28/outcome.md)
+- [Game 006 vs KKR: Prediction](../../games/game-006-KKR-vs-SRH-2026-04-02/prediction.md) | [Outcome](../../games/game-006-KKR-vs-SRH-2026-04-02/outcome.md)
 
 ## Basic Info
 
@@ -48,6 +49,42 @@ replacement for Jack Edwards), Onkar Tarmale, Amit Kumar, Aniket Verma
 | 3 | Ishan Kishan (wk) | Top order (LHB) |
 | 4 | Heinrich Klaasen | Middle order (RHB) — finisher |
 | 5 | Nitish Kumar Reddy | AR (RHB/RMF) |
+
+---
+
+## Game 006 Post-Match Analysis (SRH vs KKR, April 2, 2026)
+
+**Result:** SRH WON decisively over KKR (226/8, KKR 159/8)
+
+**Key Findings:**
+
+1. **Elite opening pair dominance:**
+   - Travis Head 46 + Abhishek Sharma 48 = 82 off 34 balls (~144 SR)
+   - This was exactly as strong as predicted; Head's elite powerplay form (SR 165+) + Abhishek's aggressive intent fully materialized
+   - Opening partnership set a dominant platform against KKR's weak pace (Arora, Muzarabani)
+   - Recommendation: Head + Abhishek combination is a core strength; expect this pattern in future games vs weak pace attacks
+
+2. **Middle-order execution (Klaasen, NKR):**
+   - Heinrich Klaasen 52 + Nitish Kumar Reddy 39 = 91 runs in middle-to-death overs
+   - Klaasen's finishing prowess (SR 160+) confirmed; he dominated death overs against Arora/Muzarabani
+   - NKR's acceleration (SR 150+) showed depth in middle order
+   - SRH total 226/8 exceeded par (170–180) by 46+ runs, indicating strong batting collective
+
+3. **Bowling execution in favorable conditions:**
+   - SRH's bowling (Harshal Patel, Jaydev Unadkat, Sai Kishore) executed well under dew
+   - KKR's chase collapsed early (159/8 by o15), suggesting SRH bowlers applied pressure effectively
+   - Dew was moderate (not "Heavy" as predicted), but SRH's bowlers adapted; KKR's did not
+
+4. **Balance against weak opposition:**
+   - KKR's bowling crisis (Arora/Muzarabani + Varun form dip) made SRH's task easier
+   - On an even playing field (both teams at full strength), this margin of victory would compress
+   - Recommendation: don't over-extrapolate this win to expectations vs strong bowling lineups (MI, RCB, etc.)
+
+**Next Match Expectations:**
+- Head + Abhishek opening pair will be dangerous again if facing similar weak-pace lineups
+- Klaasen's finishing skills are elite; expect him to deliver in death overs vs most bowling
+- SRH's middle order (NKR, Livingstone if fit) provides good batting depth
+- Monitor Cummins/Ishan's availability; Ishan's captaincy has been steady; Cummins' return will strengthen bowling further
 | 6 | Kamindu Mendis / Liam Livingstone | Middle order |
 | 7 | Sai Kishore | Left-arm spin |
 | 8 | Pat Cummins (c) | Right-arm fast |
