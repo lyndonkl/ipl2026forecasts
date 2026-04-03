@@ -13,3 +13,4 @@
 | 004 | PBKS vs GT | 0.3025 | Medium | 0.1947 |
 | 005 | LSG vs DC | 0.25 | Medium | 0.2157 |
 | 006 | KKR vs SRH | 0.3306 | Medium | 0.2266 |
+| 007 | CSK vs PBKS | 0.1444 | Medium | 0.2148 |

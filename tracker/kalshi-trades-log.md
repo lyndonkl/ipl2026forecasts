@@ -16,6 +16,7 @@ Tracks all actual contract purchases, P&L, and running totals.
 | 003 | 2026-03-30 | RR Yes | $0.53 | 3 | $1.59 | $0.06 | $1.65 | 55% | ~2¢/contract (net of fee) | WON | $3.00 | +$1.35 |
 | 004 | 2026-03-31 | GT Yes | $0.51 | 3 | $1.53 | ~$0.06 | ~$1.59 | 55% | ~4¢/contract | LOST | $0.00 | -$1.59 |
 | 006 | 2026-04-02 | KKR Yes | $0.52 | 1 | $0.52 | $0.02 | $0.54 | 57.5% | ~3.5¢/contract (thin edge) | LOST | $0.00 | -$0.54 |
+| 007 | 2026-04-03 | PBKS Yes | $0.54 | ~7 | ~$3.78 | ~$0.14 | ~$3.92 | 62% | ~6-8¢/contract (solid edge) | WON | $7.00 | +$3.08 |
 
 ## Running P&L
 
@@ -27,6 +28,7 @@ Tracks all actual contract purchases, P&L, and running totals.
 | 004 | ~$4.93 | $4.00 | -$0.93 | -18.9% |
 | 005 | ~$4.93 | $4.00 | -$0.93 | -18.9% |
 | 006 | ~$5.47 | $4.00 | -$1.47 | -26.9% |
+| 007 | ~$9.39 | $11.00 | +$1.61 | +17.1% |
 
 ## Game 005 Note
 

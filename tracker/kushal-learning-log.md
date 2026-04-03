@@ -326,6 +326,49 @@ Update every 5 games.*
 
 ---
 
+## Game 007 — CSK vs PBKS (April 3, 2026)
+
+**Prediction:** CSK 38% / PBKS 62% | **Result:** PBKS won by 5 wickets in 18.4 overs
+**Brier score:** 0.1444 (EXCELLENT — best since Games 001-002) | **Kalshi trade:** PBKS Yes at $0.54, ~7 contracts — WON
+
+### What I noticed live
+- [Kushal to fill in if watched — key observation: Mhatre's 73-off-43 and Arya's explosive 39-off-11]
+
+### My strongest pre-match belief
+- **PBKS's recent Chepauk dominance (4 of last 5, 3 consecutive wins) is structural, not a hot streak.** This conviction justified the 62% estimate and the decision to size up to ~7 contracts (vs model recommendation of 2 contracts).
+
+### What surprised me
+- **Mhatre's 73-off-43 (career-best).** Prediction flagged "unproven lineup collapse risk" (-0.5pp adjustment), but the flip side — "if collapse avoided, upside ceiling from young batter" — wasn't vividly modeled. Mhatre's performance validated that CSK had depth even when Samson failed early.
+- **Samson dismissed very early (overs 1-3).** Prediction identified "Samson vs Chahal in overs 8-12" as the crux variable, but Chahal/Bartlett struck in overs 1-3 instead. The crux was real; the timing was off.
+
+### One thing I'd weight differently next time
+- **Young player "upside ceiling" should be modeled explicitly in score ranges.** If CSK lineup has 2+ debutants/young players, the upside range (not just floor) should be widened. Instead of "175-190 par, collapse floor 130," use "165-220 with phase-level decomposition: base 175, collapse -40, upside +30-45 if one young batter breaks through." Mhatre's 73 is a breakout, but "breakout" should be in the model, not a surprise.
+- **Conviction alignment: when sizing positions, if you feel >Medium confidence, express it in the model itself.** Sized ~7 contracts when model recommended 2 (3.5x multiple). The win justified this, but the disconnect hints at model under-expressing confidence. Next game: if conviction is higher, adjust model inputs (not just position size post-hoc).
+
+### Bias I caught in myself
+- **Anchoring to recent H2H without questioning recency weight.** PBKS 4-of-5 is 80%, but prediction assigned 62% to PBKS (38% to CSK). This implies a 20pp discount from pure H2H. The discount was applied through scenario decomposition (CSK Samson/Dube upside, PBKS bowling concerns), but it may have been over-cautious. If recent H2H is truly predictive (4-of-5 is significant), pure recency weighting might yield 65-68% PBKS, closer to actual win result.
+- **Confidence in the "crux variable" framework:** Predicted "Samson vs Chahal in overs 8-12" as the crux, but Samson was dismissed in overs 1-3. Crux was real (Chahal did pressure CSK), but timing assumption was off. This suggests the framework is sound (crux identification works) but **timing/sequencing of crux manifestation is harder to predict than we assume.**
+
+### Question I want to explore
+- **Are young player upside tails (20% probability in model) materializing at >20% frequency in IPL 2026?** Mhatre and Arya both hit upside tail in same game. If young player upside is realizing at 30-40% instead of 20%, the base rate is miscalibrated and should be adjusted seasonally.
+- **How much should crux-variable timing matter?** If Samson vs Chahal was the crux, but they meet in overs 1-3 instead of 8-12, does the crux lose force? In this case: no, Samson's dismissal still shaped CSK's innings. But if timing had been overs 15-16 (late MO), the impact would've been different. Should crux analysis include "timing distribution" (when the crux variable manifests) in addition to "what happens when it manifests"?
+
+### Kalshi Trade Review
+
+**Thesis:** PBKS are genuine favorites at 54¢ (market pricing 54% implied). Our 62% model indicates +8pp raw edge (~6pp net after fees). PBKS recent dominance at Chepauk, Chahal strength, fresh-pitch dew benefit justify conviction.
+
+**Execution:** Model recommended 2 contracts (quarter Kelly, Medium confidence). Kushal sized up to ~7 contracts (~3.5x), citing higher conviction from watching Games 001-006 pattern (PBKS outperforming expectations, Chahal dominance repeated).
+
+**Result:** PBKS won 210 in 18.4 overs (8 balls + 5 wickets spare). Contracts worth $1.00 each. Payout: $7.00. Cost ~$3.92 (7 × $0.54 + fee). Profit: ~$3.08 (78% single-game return).
+
+**Trade decision quality:**
+- Model edge (8pp raw) was solid.
+- Position sizing (7 vs 2) was aggressive but justified by conviction + result.
+- **Key for future:** When you size beyond model recommendation and WIN, track this. If pattern is 2-of-3 times the "higher conviction" call works, recalibrate model to express confidence more boldly. If 1-of-3, stick to model discipline.
+- **This win justifies confidence in "recent H2H + venue specialist (Chahal)" thesis.** Future games: use this template when confidence is high.
+
+---
+
 ## Skill Development Milestones
 
 Track specific forecasting skills as they develop:

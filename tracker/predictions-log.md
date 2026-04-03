@@ -12,3 +12,4 @@
 | 004 | PBKS vs GT | 2026-03-31 | GT 55% / PBKS 45% | ~GT 50.5% / PBKS 49.5% (Kalshi 51/50) | PBKS (by 3 wkts) | NO | 0.3025 | Medium |
 | 005 | LSG vs DC | 2026-04-01 | LSG 50% / DC 50% | ~LSG 53% / DC 47% (market favor LSG) | DC (by 6 wkts) | YES | 0.25 | Medium |
 | 006 | KKR vs SRH | 2026-04-02 | KKR 57.5% / SRH 42.5% | ~KKR 52% / SRH 48% (Kalshi 52/48) | SRH (by 68 runs) | NO | 0.3306 | Medium |
+| 007 | CSK vs PBKS | 2026-04-03 | CSK 38% / PBKS 62% | PBKS 54-56% (Kalshi) | PBKS (by 5 wkts, 18.4 ov) | YES | 0.1444 | Medium |

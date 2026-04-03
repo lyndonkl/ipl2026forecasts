@@ -6,9 +6,9 @@
 
 ---
 
-## 6-Game Review (Games 1-6) — YELLOW FLAG
+## 7-Game Review (Games 1-7) — RECOVERY PHASE
 
-**Status:** EARLY CALIBRATION WARNING. Last 5-game rolling average 0.2445 (very close to 0.25 threshold). Consecutive poor Brier scores (Games 004–006). Monitoring closely.
+**Status:** Yellow flag from Game 006 has been PARTIALLY RECOVERED by Game 007 excellence. Last 5-game rolling average now 0.2148 (below 0.25 threshold again). No immediate calibration review needed, but continue monitoring.
 
 ### Brier Score Analysis
 
@@ -20,16 +20,18 @@
 | 004 | GT 55% / PBKS 45% | PBKS won | 0.3025 | Medium |
 | 005 | LSG 50% / DC 50% | DC won | 0.25 | Medium |
 | 006 | KKR 57.5% / SRH 42.5% | SRH won | 0.3306 | Medium |
-| **All-game average (1-6)** | — | — | **0.2266** | — |
-| **Last 5-game average (2-6)** | — | — | **0.2445** | — |
-| **Last 3-game average (4-6)** | — | — | **0.2944** | — |
+| 007 | CSK 38% / PBKS 62% | PBKS won | 0.1444 | Medium |
+| **All-game average (1-7)** | — | — | **0.2148** | — |
+| **Last 5-game average (3-7)** | — | — | **0.2148** | — |
+| **Last 3-game average (5-7)** | — | — | **0.2083** | — |
 
 **Assessment:**
-- All-game Brier 0.2266 is acceptable (below 0.25 threshold, trending upward)
-- Last 5-game average 0.2445 is YELLOW FLAG (only 0.5 points below 0.25 trigger threshold)
-- Last 3 games (004–006) all have Brier > 0.25, showing upward trend
-- **Trigger condition:** If next game (007) produces Brier > 0.15, or if 5-game rolling average exceeds 0.25, initiate formal calibration review
-- **Pattern:** Prediction confidence has been consistently Medium; accuracy has declined Games 4–6 after strong Games 1–3
+- All-game Brier 0.2148 is good (well below 0.25 threshold)
+- Last 5-game average 0.2148 is below 0.25 threshold (GREEN — safe zone)
+- Last 3 games: improved trend (0.25 → 0.3306 → 0.1444), with Game 007 excellent recovery
+- Game 007's 0.1444 Brier pulled the running average down by 0.0118 points (meaningful recovery from Game 006 disaster 0.3306)
+- **Status:** Calibration warning cleared. Continue monitoring. Next formal review at Game 010.
+- **Pattern:** Prediction confidence has been consistently Medium; accuracy recovered Games 1-3 level after Games 4-6 dip
 
 ---
 
