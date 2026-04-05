@@ -113,6 +113,16 @@ Analyse each team's batting and bowling through three phases (powerplay, middle,
 ### Step 6 — Key Matchups
 
 Identify 3-5 matchups most likely to shape the game.
+
+### Step 7 — Compile Lineup Card (Final Summary)
+
+After completing the full analysis above, write the **Lineup Card** section at the very top of the output (right after the main heading and date line). This is a derived summary designed for Kushal's rapid scanning:
+
+- **XI Confidence:** Extract from the Playing XI section and state as CONFIRMED or PROBABLE with confidence level
+- **Side-by-side XI table:** Populate from the full Playing XI section, adding ✓ for confirmed/likely players and ⚠️ for uncertain ones
+- **Overseas counts:** Extract from the Overseas Slot Tracker
+- **Changes vs Last Game:** Compare this game's XI against the prior game's XI for the same team (if prior game exists in the game folder). If no prior game, write "No prior game."
+- **Uncertainty Register:** Extract only players with material uncertainty from the full Uncertainty Register below, limit to 3-4 rows
 </execution_steps>
 
 ---
@@ -124,6 +134,39 @@ Identify 3-5 matchups most likely to shape the game.
 # Team Analysis — [TEAM] for Game [NNN]: [TEAM1] vs [TEAM2]
 
 **Date:** [Date] | **Venue:** [Venue, City]
+
+---
+
+## Lineup Card (Quick Review)
+
+This section is for Kushal's rapid scanning. Full detail follows below.
+
+### XI Confidence: [CONFIRMED / PROBABLE (High/Medium/Low)]
+
+| # | [TEAM1] | Role | Status | # | [TEAM2] | Role | Status |
+|---|---------|------|--------|---|---------|------|--------|
+| 1 | [Name] | [Role] | [✓/⚠️] | 1 | [Name] | [Role] | [✓/⚠️] |
+| 2 | [Name] | [Role] | [✓/⚠️] | 2 | [Name] | [Role] | [✓/⚠️] |
+| 3 | [Name] | [Role] | [✓/⚠️] | 3 | [Name] | [Role] | [✓/⚠️] |
+| 4 | [Name] | [Role] | [✓/⚠️] | 4 | [Name] | [Role] | [✓/⚠️] |
+| 5 | [Name] | [Role] | [✓/⚠️] | 5 | [Name] | [Role] | [✓/⚠️] |
+| 6 | [Name] | [Role] | [✓/⚠️] | 6 | [Name] | [Role] | [✓/⚠️] |
+| 7 | [Name] | [Role] | [✓/⚠️] | 7 | [Name] | [Role] | [✓/⚠️] |
+| 8 | [Name] | [Role] | [✓/⚠️] | 8 | [Name] | [Role] | [✓/⚠️] |
+| 9 | [Name] | [Role] | [✓/⚠️] | 9 | [Name] | [Role] | [✓/⚠️] |
+| 10 | [Name] | [Role] | [✓/⚠️] | 10 | [Name] | [Role] | [✓/⚠️] |
+| 11 | [Name] | [Role] | [✓/⚠️] | 11 | [Name] | [Role] | [✓/⚠️] |
+
+★ = overseas | ✓ = confirmed/likely | ⚠️ = uncertain
+Overseas count: [TEAM1] [N]/4 | [TEAM2] [N]/4
+
+### Changes vs Last Game
+[List only what changed. If nothing: "No changes from Game N."]
+
+### Uncertainty Register (if any)
+| Player | Competing With | Probability | If Changes, Affects... |
+|--------|---------------|------------|----------------------|
+| [Name] | [Name] | [X%] | [downstream impact] |
 
 ---
 

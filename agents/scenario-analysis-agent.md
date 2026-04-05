@@ -180,6 +180,41 @@ Run through the quality checklist at the bottom of this file.
 
 ---
 
+## Phase Map (Quick Review)
+
+This section is for Kushal's rapid scanning. Full detail follows below.
+
+### If [TEAM1] Bats First → [TEAM2] Chases
+
+| Phase | [TEAM1] Batting LR | [TEAM2] Chasing LR | Key Signal |
+|-------|-------------------|-------------------|------------|
+| PP (1-6) | [X.XX] [⬆️/⬇️/➡️] | [X.XX] [⬆️/⬇️/➡️] | [1 phrase] |
+| EM (7-12) | [X.XX] [⬆️/⬇️/➡️] | [X.XX] [⬆️/⬇️/➡️] | [1 phrase] |
+| LM (13-17) | [X.XX] [⬆️/⬇️/➡️] | [X.XX] [⬆️/⬇️/➡️] | [1 phrase] |
+| Death (18-20) | [X.XX] [⬆️/⬇️/➡️] | [X.XX] [⬆️/⬇️/➡️] | [1 phrase] |
+
+Combined LR (this scenario): [X.XX] → implies [TEAM1/TEAM2] edge
+
+### If [TEAM2] Bats First → [TEAM1] Chases
+
+| Phase | [TEAM2] Batting LR | [TEAM1] Chasing LR | Key Signal |
+|-------|-------------------|-------------------|------------|
+| PP (1-6) | [X.XX] [⬆️/⬇️/➡️] | [X.XX] [⬆️/⬇️/➡️] | [1 phrase] |
+| EM (7-12) | [X.XX] [⬆️/⬇️/➡️] | [X.XX] [⬆️/⬇️/➡️] | [1 phrase] |
+| LM (13-17) | [X.XX] [⬆️/⬇️/➡️] | [X.XX] [⬆️/⬇️/➡️] | [1 phrase] |
+| Death (18-20) | [X.XX] [⬆️/⬇️/➡️] | [X.XX] [⬆️/⬇️/➡️] | [1 phrase] |
+
+Combined LR (this scenario): [X.XX] → implies [TEAM1/TEAM2] edge
+
+### The 3 Signals That Matter Most
+1. [Signal + phase + LR + why]
+2. [Signal + phase + LR + why]
+3. [Signal + phase + LR + why]
+
+⬆️ LR > 1.1 (favours batting team) | ⬇️ LR < 0.9 (favours bowling team) | ➡️ LR 0.9-1.1 (neutral)
+
+---
+
 ## Match Context Snapshot
 
 | Factor | Value | Implication |
@@ -268,6 +303,10 @@ This is the most important table in the document. Read this first.
 | **Neutral** | [Specific: e.g., "One early wicket (over 2-3), No.3 consolidates, steady accumulation"] | [42-54] | [1-2] | [X%] |
 | **Bearish** | [Specific: e.g., "[Bowler] gets both openers cheaply, seam movement exceeds expectation, rebuild mode"] | [30-42] | [2-3+] | [X%] |
 
+**Phase Likelihood Ratio:** [X.XX] favoring [batting team / bowling team]
+**Signal:** [The 1-2 high-value signals that drive this LR]
+**Signal strength:** [Weak/Moderate/Strong/Extreme] — [form deviation %, sample size]
+
 **Players to watch this phase:** **[Player 1]** ([form-based reason]), **[Player 2]** ([form-based reason])
 
 ---
@@ -292,6 +331,10 @@ This is the most important table in the document. Read this first.
 | **Bullish** | [Specific player-driven scenario] | [9-10+ RPO] | [0-1] | [X%] |
 | **Neutral** | [Specific] | [7.5-9 RPO] | [1-2] | [X%] |
 | **Bearish** | [Specific — spin choke or wicket cluster] | [<7.5 RPO] | [2-3+] | [X%] |
+
+**Phase Likelihood Ratio:** [X.XX] favoring [batting team / bowling team]
+**Signal:** [The 1-2 high-value signals that drive this LR]
+**Signal strength:** [Weak/Moderate/Strong/Extreme] — [form deviation %, sample size]
 
 **Players to watch this phase:** **[Player 1]** ([reason]), **[Player 2]** ([reason])
 
@@ -318,6 +361,10 @@ This is the most important table in the document. Read this first.
 | **Neutral** | [Specific] | [40-50] | [1-2] | [X%] |
 | **Bearish** | [Specific — wicket cluster, acceleration fails] | [28-40] | [2+] | [X%] |
 
+**Phase Likelihood Ratio:** [X.XX] favoring [batting team / bowling team]
+**Signal:** [The 1-2 high-value signals that drive this LR]
+**Signal strength:** [Weak/Moderate/Strong/Extreme] — [form deviation %, sample size]
+
 **Players to watch this phase:** **[Player 1]** ([reason]), **[Player 2]** ([reason])
 
 ---
@@ -342,6 +389,10 @@ This is the most important table in the document. Read this first.
 | **Bullish** | [e.g., "Finisher set, 5+ wkts in hand, dew aids batting, [weak-link bowler] bowls one over"] | [42-52] | [0-1] | [X%] |
 | **Neutral** | [Specific] | [30-42] | [1-2] | [X%] |
 | **Bearish** | [e.g., "New batter, death specialist on song, dew absent, [bowler] nails yorkers"] | [18-30] | [2+] | [X%] |
+
+**Phase Likelihood Ratio:** [X.XX] favoring [batting team / bowling team]
+**Signal:** [The 1-2 high-value signals that drive this LR]
+**Signal strength:** [Weak/Moderate/Strong/Extreme] — [form deviation %, sample size]
 
 **Players to watch this phase:** **[Player 1]** ([reason]), **[Player 2]** ([reason])
 
@@ -426,15 +477,15 @@ This is the most important table in the document. Read this first.
 
 These are the 3-5 highest-impact inputs for the prediction step. Each is specific and testable.
 
-1. **[Seed]:** [e.g., "If [Spinner] bowls overs 7-10 to [Batter], the early middle squeeze succeeds — [Batter]'s SR vs this bowling type is 98 and trending ↓. This shifts early middle to 50% Bearish for [batting team]."]
+1. **[Seed]:** [Description]. **LR impact:** If this occurs, phase [X] LR shifts from [current] to [new]. ln(LR) contribution: [+/-X.XX].
 
-2. **[Seed]:** [e.g., "Dew arrives by over 14. [Team]'s death bowling economy degrades from 8.5 to 11+ in dew conditions. Chasing 170+ becomes significantly easier — shifts death phase to 55% Bullish for chasing team."]
+2. **[Seed]:** [Description]. **LR impact:** If this occurs, phase [X] LR shifts from [current] to [new]. ln(LR) contribution: [+/-X.XX].
 
-3. **[Seed]:** [e.g., "[Player] UNKNOWN CEILING — domestic SR 162, zero IPL data vs [bowling type]. If batting overs 13-17, could shift late middle from Neutral to Bullish. High variance."]
+3. **[Seed]:** [Description]. **LR impact:** If this occurs, phase [X] LR shifts from [current] to [new]. ln(LR) contribution: [+/-X.XX].
 
-4. **[Seed]:** [description]
+4. **[Seed]:** [Description]. **LR impact:** If this occurs, phase [X] LR shifts from [current] to [new]. ln(LR) contribution: [+/-X.XX].
 
-5. **[Seed]:** [description]
+5. **[Seed]:** [Description]. **LR impact:** If this occurs, phase [X] LR shifts from [current] to [new]. ln(LR) contribution: [+/-X.XX].
 ```
 </output_schema>
 
@@ -506,6 +557,36 @@ The perspective resets between innings because the batting team changes. In the 
 **Neutral should NOT default to 45-50%.** A Neutral above 45% is only justified when form data for both sides is genuinely thin (fewer than 3 recent innings) or when the specific matchup has no clear form-driven edge. When the Player Research Agent has flagged clear form signals (FORM SURGE, FORM DIP, ELITE, VERY STRONG), those signals must shift probability mass toward Bullish or Bearish accordingly.
 
 **Self-check for anchoring bias:** If you find Neutral assigned at 45% or higher in a phase where either side has strong form flags, stop and reconsider. The form data is there to differentiate phases — a uniform Neutral across phases with different form profiles means the form data is being ignored.
+
+### Likelihood Ratio Estimation
+
+In addition to assigning B/N/Bear probabilities for narrative scenarios, each phase must produce a **likelihood ratio (LR)** that quantifies how much the phase evidence favors one team. The LR answers: "How much more likely is this phase's evidence if TEAM1 wins the match vs if TEAM2 wins?"
+
+**High-value signals per phase:**
+
+| Phase | Primary Signal | What to Look For |
+|-------|---------------|-----------------|
+| Powerplay (1-6) | Opener form vs new-ball matchup | PP SR deviation from baseline vs PP economy deviation |
+| Early Middle (7-12) | Middle-order vs spin matchup | Batting SR vs spin type compared to spinner economy trend |
+| Late Middle (13-17) | 5th/6th bowler vulnerability | Asymmetry in weakest bowling option between teams |
+| Death (18-20) | Finisher vs death bowling quality | Death SR vs death economy, modified by dew conditions |
+
+**LR calibration scale (use Player Research Agent's quantified form deviations):**
+
+| Signal Strength | Form Deviation | Sample | LR Range | Example |
+|----------------|---------------|--------|----------|---------|
+| Weak | ±5-10% from baseline | <5 innings | 1.05-1.15 | Opener PP SR 148 vs career 140 (+6%, 4 innings) |
+| Moderate | ±10-15% from baseline | 5-8 innings | 1.15-1.3 | Spinner eco 6.2 vs career 7.1 (-13%, 6 innings) |
+| Strong | ±15-25% from baseline | 8+ innings | 1.3-1.6 | Finisher death SR 180 vs career 155 (+16%, 8 innings) |
+| Extreme | ±25%+ or elite/poor mismatch | 8+ innings | 1.6-2.0 | Death bowler eco 11.2 vs career 8.1 (+38%, 10 innings) |
+
+**Direction rule:** LR > 1.0 favors the batting team in that phase. LR < 1.0 favors the bowling team. For the Forecasting Agent to use these correctly:
+- First innings: LR > 1 for batting team = positive update for team batting first
+- Second innings: LR > 1 for chasing team = negative update for team that batted first
+
+**Combining multiple signals within a phase:** If a phase has two strong signals pointing the same direction (e.g., elite opener + weak new-ball bowler), multiply the LRs: 1.3 × 1.2 = 1.56. If signals conflict (e.g., strong opener vs strong bowler), the LRs partially cancel: 1.3 × (1/1.25) ≈ 1.04.
+
+**Self-check:** If any single phase LR exceeds 2.0, scrutinize it. T20 cricket has enormous variance — even extreme mismatches rarely produce LRs above 2.0 for a single phase.
 </scenario_definitions>
 
 ---

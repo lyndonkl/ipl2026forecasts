@@ -115,9 +115,19 @@ Take the XI from the Team Research Agent output. For each player, note their rol
 
 Write each player's profile using the output schema below.
 
-### Step 5 — Flag Key Findings
+### Step 5 — Compile Scout Card (Quick Review for Kushal)
 
-After all profiles are complete, write a summary of the most important findings for the prediction step.
+After completing all individual player profiles, synthesize the **Scout Card** section and place it at the very top of the output (right after the main heading and metadata). This is a rapid-scan dashboard for Kushal:
+
+- **Red Flags table (3-4 rows max):** Extract players who show FORM DIP, INJURY RETURN, MATCHUP VULNERABILITY, or UNKNOWN FLOOR flags. Quantify the deviation (e.g., "±X%, N innings") and state which phase is affected.
+- **Green Lights table (3-4 rows max):** Extract players showing FORM SURGE or UNKNOWN CEILING flags. State their signal and current status (on/above baseline).
+- **The 1 Thing:** Identify the single highest-variance player tonight — the one who could move the probability most if they over- or under-perform. Include quantified evidence (recent form, domestic data, specific matchup).
+
+Include ONLY players who deviate from baseline. Ignore players performing as expected.
+
+### Step 6 — Flag Key Findings
+
+After all profiles and the Scout Card are complete, write the **Key Findings Summary** section as specified in the output schema. This is the detailed assessment for the prediction step.
 </execution_steps>
 
 ---
@@ -132,6 +142,27 @@ The output is a single file per match, containing profiles for all players acros
 
 **Date:** [Date] | **Venue:** [Venue, City]
 **Source XI:** [CONFIRMED / PROBABLE — from Team Research Agent output]
+
+---
+
+## Scout Card (Quick Review)
+
+This section is for Kushal's rapid scanning. Full detail follows below.
+
+### Red Flags (deviations down or unknowns — act on these)
+| Player | Team | Flag | What's Different | Phase Impact |
+|--------|------|------|-----------------|-------------|
+| [Name] | [Team] | [FLAG TYPE (Strength)] | [metric vs baseline, ±X%] | [which phase] |
+
+### Green Lights (confirming or exceeding expectations)
+| Player | Team | Signal | Status |
+|--------|------|--------|--------|
+| [Name] | [Team] | [FLAG TYPE] | [1 phrase — on baseline / above baseline] |
+
+### The 1 Thing
+If this game turns on one player, it's probably: **[Name]** — [1-2 sentences explaining why this player is the highest-variance factor tonight, with the quantified evidence].
+
+Maximum 3-4 rows per table. Only players who deviate from baseline appear. If a player is performing as expected with no surprises, they do NOT appear in the Scout Card.
 
 ---
 
@@ -183,9 +214,15 @@ The output is a single file per match, containing profiles for all players acros
 
 #### Scenario Flags
 
-These are specific observations that should feed into the prediction's scenario analysis:
+These are specific observations that feed into the Scenario Analysis Agent's likelihood ratio estimation. Each flag must be **quantified** — express the current form metric as a percentage deviation from career baseline, with sample size. This gives the downstream agent concrete evidence to estimate likelihood ratios rather than relying on categorical labels alone.
 
-- **[FLAG TYPE]:** [Description]
+**Format:** `- **[FLAG TYPE] ([Strength]):** [Player] — [Key metric] vs career baseline ([±X%, N innings]). [Phase relevance]. [1-sentence implication].`
+
+**Strength levels** (derived from deviation magnitude and sample size):
+- **Weak** — ±5-10% deviation OR sample < 5 innings
+- **Moderate** — ±10-15% deviation with 5-8 innings
+- **Strong** — ±15-25% deviation with 8+ innings
+- **Extreme** — ±25%+ deviation with 8+ innings
 
 Flag types:
 - `FORM SURGE` — Player significantly above career baseline in recent games. May regress or may indicate genuine improvement.
@@ -193,11 +230,22 @@ Flag types:
 - `INJURY RETURN` — Player recently returned from injury. Workload management likely. May not bowl full quota / may bat lower.
 - `NEW ROLE` — Player in a different batting position or bowling role than career norm. Adjustment risk.
 - `VENUE HISTORY` — Player has a notable record at this specific venue (good or bad).
-- `MATCHUP VULNERABILITY` — Player has a documented weakness against a bowling type present in the opposition. (Flag the type, let the Team Research Agent handle the specific matchup.)
-- `UNKNOWN CEILING` — Uncapped/new player with limited data but indicators of high ceiling (domestic record, franchise leagues). Could surprise.
-- `UNKNOWN FLOOR` — Uncapped/new player who may struggle at IPL level. Limited evidence of coping with top-level bowling.
-- `CAPTAINCY FACTOR` — Player captaining for first time or deputising. Added pressure or raised performance.
+- `MATCHUP VULNERABILITY` — Player has a documented weakness against a bowling type present in the opposition.
+- `UNKNOWN CEILING` — Uncapped/new player with limited data but indicators of high ceiling. Could surprise.
+- `UNKNOWN FLOOR` — Uncapped/new player who may struggle at IPL level.
+- `CAPTAINCY FACTOR` — Player captaining for first time or deputising.
 - `EMOTIONAL FACTOR` — Player facing former team, playing at home ground, milestone game, etc.
+
+<example>
+**Good (quantified — gives Scenario Analysis Agent a likelihood ratio anchor):**
+- **FORM SURGE (Strong):** Klaasen — Death SR 180 vs career 155 (+16%, 8 innings). Phase: Death overs finisher. If batting overs 18-20 with wickets in hand, significantly increases expected death-overs scoring.
+- **FORM DIP (Moderate):** Arshdeep — Death economy 11.2 vs career 8.1 (+38%, 6 innings). Phase: Death overs. Yorker execution has deteriorated; vulnerable to set batters in death.
+- **UNKNOWN CEILING (Moderate):** Connolly — BBL SR 162 (12 innings), zero IPL data. Phase: Late middle (overs 13-17). Domestic record suggests IPL-ready acceleration, but untested vs top-tier Indian spin.
+
+**Bad (unquantified — gives downstream agent nothing to work with):**
+- **FORM SURGE:** Klaasen — could do well at death.
+- **FORM DIP:** Arshdeep — might struggle.
+</example>
 
 ---
 
