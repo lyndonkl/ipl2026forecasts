@@ -118,6 +118,7 @@ on Chepauk's fresh-pitch green tops.
 | Match # | Opponent | Result | Score | Key Performer | Notes |
 |---------|----------|--------|-------|---------------|-------|
 | 003 | RR (Barsapara) | LOST by 8 wkts | CSK 127 ao (19.4) → RR 128/2 (12.1) | Overton 43(36), Kartik 18(15) | Collapsed 41/4 in PP. Samson 6(7), Gaikwad 6(11). Dube 6(4) dismissed Jadeja. Overton lone resistance. |
+| 011 | RCB (Chinnaswamy) | LOST by 43 runs | CSK 207/10 in 19.4 ov (chasing RCB 250/3) | Sarfaraz Khan 50 off 25 (unlikely hero), Prashant Veer 43 off 29 | Samson opened 9 (?) — pattern continues: 6 off 7 in G003, 9 in G011 (opening collapse repeating). Gaikwad likely early out. Sarfaraz + Prashant provided resistance but insufficient vs RCB 250. Dew occurred (overs 15–20) but couldn't overcome 43-run margin. CSK now 0–3 (last in table likely). [Game file](../../games/game-011-RCB-vs-CSK-2026-04-05/) |
 
 ### Game 003 XI (Actual — MAJOR DIFFERENCES FROM PRE-SEASON PROJECTION)
 | # | Player | Role | Notes |

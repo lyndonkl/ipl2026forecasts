@@ -3,6 +3,7 @@
 ### Game Files
 - [Game 001 vs RCB: Prediction](../../games/game-001-RCB-vs-SRH-2026-03-28/prediction.md) | [Outcome](../../games/game-001-RCB-vs-SRH-2026-03-28/outcome.md)
 - [Game 006 vs KKR: Prediction](../../games/game-006-KKR-vs-SRH-2026-04-02/prediction.md) | [Outcome](../../games/game-006-KKR-vs-SRH-2026-04-02/outcome.md)
+- [Game 010 vs LSG: Prediction](../../games/game-010-SRH-vs-LSG-2026-04-05/prediction.md) | [Outcome](../../games/game-010-SRH-vs-LSG-2026-04-05/outcome.md)
 
 ## Basic Info
 
@@ -159,4 +160,6 @@ clear at smaller grounds.
 
 | Match # | Opponent | Result | Score | Key Performer | Notes |
 |---------|----------|--------|-------|---------------|-------|
-| 1 (Game 001) | RCB | Lost by 6 wkts | 201/9 in 20 ov | Kishan 80(38), Verma 43(18), Harshal - | Collapsed 29/3 in PP. Kishan captain's knock rescued to 201. Cummins absent. [Game file](../../games/game-001-RCB-vs-SRH-2026-03-28/) |
+| 1 (Game 001) | RCB | Lost by 6 wkts | 201/9 in 20 ov | Kishan 80(38), Verma 43(18) | Collapsed 29/3 in PP. Kishan captain's knock rescued to 201. Cummins absent. [Game file](../../games/game-001-RCB-vs-SRH-2026-03-28/) |
+| 3 (Game 006) | KKR | Won by 68 runs | 226/8 in 20 ov | Head 46, Abhishek 48, Klaasen 52 | Dominant opening partnership + finishing. KKR weak bowling. Par-exceeding total. [Game file](../../games/game-006-KKR-vs-SRH-2026-04-02/) |
+| 5 (Game 010) | LSG | Lost by 5 wkts | 156/9 in 20 ov | Klaasen 62, Nitish 56 | Catastrophic PP collapse: 26/3 in 3.3 ov. Shami 2/9 MOTM (elite seam execution). Head 7, Abhishek 0. Strong middle-order recovery (Klaasen + Nitish 118 runs) insufficient to overcome -24 run deficit. Form surge stalled. [Game file](../../games/game-010-SRH-vs-LSG-2026-04-05/) | |

@@ -116,3 +116,4 @@ to be dangerous.
 | Match # | Opponent | Result | Score | Key Performer | Notes |
 |---------|----------|--------|-------|---------------|-------|
 | [004](../../games/game-004-PBKS-vs-GT-2026-03-31/outcome.md) | PBKS | **L** (3 wkts) | 162/6 (bat first after losing toss) | Gill 39(27), Prasidh 3/29 | Holder NOT selected — Rabada played instead. Rashid eco 7.25 (better than 2025 avg 9.30). Overseas 4: Buttler, Rashid, Phillips, Rabada |
+| [009](../../games/game-009-GT-vs-RR-2026-04-04/outcome.md) | RR | **L** (6 runs) | 204/8 (chase 211 target) | Sudharsan 73(44), Rashid caught | **XI CHANGE:** Gill absent (muscle spasm). Kumar Kushagra (21) debut. Sudharsan 73 off 44 showed strong recovery post-Game 004 (13 off 22). Rashid caught Archer final ball. Bishnoi 4/41 (game-winner). |

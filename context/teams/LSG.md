@@ -1,5 +1,9 @@
 # Lucknow Super Giants (LSG) — IPL 2026
 
+### Game Files
+- [Game 005 vs DC: Prediction](../../games/game-005-LSG-vs-DC-2026-04-01/prediction.md) | [Outcome](../../games/game-005-LSG-vs-DC-2026-04-01/outcome.md)
+- [Game 010 vs SRH: Prediction](../../games/game-010-SRH-vs-LSG-2026-04-05/prediction.md) | [Outcome](../../games/game-010-SRH-vs-LSG-2026-04-05/outcome.md)
+
 ## Basic Info
 
 - **Captain:** Rishabh Pant

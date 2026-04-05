@@ -17,6 +17,10 @@ Tracks all actual contract purchases, P&L, and running totals.
 | 004 | 2026-03-31 | GT Yes | $0.51 | 3 | $1.53 | ~$0.06 | ~$1.59 | 55% | ~4¢/contract | LOST | $0.00 | -$1.59 |
 | 006 | 2026-04-02 | KKR Yes | $0.52 | 1 | $0.52 | $0.02 | $0.54 | 57.5% | ~3.5¢/contract (thin edge) | LOST | $0.00 | -$0.54 |
 | 007 | 2026-04-03 | PBKS Yes | $0.54 | ~7 | ~$3.78 | ~$0.14 | ~$3.92 | 62% | ~6-8¢/contract (solid edge) | WON | $7.00 | +$3.08 |
+| 008 | 2026-04-04 | DC Yes | $0.80 | 1 | $0.80 | $0.02 | $0.82 | 42% | ~4¢/contract | WON | $1.00 | +$0.20 |
+| 009 | 2026-04-04 | GT Yes | $0.50 | 2 | $1.00 | $0.04 | $1.04 | 56% | ~6¢/contract | LOST | $0.00 | -$1.04 |
+| 010 | 2026-04-05 | LSG Yes | $0.42 | 1 | $0.42 | $0.02 | $0.44 | 49% | ~5¢/contract | WON | $1.00 | +$0.58 |
+| 011 | 2026-04-05 | PASS | — | — | — | — | — | RCB 60% / CSK 40% | No edge (market aligned ~60%) | N/A | — | $0.00 |
 
 ## Running P&L
 
@@ -29,6 +33,10 @@ Tracks all actual contract purchases, P&L, and running totals.
 | 005 | ~$4.93 | $4.00 | -$0.93 | -18.9% |
 | 006 | ~$5.47 | $4.00 | -$1.47 | -26.9% |
 | 007 | ~$9.39 | $11.00 | +$1.61 | +17.1% |
+| 008 | ~$10.19 | $12.00 | +$1.81 | +17.8% |
+| 009 | ~$11.23 | $12.00 | +$0.77 | +6.9% |
+| 010 | $11.65 | $13.00 | +$1.35 | +11.6% |
+| 011 | $11.65 | $13.00 | +$1.35 | +11.6% |
 
 ## Game 005 Note
 
@@ -72,3 +80,13 @@ Tracks all actual contract purchases, P&L, and running totals.
   Need to discount edge when it depends on unconfirmed XI. Consider: wait for XI before trading?
 - Pattern: 3-contract bets on wrong side are devastating. Two losses at 3 contracts = -$2.62 total.
   Two wins at 1+3 contracts = +$1.69. Asymmetric downside when sizing up on wrong thesis.
+
+## Game 008 Note
+
+- **Game 008:** Bought 1 contract DC Yes at 80¢ (vs market implied 38%, our model 42%). Model expected upside vs public pricing. Result: DC WON. Payout $1.00, profit +$0.20. Thin edge executed (42% is near-breakeven).
+
+## Game 009 Note
+
+- **Game 009:** Bought 2 contracts GT Yes at 50¢. Model at 56% GT vs market 50/50. Edge +6¢/contract base rate. Thesis: GT H2H dominance (6-2 all-time), decent bowling (Prasidh surging), home advantage. Market underweight H2H factor. Confidence: Medium (thin form samples, toss not yet decided). Quarterly Kelly: 2.1% of bankroll.
+- **Toss:** RR won toss, elected to bat first. XI alert: Shubman Gill absent (muscle spasm), Kumar Kushagra (21yo) replacement.
+- **Result:** RR WON by 6 runs. GT lost. 2 contracts × $0 payout = $0. Cost+fee ~$1.04. P&L: -$1.04. **Thesis failed due to XI change.** Edge calculation was sound ex-ante (56% vs 50% = +6pp) but hinged on Gill's participation. Post-toss, Gill's absence should have prompted trade cancellation or size reduction. Lesson: finalize trades only AFTER confirmed XI, not before toss.

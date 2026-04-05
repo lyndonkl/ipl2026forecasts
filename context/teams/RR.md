@@ -127,6 +127,7 @@ lower prediction confidence for RR matches there.
 | Match # | Opponent | Result | Score | Key Performer | Notes |
 |---------|----------|--------|-------|---------------|-------|
 | 003 | CSK (Barsapara) | WON by 8 wkts | CSK 127 ao → RR 128/2 (12.1 ov) | Suryavanshi 52*(17), Jadeja 2/18, Burger 2/26, Archer 2/19 | Dominant. CSK collapsed 41/4 in PP. Chase done in 12.1 overs. Burger MOTM on IPL debut. Jadeja devastating vs old team. |
+| 009 | GT (Ahmedabad, Narendra Modi) | WON by 6 runs | RR 210/6 → GT 204/8 | Jurel 75(42), Bishnoi 4/41, Deshpande heroics (defended 11 overs 20) | Thriller. Jurel's 75 off 42 (5 fours, 5 sixes) was match-winner, pushing RR above par. Jaiswal 55 off 36 solid, Suryavanshi 31 continued aggression. Bishnoi 4/41 (MOTM) broke GT's back. Deshpande final-over defense + Archer spectacular catch (Rashid Khan) sealed it. |
 
 ### Game 003 XI (Actual)
 | # | Player | Role |

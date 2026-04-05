@@ -111,3 +111,4 @@ will be tested in defence.
 | Match # | Opponent | Result | Score | Key Performer | Notes |
 |---------|----------|--------|-------|---------------|-------|
 | 1 (Game 001) | SRH | Won by 6 wkts | 203/4 in 15.4 ov (chasing 202) | Kohli 69*(38), Padikkal 61(26), Duffy 3/22 | Tournament opener. Chased comfortably. Duffy MOTM on debut. [Game file](../../games/game-001-RCB-vs-SRH-2026-03-28/) |
+| 011 (Game 011) | CSK | Won by 43 runs | 250/3 in 20 ov (batting first, defending) | Tim David 70* off 25 (8 sixes), Patidar 48 off 14, Padikkal 50 off 29 | Chinnaswamy dominance. Explosive batting: Salt 46 (PP), Kohli 28 (underperformed), Padikkal 50 (EM), Patidar 48 off 14 (slog), David 70 off 25 (death). CSK chase fell 43 runs short. Bhuvneshwar 3 wkts (death bowling elite). RCB now 2–0. [Game file](../../games/game-011-RCB-vs-CSK-2026-04-05/) |

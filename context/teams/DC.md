@@ -99,4 +99,5 @@ Delhi heat affects workload management for Starc.
 
 | Match # | Opponent | Result | Score | Key Performer | Notes |
 |---------|----------|--------|-------|---------------|-------|
-| | | | | | |
+| 005 | LSG | W (6 wkts) | 145/4 (17.1 ov) chasing 142 | Sameer Rizvi 70* | DC recovered from 26/4 collapse. Rizvi unproven but delivered. |
+| 008 | MI | W (6 wkts) | 164/4 (18.1 ov) chasing 163 | Sameer Rizvi 90* (MOTM) | Second consecutive chase win. Rizvi 176.47 SR (90 off 51), 7 fours + 7 sixes. Pattern emerging: Rizvi as reliable finisher. KL dismissed early (vulnerable to elite pace). Nissanka 44 stabilizing. |

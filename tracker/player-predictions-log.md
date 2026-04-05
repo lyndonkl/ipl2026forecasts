@@ -54,3 +54,32 @@
 | 006 | Varun Chakravarthy | Top wicket-taker KKR | 1–3 wkts, eco 6.5–8.5 | Likely poor (SRH scored 226) | UNCLEAR |
 | 006 | Harshal Patel | Top wicket-taker SRH | 1–3 wkts, eco 7.5–9.0 | Likely effective (KKR collapsed) | LIKELY YES |
 | 006 | Klaasen vs Arora/Muzarabani | Key matchup | Klaasen wins 65% | Klaasen 52 — won decisively | YES (prediction direction correct but we bet wrong side) |
+| 009 | Shubman Gill | Top scorer GT | 35–60 runs, SR 135–155 | Gill absent (muscle spasm); Kushagra debut | VOID — XI change |
+| 009 | Yashasvi Jaiswal | Top scorer RR | 35–65 runs, SR 150–170 | 55 off 36, SR 152.8 | YES — in range |
+| 009 | Sai Sudharsan | Top scorer GT (actual) | Not predicted (Gill expected) | 73 off 44, SR 165.9 | N/A — not predicted; exceeded expected range |
+| 009 | Dhruv Jurel | Top scorer RR (actual) | Not predicted (expected 40–50 support) | 75 off 42, SR 178.6 — MOTM-level performance | N/A — not predicted; exceeded expected range |
+| 009 | Prasidh Krishna | Top wickets GT | 2–3 wkts, eco 7.0–8.5 | 1 wkt (Parag), eco unknown | PARTIAL — took wicket, likely in range |
+| 009 | Jofra Archer | Top wickets RR | 1–3 wkts, eco 7.0–8.5 | Not top wicket-taker; Bishnoi 4/41 was MOTM | NO — wrong player |
+| 009 | Ravi Bishnoi | Top wickets RR (actual) | Not predicted as top (secondary role expected) | 4/41 MOTM, eco 10.25 | N/A — not predicted; dominant ceiling realised |
+| 009 | Gill vs Archer | Key matchup | Gill vs Archer, bowler slight edge | Gill absent; matchup void | VOID — XI change |
+| 010 | Travis Head | Top scorer SRH | 30–55 runs, SR 140–165 | 7 off 8, SR 87.5 | NO — form surge collapsed vs elite seam |
+| 010 | Abhishek Sharma | Powerplay aggression SRH | SR 180+ in overs 1–3 | Out for 0 off 2, SR 0 | NO — dismissed immediately |
+| 010 | Heinrich Klaasen | Top scorer SRH | 45–65 runs, SR 150–170 | 62 off 41, SR 151.2 | YES — in range, death finisher delivered |
+| 010 | Nitish Kumar Reddy | Middle-order acceleration SRH | 35–55 runs, SR 140–160 | 56 off 33, SR 169.7 | YES — exceeded range, dominant |
+| 010 | SRH | Powerplay score (Bullish expected) | 50–60 | 26/3 | NO — catastrophic collapse |
+| 010 | SRH | First innings total | 170–180 (par estimate) | 156/9 | NO — 14–24 below par due to PP collapse |
+| 010 | Rishabh Pant | Top scorer LSG | 30–50 runs, SR 130–150 (form dip concern) | 68* off 50, SR 136.0 | YES — exceeded range, form dip was mirage |
+| 010 | Aiden Markram | LSG opening aggression | 25–40 runs, SR 155–175 | 45 off 27, SR 166.7 | YES — top of expected range |
+| 010 | Mohammed Shami | Top wickets LSG (bowling) | 1–2 wkts, economy 7.5–8.0 | 2/9 in 4 overs, economy 2.25, MOTM | NO — exceeded range massively; elite execution |
+| 010 | SRH | Death bowling (Harshal) | 2–3 runs per over in overs 16–20 | LSG finished 160/5 in 19.5 ov; Harshal efficient but LSG didn't need death aggression | PARTIAL — bowling was effective but game ended early |
+| 010 | Pant vs SRH Bowling | Key matchup | Pant dominates SRH seam, scores 40+ | Pant 68* — dominant, unbeaten | YES — match-winner |
+| 010 | Head vs Shami | Key matchup | Head vs elite seam, SR 120–140 | Head 7 off 8, eliminated early | NO — Shami won decisively |
+| 011 | Phil Salt | Powerplay aggression | 35–55 runs, SR 150–180 | 46 off 30, SR 153.3 | YES — explosive opening |
+| 011 | Virat Kohli | RCB home form | 40–65 runs, SR 145–180 | 28 | NO — below floor, underperformed |
+| 011 | Devdutt Padikkal | EM surge | 40–60 runs, SR 140–170 | 50 off 29, SR 172.4 | YES — solid execution |
+| 011 | Rajat Patidar | Slog role aggression | 25–45 runs, SR 130–160 | 48 off 14, SR 342.8 | PARTIAL — exceeded range, SR massive |
+| 011 | Tim David | Finisher | 40–65 runs, SR 160–200 | 70 off 25, SR 280.0 | YES — exceeded range, dominant |
+| 011 | Sanju Samson | Opening role | 30–50 runs, SR 135–165 | 9 | NO — repeated failure pattern |
+| 011 | Bhuvneshwar Kumar | Death bowling | 1–2 wkts, eco 8.5–10.0 | 3 wkts | YES — exceeded range, elite |
+| 011 | RCB | First innings total | 185–210 runs | 250/3 | NO — +40 above ceiling |
+| 011 | CSK | Second innings total | 180–210 runs | 207/10 | NEAR MISS — near par, insufficient |

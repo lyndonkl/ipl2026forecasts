@@ -114,3 +114,4 @@ exposed at Wankhede than at Chepauk or Eden Gardens.
 | Match # | Opponent | Result | Score | Key Performer | Notes |
 |---------|----------|--------|-------|---------------|-------|
 | 1 (Game 002) | KKR | Won by 6 wkts | 224/4 in 19.1 ov (chasing 221) | Rickelton 81(43), Rohit 78(38), Shardul 3/39 | Broke 12-year opening-game jinx. De Kock absent (fitness). SKY impact sub. [Game file](../../games/game-002-MI-vs-KKR-2026-03-29/) |
+| 2 (Game 008) | DC | Lost by 6 wkts | 162/6 (20 ov) batting first | Suryakumar 51, Rohit 35, Naman Dhir 28 | MI underperformed at bat (162 vs par 175-185 at Arun Jaitley). Rohit's "SURGE form" from Game 002 did not manifest (35 vs expected 50-70). Bumrah + Boult could not defend on flat track. DC chased easily with 11 balls spare. |
