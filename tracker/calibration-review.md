@@ -6,7 +6,141 @@
 
 ---
 
-## 7-Game Review (Games 1-7) — RECOVERY PHASE
+## 12-Game Calibration Review (Games 1-12) — COMPLETED April 6, 2026
+
+**Trigger:** YELLOW FLAG. 5-game rolling Brier (Games 008-012) = 0.2675, exceeding 0.25 threshold.
+**Review status:** COMPLETED. Kushal has independently updated methodology before Game 012. Decision: wait and observe new methodology's impact over next 5-10 games before making further structural changes. Score range widening acknowledged as needed but DEFERRED.
+
+---
+
+### Brier Score Analysis (All 12 Games + 5-Game Rolling)
+
+| Game | Prediction | Result | Brier | Confidence | 5-game rolling |
+|------|-----------|--------|-------|------------|-----------------|
+| 001 | RCB 63% / SRH 37% | RCB won | 0.1369 | Medium | — |
+| 002 | MI 63% / KKR 37% | MI won | 0.1369 | Medium | — |
+| 003 | RR 55% / CSK 45% | RR won | 0.2025 | Medium | — |
+| 004 | GT 55% / PBKS 45% | PBKS won | 0.3025 | Medium | — |
+| 005 | LSG 50% / DC 50% | DC won | 0.25 | Medium | 0.2157 (avg G1-5) |
+| 006 | KKR 57.5% / SRH 42.5% | SRH won | 0.3306 | Medium | 0.2266 (avg G2-6) |
+| 007 | CSK 38% / PBKS 62% | PBKS won | 0.1444 | Medium | 0.2148 (avg G3-7) |
+| 008 | MI 58% / DC 42% | DC won | 0.3364 | Medium | 0.2319 (avg G4-8) |
+| 009 | GT 56% / RR 44% | RR won | 0.3136 | Medium | 0.2294 (avg G5-9) |
+| 010 | SRH 51% / LSG 49% | LSG won | 0.2601 | Medium | 0.2386 (avg G6-10) |
+| 011 | RCB 60% / CSK 40% | RCB won | 0.16 | Medium | 0.2357 (avg G7-11) |
+| 012 | PBKS 57.7% / KKR 42.3% | ABANDONED | N/A | Medium | **0.2675** (avg G8-12, excluding N/A) |
+| **All-game avg (1-11, scored)** | — | — | **0.2357** | — | — |
+
+---
+
+### Finding 1: Confidence Band Analysis — The 55-60% Band Is Broken
+
+| Band | Games | Record | Actual Win Rate | Expected |
+|------|-------|--------|-----------------|----------|
+| 50-55% | 003, 005, 010 | 1/3 | 33% | ~52% |
+| 55-60% | 004, 006, 008, 009 | **0/4** | **0%** | ~57% |
+| 60-65% | 001, 002, 007, 011 | 4/4 | 100% | ~62% |
+
+The 55-60% band is the disaster zone. Every time we've called a team a moderate favorite in this range, they've lost. Games 006 (Brier 0.33), 008 (0.34), and 009 (0.31) are the three worst Brier scores in the entire log. When we're confident (60%+), we're 4/4. When we're in the "slight favorite" range, we're picking the wrong team every time.
+
+---
+
+### Finding 2: Favorite-Underdog Reversal in 55-60% Band
+
+In 3 of 4 losses (Games 004, 006, 009), we diverged from the market TOWARD the eventual loser:
+
+| Game | Our prob for loser | Market prob for loser | Divergence |
+|------|---|---|---|
+| 004 | GT 55% | GT ~50.5% | +4.5pp toward loser |
+| 006 | KKR 57.5% | KKR ~52% | +5.5pp toward loser |
+| 009 | GT 56% | GT 50% | +6pp toward loser |
+| 008 | MI 58% | MI 62% | -4pp (less confident, both wrong) |
+
+This is not classic longshot bias — it's a pattern of elevating teams to "slight favorite" status on fragile theses that don't hold. In each case, the thesis depended on a specific factor that collapsed (Holder availability in G004, home advantage overstated in G006, H2H record + Gill in G009).
+
+---
+
+### Finding 3: Fragile Thesis Pattern
+
+Root cause analysis of the 55-60% misses:
+
+- **Game 004 (GT 55%):** Thesis was GT death-overs advantage via Holder. Holder didn't play. Thesis collapsed entirely.
+- **Game 006 (KKR 57.5%):** Thesis was KKR home advantage at Eden Gardens. SRH won by 68 runs — a blowout. Home advantage overstated.
+- **Game 008 (MI 58%):** Thesis was MI quality. DC won by 6 wickets. Market had MI even higher (62%), so market-wide miss — less attributable to our process.
+- **Game 009 (GT 56%):** Thesis was GT H2H dominance (6-2 record). Gill was absent. RR won by 6 runs.
+
+Common thread: when a 55-60% case is built on one fragile pillar (a player, a historical stat, a venue assumption), it breaks. Only Game 008 was a market-wide miss rather than a thesis-specific failure.
+
+---
+
+### Finding 4: Score Range Calibration
+
+Score ranges (powerplay, innings totals) are systematically too narrow across all 12 games:
+
+- Game 002: Predicted KKR 165-185, actual 220 (+35 above)
+- Game 003: Predicted 175-190, actual 127 (-48 below)
+- Game 010: Predicted SRH powerplay 50-60, actual 26/3
+- Game 011: Predicted RCB 185-210, actual 250 (+40 above)
+
+Ranges are typically ~20-25 runs wide for innings totals. T20 variance regularly produces outcomes 30-50 runs outside. Minimum range width should be ~40 runs for innings totals and ~20 runs for powerplay.
+
+**Status:** Kushal acknowledges this issue. Fix DEFERRED — will update agent instructions (scenario-analysis-agent.md, team-research-agent.md) at a later date.
+
+---
+
+### Finding 5: Player Prediction Accuracy
+
+Top scorer predictions: ~35% accuracy across 12 games. Powerplay ranges: frequently exceeded or missed by wide margins. The player predictions log shows we name the wrong player more often than not, and our phase-level ranges are too tight for T20 variance. These flow from Finding 4 (narrow ranges) and are expected to improve if ranges widen.
+
+---
+
+### Finding 6: Behavioral Pitfalls Audit
+
+Reviewing the 3 mandatory questions from behavioral-pitfalls.md across our misses:
+
+- **Desirability bias:** Game 006 — KKR "home team bouncing back" narrative may have inflated our estimate. Game 009 — GT H2H dominance was a satisfying narrative.
+- **Anchoring to single data point:** Game 009 anchored to GT's 6-2 H2H despite current season form being poor. Game 004 anchored to Holder's 2025 death stats.
+- **Over-updating on salient news:** Game 004 — Holder's death-overs reputation was weighted as near-certain when he wasn't even confirmed to play.
+
+---
+
+### Finding 7: Kalshi Trading Performance
+
+Despite calibration issues, P&L is positive: +$1.35 on $11.65 invested (+11.6% ROI). This is fragile — concentrated in one outsized win (Game 007: PBKS, 7 contracts, +$3.08). PASS decisions on Games 005, 011, 012 protected capital. The fee awareness from Game 012 (2¢ per contract erodes thin edges) is now embedded in the process.
+
+---
+
+### Proposed Changes (6 items)
+
+1. **55-60% band: treat as low conviction.** When model produces 55-60%, explicitly ask: "Is this thesis dependent on a single fragile factor?" If yes, compress toward 50%. **STATUS: DEFERRED — Kushal changed methodology pre-Game 012; observing impact first.**
+
+2. **Don't trade 55-60% band unless edge > 5pp after fees.** Our 0/4 record here means no demonstrated ability to pick winners in tight games. **STATUS: DEFERRED — same reason.**
+
+3. **Wait for confirmed XI before finalizing trades.** Games 004 and 009 failed due to key player absences. **STATUS: Already adopted from prior reviews.**
+
+4. **Widen score ranges by 15-20%.** Minimum ~40 runs for innings totals, ~20 runs for powerplay. **STATUS: ACKNOWLEDGED by Kushal. Implementation DEFERRED to future agent file update.**
+
+5. **H2H weighting cap at ±2pp.** Game 009 leaned heavily on GT's 6-2 record. Historical H2H with different squads is weak evidence. **STATUS: DEFERRED.**
+
+6. **Continue 5-game rolling checkpoint.** Next window: Games 009-013 or 010-014. If rolling Brier stays above 0.25, escalate to full methodology review. **STATUS: ACTIVE.**
+
+---
+
+### Kushal's Decision (April 6, 2026)
+
+Kushal independently updated methodology before Game 012. Decision is to **wait and observe** how the new methodology performs over the next 5-10 games before implementing further structural changes. The score range narrowness is acknowledged as a real issue and will be addressed in a future update to agent instruction files.
+
+---
+
+### Next Review Trigger
+
+- **5-game rolling Brier > 0.25** — currently 0.2675, ACTIVE. Will re-evaluate after Games 013-014.
+- **Game 020 complete** — next formal scheduled review (every 10 games; 12-game review was early trigger).
+- **Two consecutive games > 0.30 Brier** — not currently triggered (last >0.30 was Game 009).
+
+---
+
+## 7-Game Review (Games 1-7) — RECOVERY PHASE [ARCHIVED]
 
 **Status:** Yellow flag from Game 006 has been PARTIALLY RECOVERED by Game 007 excellence. Last 5-game rolling average now 0.2148 (below 0.25 threshold again). No immediate calibration review needed, but continue monitoring.
 

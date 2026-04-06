@@ -634,6 +634,67 @@ When RCB bats first at Chinnaswamy:
 
 ---
 
+## Game 012 — KKR vs PBKS (April 6, 2026) [ABANDONED]
+
+**Prediction:** PBKS 57.7% / KKR 42.3% | **Result:** ABANDONED (rain after 3.4 overs, KKR 25/2)
+**Brier score:** N/A (no winner to evaluate against) | **Kalshi trade:** PASS (no trade)
+
+### What I Noticed Live
+
+**Did not watch live.** Post-match analysis:
+- Match disrupted after 3.4 overs due to rain/wet outfield at Eden Gardens
+- KKR first innings: 25/2 (Rahane 8*, Raghuvanshi 7*) when play stopped
+- Xavier Bartlett took early wickets: Finn Allen (0 off 2), Cameron Green (3 off 4) — impressive powerplay bowling
+- Toss: Rahane won and **elected to BAT FIRST** (against our predicted convention)
+
+### My Strongest Pre-Match Belief
+
+**Toss winner will bowl first** — Based on conditions report predicting "Heavy dew from overs 12-13" + historical Eden Gardens dew convention. I expected the toss winner to prioritize batting in drier conditions and avoid chasing in heavy dew.
+
+**This belief was WRONG.** Rahane batted first despite the dew risk.
+
+### What Surprised Me
+
+**Toss decision divergence:** Our conditions report assumed "Toss winner likely to bowl first (to avoid chasing in heavy dew)." Rahane chose to bat first. This is the opposite of our assumption.
+
+**Possible explanations:**
+1. **KKR's bowling weakness (0-2 record, Harshit Rana out, Varun form dip) motivated aggressive batting.** If you can't defend, control the game by batting first.
+2. **Captain-specific preference:** Rahane may have personal preference for batting first, independent of venue norms.
+3. **Weather forecast news:** Perhaps Rahane's team received updated rain forecasts suggesting rain **during the match** (which materialized), making batting first a defensive choice to maximize completed overs.
+
+**Abandonment itself:** Rain arrived around overs 3-4 (~7:45-8:00 PM), much earlier than our predicted dew onset (overs 12-13). This suggests **wet-weather disruption, not dew-onset**, invalidating the entire prediction model.
+
+**PASS decision vindicated:** Our decision to PASS (edge thin after fees) proved correct because the match did not complete. If we had traded and the match abandoned, we'd have ~0 P&L (typically returns half the stake on abandonment, breaking even after fees). Avoiding the trade eliminated variance risk.
+
+### One Thing I'd Weight Differently Next Time
+
+**Toss assumptions should be team-specific, not venue-wide.**
+
+Current approach: "At this venue, dew is heavy, so toss winner bowls first."
+**Better approach:** "Does this specific captain prefer batting or bowling first at this venue, given their team's strengths/weaknesses?"
+
+- **KKR (weak bowling, strong batting):** Prefer batting first to control early overs and set target
+- **PBKS (balanced attack, all-round depth):** More flexible; might bowl first if confidence in bowling
+- **Venue convention (Eden Gardens dew) overridden by team urgency (KKR 0-2 record)**
+
+**Action:** For future KKR games, anchor toss preference on "KKR wants to bat first to build confidence after 0-2 start" rather than "venue dew convention says bowl first."
+
+### Bias I Caught in Myself
+
+**Institutional thinking:** Applied the "Eden Gardens dew convention" (bowl first) uniformly across all captains, without modeling captain-specific toss behavior.
+
+This is lazy pattern-matching. Cricket captains are individuals with preferences + team situations. Assuming institutional norms without individual context led to a wrong prediction.
+
+**Lesson:** For toss modeling, separate (a) venue convention, (b) team strength differential, and (c) captain's personal history. Weight them explicitly before locking.
+
+### Question I Want to Explore
+
+1. **Is there a quantifiable relationship between team record and toss choice?** Do 0-2 teams bat first more often than 2-0 teams? (Hypothesis: losing teams try to seize initiative; winning teams play conservative.)
+2. **How much does rain-probability affect toss choice?** If rain is forecasted during the match, do captains bat first to maximize completed overs? (This may have been Rahane's reasoning in Game 012.)
+3. **Abandonment frequency in IPL 2026:** April is rain season in Kolkata. Should we be modeling 2-3% abandonment risk for Eden Gardens matches? This would naturally suggest PASS on thin-edge games at this venue in April.
+
+---
+
 ## Skill Development Milestones
 
 Track specific forecasting skills as they develop:

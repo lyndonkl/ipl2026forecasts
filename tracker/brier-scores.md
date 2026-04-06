@@ -18,3 +18,4 @@
 | 009 | GT vs RR | 0.3136 | Medium | 0.2294 |
 | 010 | SRH vs LSG | 0.2601 | Medium | 0.2386 |
 | 011 | RCB vs CSK | 0.16 | Medium | 0.2357 |
+| 012 | KKR vs PBKS | N/A (ABANDONED) | Medium | 0.2357 (unchanged) |

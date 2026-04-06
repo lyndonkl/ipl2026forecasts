@@ -1,6 +1,6 @@
 # IPL 2026 Season Overview
 
-**Last updated:** 2026-04-05 (after Game 011)
+**Last updated:** 2026-04-06 (after Game 012)
 
 ---
 
@@ -25,20 +25,20 @@
 
 ---
 
-## Points Table (After Game 011)
+## Points Table (After Game 012)
 
 | Pos | Team | P | W | L | NR | Pts |
 |-----|------|---|---|---|----|----|
-| 1 | PBKS | 2 | 2 | 0 | 0 | 4 |
-| 1 | DC | 2 | 2 | 0 | 0 | 4 |
-| 3 | RR | 2 | 2 | 0 | 0 | 4 |
-| 4 | RCB | 2 | 2 | 0 | 0 | 4 |
+| 1 | PBKS | 3 | 2 | 0 | 1 | 5 |
+| 2 | DC | 2 | 2 | 0 | 0 | 4 |
+| 2 | RR | 2 | 2 | 0 | 0 | 4 |
+| 2 | RCB | 2 | 2 | 0 | 0 | 4 |
 | 5 | LSG | 2 | 1 | 1 | 0 | 2 |
 | 5 | MI | 2 | 1 | 1 | 0 | 2 |
 | 7 | SRH | 3 | 1 | 2 | 0 | 2 |
 | 8 | CSK | 2 | 0 | 2 | 0 | 0 |
 | 8 | GT | 2 | 0 | 2 | 0 | 0 |
-| 10 | KKR | 2 | 0 | 2 | 0 | 0 |
+| 10 | KKR | 3 | 0 | 2 | 1 | 1 |
 
 **Notes:**
 - PBKS and DC both 2W-0L, co-leading with 4 points each.
@@ -46,7 +46,7 @@
 - **NEW:** RCB climbed to 2W-0L (4 points) after dominating CSK at home. Tim David 70* off 25 (8 sixes), Patidar 48 off 14. CSK 207/10 fell 43 short. RCB now joint leaders.
 - LSG 1W-1L. SRH 1W-2L (Game 010 loss vs Shami 2/9). MI 1W-1L.
 - CSK now 0–2 (last place) after losses to RR (Game 003) and RCB (Game 011). Opening collapse pattern continues.
-- KKR still 0W-2L; bowling crisis persists.
+- **Game 012 (Apr 6):** KKR vs PBKS ABANDONED (rain after 3.4 ov, 25/2 KKR). Both teams share 1 point. PBKS now 2W-0L-1NR (5 points, co-leaders). KKR 0W-2L-1NR (1 point, 10th place). Rahane won toss, chose to BAT FIRST (unusual decision vs dew convention). Bartlett took early wickets (Allen 0, Green 3). Rain disrupted around 7:45-8:00 PM.
 
 ---
 

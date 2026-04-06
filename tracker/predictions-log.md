@@ -17,3 +17,4 @@
 | 009 | GT vs RR | 2026-04-04 | GT 56% / RR 44% | RR 50¢ / GT 50¢ (Kalshi) | RR (by 6 runs) | NO | 0.3136 | Medium |
 | 010 | SRH vs LSG | 2026-04-05 | SRH 51% / LSG 49% | SRH 58¢ / LSG 42¢ (est bookmaker consensus) | LSG (by 5 wkts) | NO | 0.2601 | Medium |
 | 011 | RCB vs CSK | 2026-04-05 | RCB 60% / CSK 40% | RCB ~60% (est bookmaker consensus) | RCB (by 43 runs) | YES | 0.16 | Medium |
+| 012 | KKR vs PBKS | 2026-04-06 | PBKS 57.7% / KKR 42.3% | PBKS 55¢ / KKR 45¢ (Kalshi) | ABANDONED | — | — | Medium |

@@ -56,9 +56,10 @@
 
 | Match # | Date | Teams | 1st Inn | 2nd Inn | Result | Key Performers | Pitch Notes |
 |---------|------|-------|---------|---------|--------|---------------|-------------|
-| 006 | Apr 2 | KKR vs SRH | — | — | — | — | Pre-match: Balanced to batting-dominant, par 170-180, heavy dew expected from overs 12-13 |
+| 006 | Apr 2 | KKR vs SRH | SRH 226/8 | KKR 159/8 | SRH +68 runs | SRH dominated batting; KKR collapsed in chase (dew impact) | Confirmed batting-dominant. Dew from overs 12-13 reduced spin effectiveness. Par 170-180 accurate. |
+| 012 | Apr 6 | KKR vs PBKS | KKR 25/2 (3.4 ov) | — | ABANDONED | Bartlett 2/9 (Allen, Green); Rahane 8*, Raghuvanshi 7* | Rain disrupted match after 3.4 overs. Toss: Rahane chose to BAT FIRST (unusual vs dew convention). Rain arrived ~7:45-8:00 PM (earlier than 12-13 overs expected). Both teams share 1 point. |
 
-*To be updated after match completion.*
+*Updated after Game 012 completion (abandonment).*
 
 ### Last 5 IPL Games at Eden Gardens (pre-2026)
 
@@ -68,8 +69,8 @@
 | IPL 2025 | KKR vs various | ~165-185 | Mixed | Mixed | Typical Eden Gardens scores |
 
 ### Running Venue Stats (IPL 2026)
-- Games played: 0 (Game 006 pending)
-- Average 1st innings: —
-- Average 2nd innings: —
-- Bat first wins: — | Chase wins: —
-- Toss → field: —
+- Games played: 2 (Game 006 completed, Game 012 abandoned)
+- Average 1st innings: SRH 226/8, KKR 25/2 (incomplete)
+- Average 2nd innings: KKR 159/8 (Game 006), no second innings Game 012
+- Bat first wins: 1 (SRH Game 006) | Chase wins: 0 (KKR failed Game 006)
+- Toss → field: Game 006 (KKR won, chose to bowl), Game 012 (Rahane won, chose to bat) — see notes above

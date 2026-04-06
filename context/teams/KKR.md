@@ -148,3 +148,5 @@ running. Low-scoring spin battles where Varun is match-winning.
 | Match # | Opponent | Result | Score | Key Performer | Notes |
 |---------|----------|--------|-------|---------------|-------|
 | 1 (Game 002) | MI | Lost by 6 wkts | 220/4 in 20 ov | Rahane 67(40), Raghuvanshi 51(29), Rinku 33*(21) | Batting strong (220) but bowling crisis confirmed — Arora, Muzarabani toothless. Varun 0/48. Tyagi impact sub. [Game file](../../games/game-002-MI-vs-KKR-2026-03-29/) |
+| 2 (Game 006) | SRH | Lost by 68 runs | 159/8 in 20 ov | SRH 226/8 (chase failed) | Chasing 227 at Eden Gardens; dew factor + pace bowling weakness. Middle-order collapse. [Game file](../../games/game-006-KKR-vs-SRH-2026-04-02/) |
+| 3 (Game 012) | PBKS | No Result (ABANDONED) | 25/2 in 3.4 ov | Rahane 8*(9), Raghuvanshi 7*(5), Allen 0(2), Green 3(4) | Rain interrupted KKR first innings. Rahane won toss and chose to BAT FIRST. Xavier Bartlett 2/9 in early wickets (Allen, Green). Match abandoned after 3.4 overs. KKR record: 0W-2L-1NR. [Game file](../../games/game-012-KKR-vs-PBKS-2026-04-06/) |

@@ -125,3 +125,5 @@ near-identical performances. Treat Chahal at Mullanpur as a base-rate fact in fu
 | Match # | Opponent | Result | Score | Key Performer | Notes |
 |---------|----------|--------|-------|---------------|-------|
 | [004](../../games/game-004-PBKS-vs-GT-2026-03-31/outcome.md) | GT | **W** (3 wkts) | 165/7 chasing 162/6 | Connolly 72*(44) MOTM, Vyshak 3/34 | Collapsed to 118/6 then rescued. Arshdeep 0/42. Overseas 4: Stoinis, Jansen, Connolly, Bartlett |
+| [007](../../games/game-007-CSK-vs-PBKS-2026-04-03/outcome.md) | CSK | **W** (5 wkts) | 157/5 chasing 160 ao | Chahal 4-0-28-2 MOTM | PBKS 2-0 after CSK collapse. Chahal repeats Mullanpur magic at Chepauk. |
+| [012](../../games/game-012-KKR-vs-PBKS-2026-04-06/outcome.md) | KKR | No Result (ABANDONED) | No runs (KKR 25/2 in 3.4 ov) | Bartlett 2/9 (Allen, Green) | Match abandoned due to rain after 3.4 overs. PBKS shared 1 point. Record: 2W-0L-1NR. |
