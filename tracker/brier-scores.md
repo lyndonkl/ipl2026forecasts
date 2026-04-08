@@ -19,3 +19,5 @@
 | 010 | SRH vs LSG | 0.2601 | Medium | 0.2386 |
 | 011 | RCB vs CSK | 0.16 | Medium | 0.2357 |
 | 012 | KKR vs PBKS | N/A (ABANDONED) | Medium | 0.2357 (unchanged) |
+| 013 | RR vs MI | 0.1781 | Medium-Low | 0.2254 |
+| 014 | DC vs GT | 0.2581 | Medium-Low | 0.2265 |

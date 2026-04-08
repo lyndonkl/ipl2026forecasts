@@ -1,6 +1,6 @@
 # IPL 2026 Season Overview
 
-**Last updated:** 2026-04-06 (after Game 012)
+**Last updated:** 2026-04-08 (after Game 014)
 
 ---
 
@@ -25,19 +25,19 @@
 
 ---
 
-## Points Table (After Game 012)
+## Points Table (After Game 014)
 
 | Pos | Team | P | W | L | NR | Pts |
 |-----|------|---|---|---|----|----|
 | 1 | PBKS | 3 | 2 | 0 | 1 | 5 |
-| 2 | DC | 2 | 2 | 0 | 0 | 4 |
-| 2 | RR | 2 | 2 | 0 | 0 | 4 |
-| 2 | RCB | 2 | 2 | 0 | 0 | 4 |
-| 5 | LSG | 2 | 1 | 1 | 0 | 2 |
-| 5 | MI | 2 | 1 | 1 | 0 | 2 |
-| 7 | SRH | 3 | 1 | 2 | 0 | 2 |
-| 8 | CSK | 2 | 0 | 2 | 0 | 0 |
-| 8 | GT | 2 | 0 | 2 | 0 | 0 |
+| 1 | RR | 3 | 2 | 1 | 0 | 4 |
+| 1 | RCB | 3 | 2 | 1 | 0 | 4 |
+| 4 | DC | 3 | 2 | 1 | 0 | 4 |
+| 4 | GT | 3 | 1 | 2 | 0 | 2 |
+| 6 | LSG | 2 | 1 | 1 | 0 | 2 |
+| 6 | MI | 2 | 1 | 1 | 0 | 2 |
+| 8 | SRH | 3 | 1 | 2 | 0 | 2 |
+| 9 | CSK | 2 | 0 | 2 | 0 | 0 |
 | 10 | KKR | 3 | 0 | 2 | 1 | 1 |
 
 **Notes:**
@@ -154,3 +154,7 @@ _Append new developments here throughout the tournament:_
 
 - **[Game 010 (Apr 5 AM)](../games/game-010-SRH-vs-LSG-2026-04-05/outcome.md):** LSG 160/5 beat SRH 156/9 at [Arun Jaitley Stadium](venues/arun-jaitley.md) by 5 wkts (19.5 overs). Rishabh Pant 68* (form surge confirmed). Mohammed Shami 2/9 MOTM (elite seam bowling, youngest to 250 IPL wickets). SRH collapse: Abhishek 0(2), Head 7(8) vs Shami precision. LSG now 2W-1L.
 - **[Game 011 (Apr 5 PM)](../games/game-011-RCB-vs-CSK-2026-04-05/outcome.md):** RCB 250/3 beat CSK 207/10 at [M. Chinnaswamy Stadium](venues/chinnaswamy.md) by 43 runs. Tim David 70*(25, 8 sixes) death-overs dominance. Rajat Patidar 48 off 14 (unprecedented slog role aggression). Padikkal 50, Salt 46. CSK chase: Samson 9 (repeated opener failure pattern: 6 off 7 Game 003, 9 Game 011), Sarfaraz Khan 50 off 25 (unlikely hero), Prashant Veer 43 off 29 (debutant). Bhuvneshwar 3 wkts (death bowling). Dew occurred but insufficient vs RCB 250. RCB now co-leaders 2W-0L alongside PBKS, DC, RR with 4 points. CSK 0–2 (last place). Chinnaswamy flat pitch confirmed: 200 NOT safe, par updated 210–220 to defend.
+
+### Week 4 (April 8)
+
+- **[Game 014 (Apr 8)](../games/game-014-DC-vs-GT-2026-04-08/outcome.md):** GT 210/4 beat DC 209/8 at [Arun Jaitley Stadium](venues/arun-jaitley.md) by 1 run. **GT's FIRST WIN of IPL 2026.** Shubman Gill 70(45) anchored. Washington Sundar 55(32) maiden IPL fifty. Jos Buttler 52(27, 24-ball fifty). Pathum Nissanka 41(24) aggressive opening in both innings. **DC Chase:** KL Rahul 92(52) nearly won it single-handedly. Rizvi duck (critical juncture). David Miller 41*(20) returned from retirement-hurt, explosive finish. **Bowling:** Rashid Khan MOTM with 3 wickets (dominated middle overs). Prasidh Krishna clutch final over (dot + run-out, 1-run victory). Flat Arun Jaitley pitch confirmed: both teams 200+. Dew onset on schedule (late MO/Death). **DC now 2–1-0 (4 pts).** **GT now 1–2-0 (2 pts).** **RR remains 2–1-0 (4 pts), co-leaders with PBKS (2–0–1) and RCB (2–1-0).**

@@ -83,3 +83,16 @@
 | 011 | Bhuvneshwar Kumar | Death bowling | 1–2 wkts, eco 8.5–10.0 | 3 wkts | YES — exceeded range, elite |
 | 011 | RCB | First innings total | 185–210 runs | 250/3 | NO — +40 above ceiling |
 | 011 | CSK | Second innings total | 180–210 runs | 207/10 | NEAR MISS — near par, insufficient |
+| 014 | Shubman Gill | Top scorer GT | 50–70 runs, SR 150–160 | 70 off 45, SR 155.6 | YES |
+| 014 | Jos Buttler | GT middle-order aggression | 35–55 runs, SR 160–200 | 52 off 27, SR 192.6 | YES — exceeded ceiling |
+| 014 | Washington Sundar | EM/LM not explicitly predicted | 25–40 range expected | 55 off 32, SR 171.9 (maiden IPL fifty) | NO — not predicted; exceeded expected pairing threat |
+| 014 | Pathum Nissanka | Powerplay/EM | 30–50 runs, SR 150–180 | 41 off 24 (both innings combined predicted) | YES — in range |
+| 014 | KL Rahul | DC opening anchor | 40–70 runs, SR 160–180 (chase) | 92 off 52, SR 176.9 | NO — exceeded ceiling by 22 runs |
+| 014 | Sameer Rizvi | DC middle order | 10–30 runs, SR 130–160 | 0 (duck) | NO — underperformance miss |
+| 014 | David Miller | Death finisher (retirement-hurt framed as limit) | 20–35 runs expected | 41* off 20, SR 205.0 (returned, game-changer) | NO — underestimated retirement-hurt impact |
+| 014 | Rashid Khan | Spin dominance (v3 downweighted 0.88→0.95) | 1–3 wkts, eco 7.0–8.5 | 3 wkts (MOTM), likely eco 6.5–8.0 | NO — downweight proven wrong; dominance underestimated |
+| 014 | Prasidh Krishna | Final-over execution (GT death) | 1–2 wkts, eco 7.5–9.0 | Delivered final-over clutch (dot ball, run-out) | PARTIAL — not top wicket-taker (Rashid 3) but match-deciding delivery |
+| 014 | GT | First innings total | 175–190 range | 210 | NO — 20 above ceiling |
+| 014 | DC | Second innings total | 165–190 range (par chase) | 209 | YES — in range, 1 run short |
+| 014 | GT vs DC | Death bowling edge (LR 1.25) | DC under pressure, GT holds | GT won by 1 run; edge verified | YES (direction) |
+| 014 | Kuldeep vs Phillips | Dominance assumption (v3 override 0.92→0.82) | Phillips restricted, Kuldeep dominant | Phillips didn't bat in key LM overs; override moot | NO — moot matchup |

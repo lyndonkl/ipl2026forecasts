@@ -6,6 +6,34 @@
 
 ---
 
+## Post-Game 013 Status — MONITORING (April 7, 2026)
+
+**Metric:** 5-game rolling Brier (Games 009-013, excluding abandoned 012)
+**Current value:** 0.2279
+**Threshold:** ≤0.25 (acceptable), >0.25 (early calibration review)
+**Status:** BORDERLINE ELEVATED. At 0.2279, tracking just below 0.25 threshold.
+
+| Game | Teams | Prediction | Brier | 5-Game Rolling |
+|------|-------|-----------|-------|---|
+| 009 | GT vs RR | GT 56% | 0.3136 | — |
+| 010 | SRH vs LSG | SRH 51% | 0.2601 | — |
+| 011 | RCB vs CSK | RCB 60% | 0.1600 | 0.2438 (avg G7-11) |
+| 012 | KKR vs PBKS | PBKS 57.7% | N/A | 0.2357 (avg G8-12, excl N/A) |
+| 013 | RR vs MI | RR 57.8% | **0.1781** | **0.2279** (avg G9-13, excl N/A) |
+
+**Recommendation:** Monitor next 2 games (014, 015). If rolling average stays ≥0.24 or creeps above 0.25, trigger full calibration review before Game 016.
+
+**Process Notes from Game 013:**
+- Prediction direction was correct (RR 57.8%, RR won)
+- Brier of 0.1781 is good (well-calibrated)
+- However, underlying reasoning had flaws: base rate process error (qualitative synthesis), Archer impact underestimated, format compression (11-overs) not modeled
+- Kalshi trade won (+$3.99), but Full Kelly sizing into divergence + Medium-Low confidence was risky process (lucky outcome, not vindicated process)
+- Confidence correctly downgraded to Medium-Low due to +14.8pp Kalshi divergence and process flaws
+
+**Calibration Health:** Yellow flag (0.2279 is close to 0.25), but not yet triggered. Game 013 improved trajectory (brought 5-game average down from 0.2357 to 0.2279).
+
+---
+
 ## 12-Game Calibration Review (Games 1-12) — COMPLETED April 6, 2026
 
 **Trigger:** YELLOW FLAG. 5-game rolling Brier (Games 008-012) = 0.2675, exceeding 0.25 threshold.

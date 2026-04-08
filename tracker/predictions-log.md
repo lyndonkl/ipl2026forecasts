@@ -18,3 +18,5 @@
 | 010 | SRH vs LSG | 2026-04-05 | SRH 51% / LSG 49% | SRH 58¢ / LSG 42¢ (est bookmaker consensus) | LSG (by 5 wkts) | NO | 0.2601 | Medium |
 | 011 | RCB vs CSK | 2026-04-05 | RCB 60% / CSK 40% | RCB ~60% (est bookmaker consensus) | RCB (by 43 runs) | YES | 0.16 | Medium |
 | 012 | KKR vs PBKS | 2026-04-06 | PBKS 57.7% / KKR 42.3% | PBKS 55¢ / KKR 45¢ (Kalshi) | ABANDONED | — | — | Medium |
+| 013 | RR vs MI | 2026-04-07 | RR 57.8% / MI 42.2% | RR 43¢ / MI 57¢ (Kalshi) | RR (by 27 runs, 11 ov) | YES | 0.1781 | Medium-Low |
+| 014 | DC vs GT | 2026-04-08 | DC 50.8% / GT 49.2% | DC 53¢ / GT 47¢ (Kalshi) | GT (by 1 run) | NO | 0.2581 | Medium-Low |
