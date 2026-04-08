@@ -376,33 +376,141 @@ The base rate anchors our prediction in observable data before any scenario anal
 
 ### Step 2 — Kushal's Independent View (⏸️ PAUSE POINT 1)
 
-**STOP HERE. Present the base rate to Kushal and ask:**
+**STOP HERE.** This pause point has two phases. Phase 2A presents the base rate with explicit driver attribution so Kushal can see WHAT drove the number before reacting. Phase 2B runs only after Kushal has accepted or adjusted the base rate — it shows the log-odds conversion walkthrough so Kushal can see how the base rate becomes the anchor for Step 3.
+
+<output_contract_pause_1>
+The Pause 1 output must contain these sections in order. Do not compress or rearrange.
+
+1. **Base rate number** (headline, one line)
+2. **Base rate driver breakdown** (WHY this number)
+3. **Driver-by-driver provenance** (where each component came from)
+4. **Sanity anchor comparison** (base rate vs gut anchor references)
+5. **Questions for Kushal**
+6. **Kushal's verbatim responses**
+7. **Reconciliation verdict**
+8. *[After Kushal decides]* **Log-odds conversion walkthrough**
+</output_contract_pause_1>
+
+#### Phase 2A — Present the Base Rate WITH Its Drivers
 
 ```markdown
 ## Kushal's Pre-Match Read
 
+### Base Rate Headline
+
 **My base rate:** TEAM1 [X.0%] / TEAM2 [Y.0%]
 
-**Questions for Kushal:**
+### What drove this number
 
-1. What is your gut estimate? (Just a number — no justification needed yet.)
-2. Which specific players do you think will over- or under-perform relative to expectation?
-3. Is there anything about either team's lineup, form, or situation that the base rate is missing?
-4. Any specific matchups or factors you feel strongly about?
+| Driver | Raw Value | Weight | Contribution to P(TEAM1) | Direction vs 50% |
+|--------|-----------|--------|-------------------------|------------------|
+| H2H (selected pool) | [X% from N games] | [70% or 0%] | [+/-X.X pp] | [pulls TEAM1 up/down by X.X] |
+| Market odds | [Y% implied from Kalshi/book] | [30% or 100%] | [+/-X.X pp] | [pulls TEAM1 up/down by X.X] |
+| **Net base rate** | | | **[X.X%]** | **[net pull +/-X.X pp from 50%]** |
 
-**Kushal's responses:**
-1. Gut: [record verbatim]
-2. Player views: [record verbatim]
-3. Missing factors: [record verbatim]
-4. Strong feelings: [record verbatim]
+### Driver provenance (so you can challenge any input)
+
+1. **H2H pool used:** [Last-4 / This-season] — [N games]
+   - Games counted: [list each: "2025-05-12 MI won by 6w", "2024-04-03 CSK won by 14r", ...]
+   - Source: [web search URL / snippet]
+   - Why this pool: [1 sentence — more games / only pool with current-season data]
+2. **Market odds source:** [Kalshi / Bet365 / Betfair]
+   - Raw prices: TEAM1 [X¢ / X.XX] / TEAM2 [Y¢ / Y.XX]
+   - Implied (overround-stripped): TEAM1 [X%] / TEAM2 [Y%]
+   - Market pulled: [toward TEAM1 / toward TEAM2 / neutral] relative to H2H
+3. **What this base rate excludes (deliberately):** pitch analysis, player form, matchups, scenario analysis. These enter in Step 3 as LRs — do NOT try to smuggle them into the base rate via the gut estimate reconciliation.
+
+### Sanity anchors
+
+| Anchor | Value | Gap vs Base Rate |
+|--------|-------|-----------------|
+| Coin flip | 50.0% | [+/-X.X pp] |
+| Pure market (if not already 100% weight) | [X%] | [+/-X.X pp] |
+| Pure H2H (if available) | [X%] | [+/-X.X pp] |
+| This-season-only H2H (if different from pool used) | [X%] | [+/-X.X pp] |
+
+### Questions for Kushal
+
+1. **Gut:** What is your gut estimate for TEAM1? (Just a number — no justification yet.)
+2. **Driver challenge:** Looking at the driver table above, do either the H2H component or the market component feel wrong? (E.g., "the H2H is stale because both squads have changed 6 players since 2024" or "the market is probably mispriced because Kalshi volume is thin.")
+3. **Player over/under-performance:** Which specific players do you think will over- or under-perform relative to expectation? (This is logged for Step 3, not applied to the base rate.)
+4. **Missing base-rate-relevant factors:** Is there anything at the *team level* — coaching, travel, injury cluster, rest — that the base rate is missing? (Not individual form — that's Step 3.)
+5. **Strong feelings:** Any specific matchups or factors you feel strongly about? (Logged for Step 3.)
+
+### Kushal's responses
+1. Gut: [record verbatim, include the number]
+2. Driver challenge: [record verbatim]
+3. Player views: [record verbatim — do NOT apply to base rate, save for Step 3]
+4. Missing team-level factors: [record verbatim]
+5. Strong feelings: [record verbatim — do NOT apply to base rate, save for Step 3]
 ```
 
-**Reconciliation rules:**
-- If Kushal's gut differs by ≤5 points → note it, proceed
-- If Kushal's gut differs by >5 points → discuss specific reason. Adjust ONLY if Kushal identifies a genuinely missed factor. Do NOT split the difference.
-- Record any adjustment with attribution
+**Reconciliation rules (explicit):**
+
+| Situation | Action |
+|-----------|--------|
+| Gut gap ≤ 5 pp | Note it, keep base rate as-is, proceed |
+| Gut gap > 5 pp AND Kushal names a *team-level* factor the base rate missed | Adjust base rate with attribution. Cap adjustment at the smaller of (Kushal's gut gap) or (±5 pp) |
+| Gut gap > 5 pp AND Kushal only cites player-form or matchup reasons | DO NOT adjust base rate. Log those reasons for Step 3 LR application. Explain to Kushal why: player form belongs in LRs, not in the prior. |
+| Gut gap > 10 pp | STOP. Read back the base rate drivers and ask Kushal to point to which driver is wrong. Do not proceed until the disagreement is localised to a specific driver. |
+
+**Never split the difference.** Either a driver was wrong (adjust) or the gap is real disagreement that Step 3 will resolve (do not adjust).
+
+```markdown
+### Reconciliation verdict
+
+**Decision:** [Keep base rate unchanged / Adjust to TEAM1 X.X%]
+**If adjusted — driver corrected:** [Which row in the driver table was wrong and by how much]
+**If adjusted — attribution:** [Kushal's exact quote identifying the missed factor]
+**If not adjusted despite gap:** [Which Step 3 LR this disagreement will be tested in]
 
 **Post-reconciliation base rate: TEAM1 [X.0%] / TEAM2 [Y.0%]**
+```
+
+---
+
+#### Phase 2B — Log-Odds Conversion Walkthrough (AFTER Kushal has decided)
+
+Only present this after Kushal has accepted or adjusted the base rate in Phase 2A. This phase converts the base rate into the anchor for Step 3 and shows Kushal exactly what λ₀ the log-odds chain will start from.
+
+```markdown
+### Base Rate → Log-Odds Anchor
+
+Now that the base rate is locked at **TEAM1 [X.0%]**, here is how it becomes the starting point for the Bayesian chain in Step 3.
+
+**Step A — Base rate to odds:**
+- P₀ = [X.XXX] (TEAM1)
+- O₀ = P₀ / (1 - P₀) = [X.XXX] / [X.XXX] = **[X.XXX]**
+- Plain reading: "TEAM1 is [X.XX] times as likely to win as to lose, before any phase evidence."
+
+**Step B — Odds to log-odds:**
+- λ₀ = ln(O₀) = ln([X.XXX]) = **[+/-X.XXX]**
+- Plain reading: "Positive λ means TEAM1 favored; negative means TEAM2 favored. Magnitude is how far from 50/50 we start."
+
+**Step C — Calibration anchors for λ scale (so the numbers are meaningful):**
+
+| P(TEAM1) | λ₀ | Intuition |
+|----------|-----|-----------|
+| 50.0% | 0.000 | coin flip |
+| 55.0% | +0.201 | slight edge |
+| 60.0% | +0.405 | clear edge |
+| 65.0% | +0.619 | strong edge |
+| 70.0% | +0.847 | dominant |
+| 75.0% | +1.099 | favourite by a lot |
+
+Our starting λ₀ = **[+/-X.XXX]**, which sits [between / at] [anchor rows]. Each phase LR in Step 3 will add or subtract ln(LR) from this anchor, and the running λ will be converted back to P(TEAM1) after every phase so you can see the walk in real time.
+
+**Step D — Headroom and floor:**
+- Starting P(TEAM1) = [X.X%], starting λ = [+/-X.XXX]
+- If ALL 8 phase LRs hit the +2.0 ceiling (maximum bullish case): Σ ln(LR) = +5.545 → final P ≈ [X%]
+- If ALL 8 phase LRs hit the 0.5 floor (maximum bearish case): Σ ln(LR) = -5.545 → final P ≈ [X%]
+- Realistic total |Σ ln(LR)| from scenario analysis: ~0.4-1.2 (typical past games)
+
+**Confirmation question for Kushal:**
+Does the λ₀ anchor of [+/-X.XXX] feel like the right starting point for the chain? If yes, proceed to Step 3. If no, go back to Phase 2A and fix the base rate driver that's pulling the anchor off.
+```
+
+**Only proceed to Step 3 after Kushal has confirmed the λ₀ anchor.**
 
 ---
 
@@ -657,27 +765,128 @@ I'll now walk you through each adjustment one at a time. For each one, I'll show
 
 Present EACH of the 8 phase LRs (and match-level conditions) individually, in this format. Work through Toss Branch A first, then Toss Branch B. Skip phases where LR = 1.0 (dead neutral) — just note them as "no update, moving on."
 
-For each non-neutral LR, use this template:
+For each non-neutral LR, use this template. The template is a **Matchup Card** — every LR must be traceable from the final number back to the specific matchup, the specific signals inside that matchup, and the exact line in the upstream files that produced each signal. Kushal must be able to accept or reject on the basis of the signals, not on the basis of the number alone.
+
+<output_contract_pause_2>
+Every Matchup Card must contain these blocks in order:
+1. **Header** — update number, phase, innings, batting team
+2. **Matchup** — the specific batter(s) vs bowler(s) this LR is about
+3. **Signal stack** — one row per distinct signal contributing to the LR, with explicit column labels (Δ vs Career / Δ vs Tmmt / Δ vs Opp / Form Class / Phase sample size)
+4. **Provenance** — exact file + section for every signal (so Kushal can click through and verify)
+5. **LR derivation** — how the raw signals combined into the LR (not just the final number)
+6. **Log-odds math** — sign conversion, ln(LR), running λ, running P(TEAM1)
+7. **Accept/Reject scaffold** — the specific question that lets Kushal decide
+8. **Verdict** — Kushal's recorded response
+</output_contract_pause_2>
 
 ```markdown
 ---
 
 ### Update [N] of [total]: [Phase Name] — [Innings Context]
-*e.g., "Update 1 of 10: Powerplay (1-6) — TEAM1 batting first"*
+*e.g., "Update 1 of 10: Powerplay (1-6) — MI batting first, BOWLED BY PBKS"*
 
-**What the scenario analysis says:**
-> [Quote the Phase LR, signal, and signal strength]
-> e.g., "LR 1.20 favoring batting team (MI). Signal: Rohit's PP SR 162 (+18% vs career, 7 innings)
-> vs Arshdeep's PP economy 9.2 (↑ declining). Signal strength: Moderate."
+**Batting team perspective:** [TEAM1 / TEAM2]
+**LR direction rule for this row:** LR > 1 favours [batting team name]; LR < 1 favours [bowling team name]
 
-**My calculation:**
-- LR: **1.20** favoring MI (batting team = TEAM1) → **positive**
+---
+
+#### 🎯 Matchup
+
+| Role | Player | Team | Why they're in this phase |
+|------|--------|------|---------------------------|
+| Primary batter | **[Rohit Sharma]** (RH) | MI | Opens, expected to face overs 1-6 |
+| Partner batter | **[Rickelton]** (LH) | MI | Opens, L-R combo vs right-arm pace |
+| Primary bowler | **[Arshdeep Singh]** (LA-pace) | PBKS | New-ball specialist, bowls overs 1-2 and 5-6 |
+| Secondary bowler | **[Prasidh Krishna]** (R-pace) | PBKS | Overs 3-4, second change option |
+
+**Matchup thesis (one sentence):** [e.g., "MI's experienced top order targets PBKS' second-change pacer Prasidh while managing Arshdeep's new-ball swing."]
+
+---
+
+#### 📊 Signal stack (from Player Research Agent v2 tables)
+
+The LR is built from these specific signals. Every row cites: the player, the metric, the baseline it's compared against, the sample size, and the Form Class z-score.
+
+**Batting-side signals:**
+
+| Player | Metric | Recent Value | Baseline | Δ | Sample | Form Class | LR pull |
+|--------|--------|--------------|----------|---|--------|------------|---------|
+| **Rohit** | PP SR | 162 | Own career PP SR 140 | **+15.7% vs Career** | 7 inn | Signal (z=+1.3) | × 1.18 toward bat |
+| **Rohit** | PP SR | 162 | Tmmt avg PP SR 138 last gm | **+17.4% vs Tmmt** | 1 gm | confirms | × 1.05 confirm |
+| **Rickelton** | PP SR | 148 | Own career PP SR 132 | **+12.1% vs Career** | 4 inn | Signal (z=+0.9, borderline) | × 1.08 toward bat |
+
+**Bowling-side signals:**
+
+| Player | Metric | Recent Value | Baseline | Δ | Sample | Form Class | LR pull |
+|--------|--------|--------------|----------|---|--------|------------|---------|
+| **Arshdeep** | PP Eco | 9.2 | Own career PP Eco 7.8 | **+17.9% vs Career (BAD)** | 5 inn | Signal (z=+1.4) | × 1.15 toward bat |
+| **Arshdeep** | PP Wkts L5 | 4 | — | — | 5 inn | counterweight | × 0.95 toward bowl |
+| **Prasidh** | PP Eco | 9.1 | Own career PP Eco 8.4 | +8.3% vs Career | 6 inn | Noise | × 1.0 (no pull) |
+
+**Unknowns in this matchup:**
+- [e.g., "Rickelton sample is 4 innings — Form Class is borderline, treat as Weak signal at most"]
+
+---
+
+#### 📚 Provenance (exact lines — Kushal can open and verify)
+
+| Signal | File | Section / Row |
+|--------|------|---------------|
+| Rohit PP SR 162 (+15.7% vs Career) | `games/game-NNN/player-form-profiles.md` | MI Batters table, row 1, cols "Last-5 Score Line" + "Δ vs Career" |
+| Rohit +17.4% vs Tmmt | `games/game-NNN/player-form-profiles.md` | MI Batters table, row 1, col "Δ vs Tmmt last gm" |
+| Rickelton PP SR 148 | `games/game-NNN/player-form-profiles.md` | MI Batters table, row 2 |
+| Arshdeep PP Eco 9.2 | `games/game-NNN/player-form-profiles.md` | PBKS Bowlers table, row 1 |
+| Phase LR 1.20 | `games/game-NNN/scenario-analysis.md` | Match Scenario A → First Innings → Phase 1 Powerplay → Phase Likelihood Ratio line |
+| Which phase we're in | `context/cricket/ipl-phase-dynamics.md` | Powerplay definition |
+
+---
+
+#### 🧮 LR derivation (how the signals combined)
+
+The Scenario Analysis Agent combined the signal pulls above using the multiplicative combining rule:
+
+- Batting-side combined pull: 1.18 × 1.05 × 1.08 = **1.338** (cap at 1.6 for Moderate)
+- Bowling-side combined pull: 1.15 × 0.95 × 1.0 = **1.093** toward batting (Arshdeep's bad economy partly offset by his wicket trend)
+- Matchup net: 1.338 × 1.093 = 1.462 → **capped/rounded to phase LR = 1.20** (Moderate signal strength, consistent with the thinnest sample in the stack)
+
+**Sanity check:** A single Moderate LR of 1.20 means "this phase's evidence is 1.2× more likely under MI-wins than under PBKS-wins." That's a modest, honest signal — not a thesis-defining edge.
+
+---
+
+#### 🔢 Log-odds math
+
+- Phase LR: **1.20** favoring MI (batting team = TEAM1) → **positive for TEAM1**
 - ln(1.20) = **+0.182**
-- Running log-odds: [X.XXX] + 0.182 = **[X.XXX]**
-- Running P(TEAM1): **[X.X%]**
+- Running log-odds before this update: [X.XXX]
+- Running log-odds after: [X.XXX] + 0.182 = **[X.XXX]**
+- Running P(TEAM1): **[X.X%]** (was [X.X%], change [+/-X.X pp])
 
-**🔍 Calibration question:**
-[One targeted question from the menu below — choose the most relevant for this specific LR]
+---
+
+#### 🔍 Accept / Reject scaffold
+
+**Default question (always ask this):**
+*"Looking at the signal stack, does the LR of 1.20 feel right given (a) the baseline the signals are compared against, (b) the sample sizes, and (c) the combining logic? If not — which row in the signal stack do you want to challenge?"*
+
+**Plus ONE targeted question from the menu below** — choose the type that best probes the specific risk for this LR:
+
+[Leading Question Menu table follows unchanged — see below]
+
+**🔍 Calibration question (chosen):**
+[One targeted question from the menu]
+
+---
+
+#### Kushal's verdict
+
+```
+**Verdict:** [Accept / Adjust LR / Remove]
+**Which signal(s) Kushal challenged:** [row name(s) from the signal stack, or "none"]
+**Reason:** [record verbatim]
+**New LR (if adjusted):** [X.XX]
+**New ln(LR):** [+/-X.XXX]
+**Updated running log-odds:** [X.XXX] → **P(TEAM1): [X.X%]**
+```
 ```
 
 ##### Leading Question Menu
@@ -694,19 +903,19 @@ Choose ONE question per adjustment. Select the question type that best probes th
 | **Double-count check** | When the factor overlaps with another LR already applied | "We already applied a [Moderate] LR for [related factor] in [earlier phase]. Is this LR capturing something NEW, or are we counting the same edge twice?" |
 | **Counter-evidence probe** | When the evidence is one-sided | "What's the strongest argument that this phase goes the OTHER way? Does that argument weaken the LR?" |
 
-**After presenting each LR, WAIT for Kushal's response before proceeding to the next one.**
-
-Record Kushal's response inline:
-
-```markdown
-**Kushal's verdict:** [Accept / Adjust LR to [X.XX] / Remove (set LR = 1.0)]
-**Reason (if changed):** [record verbatim]
-**Updated running log-odds:** [X.XXX] → **P(TEAM1): [X.X%]**
-```
+**After presenting each Matchup Card, WAIT for Kushal's response before proceeding to the next one.** Record the verdict in the "Kushal's verdict" block at the bottom of the Matchup Card (not as a separate stanza).
 
 ---
 
-#### 4c. Match-Level Conditions (same format)
+#### 4c. Match-Level Conditions (same Matchup Card format)
+
+Match-level conditions (dew, XI uncertainty, captaincy, form cluster) use the same Matchup Card template, but the "Matchup" block describes the *condition* rather than player pairs. For each:
+
+- **Matchup block** → describes the condition (e.g., "Dew onset at over 13 of second innings, affecting MI spinners bowling overs 13-17 and chasing team's timing")
+- **Signal stack** → the observations that support the condition LR (e.g., "IPL 2026 dew effect at this venue: 3 of 4 night games went to chase", cite conditions-report.md)
+- **Provenance** → `games/game-NNN/conditions-report.md` section references, venue file references
+- **LR derivation** → how the condition pull was sized
+- **Accept/Reject scaffold** → prefer **double-count check** and **base rate check** questions (these tend to have the highest double-counting risk against earlier phase LRs)
 
 Present each match-level condition (dew, XI uncertainty, form flags, captaincy) using the same per-adjustment template. These tend to have the highest double-counting risk, so prefer the **double-count check** and **base rate check** questions.
 

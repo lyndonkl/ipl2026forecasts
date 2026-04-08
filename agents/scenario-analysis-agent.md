@@ -117,6 +117,78 @@ The three probabilities within each phase must sum to 100%.
 
 ---
 
+<input_contract>
+## Input Contract — Reading the v2 Player-Form-Profiles
+
+As of the v2 Player Research Agent rewrite, `player-form-profiles.md` is **table-only** (no prose). You consume four standardized table types per game. Read them mechanically — the columns are stable across games.
+
+### Table 1: Batter Summary Table (one per team)
+
+Columns (14):
+
+| # | Player(hand) | Role | Last-5 Score Line | Career SR (window) | Δ vs Career | Δ vs Tmmt last gm | Δ vs Opp last gm | Form Class | Phase Edge | Matchup | Bnd % | Trend | Flag |
+
+**Critical column meanings — do NOT confuse these:**
+
+- **Δ vs Career** = recent SR minus the player's own career SR baseline. Cross-time signal. Tells you if the player is hot or cold relative to their own normal level.
+- **Δ vs Tmmt last gm** = same-game SR minus the average SR of their teammates in their most recent game. Cross-section signal. Tells you if they outperformed or underperformed their own dressing room on the same surface.
+- **Δ vs Opp last gm** = same-game SR minus the average SR of opposition batters in their most recent game. Cross-section signal vs different opposition. Tells you if their last game was a flat-track vs a tough surface.
+- **Form Class** = z-score classification: `Noise` (z<±1.0), `Signal` (±1.0-2.0), `Strong` (>±2.0). Use this to weight LR strength.
+- **Phase Edge** = which of the four phases (PP / EM / LM / Death) this player is most relevant in.
+- **Bnd %** = boundary percentage (recent window).
+
+### Table 2: Bowler Summary Table (one per team)
+
+Columns (14):
+
+| # | Player(hand) | Role | Last-5 Eco Line (phase) | Career Eco (window) | Δ vs Career | Δ vs Tmmt last gm | Δ vs Opp last gm | Form Class | Phase Edge | Matchup | Wkts L5 | Trend | Flag |
+
+Same column semantics as the batter table — but **lower is better** for Δ values (negative Δ vs Career = bowler is improving). When mapping to LRs, invert the sign for bowlers relative to the batting team perspective.
+
+### Table 3: Deviation Watchlist (per match)
+
+Three sub-tables:
+- **Red flags** — players whose Form Class is `Strong` in the bad direction (steep dip). Treat as bearish for their team in their Phase Edge.
+- **Green flags** — players whose Form Class is `Strong` in the good direction (surge). Treat as bullish for their team in their Phase Edge.
+- **Unknowns** — debutants, injury returns, role changes. Wide variance — must appear in Scenario Seeds with explicit high-variance framing.
+
+### Table 4: Key Findings — Form Alerts / Phase Edges / Scenario Seeds
+
+Pre-digested phase edges and scenario seeds from the Player Research Agent. Use these as a starting point but do not blindly copy — re-derive your own LRs from the underlying numerical signals.
+
+### Mapping Player-Profile Signals to Phase LRs
+
+Use this mechanical mapping to translate the tabular signals into Bullish/Neutral/Bearish probabilities and phase LRs:
+
+| Form Class (active player in phase) | Direction | LR contribution | B/N/Bear shift |
+|---|---|---|---|
+| Strong (Δ vs Career > +20%, n≥5) | Batter surge | × 1.4-1.6 toward batting team | Bullish +15, Bearish -10 |
+| Strong (Δ vs Career < -20%, n≥5) | Batter slump | × 1.4-1.6 toward bowling team | Bullish -10, Bearish +15 |
+| Signal (Δ vs Career ±10-20%, n≥4) | Moderate | × 1.15-1.3 in direction | Shift 5-10 in direction |
+| Noise (Δ vs Career < ±10% or n<4) | None | × 1.0 | No shift — keep baseline split |
+| Strong + same-direction Δ vs Tmmt | Confirmed surge/slump | Combine multiplicatively (cap LR at 2.0) | Strong shift |
+| Strong vs Career but opposite Δ vs Tmmt | Conflicting | × 1.1 only — uncertainty discount | Small shift, widen Neutral |
+| Unknown (debut / new role / injury return) | Wide variance | LR ≈ 1.0 | Bullish +5, Bearish +5, Neutral -10 |
+
+**Rule of thumb for combining multiple signals in one phase:**
+- 2 same-direction Strong signals: multiply LRs (cap at 2.0)
+- 1 Strong + 1 Signal same direction: multiply
+- Conflicting Strong signals: take √ of larger LR (partial cancellation)
+- All Noise: default to the form-driven calibration table baseline (see scenario_definitions)
+
+**Team attribution discipline:**
+Every player named in a phase scenario must have their team explicitly written in the player table (this is enforced by the Player Research Agent's batter/bowler tables having team headers). When you write "Bumrah operates overs 1-3", verify Bumrah's row appears under the correct team's bowler table — never carry team assumptions from memory.
+
+### What to do if the v2 format is missing
+
+If `player-form-profiles.md` does NOT contain Batter Summary Table / Bowler Summary Table / Deviation Watchlist headers, you are reading a v1 (prose-heavy) profile. Proceed but:
+1. Mark the output header: `⚠️ v1 player profiles — signals extracted manually, lower confidence`
+2. Tighten all phase LRs toward 1.0 (multiply all (LR - 1.0) by 0.7)
+3. Widen Neutral by 5 percentage points across all phases
+</input_contract>
+
+---
+
 <execution_steps>
 ## Execution Steps
 
@@ -136,7 +208,7 @@ If any upstream file is missing or incomplete, STOP and flag it. Do not proceed 
 For each of the four phases, pull:
 - **From conditions-report.md:** Pitch behaviour in that phase, dew timing, par scoring rate
 - **From team-analysis.md:** Which bowlers operate in each phase, batting order positions active, key matchups
-- **From player-form-profiles.md:** Form flags (FORM SURGE, FORM DIP, etc.), phase splits, scenario flags
+- **From player-form-profiles.md:** Read the v2 tables per the `<input_contract>` section above. For each player active in this phase, extract: Form Class, Δ vs Career, Δ vs Tmmt last gm, Δ vs Opp last gm, Phase Edge, Trend, and Flag. Apply the signal-to-LR mapping table to convert these into a phase LR contribution.
 
 ### Step 3 — Build Phase Scenarios for Both Match Scenarios
 
