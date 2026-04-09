@@ -3,6 +3,7 @@
 ### Game Files
 - [Game 005 vs DC: Prediction](../../games/game-005-LSG-vs-DC-2026-04-01/prediction.md) | [Outcome](../../games/game-005-LSG-vs-DC-2026-04-01/outcome.md)
 - [Game 010 vs SRH: Prediction](../../games/game-010-SRH-vs-LSG-2026-04-05/prediction.md) | [Outcome](../../games/game-010-SRH-vs-LSG-2026-04-05/outcome.md)
+- [Game 015 vs KKR: Prediction](../../games/game-015-KKR-vs-LSG-2026-04-09/prediction.md) | [Outcome](../../games/game-015-KKR-vs-LSG-2026-04-09/outcome.md)
 
 ## Basic Info
 
@@ -98,6 +99,65 @@ are all fit and firing simultaneously.
   options (Abdul Samad, Himmat Singh) are unproven.
 - **Too many overseas options:** Selecting the right 4 from 7 quality
   overseas players every match is a selection challenge.
+
+---
+
+## Game 015 Post-Match Analysis (LSG vs KKR, April 9, 2026)
+
+**Result:** LSG WON vs KKR by 3 wickets (182/7 chased 181/4, with 0 balls remaining)
+
+**Key Findings:**
+
+1. **Mohammed Shami elite form continues:**
+   - Bowled Ajinkya Rahane in PP (over 8.1), 1/20–25 estimated economy
+   - Post-surgery fitness fully confirmed; workload stable (4 overs expected per match)
+   - Form surge (2/9 vs SRH in Game 010) carries through; elite new-ball threat sustained
+   - Confidence upgrade: Shami is an elite new-ball pacer for future predictions, not a fitness risk
+
+2. **Wanindu Hasaranga fitness + selection confirmed:**
+   - Selected in Game 015 (5-overseas slot, Nortje + Hasaranga both played)
+   - Took Cameron Green's wicket (bowled, EM phase over 12.3) — leg-spin effectiveness confirmed on flat pitch
+   - Fitness fully cleared; hamstring injury (from T20 World Cup) resolved
+   - Post-match batting: Hasaranga 19(9, SR 211.1) in death overs, explosive finish under dew
+   - Confidence upgrade: Hasaranga is selection-locked for future matches, no fitness red flag
+
+3. **Nicholas Pooran form dip confirmed as sustained crisis:**
+   - Pooran 8(9, SR 88.9, caught at over 10.5) — extreme form collapse sustained
+   - Prediction flagged form dip (121 runs/9 innings, avg 13.44 vs career 40+, −62% SR)
+   - Early dismissal in EM phase removed LSG's death-finisher threat, forcing reliance on Samad + Hasaranga
+   - Critical insight: Pooran's selection despite form dip was a structural weakness; early dismissal validates risk assessment
+   - Recommendation: monitor whether Pooran recovers form in future matches; if form persists, selection should be reconsidered
+
+4. **Abdul Samad form ceiling exceeded (discovery):**
+   - Samad 42(28, SR 150.0) in LM phase — exceeded "unknown ceiling, P25–P75: 125–135 SR" conservative estimate
+   - Samad not out through death, providing final momentum for chase success
+   - Critical signal: Samad is a young high-potential batter developing rapidly; conservative prediction range was too narrow
+   - Confidence upgrade: future predictions should assign higher upside to Samad (140–160 SR instead of 125–135)
+
+5. **Anrich Nortje elite execution limited by dew:**
+   - Nortje elite 150+ kph confirmed; bowled Raghuvanshi at over 19.0 (boundary, not core death)
+   - However, dew heavy (overs 18–20 fully present) negated Nortje's reverse-swing/seam advantages
+   - Nortje's edge (predicted +0.45 LR for death execution) was over-optimistic; dew reduced advantage to +0.20–0.30 range
+   - Insight: future dew-scenario predictions should discount elite bowlers' edge (wet ball reduces reversals, yorkers become full-tosses)
+
+6. **Dew effect on chase batting confirmed extreme:**
+   - Hasaranga 211.1 SR (19 off 9) and Samad 150.0 SR sustained through death overs
+   - Wet ball made yorkers ineffective (converted to full-tosses), aided boundary hitting
+   - Chase success (182/7, target achieved with 0 balls remaining) validates dew as 2nd-innings advantage (+5–8pp edge realized)
+   - Critical for future predictions: dew's effect on death-overs batting is match-deciding, especially on flat pitches
+
+7. **Rishabh Pant aggressive intent confirmed:**
+   - Pant 39(28, SR 139.3) — aggressive captain momentum from Game 010 (68* vs SRH) continues
+   - Caught at over 5.1 (post-PP boundary) to Arora, showing KKR found early weakness
+   - Pant's form remains strong (39 + 68* = dual-game evidence); leader of LSG attack
+   - Confidence sustained: Pant is reliable opener for LSG, 45–65 run expectation validated
+
+**Next Match Priorities:**
+- Hasaranga confirmed fit: expect selection in spin-favorable venues; leg-spin edge sustained
+- Shami post-surgery fully cleared: expect 4-over consistent role in future matches
+- Samad ceiling discovery: upgrade prediction range for young Indian batting depth (140–160 SR vs 125–135)
+- Pooran form recovery critical: if form persists, recommend selection reduction or benching
+- Dew effect on death overs: adjust LR chains for elite bowlers (−0.15 to −0.20 discount for dew scenarios)
 
 ---
 

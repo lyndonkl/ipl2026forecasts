@@ -3,6 +3,7 @@
 ### Game Files
 - [Game 002 vs MI: Prediction](../../games/game-002-MI-vs-KKR-2026-03-29/prediction.md) | [Outcome](../../games/game-002-MI-vs-KKR-2026-03-29/outcome.md)
 - [Game 006 vs SRH: Prediction](../../games/game-006-KKR-vs-SRH-2026-04-02/prediction.md) | [Outcome](../../games/game-006-KKR-vs-SRH-2026-04-02/outcome.md)
+- [Game 015 vs LSG: Prediction](../../games/game-015-KKR-vs-LSG-2026-04-09/prediction.md) | [Outcome](../../games/game-015-KKR-vs-LSG-2026-04-09/outcome.md)
 
 ## Basic Info
 
@@ -84,6 +85,43 @@ Kartik Tyagi, Saurabh Dubey (replacement for Harshit Rana)
 - Monitor Harshit Rana recovery; if unavailable, consider Kartik Tyagi for pace options
 - Revisit Varun's role; may need rotation or confidence rebuild
 - Review chase batting; early wicket scenarios more likely than first predicted
+
+---
+
+## Game 015 Post-Match Analysis (KKR vs LSG, April 9, 2026)
+
+**Result:** KKR LOST to LSG by 3 wickets (181/4 vs LSG 182/7, chase success with 0 balls remaining)
+
+**Key Findings:**
+
+1. **Varun Chakravarthy form recovery confirmed:**
+   - Selected in Game 015 after being benched in Game 006
+   - Bowled Aiden Markram in EM phase (over 10.2), confirming form recovery to ~8.0 economy (from 11.86 crisis level)
+   - Eden Gardens spin edge (Narine + Varun) materialized as predicted; destroyed LSG RHB batting (Markram bowled)
+   - Confidence restored: Varun's selection + recovery was the correct call
+
+2. **Raghuvanshi dominates mid-to-late overs:**
+   - Raghuvanshi 45(28, SR 160.7) — spanned EM + LM phases, elite momentum
+   - Contradicted "young, vulnerable to googly" conservative prediction
+   - Raghuvanshi momentum continues from Game 002 (51 off 29); established as reliable accelerator
+   - Confidence upgrade: young talent proving consistent, not variance
+
+3. **Finisher Rinku established for future matches:**
+   - Rinku 18(14, not out) in death overs — survived Nortje elite (150+ kph) vs dew-aided batting
+   - Death SR 128.6 shows disciplined finisher approach, not domination but survival
+   - Finisher role confirmed for future games; dew conditions favor Rinku's clean hitting (wet ball, boundary-aiding)
+
+4. **Harshit Rana absence structural weakness confirmed:**
+   - Arora new-ball replacement: caught Pant dismissal (reasonable execution) but overall depth questioned
+   - Muzarabani bowled only economic overs (not dominant); no breakthrough capability
+   - KKR's death bowling (Arora 9+ economy, Muzarabani 10+ economy) was leaky under dew
+   - Recommendation: Harshit Rana recovery remains critical; structural weakness unresolved
+
+**Next Match Priorities:**
+- Raghuvanshi's consistency trend (Games 2 + 15 both strong): lock him into middle-order predictions
+- Varun form recovery validated: expect him selected in future Eden Gardens/spin-favorable venues
+- Finisher role (Rinku) stable; consider him reliable 45–55 run option in death
+- Pace bowling remains unresolved without Rana; expect future weakness vs quality pace attacks
 | 8 | Prashant Solanki | Spin option |
 | 9 | Matheesha Pathirana | Right-arm fast (slingy yorkers) |
 | 10 | Mustafizur Rahman | Left-arm fast-medium (cutters) |
