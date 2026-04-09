@@ -20,3 +20,5 @@
 | 012 | KKR vs PBKS | 2026-04-06 | PBKS 57.7% / KKR 42.3% | PBKS 55¢ / KKR 45¢ (Kalshi) | ABANDONED | — | — | Medium |
 | 013 | RR vs MI | 2026-04-07 | RR 57.8% / MI 42.2% | RR 43¢ / MI 57¢ (Kalshi) | RR (by 27 runs, 11 ov) | YES | 0.1781 | Medium-Low |
 | 014 | DC vs GT | 2026-04-08 | DC 50.8% / GT 49.2% | DC 53¢ / GT 47¢ (Kalshi) | GT (by 1 run) | NO | 0.2581 | Medium-Low |
+| 015 | KKR vs LSG | 2026-04-09 | KKR 37% / LSG 63% | KKR 48¢ / LSG 52¢ (Kalshi) | LSG (by 3 wkts, 0 balls remaining) | YES | 0.1369 | Medium |
+| 016 | RR vs RCB | 2026-04-10 | RR 52% / RCB 48% | RR 47¢ / RCB 53¢ (Kalshi) | — | — | — | Medium |

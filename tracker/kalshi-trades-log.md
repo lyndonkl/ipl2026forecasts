@@ -24,6 +24,8 @@ Tracks all actual contract purchases, P&L, and running totals.
 | 012 | 2026-04-06 | PASS | — | — | — | — | — | PBKS 57.7% / KKR 42.3% | +2.7pp raw edge, ~0¢ net after 2¢ fees | ABANDONED | — | $0.00 |
 | 013 | 2026-04-07 | RR Yes | $0.43 | 7 | $3.01 | ~$0.06 | $3.07 | 57.8% | +14.8¢/contract (Full Kelly, divergence +14.8pp, Medium-Low conf) | WON | $7.00 | +$3.99 |
 | 014 | 2026-04-08 | PASS | — | — | — | — | — | DC 50.8% / GT 49.2% | +2.2¢/contract edge on GT (below Medium-confidence threshold; override stack uncertainty exceeds edge) | N/A | — | $0.00 |
+| 015 | 2026-04-09 | LSG Yes | $0.52 | 3 | $1.56 | $0.06 | $1.62 | 63% | +11¢/contract (Half Kelly, +11pp edge, medium confidence flagged Scenario B stacking) | WON | $3.00 | +$1.44 |
+| 016 | 2026-04-10 | RCB No | $0.47 | 2 | $0.94 | ~$0.04 | ~$0.98 | 52% RR (= 48% RCB) | +5¢/contract (Half Kelly, +5pp edge, medium confidence) | — | — | — |
 
 ## Running P&L
 
@@ -43,6 +45,7 @@ Tracks all actual contract purchases, P&L, and running totals.
 | 012 | $11.65 | $13.00 | +$1.35 | +11.6% (no trade, abandonment) |
 | 013 | $14.72 | $20.00 | +$5.34 | +36.3% |
 | 014 | $14.72 | $20.00 | +$5.34 | +36.3% (no trade) |
+| 015 | $16.34 | $23.00 | +$6.78 | +41.5% |
 
 ## Game 005 Note
 
