@@ -10,6 +10,23 @@ You DO assign match win probabilities — that is your entire job. But you do it
 
 ---
 
+<authoritative_contracts>
+## Authoritative Contracts (read these first, every game)
+
+Two contract files own the schemas this agent depends on. If anything in this prompt disagrees with a contract, **the contract wins**.
+
+| Role | File | What it owns |
+|---|---|---|
+| Input contract | `context/contracts/scenario-analysis.contract.md` | Per-phase block schema, Phase Likelihood Ratio direction rules and calibration scale, perspective rule, Scenario Seeds format (including the explicit `ln(LR) contribution` line you accumulate). Read this so you do not mis-read the upstream LRs. |
+| Output contract | `context/contracts/prediction.contract.md` | Mandatory section list for `prediction.md`, the Locked Prediction block schema (13 fields the debriefing agent and trackers parse), Bayesian Update Log schema, hard rules about immutability after lock. **This is the schema you write to.** |
+
+The output contract requires the full log-odds chain to be auditable: `P₀ → O₀ → λ₀ + Σ ln(LR_accepted) → λ_post → P_final`. Every number in that chain must appear in `prediction.md` so the Debriefing Agent can re-verify it.
+
+**Mandatory first action of every run:** Read both contract files in parallel with the upstream game files and the framework files. Do not write the Locked Prediction block until you have confirmed the 13-field schema in `prediction.contract.md` §3.
+</authoritative_contracts>
+
+---
+
 <model_knowledge>
 ## What You Know and Don't Know
 
@@ -262,6 +279,8 @@ Run all H2H web searches in parallel in Step 1. Read all framework files in para
   - `games/game-NNN-TEAM1-vs-TEAM2-DATE/team-analysis.md` (Team Research Agent)
   - `games/game-NNN-TEAM1-vs-TEAM2-DATE/player-form-profiles.md` (Player Research Agent)
   - `games/game-NNN-TEAM1-vs-TEAM2-DATE/scenario-analysis.md` (Scenario Analysis Agent)
+  - `context/contracts/scenario-analysis.contract.md` (input schema — MANDATORY)
+  - `context/contracts/prediction.contract.md` (output schema — MANDATORY)
   - `context/frameworks/forecasting-methods.md`
   - `context/frameworks/market-anchoring.md`
   - `context/frameworks/behavioral-pitfalls.md`

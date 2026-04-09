@@ -16,6 +16,10 @@
 #   players             [search]       List players (optional substring filter)
 #   series_info         <series_id>    Series detail + match list
 #   match_info          <match_id>     Single match details, scores, toss
+#   match_squad         <match_id>     Playing squads for a match (both teams) — costs ~10 hits
+#   match_scorecard     <match_id>     Per-batter + per-bowler scorecard — costs ~20 hits
+#   match_bbb           <match_id>     Ball-by-ball commentary (paginated) — costs ~20 hits
+#   match_points        <match_id>     Fantasy points breakdown per player — costs ~35 hits
 #   player_info         <player_id>    Player biographical data
 #   find_player         <name>         Convenience: find a player by name (returns first 5 matches)
 #   raw                 <path>         Raw GET against /v1/<path> with apikey appended
@@ -31,6 +35,19 @@
 #   Free tier: ~500 hits/day. Use sparingly. Each call's response includes
 #   `info.hitsToday` and `info.hitsLimit` — agents should monitor and stop
 #   calling if hitsToday approaches hitsLimit.
+#
+#   Basic endpoints (countries, series, series_info, match_info, players,
+#   player_info) cost 1 hit per call.
+#
+#   Fantasy endpoints (match_squad, match_scorecard, match_bbb, match_points)
+#   incur a "usage penalty" on the free plan — each call costs roughly:
+#       match_squad      ≈ 10  hits
+#       match_scorecard  ≈ 20  hits
+#       match_bbb        ≈ 20  hits per page
+#       match_points     ≈ 35  hits
+#   Budget carefully: at 20 hits/call, match_scorecard can be called ~25x/day.
+#   Prefer one match_scorecard call per recent match over many per-player
+#   lookups — a single scorecard returns full batting + bowling for both sides.
 #
 # DEPENDENCIES: bash, curl, jq (optional but recommended for pretty output)
 
@@ -124,6 +141,24 @@ case "$cmd" in
   match_info)
     [[ $# -ge 1 ]] || { echo "match_info requires <match_id>" >&2; exit 1; }
     api_get "match_info" "id=$1"
+    ;;
+  match_squad)
+    [[ $# -ge 1 ]] || { echo "match_squad requires <match_id>" >&2; exit 1; }
+    api_get "match_squad" "id=$1"
+    ;;
+  match_scorecard|scorecard)
+    [[ $# -ge 1 ]] || { echo "match_scorecard requires <match_id>" >&2; exit 1; }
+    api_get "match_scorecard" "id=$1"
+    ;;
+  match_bbb|bbb)
+    [[ $# -ge 1 ]] || { echo "match_bbb requires <match_id> [offset]" >&2; exit 1; }
+    mid="$1"; shift || true
+    offset="${1:-0}"
+    api_get "match_bbb" "id=${mid}&offset=${offset}"
+    ;;
+  match_points|fantasy_points)
+    [[ $# -ge 1 ]] || { echo "match_points requires <match_id>" >&2; exit 1; }
+    api_get "match_points" "id=$1"
     ;;
   player_info|players_info)
     [[ $# -ge 1 ]] || { echo "player_info requires <player_id>" >&2; exit 1; }

@@ -58,6 +58,10 @@ IPL-2026/
 │   ├── forecasting-agent.md           ← Agent 5: match probability + Kalshi decision
 │   └── debriefing-agent.md            ← Agent 6: post-match review + context updates
 ├── context/
+│   ├── contracts/                     ← shared producer/consumer schemas
+│   │   ├── player-form-profiles.contract.md   ← Agent 3 output / Agent 4 input
+│   │   ├── scenario-analysis.contract.md      ← Agent 4 output / Agent 5 input
+│   │   └── prediction.contract.md             ← Agent 5 output / Agent 6 input
 │   ├── frameworks/
 │   │   ├── forecasting-methods.md
 │   │   ├── calibration-and-brier.md
@@ -484,12 +488,20 @@ Each agent loads specific context files. This table is the authoritative referen
 |-------|----------------------|
 | 1. Pitch Report | context/cricket/pitch-types.md, context/cricket/ipl-venue-patterns.md, context/venues/[VENUE].md |
 | 2. Team Research | context/cricket/player-matchup-framework.md, context/cricket/ipl-phase-dynamics.md, context/teams/[TEAM1].md, context/teams/[TEAM2].md |
-| 3. Player Research | context/cricket/player-matchup-framework.md, context/cricket/ipl-phase-dynamics.md, context/teams/[TEAM1].md, context/teams/[TEAM2].md, context/players/* (relevant) |
-| 4. Scenario Analysis | context/cricket/ipl-phase-dynamics.md, context/cricket/player-matchup-framework.md |
-| 5. Forecasting | context/frameworks/forecasting-methods.md, context/frameworks/market-anchoring.md, context/frameworks/behavioral-pitfalls.md, context/frameworks/position-sizing.md, context/frameworks/calibration-and-brier.md |
-| 6. Debriefing | context/frameworks/calibration-and-brier.md, context/teams/[TEAM1].md, context/teams/[TEAM2].md, context/venues/[VENUE].md, context/season-overview.md, all tracker files |
+| 3. Player Research | **context/contracts/player-form-profiles.contract.md (output schema — MANDATORY)**, context/cricket/player-matchup-framework.md, context/cricket/ipl-phase-dynamics.md, context/teams/[TEAM1].md, context/teams/[TEAM2].md, context/players/* (relevant) |
+| 4. Scenario Analysis | **context/contracts/player-form-profiles.contract.md (input schema — MANDATORY)**, **context/contracts/scenario-analysis.contract.md (output schema — MANDATORY)**, context/cricket/ipl-phase-dynamics.md, context/cricket/player-matchup-framework.md |
+| 5. Forecasting | **context/contracts/scenario-analysis.contract.md (input schema — MANDATORY)**, **context/contracts/prediction.contract.md (output schema — MANDATORY)**, context/frameworks/forecasting-methods.md, context/frameworks/market-anchoring.md, context/frameworks/behavioral-pitfalls.md, context/frameworks/position-sizing.md, context/frameworks/calibration-and-brier.md |
+| 6. Debriefing | **context/contracts/prediction.contract.md (input schema — MANDATORY)**, context/frameworks/calibration-and-brier.md, context/teams/[TEAM1].md, context/teams/[TEAM2].md, context/venues/[VENUE].md, context/season-overview.md, all tracker files |
 
 When constructing a subagent prompt, include these file paths so the agent knows exactly what to read.
+
+### Data Contracts — Why They Exist
+
+The `context/contracts/` directory holds **shared schemas** that are read by both the producer agent (which writes the file) and the consumer agent (which reads it). This is the architectural fix for producer/consumer drift: when Agent 4 wants to know what columns Agent 3 wrote, it reads the same contract Agent 3 wrote against. There is no way for the two to disagree.
+
+When spawning Agents 3, 4, 5, or 6 as subagents, the orchestrator must include the relevant contract file paths in the subagent's prompt alongside the upstream game files. The agents are instructed to read their contract before doing anything else; the orchestrator's job is to make sure the path is available.
+
+If a contract file is updated, every downstream agent must be re-read against the new contract on the next game. The orchestrator does not need to re-spawn old subagents — the next run picks up the new schema automatically.
 </context_loading_rules>
 
 ---
