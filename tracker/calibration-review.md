@@ -6,7 +6,35 @@
 
 ---
 
-## Post-Game 013 Status — MONITORING (April 7, 2026)
+## Post-Game 018 Status — ELEVATED WARNING (April 11, 2026)
+
+**Metric:** 5-game rolling Brier (Games 014-018, excluding abandoned 012)
+**Current value:** 0.2449 (avg of G014 0.2581, G015 0.1369, G016 0.2304, G017 0.1764, G018 0.4225)
+**Threshold:** ≤0.25 (acceptable), >0.25 (early calibration review)
+**Status:** BORDERLINE — at 0.2449, just below 0.25 threshold, but Game 018's 0.4225 is the worst single-game Brier of the season.
+
+| Game | Teams | Prediction | Brier | 5-Game Rolling |
+|------|-------|-----------|-------|---|
+| 014 | DC vs GT | DC 50.8% | 0.2581 | — |
+| 015 | KKR vs LSG | KKR 37% | 0.1369 | — |
+| 016 | RR vs RCB | RR 52% | 0.2304 | — |
+| 017 | PBKS vs SRH | PBKS 58% | 0.1764 | — |
+| 018 | CSK vs DC | CSK 35% | **0.4225** | **0.2449** (avg G014-018) |
+
+**Running average (17 scored games):** 0.2252 (up from 0.2189 after G017)
+
+**Key concern:** Game 018's 0.4225 is driven by a single-player form classification error (Samson −18% SR treated as Signal on 2-game sample → actual +205% SR). This is not a systemic calibration failure but a specific process error.
+
+**Recommendation:** Do NOT trigger full calibration review yet (5-game rolling is 0.2449, just under 0.25). But implement the three process fixes from Game 018 debrief immediately:
+1. Form dip minimum sample: never classify <5-game trends as "Signal"
+2. Desperation-bounce factor: +3-5pp reversion for teams 0-3+ at home
+3. Correlation discount floor: minimum 60% when all 8 phase LRs align
+
+**Next review trigger:** If 5-game rolling exceeds 0.25 after Game 019-020, or at Game 020 (scheduled 20-game formal review).
+
+---
+
+## Post-Game 013 Status — MONITORING (April 7, 2026) [ARCHIVED]
 
 **Metric:** 5-game rolling Brier (Games 009-013, excluding abandoned 012)
 **Current value:** 0.2279

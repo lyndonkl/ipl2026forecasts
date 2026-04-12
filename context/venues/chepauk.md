@@ -68,7 +68,8 @@
 
 | Match # | Date | Teams | 1st Inn | 2nd Inn | Result | Key Performers | Pitch Notes |
 |---------|------|-------|---------|---------|--------|---------------|-------------|
-| 007 | Apr 3 | CSK vs PBKS | — | — | Upcoming | — | Fresh pitch, light grass, dry turning track; first IPL 2026 match at renovated venue |
+| 007 | Apr 3 | CSK vs PBKS | CSK 160 ao | PBKS 157/5 (18.4) | PBKS won by 5 wkts | Chahal 4-0-28-2 | Dry turning track; spin dominated middle overs. CSK middle-order collapse. |
+| 018 | Apr 11 | CSK vs DC | CSK 212/2 (20) | DC 189 ao (19.2) | CSK won by 23 runs | Samson 115*(56) | Used pitch, moderate turn. Samson dominated all phases. DC chase collapsed in middle overs. Dew moderate onset ~8:30pm but insufficient to rescue DC. |
 
 ### Last 5 IPL Games at Chepauk (Pre-2026)
 
@@ -84,8 +85,9 @@
 
 ### Running Venue Stats (IPL 2026)
 
-- Games played: 0 (Game 007 is the first)
-- CSK home wins at Chepauk (2026): 0
-- PBKS wins at Chepauk: 0 (in 2026)
-- Average first innings score: TBD (will update after Game 007)
-- Pitch observations: Fresh, light grass covering, dry turning characteristics expected to develop through match
+- Games played: 2 (Game 007, Game 018)
+- CSK home record at Chepauk (2026): 1W-1L (lost G007 vs PBKS, won G018 vs DC)
+- Average first innings score: 186 (CSK 160 in G007, CSK 212 in G018)
+- Bat-first record: 1W-1L (CSK batted first both times)
+- Pitch observations: Spin remains a factor but post-renovation surface plays better for batting than historical IPL averages. Par score revised upward to 175-195. Dew moderate, onset 8:30-9pm, not match-defining.
+- **Key learning (G018):** An in-form opener (Samson 115*) can neutralize Chepauk's spin reputation. 212 is achievable even on a used pitch.

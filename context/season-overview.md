@@ -1,6 +1,6 @@
 # IPL 2026 Season Overview
 
-**Last updated:** 2026-04-08 (after Game 014)
+**Last updated:** 2026-04-11 (after Game 017)
 
 ---
 
@@ -25,28 +25,27 @@
 
 ---
 
-## Points Table (After Game 014)
+## Points Table (After Game 018)
 
 | Pos | Team | P | W | L | NR | Pts |
 |-----|------|---|---|---|----|----|
-| 1 | PBKS | 3 | 2 | 0 | 1 | 5 |
-| 1 | RR | 3 | 2 | 1 | 0 | 4 |
-| 1 | RCB | 3 | 2 | 1 | 0 | 4 |
-| 4 | DC | 3 | 2 | 1 | 0 | 4 |
-| 4 | GT | 3 | 1 | 2 | 0 | 2 |
+| 1 | PBKS | 4 | 3 | 0 | 1 | 7 |
+| 2 | RR | 3 | 2 | 1 | 0 | 4 |
+| 2 | RCB | 3 | 2 | 1 | 0 | 4 |
+| 2 | DC | 4 | 2 | 2 | 0 | 4 |
+| 5 | SRH | 4 | 2 | 2 | 0 | 4 |
+| 6 | GT | 3 | 1 | 2 | 0 | 2 |
 | 6 | LSG | 2 | 1 | 1 | 0 | 2 |
 | 6 | MI | 2 | 1 | 1 | 0 | 2 |
-| 8 | SRH | 3 | 1 | 2 | 0 | 2 |
-| 9 | CSK | 2 | 0 | 2 | 0 | 0 |
+| 9 | CSK | 3 | 1 | 2 | 0 | 2 |
 | 10 | KKR | 3 | 0 | 2 | 1 | 1 |
 
-**Notes:**
-- PBKS and DC both 2W-0L, co-leading with 4 points each.
-- RR 2W-0L after thriller vs GT (Game 009).
-- **NEW:** RCB climbed to 2W-0L (4 points) after dominating CSK at home. Tim David 70* off 25 (8 sixes), Patidar 48 off 14. CSK 207/10 fell 43 short. RCB now joint leaders.
-- LSG 1W-1L. SRH 1W-2L (Game 010 loss vs Shami 2/9). MI 1W-1L.
-- CSK now 0–2 (last place) after losses to RR (Game 003) and RCB (Game 011). Opening collapse pattern continues.
-- **Game 012 (Apr 6):** KKR vs PBKS ABANDONED (rain after 3.4 ov, 25/2 KKR). Both teams share 1 point. PBKS now 2W-0L-1NR (5 points, co-leaders). KKR 0W-2L-1NR (1 point, 10th place). Rahane won toss, chose to BAT FIRST (unusual decision vs dew convention). Bartlett took early wickets (Allen 0, Green 3). Rain disrupted around 7:45-8:00 PM.
+**Notes (through Game 018):**
+- **PBKS sole leaders:** 3W-0L-1NR (7 points from 4 games). Unbeaten.
+- DC drop to 2W-2L after loss at Chepauk. RR, RCB also at 4 pts (2W-1L).
+- **CSK first win:** Beat DC by 23 runs at Chepauk (Game 018). Samson 115*(56). CSK now 1-2 (2 pts), off the bottom.
+- SRH now 2W-2L (4 points, co-second with RR/RCB/DC) after losing to PBKS at Mullanpur.
+- **Game 017 (Apr 11, Mullanpur):** PBKS 223/4 beat SRH 219/6 in 18.5 overs by 6 wickets. Priyansh Arya MOTM 57(20), Shreyas Iyer 69*(33). SRH elite PP (Abhishek 74 SR 264 + Head 38 SR 165 = 105/0), PBKS elite PP (Priyansh 57 SR 285 + Prabhsimran 51 = 93/0). Chase won comfortably.
 
 ---
 
@@ -155,6 +154,8 @@ _Append new developments here throughout the tournament:_
 - **[Game 010 (Apr 5 AM)](../games/game-010-SRH-vs-LSG-2026-04-05/outcome.md):** LSG 160/5 beat SRH 156/9 at [Arun Jaitley Stadium](venues/arun-jaitley.md) by 5 wkts (19.5 overs). Rishabh Pant 68* (form surge confirmed). Mohammed Shami 2/9 MOTM (elite seam bowling, youngest to 250 IPL wickets). SRH collapse: Abhishek 0(2), Head 7(8) vs Shami precision. LSG now 2W-1L.
 - **[Game 011 (Apr 5 PM)](../games/game-011-RCB-vs-CSK-2026-04-05/outcome.md):** RCB 250/3 beat CSK 207/10 at [M. Chinnaswamy Stadium](venues/chinnaswamy.md) by 43 runs. Tim David 70*(25, 8 sixes) death-overs dominance. Rajat Patidar 48 off 14 (unprecedented slog role aggression). Padikkal 50, Salt 46. CSK chase: Samson 9 (repeated opener failure pattern: 6 off 7 Game 003, 9 Game 011), Sarfaraz Khan 50 off 25 (unlikely hero), Prashant Veer 43 off 29 (debutant). Bhuvneshwar 3 wkts (death bowling). Dew occurred but insufficient vs RCB 250. RCB now co-leaders 2W-0L alongside PBKS, DC, RR with 4 points. CSK 0–2 (last place). Chinnaswamy flat pitch confirmed: 200 NOT safe, par updated 210–220 to defend.
 
-### Week 4 (April 8)
+### Week 4 (April 8–11)
 
 - **[Game 014 (Apr 8)](../games/game-014-DC-vs-GT-2026-04-08/outcome.md):** GT 210/4 beat DC 209/8 at [Arun Jaitley Stadium](venues/arun-jaitley.md) by 1 run. **GT's FIRST WIN of IPL 2026.** Shubman Gill 70(45) anchored. Washington Sundar 55(32) maiden IPL fifty. Jos Buttler 52(27, 24-ball fifty). Pathum Nissanka 41(24) aggressive opening in both innings. **DC Chase:** KL Rahul 92(52) nearly won it single-handedly. Rizvi duck (critical juncture). David Miller 41*(20) returned from retirement-hurt, explosive finish. **Bowling:** Rashid Khan MOTM with 3 wickets (dominated middle overs). Prasidh Krishna clutch final over (dot + run-out, 1-run victory). Flat Arun Jaitley pitch confirmed: both teams 200+. Dew onset on schedule (late MO/Death). **DC now 2–1-0 (4 pts).** **GT now 1–2-0 (2 pts).** **RR remains 2–1-0 (4 pts), co-leaders with PBKS (2–0–1) and RCB (2–1-0).**
+- **[Game 017 (Apr 11)](../games/game-017-PBKS-vs-SRH-2026-04-11/outcome.md):** PBKS 223/4 beat SRH 219/6 at [Mullanpur](venues/mullanpur.md) by 6 wickets in 18.5 overs. **Elite parallel powerplays:** SRH 105/0 in PP (Abhishek 74 off 28 SR 264, form reversal; Head 38 off 23 SR 165) vs PBKS 93/0 in PP (Priyansh Arya 57 off 20 SR 285 MOTM, elite aggression; Prabhsimran 51 off 25). PBKS chase: Shreyas Iyer 69* off 33 (unbeaten finisher, 209 SR). SRH total 219 strong but insufficient vs aggressive Mullanpur pitch + weak new-ball. Chahal 4-0-52-1 (confirmed XI), Arshdeep 0/48 (form dip continues, 2-game 0-wicket streak). Harshal Patel 2/52 (death wickets maintained). **PBKS now 3W-0L-1NR (7 pts, sole leaders).** **SRH now 2W-2L (4 pts, co-second with RR/RCB/DC).**
+- **[Game 018 (Apr 11)](../games/game-018-CSK-vs-DC-2026-04-11/outcome.md):** CSK 212/2 beat DC 189 ao at [Chepauk](venues/chepauk.md) by 23 runs. **CSK's FIRST WIN of IPL 2026.** Sanju Samson 115*(56, SR 205, 15x4 4x6) — maiden CSK century, 4th IPL century overall. Gaikwad 28(32) steady, Short 35(18) explosive, Dube 18*(8) death surge. CSK won toss, batted first. DC chase: openers started well (61/0 after PP, Rahul 38 + Nissanka 24) but collapsed in middle overs. Stubbs 60(42) sole resistance. Miller underperformed 28(22) SR 127. Kuldeep/Axar spin advantage didn't materialize with 212 to chase. **CSK now 1-2 (2 pts, off bottom).** **DC now 2-2 (4 pts).**

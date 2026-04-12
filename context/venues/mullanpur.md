@@ -87,3 +87,10 @@
 | Match # | Date | Teams | 1st Inn | 2nd Inn | Result | Key Performers | Pitch Notes |
 |---------|------|-------|---------|---------|--------|---------------|-------------|
 | 004 | Mar 31 | PBKS vs GT | GT 162/6 (20 ov) | PBKS 165/7 (19.1 ov) | PBKS +3 wkts | Connolly 72*(44), Vyshak 3/34, Chahal 4-0-28-2, Prasidh 3/29 | Balanced — pace effective early, spin gripped in middle. Field-first won (PBKS chose to field). |
+| 017 | Apr 11 | PBKS vs SRH | SRH 219/6 (20 ov) | PBKS 223/4 (18.5 ov) | PBKS +6 wkts | Priyansh Arya 57(20) SR 285 MOTM, Abhishek 74(28) SR 264, Shreyas 69*(33) SR 209 | Flat, batting-friendly. Elite PPs: SRH 105/0 (Abhishek form reversal + Head elite), PBKS 93/0 (Priyansh elite + Prabhsimran aggression). Chase won decisively. New-ball weak (Bartlett, Vyshak, Unadkat all 10+ eco PP). Chase success confirmed (2/2 at Mullanpur 2026). |
+
+**Updated Venue Summary (post-Game 017):**
+- **Chase trend:** 2-2 (100% chase success in IPL 2026 at Mullanpur); historically 5-4 BAT-first (55%)
+- **Powerplay trend:** Both teams reaching 90-105 in PP; new-ball bowling weaker than expected (Bartlett, Vyshak, Unadkat struggling vs aggressive openers). Revised PP par: 75-95 runs (up from 50-65).
+- **Par score:** 180-195 (updated from 170-180; stronger batting displays in 2026)
+- **Dew:** Afternoon D/N (Game 017) saw minimal dew impact; evening matches (Game 004) saw minimal to moderate dew late innings

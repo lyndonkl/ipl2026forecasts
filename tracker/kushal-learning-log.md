@@ -98,6 +98,49 @@ the current squad is different from the dynasty years.
 - KKR bowling was genuinely terrible — Arora and Muzarabani toothless
 - Rohit and Rickelton put on an absolute show in the opening partnership
 
+---
+
+## Game 017 — PBKS vs SRH (April 11, 2026)
+
+**Prediction:** PBKS 58% / SRH 42% | **Result:** PBKS won by 6 wickets (223/4 in 18.5 ov)
+**Brier score:** 0.1764 | **Kalshi decision:** PASS
+**Running Brier average:** 0.2189 (improved from 0.2218)
+
+### Kushal's Pre-Match Beliefs
+
+**Chahal XI correction impact:** The discovery that Chahal was confirmed in PBKS XI (not benched) flipped the Early Middle phase LR from 1.35 (SRH edge) to 0.85 (PBKS edge). This single XI element was worth ~20pp in match probability (would have predicted 37.5% PBKS pre-correction). Lesson: Lock XI early; one key spinner/pacer is a probability game-changer.
+
+**Base rate adjustment:** Market had PBKS 57%, I downweighted to 54% gut estimate based on "wins recently" concern. Final 58% was a compromise between market (57%) and my conservative adjustment (54%). Edge after fees: ~0¢. Decision: PASS. Rationale was sound.
+
+**Abhishek Sharma form volatility concern:** Flagged as −28% form dip (6 ducks) with single 48(21) recovery insufficient. This proved overweighted. His 74(28) was a genuine form reversal, not a 1-game anomaly. Should have adjusted the baseline after a 2-game recovery run (Game 006 + implicit Game 017 context).
+
+### What I Noticed Live
+
+[To fill: Kushal's live observations from match broadcast]
+
+### What Surprised Me
+
+**Abhishek Sharma's +264 SR vs −28% baseline.** Form volatility was extreme. The 6 ducks → 48(21) → 74(28) progression suggests momentum-driven recovery, not an unlucky streak correcting. Post-match learning: For volatile batters, track 3-game rolling average, not season aggregate.
+
+**Shreyas Iyer 69* unbeaten in chase.** Predicted as anchor (40–50), but entering at 0-wicket state in chase elevated him to finisher. This is a role variance that added 19 runs above prediction ceiling. Lesson: When senior bat enters early in chase, model +10 pp upside for unbeaten role.
+
+**Priyansh Arya 57(20) SR285 — ceiling exceeded again.** Game 007 vs CSK, he scored 57, 62 aggregate in two games. Powerplay aggression is proving elite, not a single-game surge. Should be upgraded to baseline form projection (not +6% modifier, but +12–15% sustained).
+
+### One Thing I'd Weight Differently Next Time
+
+**Discount unused player variance in chase scenarios.** Jansen and Stoinis were flagged as 20–35 runs if played in death phase. PBKS won in 18.5 overs; both unused. Shreyas' unbeaten role absorbed their variance. For future chases: Don't inflate variance of 6th/7th batters (low probability of use = low variance contribution to win %).
+
+### Bias I Caught in Myself
+
+**Anchoring to pre-season form data.** Abhishek's 6 ducks were from Games 001–005 (late March). By Game 017 (mid-April), 2 months of team dynamics, opposing bowling familiarity, and partner confidence had reset his baseline. I was anchoring to stale data. Bias: **Seasonal anchoring** — must reset player baselines every 5 games, not carry pre-season form into mid-season.
+
+### Question I Want to Explore
+
+How much of Mullanpur's recent "chase advantage" (4 of 6 wins for chasing side) is pitch + weather vs bowling weakness league-wide? Game 017 SRH scored 219/6 (flat pitch, weak PBKS bowling); PBKS chased in 18.5 overs (aggression baked in). Is Mullanpur enabling aggression, or are 2026 IPL new-ball bowlers just weaker? 
+
+**Hypothesis:** Recent Mullanpur matches (Apr 2, Apr 4, Apr 11) show PP scores of 105, 90+, 93 — anomalously high. Pitch flatness is real, but weak new-ball attacks (Bartlett, Vyshak, Payne, Unadkat) are underperforming vs elite standards. Next Mullanpur game (TBD): Revise PP expectation upward (80–100 range) and check if bowling weakness is systematic or sampling noise.
+
+
 **What surprised me:**
 - Rohit Sharma scored 78 off 38 with his fastest IPL fifty (23 balls) — I called him "untested" pre-match and he answered emphatically
 - Rickelton 81 off 43 — I said he "hasn't produced big innings" and he produced the highest score of the match on debut
@@ -719,3 +762,93 @@ Track specific forecasting skills as they develop:
       "good data"
 - [ ] **Can argue the other side** — Naturally builds the Devil's Advocate
       case without being prompted
+
+---
+
+## Game 018 — CSK vs DC (April 11, 2026)
+
+**Prediction:** CSK 35% / DC 65% | **Result:** CSK won by 23 runs (212/2 vs 189/10)
+**Brier score:** 0.4225 (Very Bad — confident and strongly wrong)
+**Kalshi trade:** DC YES, 4 contracts at 54¢ = $2.16 (LOST, -$2.24 with fees)
+**Running average Brier:** 0.2252 (after 18 games, up from 0.2189 after Game 017)
+
+### What I Noticed Live
+
+[Kushal to record — for post-match analysis above]
+
+### My Strongest Pre-Match Belief
+
+**Kuldeep Yadav elite wrist-spin on dry Chepauk turning pitch will dominate CSK's unproven spinners (Chahar, Hosein).** This drove LR 0.75 in EM phase, which translated into 65% edge for DC.
+
+**Result:** WRONG. Samson's 115* meant CSK never faced the "EM spin choke" scenario. Kuldeep did dominate DC's chase, but CSK batting never encountered the spin dominance I modeled.
+
+### What Surprised Me
+
+**Sanju Samson's form explosion:** Predicted Samson would underperform due to -18% SR form dip (6 off 7 in G003, 9 off 7 in G011). Actual: 115* off 56 (SR 205, 15 fours, 4 sixes).
+
+This is the single largest miss of the season. Samson's +97.5 run variance (vs predicted 7.5 runs) accounts for ~60 of the 30-point DC edge reversal.
+
+### One Thing I'd Weight Differently Next Time
+
+**Never classify a 2-game form dip as a "Signal."**
+
+Current approach: Samson 6-6-9 over 3 games (avg 7 off 7), classified as "Form Class: Signal (est.)" → downweight 18% from career 135 SR baseline.
+
+**Better approach:**
+1. Use 5-game rolling average minimum for Signal classification
+2. Classify 2-3 game deviations as "Noise"
+3. Default weight 2-game sample at 20% vs career mean (80% weight on career baseline)
+4. If Samson's 2-game avg is 60 SR vs career 135, estimate likely range as: 80% weight on 135 + 20% weight on 60 = **119 SR expected** (regression toward mean), not "65 SR (form dip continues)"
+
+Samson's actual 205 SR is extreme, but 120-140 SR (reversion range) would have eliminated the DC 65% edge entirely.
+
+### Bias I Caught in Myself
+
+1. **Over-weighting recent negative games on small samples.** Two weak games (G003, G011) drove -18% adjustment. This is the textbook "recency bias" error.
+
+2. **Anchoring to form-dip narrative without validating sample size.** Once I classified Samson as "Form Class: Signal," I treated it as fact throughout prediction. Did not revisit whether 2-game sample justified "Signal" classification.
+
+3. **Ignoring home-ground acclimation for overseas player.** Samson played G003 (away at Baroda, new CSK), G011 (RCB away). Game 018 was his 3rd game, at home (Chepauk), vs familiar CSK environment. Familiarity should have prompted form reversion upside.
+
+### Kalshi Trade Review
+
+**Thesis:** CSK 35% vs market 54% (DC YES) = 11pp edge. Sized to 4 contracts (half Kelly, Medium confidence).
+
+**Result:** CSK won. Payout $0.00. Loss: -$2.24 with fees.
+
+**Trade quality analysis:**
+- Edge (11pp) was **real IF** CSK were actually weak (35%). But Samson's 2-game dip wasn't supported by a 5-game sample, so the underlying 35% probability was WRONG.
+- Kalshi trade was well-sized given Medium confidence + 11pp edge. But the model's fundamental input (CSK probability) was incorrect.
+- **Lesson:** When trade edge depends on 1-2 player assumptions (Samson form dip drove ~30pp), lower Kelly sizing fraction. Half Kelly was appropriate for 11pp edge on a stable model; but on a model with concentration risk (Samson), should have used Quarter Kelly (~6.4%) instead.
+
+**P&L Impact:** Loss -$2.24 drops bankroll from $17.32 → $14.53. Cumulative P&L after 18 games: +$5.56 (still positive, +33.1% ROI), but this game caused the steepest loss since Game 004 (-$1.59).
+
+### Pattern Recognition & Lessons
+
+| Pattern | Status | Games Confirmed | Lesson |
+|---------|--------|-----------------|--------|
+| 2-game form dips over-weighted as Signal | **NEW (Critical)** | Game 018 (Samson -18% → actual +205%) | Never classify <5-game form deviation as Signal. Use 80/20 weight (career baseline vs recent). |
+| Bankroll sizing too aggressive when edge concentrates in 1-2 players | **NEW** | Game 018 (Samson drove 30pp of edge) | Model sensitivity audit: if edge from <3 players, use 50% Kelly fraction instead of 100%. |
+| Chase-context LR distinct from bat-first LR | CONFIRMED | Game 018 (predicted DC chase at 1.35 LR, but collapsed 3-4 wkts in overs 7-12) | Discount chase phase LRs by 0.05-0.15. Wicket cluster risk higher under pressure. |
+| Unknown ceiling volatility in chase context | CONFIRMED | Game 018 (Rana UNKNOWN CEILING 5-45 proved 5-20 range; Nissanka +39% form surge under-delivered 24 vs expected 50+) | Weight P25 (lower tail) more heavily in chase. Pressure amplifies downside tail risk. |
+| Home-ground acclimation for overseas players | **NEW** | Game 018 (Samson 3rd game at Chepauk, familiar setting vs G003 Baroda away, G011 Chinnaswamy away) | Add +3-5pp reversion upside for overseas player in 3rd+ game at same home venue. |
+
+### Calibration Trigger
+
+**Game 018 Brier 0.4225 (Very Bad) triggers early warning flag:**
+- Running average Brier now 0.2252 (up from 0.2189 in Game 017)
+- Not yet at 5-game rolling average threshold (would need 4 more games >0.25 to trigger auto-review)
+- But first game with Brier >0.40 suggests model degradation in player form classification
+
+**Action:** After Game 022-024, conduct full recalibration review on:
+1. Form signal classification rules (2-game vs 5-game thresholds)
+2. Kelly sizing on player-concentrated edges
+3. Chase-context LR adjustments
+
+### Question I Want to Explore
+
+1. **How to validate a form dip before locking prediction?** Would checking T20 domestic cricket or international matches for Samson (Feb-Mar 2026) have caught the form dip noise? (Recommend: cross-check international form as a triangulation signal.)
+
+2. **Is there a formula for overseas player acclimation curves?** Do 2nd/3rd games at same venue show systematic form reversion? (Hypothesis: yes, particularly for power hitters who need to learn venue dimensions/pitch behavior.)
+
+3. **Should chase-context LRs scale with target size?** A 212-run target with required rate 10.6 RPO is pressurized. Should EM LR 1.35 (bat-first generic) become 1.20 (chase 212, higher pressure)?

@@ -21,4 +21,6 @@
 | 013 | RR vs MI | 2026-04-07 | RR 57.8% / MI 42.2% | RR 43¢ / MI 57¢ (Kalshi) | RR (by 27 runs, 11 ov) | YES | 0.1781 | Medium-Low |
 | 014 | DC vs GT | 2026-04-08 | DC 50.8% / GT 49.2% | DC 53¢ / GT 47¢ (Kalshi) | GT (by 1 run) | NO | 0.2581 | Medium-Low |
 | 015 | KKR vs LSG | 2026-04-09 | KKR 37% / LSG 63% | KKR 48¢ / LSG 52¢ (Kalshi) | LSG (by 3 wkts, 0 balls remaining) | YES | 0.1369 | Medium |
-| 016 | RR vs RCB | 2026-04-10 | RR 52% / RCB 48% | RR 47¢ / RCB 53¢ (Kalshi) | — | — | — | Medium |
+| 016 | RR vs RCB | 2026-04-10 | RR 52% / RCB 48% | RR 47¢ / RCB 53¢ (Kalshi) | RR (by 6 wkts, 18 ov) | YES | 0.2304 | Medium |
+| 017 | PBKS vs SRH | 2026-04-11 | PBKS 58% / SRH 42% | PBKS 56% (1xBet market implied) | PBKS (by 6 wkts, 18.5 ov) | YES | 0.1764 | Medium |
+| 018 | CSK vs DC | 2026-04-11 | CSK 35% / DC 65% | DC 54¢ (Kalshi) | CSK (by 23 runs) | NO | 0.4225 | Medium |

@@ -96,3 +96,33 @@
 | 014 | DC | Second innings total | 165–190 range (par chase) | 209 | YES — in range, 1 run short |
 | 014 | GT vs DC | Death bowling edge (LR 1.25) | DC under pressure, GT holds | GT won by 1 run; edge verified | YES (direction) |
 | 014 | Kuldeep vs Phillips | Dominance assumption (v3 override 0.92→0.82) | Phillips restricted, Kuldeep dominant | Phillips didn't bat in key LM overs; override moot | NO — moot matchup |
+| 016 | Vaibhav Sooryavanshi | PP aggression, 30–50 runs SR 150–180 | 78 off 26, SR 300 | NO — exceeded ceiling by 28 runs, form peak |
+| 016 | Dhruv Jurel | Middle-order solid, 25–45 runs SR 140–160 | 81 off 43, SR 188.4 | NO — exceeded ceiling by 36 runs, anchor under pressure |
+| 016 | Yashasvi Jaiswal | PP dominant, 35–60 runs SR 150–170 | 13 off 10, SR 130 | NO — well below floor, form dip vs Hazlewood |
+| 016 | Rajat Patidar | EM/LM aggression, 40–65 runs SR 140–170 | 63 off 40, SR 157.5 | YES — in range, lower SR (steady build) |
+| 016 | Virat Kohli | PP edge, 30–50 runs SR 140–160 | 32 off 16, SR 200 | PARTIAL — in run range, SR 25% higher (short-ball aggression) |
+| 016 | Josh Hazlewood | 1–2 wickets, economy 7.5–8.5 | 1 wkt (Jaiswal), econ 8.75 | PARTIAL — hit wicket, economy at high end |
+| 016 | Jofra Archer | 2–3 wickets, economy 7.0–8.0 | 2 wkts, econ ~7.0 | YES — in range |
+| 016 | Ravi Bishnoi | 1–3 wickets, economy 8.0–9.5 | 2 wkts, econ ~8.0 | YES — in range |
+| 016 | Bhuvneshwar Kumar | 1–2 wickets, economy 8.0–9.5 | 0 wkts, econ ~8.0 | NO — zero wickets, form dip vs aggression |
+| 016 | RCB First Innings Total | 175–200 runs | 201 | NO — 1 run above ceiling |
+| 016 | RR Powerplay (1-6) | 50–75 runs | 73 | YES — in range (upper end) |
+| 016 | RR Chase Completion | Win by 6+ wickets, 18–19 overs | Won by 6 wickets, 18 overs | YES — hit all fronts |
+| 017 | Priyansh Arya (PBKS) | Form surge +6%, 35–45 runs | 57 off 20 | YES — exceeded ceiling by 12 runs, elite SR 285 |
+| 017 | Prabhsimran Singh (PBKS) | Limited data, 15–40 runs | 51 off 25 | YES — exceeded ceiling by 11 runs, opening premium |
+| 017 | Shreyas Iyer (PBKS) | Anchor 40–50 runs, elite vs spin | 69* off 33 | YES — exceeded ceiling by 19 runs, unbeaten finisher role |
+| 017 | Abhishek Sharma (SRH) | Form dip −28%, collapse risk 0–40 | 74 off 28 | NO — form reversal; 74 well above ceiling |
+| 017 | Travis Head (SRH) | Form surge +14%, elite SR 165+ | 38 off 23 | YES — in range, 165.2 SR confirmed |
+| 017 | Ishan Kishan (SRH) | Outlier regression to 145 SR, 25–35 range | 27 off 17 | PARTIAL — in regression estimate, 158.8 SR confirms dip |
+| 017 | Heinrich Klaasen (SRH) | Elite death, 35–60 runs, SR 175+ | 39 off 24 | YES — in range, 162.5 SR near career 172 |
+| 017 | Harshal Patel (SRH) | Death specialist, eco 8.0–9.5, 5 wkts last 5 | 2 wickets | PARTIAL — wickets taken, economy not tracked |
+| 017 | Arshdeep Singh (PBKS) | Form dip −15%, elite baseline, 2–3 wkts | 0 wickets | PARTIAL — continuing 0-wicket streak, form dip confirmed |
+| 017 | Xavier Bartlett (PBKS) | Par pace eco 8.5–9.0, 3–4 overs | 1 wkt, eco 8.75 | YES — economy 8.75 confirms par expectation |
+| 018 | Sanju Samson (CSK) | Form dip −18% SR, PP struggle | 115*(56) SR 205 | NO — form dip prediction catastrophically wrong; career-best IPL innings |
+| 018 | Ruturaj Gaikwad (CSK) | Form dip −35% SR | 28(32) SR 87.5 | PARTIAL — still slow SR, but provided stability; form dip direction correct |
+| 018 | KL Rahul (DC) | Form surge +15% SR, 40-70 runs | 38(28) SR 135.7 | NO — below predicted floor; dismissed mid-chase |
+| 018 | Pathum Nissanka (DC) | Form surge +39% SR, aggressive opener | 24(18) SR 133.3 | NO — below expected form surge; couldn't maintain aggression |
+| 018 | David Miller (DC) | Death SR 172, +32% form surge, finisher dominance | 28(22) SR 127.3 | NO — form surge didn't materialize; well below predicted SR |
+| 018 | Kuldeep Yadav (DC) | Elite spin at Chepauk, EM dominance | 4 runs conceded? (bowled middle overs) | PARTIAL — Chepauk spin didn't dominate as predicted with 212 to chase |
+| 018 | Tristan Stubbs (DC) | Middle-order power | 60(42) SR 142.9 | YES — delivered as predicted middle-order threat |
+| 018 | Matthew Short (CSK) | Fitness variable, Brevis replacement | 35(18) SR 194.4 | YES — exceeded expectations; explosive acceleration |

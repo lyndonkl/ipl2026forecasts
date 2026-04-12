@@ -2,6 +2,7 @@
 
 ### Game Files
 - [Game 003 vs RR: Prediction](../../games/game-003-RR-vs-CSK-2026-03-30/prediction.md) | [Outcome](../../games/game-003-RR-vs-CSK-2026-03-30/outcome.md)
+- [Game 018 vs DC: Prediction](../../games/game-018-CSK-vs-DC-2026-04-11/prediction.md) | [Outcome](../../games/game-018-CSK-vs-DC-2026-04-11/outcome.md)
 
 ## Basic Info
 
@@ -119,6 +120,7 @@ on Chepauk's fresh-pitch green tops.
 |---------|----------|--------|-------|---------------|-------|
 | 003 | RR (Barsapara) | LOST by 8 wkts | CSK 127 ao (19.4) → RR 128/2 (12.1) | Overton 43(36), Kartik 18(15) | Collapsed 41/4 in PP. Samson 6(7), Gaikwad 6(11). Dube 6(4) dismissed Jadeja. Overton lone resistance. |
 | 011 | RCB (Chinnaswamy) | LOST by 43 runs | CSK 207/10 in 19.4 ov (chasing RCB 250/3) | Sarfaraz Khan 50 off 25 (unlikely hero), Prashant Veer 43 off 29 | Samson opened 9 (?) — pattern continues: 6 off 7 in G003, 9 in G011 (opening collapse repeating). Gaikwad likely early out. Sarfaraz + Prashant provided resistance but insufficient vs RCB 250. Dew occurred (overs 15–20) but couldn't overcome 43-run margin. CSK now 0–3 (last in table likely). [Game file](../../games/game-011-RCB-vs-CSK-2026-04-05/) |
+| 018 | DC (Chepauk) | **WON by 23 runs** | CSK 212/2 (20 ov) → DC 189 ao (19.2 ov) | **Sanju Samson 115* (56) SR 205** | **FIRST WIN of IPL 2026.** Samson's maiden CSK century, 4th IPL century overall (15x4, 4x6). Gaikwad 28(32) solid but slow. Short 35(18) explosive. Dube 18*(8) death finisher. CSK won toss, batted first. DC chase collapsed in middle overs vs CSK spin. CSK now 1-3 (2 pts). [Game file](../../games/game-018-CSK-vs-DC-2026-04-11/) |
 
 ### Game 003 XI (Actual — MAJOR DIFFERENCES FROM PRE-SEASON PROJECTION)
 | # | Player | Role | Notes |

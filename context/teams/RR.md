@@ -147,3 +147,24 @@ lower prediction confidence for RR matches there.
 
 **Overseas 4:** Hetmyer, Shanaka, Archer, Burger
 **Key note:** Burger played ahead of Tushar Deshpande. Brijesh Sharma included.
+
+| 016 | RCB (Barsapara) | WON by 6 wkts | RCB 201/8 → RR 202/4 (18 ov) | Sooryavanshi 78(26) [debut blitz], Jurel 81* | RCB first team beaten in IPL 2026. RR remain unbeaten 4-0. Sooryavanshi's 78 off 26 (SR 300) exceptional form realisation — 15-year-old batting like finisher (8 fours, 7 sixes). Jaiswal early out (13 off 10 to Hazlewood nick), but Sooryavanshi + Jurel 108-run 2nd-wkt partnership won it (37 balls). Jurel's 81 off 43 anchored chase. Archer 2/28, Bishnoi 2/32 controlled RCB PP + EM. RCB's Patidar 63 off 40, Kohli 32 off 16 (but expensive), Iyer 29 off 15 (death). RR's Sandeep conceded 21 in final over. |
+
+### Game 016 XI (Actual)
+| # | Player | Role |
+|---|--------|------|
+| 1 | Yashasvi Jaiswal | Opener (LHB) |
+| 2 | Vaibhav Suryavanshi | Opener (LHB) |
+| 3 | Riyan Parag (c) | Middle order (RHB) |
+| 4 | Dhruv Jurel (wk) | Middle order (RHB) |
+| — | Shimron Hetmyer | (DNB — Jadeja in) |
+| 5 | Ravindra Jadeja | AR (LHB/SLA) |
+| 6 | Sam Curran | (DNB) |
+| 7 | Jofra Archer | RF — overseas |
+| 8 | Ravi Bishnoi | Leg-spin |
+| 9 | Nandre Burger | RF — overseas |
+| 10 | Tushar Deshpande | Seam |
+| 11 | Sandeep Sharma | RMF |
+
+**Overseas 3:** Archer, Burger (2 overseas plays in Game 016, Hetmyer rested or unavailable)
+**Key XI change:** Hetmyer listed in predicted XI, but Jadeja came in to bat (actual XI). Suggests flexibility or late change.
