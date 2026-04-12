@@ -25,3 +25,5 @@
 | 016 | RR vs RCB | 0.2304 | Medium | 0.2218 |
 | 017 | PBKS vs SRH | 0.1764 | Medium | 0.2189 |
 | 018 | CSK vs DC | 0.4225 | Medium | 0.2252 |
+| 019 | LSG vs GT | 0.1764 | Medium | 0.2226 |
+| 020 | MI vs RCB | 0.2970 | Medium | 0.2263 |

@@ -50,6 +50,7 @@
 | Match # | Date | Teams | 1st Inn | 2nd Inn | Result | Key Performers | Pitch Notes |
 |---------|------|-------|---------|---------|--------|---------------|-------------|
 | 002 | Mar 29 | MI vs KKR | KKR 220/4 (20 ov) | MI 224/4 (19.1 ov) | MI by 6 wkts | Rickelton 81(43), Rohit 78(38), Rahane 67(40), Shardul 3/39 | Dead flat road. Both teams 220+. Spin completely ineffective (Varun 0/48). Minimal dew. |
+| 020 | Apr 12 | MI vs RCB | RCB 240/4 (20 ov) | MI 222/5 (20 ov) | RCB by 18 runs | Salt 78(36), Patidar 53(20), Kohli 50(38), Rutherford 71*(31) | Flat batting surface confirmed. 240 highest score at Wankhede this season. Bumrah wicketless (4-0-35-0). 11 wides in RCB innings. Fielding first didn't help — required rate too steep from early. |
 
 ### Match 002 Observations
 - **Powerplay:** KKR ~78/1 (Allen 37 off 17, explosive). MI 80/0 (Rohit + Rickelton dominated). PP average: ~79 runs — well above typical

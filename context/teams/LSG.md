@@ -81,23 +81,22 @@ are all fit and firing simultaneously.
 
 - **Pace bowling depth:** Shami + Nortje + Mayank Yadav is arguably
   the fastest bowling combination in IPL history. All three can bowl
-  145–155+ kph consistently.
+  145–155+ kph consistently. Shami elite form sustained (G010 2/9, G015 eco 5.0, G019 continued form).
+- **Abdul Samad Young Talent Ceiling (G019 Update):** Emerging finisher threat. G015 42 off 28 (SR 150, form surge) + G019 42 off 21 (SR 200) establish young batter trajectory. Ceiling rising, now 150–170 SR expected range (vs prior 125–135). High-impact finisher edge.
+- **Wanindu Hasaranga Dual-Value Fit (G019 Update):** Post-hamstring fitness cleared. Batting SR 211 G015, SR 200 G019 (not dew-dependent, repeatable). Leg-spin edge vs GT RHB batters (Gill, Buttler, Sudharsan) EM/LM effectiveness. Bowling + batting pairing threat confirmed.
 - **Rishabh Pant:** Match-winner. Left-handed aggression in the
-  powerplay is devastating. Also an excellent keeper.
-- **Hasaranga's all-round value:** Quality leg-spinner + useful lower-
-  order batting.
+  powerplay is devastating. Also an excellent keeper. Form dip (G019 18 off 24, SR 75) shows afternoon heat + Rashid aggression can suppress performance but not eliminated.
 - **Overseas depth:** Multiple quality overseas options gives tactical
   flexibility.
 
 ## Vulnerabilities
 
+- **Nicholas Pooran Ongoing Form Crisis (G019 Confirmed):** Persistent pattern: G015 8 off 9 (SR 88, −36% baseline) → G019 8 off 11 (SR 72.7). Two-game repeated pattern (same dismissal style, caught early). Early dismissal removes death-finisher role. Rashid matchup vulnerability (LBG leg-spin vs LHB off-spin weak point, SR 98 historical). Selection lock (overseas slot) despite form dip creates middle-order fragility risk.
 - **Shami's fitness:** Post-surgery return. Workload management is
-  critical. If Shami breaks down, the attack loses its leader.
+  critical. If Shami breaks down, the attack loses its leader. Elite form sustained but watch durability in back-to-back games.
 - **Mayank Yadav's durability:** Injury-prone. Has never played a
-  full IPL season. High-reward but high-risk selection.
-- **Indian batting depth:** Beyond Pant and Badoni, the Indian batting
-  options (Abdul Samad, Himmat Singh) are unproven.
-- **Too many overseas options:** Selecting the right 4 from 7 quality
+  full IPL season. High-reward but high-risk selection. G019 participation status continues uncertain fitness risk flag.
+- **Aiden Markram Reliability (G019 Data Point):** 1-game sample insufficient. G019: 30 off 27 (SR 111, stable but no sparkle). Need more data before confidence calibration.
   overseas players every match is a selection challenge.
 
 ---

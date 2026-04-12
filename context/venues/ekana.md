@@ -57,11 +57,13 @@
 
 | Match # | Date | Teams | 1st Inn | 2nd Inn | Result | Key Performers | Pitch Notes |
 |---------|------|-------|---------|---------|--------|---------------|-------------|
-| *(No matches yet)* | | | | | | | |
+| 005 | 2026-04-01 | LSG vs DC | DC 124/5 | LSG 120/7 | DC by 6 wkts | Rizvi 34* (DC), Starc 2/18 | Fresh pitch, seam-friendly. Low-scoring. Par 155–165 but both sides collapsed. |
+| 019 | 2026-04-12 | LSG vs GT | LSG 164/8 | GT 165/3 | GT by 1 run | Prasidh 4/28 MOTM, Buttler 60*(37), Gill 56(43), Samad 42*(21) | 2nd use pitch, slow and worn. Day match (no dew). Bowler-friendly confirmed. Par 155–165 held. Spinners gripped in EM/LM. |
 
 ### Running Venue Stats (IPL 2026)
-- Games played: 0
-- Average 1st innings: —
-- Average 2nd innings: —
-- Bat first wins: 0 | Chase wins: 0
-- Toss → field: —
+- Games played: 2
+- Average 1st innings: 144 (124 + 164 = 288 / 2)
+- Average 2nd innings: 143 (120 + 165 = 285 / 2)
+- Bat first wins: 0 | Chase wins: 2
+- Toss → field: 2/2 (chase dominant at Ekana IPL 2026)
+- **Pattern:** Both matches low-scoring (below venue historical average 160–175). Fresh and worn pitches both bowler-friendly. No dew in day match (G019). Dew was irrelevant in G005 (evening, but low totals ended match quickly). Chase success 100% (2/2) — small sample but consistent with 55% historical chase rate.

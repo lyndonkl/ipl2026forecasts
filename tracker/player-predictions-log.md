@@ -126,3 +126,36 @@
 | 018 | Kuldeep Yadav (DC) | Elite spin at Chepauk, EM dominance | 4 runs conceded? (bowled middle overs) | PARTIAL — Chepauk spin didn't dominate as predicted with 212 to chase |
 | 018 | Tristan Stubbs (DC) | Middle-order power | 60(42) SR 142.9 | YES — delivered as predicted middle-order threat |
 | 018 | Matthew Short (CSK) | Fitness variable, Brevis replacement | 35(18) SR 194.4 | YES — exceeded expectations; explosive acceleration |
+| 019 | Rishabh Pant (LSG) | Form dip concern, 40–60 runs SR 130–150 | 18 off 24, SR 75.0 | NO — form dip was real; afternoon heat + Rashid aggression suppressed |
+| 019 | Aiden Markram (LSG) | Opener reliability, 25–40 range SR 140–160 | 30 off 27, SR 111.1 | YES — in range (lower end); stable but no sparkle |
+| 019 | Ayush Badoni (LSG) | Young batter ceiling P25–P75 110–180 SR | 16 off 14, SR 114.3 | PARTIAL — SR in range but dismissed early; no ceiling |
+| 019 | Nicholas Pooran (LSG) | Form crisis −36%, SR 88 last game | 8 off 11, SR 72.7 | YES — matched G015 pattern; Rashid matchup loss confirmed |
+| 019 | Mitchell Marsh (LSG) | Stabilizer 25–40 range SR 155±10 | 24 off 18, SR 133.3 | YES — run range correct; SR dipped to 133 (−13%) |
+| 019 | Abdul Samad (LSG) | Form surge +11% ceiling 150–160 SR | 42 off 21, SR 200.0 | YES (SPIKE) — exceeded ceiling; young talent trajectory rising |
+| 019 | Wanindu Hasaranga (LSG) | Dual-value fit, SR 211 (G015) | 24 off 12, SR 200.0 | YES — form spike continued; day-match (no dew) shows execution edge |
+| 019 | Shubman Gill (GT) | Anchor stable 50–70 runs SR 150–160 | 56 off 43, SR 130.2 | YES — run range correct; SR lower (130 vs 150) due to chase pressure |
+| 019 | Jos Buttler (GT) | Form surge with day-match caveat SR 160–180 | 60 off 37, SR 162.2 | YES — hit range and SR expectation; afternoon heat suppressed vs night SR 192.6 |
+| 019 | Sai Sudharsan (GT) | 1-game sample 45–70 range | 15 off 14 | NO — well below floor; run-out pressure; 1-game not repeatable |
+| 019 | Washington Sundar (GT) | Unpredicted pairing threat with Buttler | 21 off 13, SR 161.5 | YES (unpredicted) — agent modeling gap; consecutive pairing threat missed |
+| 019 | Prasidh Krishna (GT) | 2–3 wickets eco 7.5–9.0 | 4 wickets, eco 7.0 (MOTM) | YES (SPIKE) — exceeded range; emerging elite threshold confirmed |
+| 019 | Rashid Khan (GT) | 2–3 wickets eco 6–7 after downweight | 1 wicket (Pooran) | PARTIAL — solid but not game-decider; downweight (0.88→0.95) was correct |
+| 020 | Phil Salt (RCB) | Powerplay SR 190–210, 40–65 runs | 78 off 36, SR 216.66 | YES — exceeded upper ceiling; aggressive profile confirmed |
+| 020 | Virat Kohli (RCB) | Opening form surge +32%, 35–55 runs SR 150–180 | 50 off 38, SR 131.57 | YES — run range correct; SR lower (anchor role, not aggression) |
+| 020 | Devdutt Padikkal (RCB) | Form spike +65% EM, 45–65 runs (if batting) | Batted 1st innings (RCB par role), not 2nd | MISS — form spike applied to wrong scenario; model predicted EM dominance in 2nd innings chase |
+| 020 | Rajat Patidar (RCB) | Anchor role 40–50 runs SR 140–170 | 53 off 20, SR 265 | NO — extreme SR spike (265 vs 157 baseline); finisher role, not anchor |
+| 020 | Jitesh Sharma (RCB) | Lower-order 10–25 runs | 10 off 9, SR 111.11 | YES — within range; lower-order role confirmed |
+| 020 | Tim David (RCB) | Finisher form spike +60%, 30–50 runs SR 200–280 | 34 off 16, SR 212.50 | YES — within predicted spike range; finisher profile confirmed |
+| 020 | Rohit Sharma (MI, chasing) | Form surge +38%, 35–55 runs SR 180–210 | 19 off 13, SR 146.15 | NO — form edge not realized; retired hurt (injury mid-innings) |
+| 020 | Ryan Rickelton (MI, chasing) | Form surge +20%, 35–50 runs SR 160–185 | 37 off 22, SR 168.18 | YES — within range; steady contribution despite early entry |
+| 020 | Suryakumar Yadav (MI impact sub, chasing) | Impact sub entry mid-chase | 33 off 22, SR 150 | YES — moderate contribution on entry; typical impact sub profile |
+| 020 | Tilak Varma (MI, chasing) | EM anchor 30–45 runs SR 130–150 | 1 off 3, SR 33.33 | NO — early dismissal (7.5 overs); collapsed instead of stabilized |
+| 020 | Hardik Pandya (MI, chasing) | All-rounder captain 35–50 runs SR 150–180 | 40 off 22, SR 181.81 | YES — exceeded upper ceiling (50) by 0, within expectation; captain role confirmed |
+| 020 | Sherfane Rutherford (MI, chasing) | Power hitter unknown ceiling 25–50 range | 71 off 31, SR 229.03 | YES (EXTREME SPIKE) — exceeded floor by +21 runs; power-hitter profile confirmed with elite SR |
+| 020 | Trent Boult (MI, 1st innings bowling RCB) | 1–2 wkts eco 8.0–9.0 | 1 wkt (Salt), eco 12.50 | NO — expensive (12.5 vs 8.0–9.0), though took 1 wicket |
+| 020 | Jasprit Bumrah (MI, 1st innings bowling RCB) | Elite death specialist 0–1 wkt, eco 7.5–8.5 | 0 wkts, eco 8.75 | PARTIAL — wicketless but economical (8.75 within 7.5–8.5 range, barely) |
+| 020 | Mitchell Santner (MI, 1st innings bowling RCB) | Elite spinner eco 7.5–9.0, 1–2 wkts | 1 wkt (Padikkal), eco 10.75 | NO — expensive (10.75 vs 7.5–9.0); above eco range |
+| 020 | Bhuvneshwar Kumar (RCB, 2nd innings bowling MI) | Elite death specialist 1–2 wkts, eco 8.0–9.5 | 0 wkts, eco 9.50 | PARTIAL — no wickets but within eco range (9.5); squeeze execution confirmed |
+| 020 | Krunal Pandya (RCB, 2nd innings bowling MI) | Spin containment eco 8.0–8.5 | 1 wkt (Dhir), eco 6.50 | YES — elite execution (6.5 vs expected 8.0–8.5); spin squeeze worked |
+| 020 | Suyash Sharma (RCB, 2nd innings bowling MI) | Death bowler 2–3 wkts, eco 11–13 (expensive OK) | 2 wkts (Santner, Bumrah), eco 11.75 | YES — hit wicket ceiling and eco range; death execution as expected |
+| 020 | RCB First Innings Total (1st innings) | 180–210 runs (par) | 240 runs | NO — 30–60 runs above ceiling; form-spike clustering anomaly |
+| 020 | MI Chase Win Probability | 52.8% (Scenario A, locked) | Loss by 18 runs | PREDICTION WRONG — RCB's par-breaking total made chase unachievable |

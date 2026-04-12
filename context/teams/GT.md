@@ -74,8 +74,11 @@ a concern.
 
 - **Rashid Khan:** Best T20 leg-spinner globally. Effective on every
   surface. Consistently economical and takes wickets in the middle overs.
+- **Prasidh Krishna Elite Pace Threat (G019 Update):** Now confirmed as primary elite threat (not secondary). Evidence: 3/29 G004 + 4/28 MOTM G019 establish trend. Elite 145+ kph baseline. Primary death/EM bowler.
 - **Top-3 quality:** Gill, Buttler, Sudharsan is one of the strongest
-  top orders in the tournament.
+  top orders in the tournament. Gill fitness (muscle spasm recovery) confirmed G019 stable 56 off 43.
+- **Washington Sundar Multi-Batter Pairing Threat (G019 Update):** Maiden fifty G014 (55 off 32) + aggressive G019 (21 off 13) show EM/LM acceleration. When paired with Buttler or explosive batter in consecutive overs, apply +3–5pp Bullish bonus (pairing momentum).
+- **Buttler Day/Night Pattern (G019 Update):** Night-match dominance (career SR 180–200+) vs day-match afternoon heat suppression (SR 160–180, −3–5% from night baseline). G019 confirmed 162.2 SR in day match (36–38°C afternoon start).
 - **Captaincy:** Gill has grown into a capable leader. Nehra's tactical
   approach complements Gill's instincts.
 
@@ -84,10 +87,8 @@ a concern.
 - **Middle-order depth after top 3:** If Gill, Buttler, and Sudharsan
   all fail, the middle order (Phillips/Shahrukh, Rashid, Tewatia) is
   untested as a unit.
-- **Pace bowling depth:** Beyond Siraj and Prasidh, options are limited.
-  Ishant Sharma (37+) is aging. Prithvi Raj is unproven.
-- **Buttler's IPL consistency:** Buttler has boom-or-bust IPL seasons —
-  either dominates or underperforms.
+- **Phillips XI Uncertainty:** Selection variable (often benched). When selected, 20–50 run range expected. Dual-value (batting + spin) flexible but low impact average.
+- **Buttler Day-Match Suppression:** Afternoon heat (>35°C) suppresses SR. Day matches expect 160–180 SR vs night 180–200+ baseline.
 
 ---
 

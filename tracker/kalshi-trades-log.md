@@ -28,6 +28,8 @@ Tracks all actual contract purchases, P&L, and running totals.
 | 016 | 2026-04-10 | RCB No | $0.47 | 2 | $0.94 | ~$0.04 | ~$0.98 | 52% RR (= 48% RCB) | +5¢/contract (Half Kelly, +5pp edge, medium confidence) | WON | $2.00 | +$1.02 |
 | 017 | 2026-04-11 | PASS | — | — | — | — | — | PBKS 58% / SRH 42% | +2.0pp raw edge, ~0¢ net after 2¢ fees (below minimum threshold) | N/A | — | $0.00 |
 | 018 | 2026-04-11 | DC Yes | $0.54 | 4 | $2.16 | $0.08 | $2.24 | 65% | +11pp edge (medium confidence) | LOST | $0.00 | -$2.24 |
+| 019 | 2026-04-12 | GT Yes | $0.53 | 1 | $0.53 | ~$0.02 | ~$0.55 | 58% | +5pp edge (medium confidence, thin edge) | WON | $1.00 | +$0.45 |
+| 020 | 2026-04-12 | PASS | — | — | — | — | — | MI 54.5% / RCB 45.5% | +1.5pp raw edge MI, ~−0.5¢ net after 2¢ fees → No positive edge | N/A | — | $0.00 |
 
 ## Running P&L
 
@@ -51,6 +53,8 @@ Tracks all actual contract purchases, P&L, and running totals.
 | 016 | $17.32 | $25.00 | +$7.80 | +45.1% |
 | 017 | $17.32 | $25.00 | +$7.80 | +45.1% (no trade) |
 | 018 | $19.56 | $25.00 | +$5.56 | +33.1% (4-contract loss on wrong prediction) |
+| 019 | $20.11 | $26.00 | +$5.89 | +29.3% (1-contract win on thin edge) |
+| 020 | $20.11 | $26.00 | +$5.89 | +29.3% (no trade, PASS) |
 
 ## Game 005 Note
 

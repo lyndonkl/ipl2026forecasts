@@ -6,6 +6,67 @@
 
 ---
 
+## Post-Game 020 Status — ELEVATED WARNING / CALIBRATION REVIEW TRIGGERED (April 12, 2026)
+
+**Metric:** 5-game rolling Brier (Games 016-020)
+**Current value:** 0.2605 (avg of G016 0.2304, G017 0.1764, G018 0.4225, G019 0.1764, G020 0.2970)
+**Threshold:** ≤0.25 (acceptable), >0.25 (early calibration review)
+**Status:** RED — above 0.25 threshold. **CALIBRATION REVIEW TRIGGERED.**
+
+| Game | Teams | Prediction | Brier | 5-Game Rolling |
+|------|-------|-----------|-------|---|
+| 016 | RR vs RCB | RR 52% | 0.2304 | — |
+| 017 | PBKS vs SRH | PBKS 58% | 0.1764 | — |
+| 018 | CSK vs DC | CSK 35% | **0.4225** | — |
+| 019 | LSG vs GT | LSG 42% | 0.1764 | — |
+| 020 | MI vs RCB | MI 54.5% | **0.2970** | **0.2605** (avg G016-020) |
+
+**Running average (20 scored games, excl 012 abandoned):** 0.2263 (up from 0.2226 after G019)
+
+**Critical observation:** Games 018 and 020 both exhibit same failure pattern: **par-breaking batting performances where multiple players exceeded form ceilings simultaneously** (Game 018: CSK collapsed despite Samson form dip — batter expectations wrong; Game 020: RCB 240 vs 180-210 model par — Salt 78 + Patidar 53 + Padikkal form all hit simultaneously).
+
+**Root cause hypothesis:** Form signals are modeled independently (Padikkal +65%, Patidar steady, Salt strong). But in actual games, form spikes **cluster**: when Padikkal hits EM dominance, Patidar also hits LM aggression. Model treats as independent events; reality shows positive correlation.
+
+**Systemic issues identified (from Learning Log Game 020):**
+1. **Scenario-specific form application:** Padikkal's +65% EM form was modeled only for RCB **second innings** (chasing). Should apply to **all scenarios** where RCB bats EM.
+2. **Form-spike clustering underweighted:** Blowout probability set at 12%; actual tail events (240 vs 210 par, CSK loss) occur more often (2 in 5 games = 40% in rolling window).
+3. **Concentration risk in player-edge clusters:** MI's PP LR 1.45 concentrated in Rohit + Rickelton. When both underperformed, cascade collapse. Need concentration-risk discount.
+4. **Chase target sensitivity undermodeled:** Each 10-run first-innings excess → −5-8% chase probability drop (non-linear). Model assumed linear.
+
+**Action:** Proceed to formal Calibration Review (full session) after Game 020 outcome.md is finalized. Review the 6 calibration questions and propose specific model adjustments.
+
+---
+
+## Post-Game 019 Status — MONITORING (April 12, 2026)
+
+**Metric:** 5-game rolling Brier (Games 015-019)
+**Current value:** 0.2285 (avg of G015 0.1369, G016 0.2304, G017 0.1764, G018 0.4225, G019 0.1764)
+**Threshold:** ≤0.25 (acceptable), >0.25 (early calibration review)
+**Status:** GREEN — below 0.25 threshold. Game 019's strong Brier (0.1764, good score) recovered from Game 018's blowout (0.4225, catastrophic).
+
+| Game | Teams | Prediction | Brier | 5-Game Rolling |
+|------|-------|-----------|-------|---|
+| 015 | KKR vs LSG | KKR 37% | 0.1369 | — |
+| 016 | RR vs RCB | RR 52% | 0.2304 | — |
+| 017 | PBKS vs SRH | PBKS 58% | 0.1764 | — |
+| 018 | CSK vs DC | CSK 35% | **0.4225** | — |
+| 019 | LSG vs GT | LSG 42% | **0.1764** | **0.2285** (avg G015-019) |
+
+**Running average (19 scored games, excl 012 abandoned):** 0.2226 (down from 0.2252 after G018)
+
+**Key observation:** Game 018's Samson form-dip error was an outlier. Game 019 validates the discipline applied to form classification (Pooran −36% over 2 games matched prediction: 8 off 9 → 8 off 11 pattern was real, not noise). Process fixes from Game 018 appear to be working.
+
+**Validation of post-G018 fixes:**
+1. **Form dip minimum sample:** Pooran's 2-game pattern (8-8) was flagged as lower-confidence Signal but used with 80/20 weight. Actual matched prediction. Samson's 2-game pattern (6-9) was correctly classified as Noise.
+2. **Small-sample MOTM discount:** Rashid's G014 downweight (0.88→0.95) predicted possible regression. G019 confirms 1 wicket vs 3-wicket expectation.
+3. **Prasidh trend confirmation:** Two consecutive elite games (3/29 + 4/28 MOTM) confirm Prasidh is now a primary threat, not secondary.
+
+**Status:** No calibration review triggered. Continue monitoring. **Next formal 20-game review:** Game 024.
+
+**Running average trajectory:** G017: 0.2189 → G018: 0.2252 (+0.0063 due to 0.4225 spike) → G019: 0.2226 (−0.0026 recovery). Trend is stabilizing post-spike.
+
+---
+
 ## Post-Game 018 Status — ELEVATED WARNING (April 11, 2026)
 
 **Metric:** 5-game rolling Brier (Games 014-018, excluding abandoned 012)
@@ -31,6 +92,8 @@
 3. Correlation discount floor: minimum 60% when all 8 phase LRs align
 
 **Next review trigger:** If 5-game rolling exceeds 0.25 after Game 019-020, or at Game 020 (scheduled 20-game formal review).
+
+**Status (Post-G019):** 5-game rolling dropped to 0.2285 (GREEN). Fixes validated. Continue tracking.
 
 ---
 

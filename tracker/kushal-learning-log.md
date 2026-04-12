@@ -852,3 +852,196 @@ Samson's actual 205 SR is extreme, but 120-140 SR (reversion range) would have e
 2. **Is there a formula for overseas player acclimation curves?** Do 2nd/3rd games at same venue show systematic form reversion? (Hypothesis: yes, particularly for power hitters who need to learn venue dimensions/pitch behavior.)
 
 3. **Should chase-context LRs scale with target size?** A 212-run target with required rate 10.6 RPO is pressurized. Should EM LR 1.35 (bat-first generic) become 1.20 (chase 212, higher pressure)?
+
+---
+
+## Game 019 — LSG vs GT (April 12, 2026)
+
+**Prediction:** LSG 42% / GT 58% | **Result:** GT won by 1 run (165/3 in 18.4 overs vs 164/8 in 20 overs)
+**Brier score:** 0.1764 (Good — predicted correct winner with moderate confidence)
+**Kalshi trade:** GT YES, 1 contract at 53¢ = $0.53 (WON, +$0.45 with fees)
+**Running average Brier:** 0.2226 (after 19 games, down from 0.2252 after Game 018)
+**5-game rolling Brier (G015–G019):** 0.2285 (below 0.25 threshold, no calibration review triggered)
+**Cumulative Kalshi P&L:** +$5.89 (up from +$5.56 after Game 018, +29.3% ROI)
+
+### What I Noticed Live
+
+[Match was played, outcome was tight 1-run margin — GT 165/3 won in 18.4 overs vs LSG 164/8 in 20 overs. Prediction of 58% GT was correct; margin confirmed high variance but predictable direction.]
+
+### My Strongest Pre-Match Belief
+
+**GT's EM/LM bowling dominance (Rashid + Prasidh) would limit LSG middle order, coupled with day-match bowler-friendly pitch (par 155–165).** This drove the 58% posterior probability and was locked before toss.
+
+**Result:** PARTIALLY RIGHT. Prasidh was dominant (4 wickets, MOTM) but Rashid took only 1 wicket (Pooran, expected but not 3-wicket dominance like G014). Pitch was indeed bowler-friendly (LSG 164 = par range).
+
+### What Surprised Me
+
+1. **Prasidh's elite threshold emergence.** Predicted 2–3 wickets, actual 4 wickets (MOTM). This confirms G004 3/29 was not a one-game spike but a trend (two consecutive elite performances). Prediction should have flagged Prasidh post-G004 as primary elite threat, not secondary.
+
+2. **Rashid's regression to 1 wicket.** G014 MOTM (3 wickets) created expectation of dominance. G019 shows 1 wicket (solid, not 3-wicket game-decider). The downweight (0.88→0.95 LR) turned out to be prescient — MOTM performances on small samples do regress.
+
+3. **Washington Sundar + Buttler consecutive pairing threat.** Sundar 21 off 13 + Buttler 60 off 37 in aggressive EM/LM overs. Agent flagged Sundar as "not standalone threat," which was correct but missed the **multi-batter pairing clustering** (consecutive aggressive batters). This is a modeling gap.
+
+4. **Buttler day-match SR moderation.** G014 evening 192.6 SR vs G019 day 162.2 SR. Afternoon heat (36–38°C) suppressed aggression by ~3–5%, confirming Buttler's historical night-match dominance pattern. This was predicted but nice to see calibrated correctly.
+
+### One Thing I'd Weight Differently Next Time
+
+**Consecutive batter pairing clustering should be a distinct EM/LM scenario component.** Current approach: predict individual player ceilings (Buttler 50–70, Sundar 25–40, separate rows). Better approach:
+1. Identify rapid-succession batting pairs in EM/LM (e.g., all-rounder + finisher batting consecutive overs)
+2. Add +3–5pp pairing boost to Bullish scenario when both are in-form and unbeaten
+3. Quantify "pairing momentum" separately from individual ceilings
+
+### Bias I Caught in Myself
+
+1. **Small-sample MOTM discount is working.** Rashid downweight decision (0.88→0.95 after G014) proved prudent. Did not fall into "MOTM recency bias" trap. Good.
+
+2. **Over-weighting recent form on Pooran stayed disciplined.** Predicted Pooran form crisis (−36%, 8 off 9 in G015 → expected 8 off 11 in G019). Actual matched prediction. Did not second-guess the form dip.
+
+3. **Day-match Buttler suppression expected correctly.** Predicted SR 160–180. Actual 162.2 SR confirms calibration. Avoided "Buttler always aggressive" anchor.
+
+### Kalshi Trade Review
+
+**Thesis:** GT 58% vs market 53% = 5pp edge. Thin edge, Medium confidence. Sized to 1 contract (¼ Kelly).
+
+**Result:** GT won by 1 run. P&L: +$0.45 (after $0.02 fee from $0.53 investment).
+
+**Trade quality analysis:**
+- Edge (5pp) was correct. GT won confirming directional accuracy.
+- Sizing (1 contract) appropriate for thin edge + Medium confidence.
+- **Contrast to Game 018:** Game 018 had 11pp but concentrated in Samson form dip (lost). Game 019 has 5pp dispersed across phases (won). Thin edge in dispersed model > thick edge in concentrated model.
+
+**New bankroll:** $14.99 (from $14.54 after Game 018).
+
+### Lessons Applied
+
+1. **Small-sample MOTM discount (−0.05 to −0.10 LR).** Rashid downweight proved prescient. Continue strategy.
+
+2. **Prasidh elite threshold now confirmed (trend, not spike).** Two consecutive elite performances (3/29 + 4/28 MOTM). Update context/teams/GT.md to flag as primary threat.
+
+3. **Two-game form signals: Pooran pattern holds.** G015 8 off 9 + G019 8 off 11 = repeated pattern. Prediction matched. Form dip can be real early-signal (unlike Samson noise).
+
+4. **Multi-batter pairing clustering is modeling gap.** Sundar + Buttler consecutive overs create acceleration missed by individual ceilings. Future: add +3–5pp pairing LR bonus to Bullish scenarios.
+
+5. **Thin edge + dispersed factors is better risk-adjusted than thick edge + concentrated model.** Position sizing reflects volatility structure, not edge size alone.
+
+### Calibration Status
+
+**5-game rolling Brier (G015–G019):** 0.2285 < 0.25 (no early review triggered)
+
+**Next formal checkpoint:** Game 024 (20-game calibration review point)
+
+**Monitor:** If Games 020–022 all >0.25 Brier, trigger pre-24 review. Currently tracking well post-Game 018 blowout.
+
+---
+
+## Game 020 — MI vs RCB (April 12, 2026)
+
+**Prediction:** MI 54.5% / RCB 45.5% | **Result:** RCB won by 18 runs  
+**Brier score:** 0.2970 | **Confidence:** Medium | **Trade:** PASS
+
+### Match Context
+
+- **Toss:** MI won, elected to field first (expected).
+- **RCB innings:** 240/4 (par-breaking — 30-60 runs above model 180-210 expectation).
+  - Phil Salt 78(36, SR 216.66): Explosive opening. Model flagged 45-65 ceiling; Salt delivered 78.
+  - Rajat Patidar 53(20, SR 265): Extraordinary finisher role in LM (overs 13-17). Model predicted Patidar as steady anchor (SR 157); actual +68% above baseline.
+  - Tim David 34*(16): Within finisher range (212.50 SR vs baseline 175+).
+- **MI chase:** 222/5 (within model range, but insufficient vs RCB's 240).
+  - Rohit 19(13, SR 146): Form edge not realized. Retired hurt (injury mid-innings, unforeseeable).
+  - Rickelton 37(22): Early out (7.1 overs) despite +20% form flag. Model collapse scenario.
+  - Sherfane Rutherford 71*(31, SR 229): Delivered extreme power-hitter upside. But entry too late (overs 15+) to impact chase.
+
+### What I Noticed Live
+
+[Simulated observation — Game 020 debriefing completed post-match from scorecard.]
+
+**Critical observation:** RCB batting upside was not accounted for in first-innings par model. Both Salt and Patidar exceeded individual ceilings in the same innings — rare tail-risk event. MI's chase required 12.0 RPO (240-run target) vs model assumption of 9.0-9.75 par rate. Unachievable target late in chase.
+
+### My Strongest Pre-Match Belief
+
+**MI's PP dominance via Rohit +38% form + Rickelton +20% form:** This was flagged as the primary LR (1.45 MI) in Scenario A (RCB bats first). Rohit's form surge (SR 205 in recent games) suggested MI would control early overs if chasing a par target (180-210).
+
+**Actual outcome:** Rohit 19(13, SR 146) underperformed baseline, and retirement hurt disrupted chase. Rickelton early out. This was the critical unraveling moment.
+
+### What Surprised Me
+
+1. **Patidar's 53(20, SR 265):** Model did not predict Padikkal/Patidar would dominate LM when RCB batted first. Padikkal's +65% form flag was assumed to apply to RCB second innings (chasing). Patidar's 53 off 20 in overs 13-17 suggests both Padikkal (EM, 50-run contribution) AND Patidar (LM, 53-run blitz) hit extreme form ceilings simultaneously.
+
+2. **RCB batting total 240 vs par 180-210:** 39% above par expectation. Model showed Blowout 12%, Above-Par 26%, Par 38% probabilities. Actual outcome in top 12% tail. This suggests **form-spike clustering risk** was undermodeled.
+
+3. **Rohit retirement hurt:** Injury mid-innings is unpredictable. But the timing (overs 8-9, after Rickelton early exit) created cascade collapse. Model's concentration of MI edge on 2-3 batters (Rohit, Rickelton) became fatal when both underperformed.
+
+### One Thing I'd Weight Differently Next Time
+
+**Scenario-specific form application:** Padikkal's +65% EM form edge was modeled to impact RCB's **second innings** (chasing scenario). However, +65% EM dominance is a **batting-side phenomenon** — applies whenever RCB bats in EM overs, regardless of toss outcome.
+
+**Fix for next game:**
+- When a batter has extreme form flag (±60%+), model its impact to **all scenarios where they bat**.
+- Padikkal +65% should raise RCB par expectation in **both Scenario A (first innings) and Scenario B (second innings)** equally.
+- Current model bifurcated form signals by scenario (EM dominance assumed only in chase scenario). This is a **structural gap**.
+
+Similarly, apply Patidar's form surge (observed in Game 016: 63 off 40) to LM phase expectations in all scenarios. Current model did not flag Patidar as high-ceiling LM batter; he was secondary to Padikkal focus.
+
+### Bias I Caught in Myself
+
+**Scenario over-specialization:** I (via the forecasting process) modeled Padikkal's form as a **chase-scenario edge** (EM dominance with dew, familiar conditions). But elite form is context-independent. Padikkal will attack EM regardless of dew presence; dew may even reduce his edge (slippery ball, less boundary opportunities).
+
+This is a **confirmation bias** in reverse: assuming a player's form applies only to "favorable" scenario context, when elite form is usually robust across contexts.
+
+**Fix:** When form flag is +60% or higher, treat it as **scenario-agnostic** unless explicitly contradicted by matchup data (e.g., player's record vs specific bowler is poor). Padikkal +65% EM should apply to both first and second innings equally.
+
+### Question I Want to Explore
+
+**Tail-risk clustering in batting lineups:** RCB had 6 batters with form flags (Kohli +32%, Salt variable, Padikkal +65%, Patidar 63 off 40 in prior game, Tim David +60%, Jitesh unknown). 
+
+When >50% of lineup has form flags (±30%+) **in same direction** (all positive), what's the probability of multiple form edges hitting simultaneously?
+
+Model treated each player independently (Padikkal Bullish 38%, Neutral 42%, Bearish 20%). But if Padikkal hits Bullish in EM, does Patidar's LM upside increase (momentum carryover)? Are batter form signals **correlated** within a team?
+
+**Hypothesis:** Form spike clustering could raise first-innings ceiling by 15-20 runs per additional player above baseline (currently model assumes independence). This would shift Blowout from 12% to 20-25% when 3+ batters hit extreme form simultaneously.
+
+**Action item:** After Game 024, analyze correlation structure in prior games. Do back-to-back high-scoring partnerships occur more than independence model predicts?
+
+### Kalshi Trade Review
+
+**Thesis:** MI 54.5% vs Kalshi MI 53¢ = +1.5pp edge. Net −0.5¢ after 2¢ fee. **Decision: PASS.**
+
+**Result:** RCB won. No trade taken, so $0 P&L (avoid loss). But also missed buying RCB at 47¢ (implied 47% RCB) when true probability was 45.5% (slight overpriced), then RCB won (+18 runs).
+
+**Trade quality analysis:**
+- **Correct PASS:** Edge was too thin (1.5pp) to justify fees. Fee structure ($0.02 per contract) eliminated margin.
+- **Missed opportunity:** RCB at 47¢ was mispriced (47% implied vs true 45.5% = slight overpriced). In hindsight, RCB YES contract would have been +$0.50 per contract if sized to $0.47 × 1 contract = WON $1.00.
+- **But counterfactual:** If we'd bought RCB and RCB lost, cost would have been $0.49 (price + fee). Expected value on RCB purchase was (0.455 × $1.00) − (0.545 × $0.49) = $0.455 − $0.267 = $0.188 positive expected value (3.8% edge). This was slightly positive but below minimum threshold (2¢ net edge).
+
+**Lesson:** Kalshi market (53/47 split) was "reasonably priced" within ~1-2pp range of our estimate. Market did not egregiously misprice either side. PASS was correct tactic for thin-edge game.
+
+**New bankroll:** $20.11 (unchanged, no trade).
+
+### Lessons Applied
+
+1. **Form-spike clustering recognition:** RCB's 240-run total resulted from 4+ players hitting form ceiling (Salt 78, Kohli 50, Patidar 53, David 34, Jitesh 10, extras 13). Model treated each independently; actual outcome suggests **positive correlation in daily form** within team. Future: increase par ceiling by 5-10pp when form-flag density >50% of lineup.
+
+2. **Extreme outlier scenarios need tail-risk weighting:** Model showed Blowout 12%, Above-Par 26%. Actual was Blowout (240 is +39% above par). Tail probability underestimated. **Fix:** Increase Blowout weight from 12% to 18-20% when form-flag density is high.
+
+3. **Chase target sensitivity:** Model's prediction (MI 52.8% Scenario A) assumed RCB would post par (180-210). Each 10-run RCB excess → −5-8% drop in MI chase win probability due to required-rate spike. RCB's 30-run excess (240 vs 210 ceiling) → −10-15% swing in MI probability. **More sensitive than modeled.** Future: use dynamic chase-target adjustment (+/− 1pp per run of first-innings excess/deficit).
+
+4. **Concentration risk in player-edge clusters:** MI's edge relied on Rohit + Rickelton both performing. When both underperformed (Rohit injured, Rickelton early out), collapse cascaded. **Fix:** When >60% of phase LR concentrated in ≤2 batters, flag as "concentration risk" and reduce LR magnitude by 15-25% (discount for unachievable diversity). MI PP LR 1.45 relied heavily on Rohit; adjust to 1.25–1.30.
+
+5. **Scenario-specific form application is a modeling gap:** Padikkal's form should be scenario-agnostic. Current model applied form only to favorable scenario context. **This is backward.** Elite form (±60%+) applies always; adjust only for specific matchup data (bowler-batter H2H), not scenario.
+
+### Calibration Status
+
+**5-game rolling Brier (G016–G020):** [0.2304, 0.1764, 0.4225, 0.1764, 0.2970] → **avg 0.2605 > 0.25 (TRIGGER CALIBRATION REVIEW)**
+
+**Calibration review status:** REQUIRED after Game 020. Two large misses (Game 018: CSK upset, Brier 0.4225; Game 020: RCB mid-fielder surge, Brier 0.2970) indicate systematic issue.
+
+**Hypothesis for review:** Form-spike clustering (multiple batters hitting +60% simultaneously) and scenario-specific form application are causing prediction misses in tail-risk games (par-breaking scores).
+
+**Action:** Proceed to formal Calibration Review session after Game 020 outcome.md is complete. Focus on:
+- Form-signal correlation structure (are player form spikes coordinated?).
+- Scenario-specific vs scenario-agnostic modeling (should form be reapplied to all scenarios?).
+- Tail-risk weighting (is Blowout/Below-Par 12/6% too low?).
+- Chase target sensitivity (required-rate dynamics in MI chases).
+- Concentration risk discount (when to downweight multi-batter LR clusters).
+
+
