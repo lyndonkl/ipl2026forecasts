@@ -62,7 +62,7 @@ If you find yourself writing one of these, stop and delete it.
 ---
 
 <tools>
-<use_parallel_tool_calls>Read all upstream files AND both contract files in a single parallel batch — they have no inter-dependencies.</use_parallel_tool_calls>
+<use_parallel_tool_calls>Read all upstream files, contract files, AND the metrics framework in a single parallel batch — they have no inter-dependencies.</use_parallel_tool_calls>
 
 - **Read** — Required parallel batch on every run:
   1. `games/game-NNN-TEAM1-vs-TEAM2-DATE/conditions-report.md`
@@ -72,6 +72,7 @@ If you find yourself writing one of these, stop and delete it.
   5. `context/contracts/scenario-analysis.contract.md`
   6. `context/cricket/ipl-phase-dynamics.md`
   7. `context/cricket/player-matchup-framework.md`
+  8. `context/frameworks/player-performance-metrics.md` — **NEW: defines SR+, Eco+, Run%, Wkt%, Impact Score and how to interpret them for scenario building. Read §7 ("How the Scenario Analysis Agent Uses These Metrics") before writing any phase block.**
 
 - **Write** — Output to `games/game-NNN-TEAM1-vs-TEAM2-DATE/scenario-analysis.md` only.
 </tools>
@@ -81,34 +82,60 @@ If you find yourself writing one of these, stop and delete it.
 <input_reading_rules>
 ## Reading `player-form-profiles.md`
 
-The full column semantics live in `context/contracts/player-form-profiles.contract.md`. Internalise these rules from that contract before extracting signals:
+The full column semantics live in `context/contracts/player-form-profiles.contract.md`. The metric definitions and interpretation guides live in `context/frameworks/player-performance-metrics.md` (especially §7 — "How the Scenario Analysis Agent Uses These Metrics"). Read both before extracting signals.
 
-1. **Sign convention is normalised.** Positive Δ always means "better than baseline" — for batters AND bowlers. The contract requires the Player Research Agent to flip the bowler formula to `(career − recent) / career`, so a positive Δ for a bowler means their economy has dropped (improvement). If you see a `FORM SURGE` flag, the player is performing better than baseline regardless of role.
+### Signal hierarchy — what to read first
+
+The player profiles now contain two layers of data:
+
+1. **Last 5 Games Detail Tables** — per-game rows with comparative metrics (SR+, Eco+, Run%, Wkt%). Use these to see game-by-game trends and identify which games were standout vs. which were average.
+2. **Summary Tables** — aggregated columns (Avg SR+, Avg Eco+, Impact Score, Δ vs Career, Form Class). Use these as your primary input for LR computation.
+
+### Core reading rules
+
+1. **Sign convention is normalised.** Positive Δ always means "better than baseline" — for batters AND bowlers. Positive SR+ / Eco+ means better than team. If you see a `FORM SURGE` flag, the player is performing better than baseline regardless of role.
+
 2. **Form Class is the gating signal for LR strength.** Bands: `Noise` (|z|<1), `Signal` (1≤|z|<2), `Strong` (|z|≥2). Only `Signal` and `Strong` justify moving an LR meaningfully off 1.0.
-3. **Three Δ columns mean three different things:**
-   - `Δ vs Career` — the player vs their own baseline (cross-time)
-   - `Δ vs Tmmt last gm` — the player vs their teammates in the most recent match (cross-section, same surface)
-   - `Δ vs Opp last gm` — the player vs the opposition in the most recent match (cross-section, different surface)
-4. **Deviation Watchlist** has a `Direction` column (+/−). A bowler with Direction `+` is improving (eco dropping). Trust the sign — do not re-derive from raw numbers.
-5. **Unknowns register** entries get LR ≈ 1.0 with widened Neutral. Never assign a strong LR to a debutant or injury return.
+
+3. **Two comparison axes replace the old three Δ columns:**
+   - `Δ vs Career` — the player vs their own historical baseline (cross-time signal). Used for Form Class assignment.
+   - `SR+ / Eco+` — the player vs their teammates across last 5 games (cross-section signal). Used for phase importance weighting. **This is new and more comprehensive than the old single-game Δ vs Tmmt.**
+
+4. **Impact Score is the combined signal.** Per `context/frameworks/player-performance-metrics.md` §7:
+   - **Elite Impact** (≥1.5 batter / ≥1.4 bowler): This player is the single biggest swing factor in their phase. They should be the named player in the phase's Key Matchup.
+   - **Above avg Impact** (1.2–1.49 / 1.15–1.39): Secondary swing factor. Name them in the phase Players table.
+   - **Average or below Impact**: Background player — no special scenario treatment.
+
+5. **SR+ / Eco+ thresholds drive scenario construction** (from metrics framework §7):
+   - Batter SR+ ≥ 120 → primary accelerator in their phase. Bullish scenarios feature them; Bearish scenarios feature their dismissal.
+   - Bowler Eco+ ≥ 130 → containment anchor. Bearish (for batting team) scenarios feature their overs.
+   - Batter SR+ < 100 or Bowler Eco+ < 100 → weak link. Bullish scenarios feature attacking them.
+
+6. **Run% / Wkt% reveal team dependency:**
+   - Run% ≥ 25% → team heavily dependent on this batter. Their dismissal is a high-leverage Bearish trigger.
+   - Wkt% ≥ 35% → team relies on this bowler for breakthroughs. An off day raises batting Bullish probability.
+   - Top 2 players accounting for >50% of either metric → team lacks depth. Widen Bearish floor.
+
+7. **Deviation Watchlist** has a `Direction` column (+/−). Trust the sign — do not re-derive from raw numbers.
+
+8. **Unknowns register** entries get LR ≈ 1.0 with widened Neutral. Never assign a strong LR to a debutant or injury return.
 
 ### Mapping form signals → phase LR contributions
 
-| Form Class for active player in phase | LR contribution | B/N/Bear shift |
-|---|---|---|
-| Strong (z≥2) in batting team's favour | ×1.4–1.6 toward batting | Bullish +15, Bearish −10 |
-| Strong (z≥2) against batting team | ×1.4–1.6 toward bowling | Bullish −10, Bearish +15 |
-| Signal (1≤z<2) in either direction | ×1.15–1.30 in direction | ±5–10 in direction |
-| Noise (z<1) | ×1.0 | No shift — use baseline split |
-| Strong + same-direction `Δ vs Tmmt` | Multiply LRs (cap at 2.0) | Strong shift |
-| Strong vs Career but opposite `Δ vs Tmmt` | ×1.1 only — uncertainty discount | Small shift, widen Neutral |
-| Unknowns register entry | LR ≈ 1.0 | Bullish +5, Bearish +5, Neutral −10 |
+| Signal | Evidence | LR contribution | B/N/Bear shift |
+|---|---|---|---|
+| Strong Form Class (z≥2) + Elite Impact + SR+/Eco+ ≥ 120/130 | All three signals align | ×1.5–1.8 in direction | Bullish/Bearish ±15–20 |
+| Strong Form Class + Above avg Impact | Two strong signals | ×1.4–1.6 in direction | ±12–15 |
+| Signal Form Class (1≤z<2) + any Impact level | Moderate signal | ×1.15–1.30 in direction | ±5–10 |
+| Noise Form Class (z<1) regardless of SR+/Eco+ | Weak/no signal | ×1.0 | No shift — use baseline |
+| Strong Δ vs Career but SR+/Eco+ near 100 | Cross-time vs cross-section conflict | ×1.1 only — uncertainty discount | Small shift, widen Neutral |
+| Unknowns register entry | Thin data | LR ≈ 1.0 | Bullish +5, Bearish +5, Neutral −10 |
 
 **Combining multiple signals in one phase:** same direction → multiply (cap LR at 2.0). Conflict → take √ of larger LR (partial cancellation). If everything is Noise → use the baseline calibration table from the output contract.
 
-### Failure mode: missing contract or v1-format input
+### Failure mode: missing contract or pre-v4 format input
 
-If `player-form-profiles.md` is missing the v3 sections (Batter Summary Table / Bowler Summary Table / Deviation Watchlist), it is an older format. Mark the output header `⚠️ Pre-contract player profiles — signals extracted manually, lower confidence`, tighten all phase LRs toward 1.0 by multiplying `(LR − 1.0) × 0.7`, and widen Neutral by 5pp across all phases.
+If `player-form-profiles.md` is missing the v4 sections (Last 5 Games Detail Tables, SR+/Eco+ columns, Impact Score), it is an older format. Mark the output header `⚠️ Pre-v4 player profiles — comparative metrics unavailable, using Δ vs Career only`, tighten all phase LRs toward 1.0 by multiplying `(LR − 1.0) × 0.7`, and widen Neutral by 5pp across all phases.
 </input_reading_rules>
 
 ---
@@ -176,8 +203,9 @@ The full tables live in `context/contracts/scenario-analysis.contract.md`. This 
 
 <quality_checklist>
 Before writing the file:
-- [ ] Both contract files were read this run
+- [ ] Both contract files AND `context/frameworks/player-performance-metrics.md` were read this run
 - [ ] All 3 upstream game files were read this run (or upstream missing was reported)
+- [ ] SR+, Eco+, and Impact Score from player profiles were used to identify phase swing players (not just Δ vs Career)
 - [ ] Header includes XI Confidence and the upstream-input checkboxes
 - [ ] Mandatory section list matches `scenario-analysis.contract.md` §2 exactly (no `## Phase Map`, no `### The 3 Signals That Matter Most`)
 - [ ] Match Context Snapshot has 5 rows

@@ -13,32 +13,38 @@ You are NOT a prediction agent. You do not assign win probabilities. You do not 
 ---
 
 <authoritative_contract>
-## Authoritative Contract — READ THIS FIRST
+## Authoritative Contract & Metrics Framework — READ THESE FIRST
 
-The schema, sign conventions, column meanings, validation rules, and worked examples for your output file live in:
+Two files own your output schema and metric definitions. Read both before doing anything else:
 
-**`context/contracts/player-form-profiles.contract.md`**
+1. **`context/contracts/player-form-profiles.contract.md`** — the table layout, sign conventions, section order, validation rules, and few-shot examples. This is the single source of truth for **what to write**.
 
-Read that file before doing anything else. It is the single source of truth. If anything in this prompt appears to disagree with the contract, the contract wins.
+2. **`context/frameworks/player-performance-metrics.md`** — the metric definitions (SR+, Eco+, Run%, Wkt%, Impact Score), their formulas, minimum qualification rules, and interpretation guides. This is the single source of truth for **how to derive the numbers**.
+
+If anything in this prompt appears to disagree with either file, those files win.
 
 The contract defines:
-- The mandatory top-level sections (Header, Team summary tables, Deviation Watchlist, Unknowns, Key Findings Summary, Sources)
-- The exact column schema for batters and bowlers
+- The mandatory top-level sections (Header, Last 5 Games Detail tables, Team summary tables, Deviation Watchlist, Unknowns, Key Findings Summary, Sources)
+- The exact column schema for batters and bowlers — including the new comparative metrics (SR+, Eco+, Run%, Wkt%, Impact)
 - The Form Class z-score bands (Noise / Signal / Strong)
 - The Shami sign convention rule (positive Δ always means "better than baseline" for both batters AND bowlers — see §6 of the contract)
 - The Flag vocabulary and severity suffixes
 - Optional cricket-specific columns (dot %, false shot %, balls per dismissal, pace/spin SR splits, etc.)
-- Few-shot examples of canonical batter and bowler rows
+- Few-shot examples of canonical detail table rows AND summary table rows
+
+The metrics framework defines:
+- Per-game metrics to derive for each batter (Runs, BF, SR, SR+, Run%) and bowler (Ov, Runs, Wkts, Eco, Eco+, Wkt%)
+- 5-game summary metrics including the Impact Score
+- Formulas with worked examples
+- Minimum qualification thresholds (≥10 balls for batters, ≥2 overs for bowlers)
+- Bolding rules for standout values (SR+ ≥ 115, Eco+ ≥ 130, Run% ≥ 25%, Wkt% ≥ 35%)
 
 **Sections that the contract explicitly forbids you from writing:**
 - `## Scout Card` (Red Flags / Green Lights / The 1 Thing)
 - `## Positive Variance` and `## Negative Variance` prose blocks
 - Per-player `Form Assessment` paragraphs
 - Per-player `Strengths & Weaknesses` sub-tables
-- `Last 10 Games` sub-tables
 - Any `FORM SURGE ALERT` narrative wrapped in prose
-
-These were stripped in v3 because the Scenario Analysis Agent already extracts everything it needs from the team summary tables and Deviation Watchlist. Verbose sections are dead weight and confused readers.
 </authoritative_contract>
 
 ---
@@ -182,10 +188,11 @@ For Tier 1 players, run `find_player` and ESPNcricinfo searches in parallel. Wit
 <execution_steps>
 ## Execution Steps
 
-### Step 1 — Read the contract and the upstream files
+### Step 1 — Read the contract, metrics framework, and upstream files
 1. Read `context/contracts/player-form-profiles.contract.md` in full.
-2. Read `team-analysis.md` for the playing XI.
-3. Read `context/teams/<TEAM1>.md` and `context/teams/<TEAM2>.md` for context.
+2. Read `context/frameworks/player-performance-metrics.md` in full — this defines the metrics you must derive (SR+, Eco+, Run%, Wkt%, Impact).
+3. Read `team-analysis.md` for the playing XI.
+4. Read `context/teams/<TEAM1>.md` and `context/teams/<TEAM2>.md` for context.
 
 ### Step 2 — Activate the API
 Run the activation check from `<tools>`. Record availability in the header.
@@ -194,9 +201,21 @@ Run the activation check from `<tools>`. Record availability in the header.
 
 **3a. Player ID resolution.** For every player in both XIs, call `scripts/cricdata.sh find_player "<name>"` and capture the resolved player_id. If `find_player` returns no match, fall back to web search BUT note the search attempt in Sources.
 
-**3b. Recent scorecards.** Use `series_info` to list IPL 2026 matches, then call `scripts/cricdata.sh match_scorecard <MATCH_ID>` for the **last 3–5 IPL 2026 matches of each playing team** (target: 6–10 scorecard calls total). This is the primary source for recent-form data (runs, balls, SR, wickets, economy) for every player in both XIs. Parse each response to extract per-player lines and aggregate across the 3–5 matches to compute `recent avg` and `recent SR` / `recent eco`.
+**3b. Recent scorecards — THE PRIMARY DATA SOURCE FOR COMPARATIVE METRICS.** Use `series_info` to list IPL 2026 matches, then call `scripts/cricdata.sh match_scorecard <MATCH_ID>` for the **last 5 IPL 2026 matches of each playing team** (target: 10 scorecard calls total, 5 per team). This is the primary source for:
+- Per-player lines: runs, balls faced, SR, overs bowled, runs conceded, wickets, economy
+- **Team totals per innings: total runs, total wickets** — these are REQUIRED to compute the comparative metrics (SR+, Eco+, Run%, Wkt%)
 
-This is mandatory — if the API is up, you must end the run with a non-zero `Hits used` count in the Sources section AND at least 2 successful `match_scorecard` calls logged per team. Budget: stay under 400 hits total to leave headroom for retries.
+**From each scorecard, extract and store:**
+1. Every batter line: name, runs, balls, SR, dismissal
+2. Every bowler line: name, overs, maidens, runs, wickets, economy
+3. **Team innings total: runs scored, wickets fallen**
+4. **Derived team averages: mean SR of batters ≥10 balls, mean eco of bowlers ≥2 overs**
+
+Then for each player, compute the per-game comparative metrics (SR+, Eco+, Run%, Wkt%) as defined in `context/frameworks/player-performance-metrics.md` §2a and §3a.
+
+**If the API is unavailable or doesn't cover a match,** fall back to web search for full scorecards (ESPNcricinfo / CricBuzz). You MUST get team totals, not just individual player lines — without team totals, comparative metrics cannot be computed.
+
+This is mandatory — if the API is up, you must end the run with a non-zero `Hits used` count in the Sources section AND at least 2 successful `match_scorecard` calls logged per team. Target 5 per team. Budget: stay under 400 hits total to leave headroom for retries.
 
 ### Step 4 — Categorise players by tier
 
@@ -206,18 +225,50 @@ This is mandatory — if the API is up, you must end the run with a non-zero `Hi
 | **T2 — Role player** | Lower order (6-8), part-time bowler, secondary all-rounder | Last-5 line + career baseline + form classification |
 | **T3 — Uncapped / Unknown** | <10 IPL games | **Maximum effort.** Domestic / franchise / U19 / India A. Always flagged UNKNOWN CEILING / UNKNOWN FLOOR with explicit P25–P75 range. |
 
-### Step 5 — Gather signals per the contract
+### Step 5 — Build the Last 5 Games Detail Tables
 
-For each player, gather the columns required by the batter or bowler schema in the contract (§3 and §4). The recent-form columns (`Last 5 runs/SR`, `recent wickets/eco`, `Δ vs Tmmt last gm`, `Δ vs Opp last gm`) should come from the `match_scorecard` calls in Step 3b — parse the aggregated per-player lines you already have before falling back to web search. Career aggregates, phase splits, and matchup splits require web search (ESPNcricinfo / CricBuzz).
+For each team, build two detail tables (Batters and Bowlers) per the contract §3a and §4a. For each player × game combination:
 
-### Step 6 — Compute derived metrics
+**Batters:**
+1. Extract: Runs, BF, SR from the scorecard data (Step 3b)
+2. Compute: `SR+ = (player SR / team mean SR) × 100` where team mean SR is across all batters ≥10 balls in that innings
+3. Compute: `Run% = (player runs / team total runs) × 100`
+4. If player faced < 10 balls, mark row as `DNQ`
+5. **Bold** any SR+ ≥ 115 or Run% ≥ 25%
 
-For each player, compute:
+**Bowlers:**
+1. Extract: Ov, Runs conceded, Wkts, Eco from scorecard data
+2. Compute: `Eco+ = (team mean eco / player eco) × 100` where team mean eco is across all bowlers ≥2 overs. **Note: formula is inverted (team/player) so higher = better, consistent with Shami sign convention.**
+3. Compute: `Wkt% = (player wkts / team total wkts) × 100`
+4. If bowler bowled < 2 overs, mark row as `DNQ`
+5. **Bold** any Eco+ ≥ 130 or Wkt% ≥ 35%
+
+After each player's game rows, compute a **summary row** with L5 averages/totals per `context/frameworks/player-performance-metrics.md` §2b and §3b.
+
+### Step 6 — Compute summary table metrics
+
+For each player, compute the summary table columns:
+
+**Batters:**
+- `Avg SR (L5)` = mean SR across qualifying games
+- `SR+ (L5)` = mean SR+ across qualifying games
+- `Avg Runs (L5)` = mean runs across qualifying games
+- `Run% (L5)` = mean Run% across qualifying games
+- `Impact (L5)` = `(Avg SR+ / 100) × (Avg Run% / 14%)` — see metrics framework §2b
 - **Δ vs Career** using the role-specific formula from contract §6 (positive = better)
-- **Δ vs Tmmt last gm** as the raw point delta in the most recent game
-- **Δ vs Opp last gm** as the raw point delta in the most recent game
 - **Form Class** by binning the z-score per contract §5 (`|z| < 1` Noise, `1–2` Signal, `≥2` Strong)
-- **Bnd %** for batters, `Wkts L5` for bowlers, **Trend** arrow per contract §3/§4
+- **Trend** arrow from slope of last-5 SR
+
+**Bowlers:**
+- `Avg Eco (L5)` = mean eco across qualifying spells
+- `Eco+ (L5)` = mean Eco+ across qualifying spells
+- `Wkts (L5)` = total wickets across last 5 games
+- `Wkt% (L5)` = mean Wkt% across qualifying spells
+- `Impact (L5)` = `(Avg Eco+ / 100) × (1 + Avg Wkt% / 100)` — see metrics framework §3b
+- **Δ vs Career** using the bowler formula from contract §6 (flip numerator: `(career − recent) / career`, positive = better)
+- **Form Class** and **Trend** as above
+
+Career aggregates, phase splits, and matchup splits require web search (ESPNcricinfo / CricBuzz) — gather these in parallel with API scorecard calls.
 
 ### Step 7 — Sign-convention assertion (mandatory before writing)
 
@@ -298,11 +349,12 @@ Use position-based estimate (openers → PP-heavy, 5–7 → middle/death). Mark
 <quality_checklist>
 ## Quality Checklist (self-verify before returning)
 
-### Contract compliance
+### Contract & metrics framework compliance
 - [ ] Read `context/contracts/player-form-profiles.contract.md` at the start of the run
+- [ ] Read `context/frameworks/player-performance-metrics.md` at the start of the run
 - [ ] Output file exists at `games/game-NNN-TEAM1-vs-TEAM2-DATE/player-form-profiles.md`
-- [ ] Top-level sections appear in the contract's mandated order
-- [ ] **No** Scout Card section, no Positive/Negative Variance prose blocks, no per-player Form Assessment paragraphs, no Last-10-Games sub-tables, no Strengths/Weaknesses tables — these are forbidden by the contract
+- [ ] Top-level sections appear in the contract's mandated order (including Last 5 Games Detail tables before summary tables)
+- [ ] **No** Scout Card section, no Positive/Negative Variance prose blocks, no per-player Form Assessment paragraphs, no Strengths/Weaknesses tables — these are forbidden by the contract
 
 ### Sign convention (the Shami rule)
 - [ ] For every bowler row with `FORM SURGE` flag, `Δ vs Career` is **positive**
@@ -310,12 +362,22 @@ Use position-based estimate (openers → PP-heavy, 5–7 → middle/death). Mark
 - [ ] For every batter row with `FORM SURGE` flag, `Δ vs Career` is **positive**
 - [ ] For every batter row with `FORM DIP` flag, `Δ vs Career` is **negative**
 - [ ] Bowler `Trend` arrow `↑` only appears when economy is dropping (i.e. improving)
+- [ ] Bowler `Eco+` uses inverted formula `(team mean / player eco) × 100` so higher = better
+
+### Comparative metrics (new — the core improvement)
+- [ ] Last 5 Games Detail tables exist for both teams' batters AND bowlers
+- [ ] Every detail table row has SR+ (batters) or Eco+ (bowlers) computed from team totals
+- [ ] SR+ and Eco+ values are numeric integers (not percentages, not text), or `n/c` with explanation
+- [ ] Run% and Wkt% are percentages, or `n/c` if team totals unavailable
+- [ ] Standout values are **bolded**: SR+ ≥ 115, Eco+ ≥ 130, Run% ≥ 25%, Wkt% ≥ 35%
+- [ ] Summary rows exist per player with L5 averages
+- [ ] Impact Score computed for players with ≥3 qualifying games; bold if Elite (≥1.5 batter / ≥1.4 bowler)
+- [ ] Games with < 10 balls (batters) or < 2 overs (bowlers) marked as `DNQ`
 
 ### Schema completeness
-- [ ] Every player in both XIs appears in exactly one row
-- [ ] Every batter row has all 14 base columns filled (no blanks; `n/a` allowed)
-- [ ] Every bowler row has all 14 base columns filled (no blanks; `n/a` allowed)
-- [ ] Every metric column header explicitly states its baseline (e.g. "Δ vs Career", "Δ vs Tmmt last gm")
+- [ ] Every player in both XIs appears in exactly one summary row AND in the detail table
+- [ ] Summary batter rows have all base columns filled (no blanks; `n/a` allowed)
+- [ ] Summary bowler rows have all base columns filled (no blanks; `n/a` allowed)
 - [ ] Phase labels use `PP` / `EM` / `LM` / `Death` exactly
 - [ ] Every Flag is quantified: delta %, sample size, severity suffix, implication
 - [ ] Form Class (`Noise` / `Signal` / `Strong`) is filled for every player

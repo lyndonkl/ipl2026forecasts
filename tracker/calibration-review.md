@@ -6,6 +6,90 @@
 
 ---
 
+## FORMAL 20-GAME CALIBRATION REVIEW — April 13, 2026
+
+**Triggers:** 20-game milestone + 5-game rolling Brier 0.3335 (>0.25 threshold)
+**Games reviewed:** 001–021 (20 scored, excl 012 abandoned)
+**Record:** 11 correct / 9 wrong (55%)
+**Running Brier:** 0.2629 | **5-game rolling (017–021):** 0.3335
+
+### Confidence Band Analysis
+
+| Band | Games | Favored Won | Win Rate | Expected | Verdict |
+|------|-------|------------|----------|----------|---------|
+| 50–60% | 13 | 5 | 38.5% | ~55% | **WORSE than coin flip** |
+| 60–70% | 6 | 5 | 83.3% | ~63% | Underconfident — strong calls are real |
+| 70–80% | 1 | 0 | 0% | ~74.5% | N=1 catastrophic miss (Game 021) |
+
+**Key insight:** Model adds genuine signal at 60%+ conviction. At 50–58%, our "lean" is anti-signal — picking the wrong side 61.5% of the time.
+
+### Longshot Bias Check
+
+Not classic longshot bias. In 6 of 9 wrong predictions, we gave HIGHER probability to the eventual loser than the market did. Largest divergences (018: +11pp, 021: +16.5pp) produced worst Brier scores (0.4225, 0.5550). Pattern: overconfidence in model vs market in close games.
+
+### Market Divergence Audit
+
+Large divergences (10pp+): 2 correct (Games 013, 015) / 2 wrong (Games 018, 021).
+- Brier damage from wrong: 0.4225 + 0.5550 = 0.9775
+- Brier benefit from right: 0.1781 + 0.1369 = 0.3150
+- Net P&L on 10pp+ divergences: +$5.43 − $4.56 = +$0.87 (barely positive)
+- **Asymmetric risk:** wrong divergences 3x more damaging than correct ones are beneficial.
+
+### Kalshi Trade Performance
+
+15 trades: 9W/6L (60%). Invested $22.43, P&L +$3.57 (ROI 15.9%).
+- PASS discipline strong: 6 PASSes on thin edges, all correct.
+- Sizing problem: largest losing trades (018: 4×, 021: 4×) both from high-divergence games. Kelly sizing amplifies overconfidence.
+
+### Behavioral Pitfall Flags
+
+1. **Confirmation bias (Games 018, 021):** Built strong cases for favored team without equal time steelmanning the other side.
+2. **Anchoring to model output:** Treated Bayesian chain output as ground truth rather than as one input to judgment.
+3. **Form clustering blindness (Games 018, 020, 021):** Player form modeled independently; reality shows positive correlation in peak performance.
+
+### Process Decision — Kushal's Call (April 13, 2026)
+
+**Decision: No AI agent changes.** The pipeline and agents stay as-is. The fix is at the human layer: Kushal will steelman every final probability against the scenarios at each Pause Point. This means harder scrutiny of the Bayesian chain output before locking, particularly when model diverges from market by >8pp.
+
+**Rationale:** The model's strong-conviction calls (60%+) hit 83.3%. The problem isn't research quality — it's the translation from scenarios to final probability in close games. That translation happens at Pause Points, which is where Kushal's judgment is the intervention.
+
+### Next Review
+
+Game 031 (10-game cadence) or if 5-game rolling Brier > 0.25 again, whichever comes first.
+
+---
+
+## Post-Game 021 Status — FORMAL CALIBRATION REVIEW REQUIRED (April 13, 2026)
+
+**Metric:** 5-game rolling Brier (Games 017-021) + 20-game milestone
+**Current 5-game rolling:** 0.3335 (avg of G017 0.1764, G018 0.4225, G019 0.1764, G020 0.2970, G021 0.5550)
+**20-game running average (G001-G021 scored, excl 012):** 0.2629
+**Threshold:** ≤0.25 (acceptable), >0.25 (early calibration review)
+**Status:** RED — **CRITICAL. BOTH TRIGGERS ACTIVE.**
+
+| Game | Teams | Prediction | Brier | 5-Game Rolling |
+|------|-------|-----------|-------|---|
+| 017 | PBKS vs SRH | PBKS 58% | 0.1764 | — |
+| 018 | CSK vs DC | CSK 35% | 0.4225 | — |
+| 019 | LSG vs GT | LSG 42% | 0.1764 | — |
+| 020 | MI vs RCB | MI 54.5% | 0.2970 | — |
+| 021 | SRH vs RR | SRH 25.5% | **0.5550** | **0.3335** (avg G017-021) |
+
+**Running average (21 scored games, excl 012):** 0.2629
+
+**Critical observations:**
+1. **Game 021's 0.5550 Brier is the worst single-game score of the season** (prior worst: G018 0.4225). We predicted SRH 25.5%, but SRH won decisively — a 74.5pp error.
+2. **5-game rolling (0.3335) exceeds 0.25 threshold by +0.0835** — this indicates a systematic failure pattern over the last 5 games.
+3. **Root cause pattern (Games 017-021):** Non-independent player performance (form clustering) + debutant-bowler information gap + market-divergence overconfidence.
+   - Game 018: Samson form dip was wrong (form clustering with other CSK recovery) → 0.4225 Brier
+   - Game 020: RCB form-spike clustering (Salt 78 + Patidar 53 + form all peaked) → 0.2970 Brier
+   - Game 021: Kishan form peak + debutant-bowler surprise (Hinge/Hussain) + market divergence → **0.5550 Brier**
+4. **Market divergence in Game 021:** We predicted SRH 25.5% vs market 42% (56¢ Kalshi = ~58% RR). The 16.5pp divergence was NOT justified by Medium confidence and was flagged in outcome.md as "70% forecastable error."
+
+**Immediate action:** Formal calibration review is MANDATORY per the 20-game milestone rule. Proceed to full 6-question audit before Games 022+.
+
+---
+
 ## Post-Game 020 Status — ELEVATED WARNING / CALIBRATION REVIEW TRIGGERED (April 12, 2026)
 
 **Metric:** 5-game rolling Brier (Games 016-020)

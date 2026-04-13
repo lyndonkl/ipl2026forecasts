@@ -20,8 +20,8 @@ This file defines the schema, sign conventions, and required cells for the playe
 ## 2. Top-Level Sections (mandatory, in order)
 
 1. Header block (date, venue, source XI, API status, generated timestamp)
-2. `## TEAM 1: <FullName> — Playing XI` → Batters table → Bowlers table
-3. `## TEAM 2: <FullName> — Playing XI` → Batters table → Bowlers table
+2. `## TEAM 1: <FullName> — Playing XI` → **Last 5 Games — Batters** detail table → **Last 5 Games — Bowlers** detail table → Batters summary table → Bowlers summary table
+3. `## TEAM 2: <FullName> — Playing XI` → **Last 5 Games — Batters** detail table → **Last 5 Games — Bowlers** detail table → Batters summary table → Bowlers summary table
 4. `## Deviation Watchlist` → one row per player whose Form Class is Signal or Strong
 5. `## Unknowns` → one row per Tier-3 / uncapped player with thin data
 6. `## Key Findings Summary` → at most 8 bullets
@@ -32,18 +32,45 @@ This file defines the schema, sign conventions, and required cells for the playe
 - `## Positive Variance` and `## Negative Variance` prose blocks
 - `## Phase Impact` tables broken out per player
 - Any per-player paragraphs labelled `Form Assessment`, `Strengths & Weaknesses`, or `Scout Card`
-- Any "Last 10 games" sub-table
 - Any narrative with the word "FORM SURGE ALERT" surrounded by prose
 
-The Scenario Analysis Agent reads only the team summary tables, the Deviation Watchlist, and the Unknowns table. Anything else is dead weight.
+The Scenario Analysis Agent reads the Last 5 Games detail tables (for per-game context), the team summary tables (for aggregated metrics), the Deviation Watchlist, and the Unknowns table.
+
+**Metrics framework reference:** All metric definitions (SR+, Eco+, Run%, Wkt%, Impact Score), their formulas, and interpretation guides live in `context/frameworks/player-performance-metrics.md`. Both the producer and consumer must read that file. This contract defines the table layout; the metrics framework defines what the numbers mean.
 
 ---
 
 ## 3. Batter Table — Schema
 
+### 3a. Last 5 Games Detail Table (per team, before the summary table)
+
+This table shows per-game comparative metrics for every batter, making form trends instantly scannable. One block of rows per player, with a summary row.
+
+Header row:
+
+| Player | Game | Runs | BF | SR | SR+ | Run% |
+
+**Column rules:**
+
+| Column | Type | Format | Notes |
+|---|---|---|---|
+| `Player` | string | Player name (repeated per game row) | Group rows by player |
+| `Game` | string | `G016 vs RCB` | Game number + opponent |
+| `Runs` | int | Raw runs | |
+| `BF` | int | Balls faced | |
+| `SR` | float | `(Runs / BF) × 100` | |
+| `SR+` | int | `(Player SR / Team Mean SR) × 100` | 100 = team avg. **Bold if ≥ 115.** Team Mean SR = mean SR of all batters who faced ≥10 balls in that innings. |
+| `Run%` | % | `(Player Runs / Team Total) × 100` | **Bold if ≥ 25%.** |
+
+After a player's 5 game rows, include a **summary row**: `**Player — L5 Summary**` with mean values. If a player faced < 10 balls in a game, mark that row as `DNQ` and exclude from summary averages.
+
+If fewer than 5 games are available, fill remaining rows with `n/a`. If the API and web search both fail to return team totals for a game, mark SR+ and Run% as `n/c` (not computable) for that row.
+
+### 3b. Batter Summary Table
+
 Header row, in this exact order:
 
-| # | Player (hand) | Role | Last-5 Score Line | Career SR (window) | Δ vs Career | Δ vs Tmmt last gm | Δ vs Opp last gm | Form Class | Phase Edge | Matchup | Bnd % | Trend | Flag |
+| # | Player (hand) | Role | Avg SR (L5) | SR+ (L5) | Avg Runs (L5) | Run% (L5) | Impact (L5) | Career SR (window) | Δ vs Career | Form Class | Phase Edge | Matchup | Trend | Flag |
 
 ### Column rules
 
@@ -52,29 +79,55 @@ Header row, in this exact order:
 | `#` | int | Batting position 1-7 | Use the position from team-analysis.md |
 | `Player (hand)` | string | `Name (LHB)` or `Name (RHB)` | Hand is mandatory |
 | `Role` | string | Opener / Anchor / Floater / Finisher / All-rounder | Pick one |
-| `Last-5 Score Line` | string | `R(B)SRxxx / R(B)SRxxx / ...` × 5 entries | Use ` / ` separator. Missing slots → `n/a` |
+| `Avg SR (L5)` | float | `134.6` | Mean SR across last 5 qualifying innings |
+| `SR+ (L5)` | int | `103` | Mean SR Index across last 5. **Bold if ≥ 115.** See `context/frameworks/player-performance-metrics.md` §2b |
+| `Avg Runs (L5)` | float | `41.6` | Mean runs across last 5 |
+| `Run% (L5)` | % | `17.4%` | Mean Run Share across last 5. **Bold if ≥ 25%.** |
+| `Impact (L5)` | float | `1.28` | `(Avg SR+ / 100) × (Avg Run% / 14%)`. See metrics framework §2b. **Bold if ≥ 1.5 (Elite).** |
 | `Career SR (window)` | string | `134 (T20 2024-25, 150 inn)` | Always include the window in parens |
 | `Δ vs Career` | signed % | `+13%` or `-8%` | **Sign convention: positive = better than career.** See §6 |
-| `Δ vs Tmmt last gm` | signed point delta | `+18 vs RR g013` | Raw SR-point delta vs teammates ≥10 balls in same game. Append the game id |
-| `Δ vs Opp last gm` | signed point delta | `+9 vs MI g013` | Raw SR-point delta vs opposing batters ≥10 balls. Append game id |
 | `Form Class` | enum | `Noise` / `Signal` / `Strong` (suffix `(est.)` if stdev estimated) | See §5 |
 | `Phase Edge` | string | `PP SR 162` / `EM SR 145` / `LM SR 158` / `Death SR 178` | One phase only — the phase where this batter is most dangerous |
 | `Matchup` | string | `vs Bumrah: SR 110 / 30 balls` | One H2H or structural matchup |
-| `Bnd %` | % | `62%` | (4×4 + 6×6) ÷ total runs over last 5 |
 | `Trend` | arrow | `↑` / `↑↑` / `↓` / `↓↓` / `→` | Slope of last-5 SR |
 | `Flag` | string | `<FLAG_TYPE> (<Severity>): <quantified evidence>` or empty | See §7 |
 
 **Cell rules**
 - No blank cells. Use `n/a` with a hint when data is missing: `n/a (no IPL26 game yet)`.
-- The `Δ vs Career` cell is the value Scenario Analysis uses as its primary recent-form signal.
+- The `Δ vs Career` cell remains the primary cross-time form signal.
+- The `SR+` and `Impact` columns are the primary cross-section signals for the Scenario Analysis Agent.
+- The old `Δ vs Tmmt last gm`, `Δ vs Opp last gm`, and `Bnd %` columns are retired — their information is now captured more precisely by SR+, Run%, and the detail table.
 
 ---
 
 ## 4. Bowler Table — Schema
 
+### 4a. Last 5 Games Detail Table (per team, before the summary table)
+
+Header row:
+
+| Player | Game | Ov | Runs | Wkts | Eco | Eco+ | Wkt% |
+
+**Column rules:**
+
+| Column | Type | Format | Notes |
+|---|---|---|---|
+| `Player` | string | Player name (repeated per game row) | Group rows by player |
+| `Game` | string | `G015 vs KKR` | Game number + opponent |
+| `Ov` | float | Overs bowled | |
+| `Runs` | int | Runs conceded | |
+| `Wkts` | int | Wickets taken | |
+| `Eco` | float | `Runs / Overs` | |
+| `Eco+` | int | `(Team Mean Eco / Player Eco) × 100` | 100 = team avg. **Bold if ≥ 130.** Team Mean Eco = mean eco of all bowlers who bowled ≥2 overs in that innings. Formula is inverted so higher = better (consistent with Shami sign convention). |
+| `Wkt%` | % | `(Player Wkts / Team Total Wkts) × 100` | **Bold if ≥ 35%.** |
+
+After a player's 5 game rows, include a **summary row** with aggregated values. If a bowler bowled < 2 overs in a game, mark as `DNQ`. If team totals unavailable, mark Eco+ and Wkt% as `n/c`.
+
+### 4b. Bowler Summary Table
+
 Header row, in this exact order:
 
-| # | Player (hand) | Role | Last-5 Eco Line (phase) | Career Eco (window) | Δ vs Career | Δ vs Tmmt last gm | Δ vs Opp last gm | Form Class | Phase Edge | Matchup | Wkts L5 | Trend | Flag |
+| # | Player (hand) | Role | Avg Eco (L5) | Eco+ (L5) | Wkts (L5) | Wkt% (L5) | Impact (L5) | Career Eco (window) | Δ vs Career | Form Class | Phase Edge | Matchup | Trend | Flag |
 
 ### Column rules
 
@@ -83,17 +136,20 @@ Header row, in this exact order:
 | `#` | int | Bowling order index | 1 = main strike bowler |
 | `Player (hand)` | string | `Name (RF)` / `(LF)` / `(OS)` / `(LS)` / `(RM)` / `(LM)` | Bowling style mandatory |
 | `Role` | string | PP specialist / Middle-overs / Death spec / All-phase | Pick one |
-| `Last-5 Eco Line (phase)` | string | `4-0-32-1 eco8.0 (PP+death) / ...` × 5 | Phase in parens if known |
-| `Career Eco (window)` | string | `7.95 (T20 career, 60 ovr/yr)` | |
+| `Avg Eco (L5)` | float | `3.63` | Mean economy across last 5 qualifying spells |
+| `Eco+ (L5)` | int | `260` | Mean Eco Index across last 5. **Bold if ≥ 130.** See `context/frameworks/player-performance-metrics.md` §3b |
+| `Wkts (L5)` | int | `3` | Total wickets across last 5 games |
+| `Wkt% (L5)` | % | `28.5%` | Mean Wicket Share across last 5. **Bold if ≥ 35%.** |
+| `Impact (L5)` | float | `2.03` | `(Avg Eco+ / 100) × (1 + Avg Wkt% / 100)`. See metrics framework §3b. **Bold if ≥ 1.4 (Elite).** |
+| `Career Eco (window)` | string | `7.20 (T20 career, 95 ovr/yr)` | |
 | `Δ vs Career` | signed % | **Positive = better than career.** See §6 — this is critical for bowlers |
-| `Δ vs Tmmt last gm` | signed point delta | `-1.2 vs MI g013` | Raw economy-point delta. **Positive = better than teammates.** |
-| `Δ vs Opp last gm` | signed point delta | `-0.8 vs MI g013` | Raw economy-point delta. **Positive = better than opposing bowlers.** |
 | `Form Class` | enum | `Noise` / `Signal` / `Strong` | |
 | `Phase Edge` | string | `Death 18-20 eco 7.2` | |
 | `Matchup` | string | `vs LHB SR 95 / 200 balls` | |
-| `Wkts L5` | int | Wickets in last 5 games | |
 | `Trend` | arrow | `↑` = improving (eco dropping), `↓` = worsening (eco rising), `→` = flat | **Bowler trend uses inverted convention so ↑ always means "better"** |
 | `Flag` | string | Same as batters | |
+
+**Retired columns:** The old `Δ vs Tmmt last gm` and `Δ vs Opp last gm` single-game deltas are replaced by the more comprehensive Eco+ (which captures the same signal across all 5 games, not just the last one).
 
 ---
 
@@ -249,11 +305,13 @@ If a column is added, both teams' tables must include it (even with `n/a`).
 
 The Scenario Analysis Agent must, before consuming this file:
 
-1. Confirm both teams have a Batters table and a Bowlers table.
-2. Confirm every player from team-analysis.md appears in exactly one row.
+1. Confirm both teams have Last 5 Games detail tables AND summary tables for both Batters and Bowlers.
+2. Confirm every player from team-analysis.md appears in exactly one summary row.
 3. Confirm `Δ vs Career` cells are signed numbers (not blank, not text).
 4. Confirm bowler `Δ vs Career` signs are consistent with their Flag (FORM SURGE → positive; FORM DIP → negative).
 5. Confirm phase labels in `Phase Edge` use exactly: `PP` / `EM` / `LM` / `Death`.
+6. Confirm `SR+` / `Eco+` columns contain numeric values (or `n/a` / `n/c` with explanation). These are the primary cross-section signals.
+7. Confirm `Impact (L5)` is computed for players with ≥3 qualifying games. Use these to identify the highest-leverage players per phase.
 
 If any check fails, the consumer must report the schema violation in its own output and proceed only with the cells that ARE valid.
 
@@ -261,21 +319,49 @@ If any check fails, the consumer must report the schema violation in its own out
 
 ## 12. Few-shot Examples (canonical rows)
 
-### Batter example — Form Surge
+### Batter detail table example
 ```
-| 1 | Jaiswal (LHB) | Opener | 55(36)SR152 / 12(14)SR86 / 41(28)SR146 / 78(45)SR173 / 22(19)SR116 | 134 (T20 2024-25, 150 inn) | +13% | +18 vs RR g013 | +9 vs MI g013 | Signal | PP SR 162 | vs Bumrah: SR 110 / 30 balls | 62% | ↑ | FORM SURGE (Strong): +13% SR over 5 inn — PP launchpad active, raises RR PP Bullish ceiling |
-```
-
-### Bowler example — the Shami row, corrected
-```
-| 1 | Shami (RAF) | Death spec | 4-0-9-2 eco2.25 (PP+death) / 4-0-38-1 eco9.5 / 4-0-32-0 eco8.0 / 3.4-0-28-2 eco7.6 / 4-0-29-1 eco7.25 | 7.20 (T20 career, 95 ovr/yr) | +25% | +1.8 vs SRH g010 | +1.4 vs SRH g010 | Signal (est.) | Death 18-20 eco 7.2 | vs LHB eco 7.4 / 280 balls | 6 | ↑ | FORM SURGE (Strong): +25% eco improvement over 5 inn — credible pattern, raises LSG Death Bullish ceiling |
-```
-
-Note: the `+25%` here is the 5-game average (not the single 1-game spike of +69%). The producer must use the 5-game window for the column value; single-game extremes go in the Flag implication if relevant.
-
-### Bowler example — Form Dip
-```
-| 2 | Arshdeep (LAM) | PP specialist | 4-0-42-0 eco10.5 / 4-0-38-1 eco9.5 / 4-0-44-0 eco11.0 / 4-0-36-2 eco9.0 / 4-0-40-1 eco10.0 | 8.10 (T20 career, 75 ovr/yr) | -22% | -1.6 vs DC g012 | -2.0 vs DC g012 | Signal | PP 1-6 eco 8.5 | vs RHB eco 8.7 / 320 balls | 4 | ↓ | FORM DIP (Strong): -22% eco regression over 5 inn — PP exposure, reduces PBKS PP Neutral floor |
+| Player | Game | Runs | BF | SR | SR+ | Run% |
+|--------|------|------|----|-----|-----|------|
+| Jaiswal | G016 vs RCB | 55 | 36 | 152 | **118** | **22%** |
+| Jaiswal | G013 vs MI | 12 | 14 | 86 | 72 | 8% |
+| Jaiswal | G009 vs GT | 41 | 28 | 146 | 105 | 17% |
+| Jaiswal | G004 vs PBKS | 78 | 45 | 173 | **131** | **28%** |
+| Jaiswal | G002 vs KKR | 22 | 19 | 116 | 91 | 12% |
+| **Jaiswal — L5 Summary** | | **41.6** | | **134.6** | **103** | **17.4%** |
 ```
 
-Note: signs are negative because the bowler is **worse** than career — the contract treats this consistently across roles.
+Note: SR+ of 118 in G016 means Jaiswal scored 18% faster than his teammates. Run% of 28% in G004 means he scored over a quarter of the team's runs. Bold formatting makes standout games instantly visible.
+
+### Batter summary table example — Form Surge
+```
+| 1 | Jaiswal (LHB) | Opener | 134.6 | 103 | 41.6 | 17.4% | 1.28 | 134 (T20 2024-25, 150 inn) | +13% | Signal | PP SR 162 | vs Bumrah: SR 110 / 30 balls | ↑ | FORM SURGE (Strong): +13% SR over 5 inn — PP launchpad active, raises RR PP Bullish ceiling |
+```
+
+### Bowler detail table example
+```
+| Player | Game | Ov | Runs | Wkts | Eco | Eco+ | Wkt% |
+|--------|------|----|------|------|-----|------|------|
+| Shami | G015 vs KKR | 4 | 20 | 1 | 5.0 | **164** | 17% |
+| Shami | G010 vs SRH | 4 | 9 | 2 | 2.25 | **356** | **40%** |
+| Shami | G007 vs CSK | 4 | 32 | 0 | 8.0 | 101 | 0% |
+| Shami | G003 vs RR | 3.4 | 28 | 2 | 7.6 | 108 | 29% |
+| Shami | G001 vs RCB | 4 | 29 | 1 | 7.25 | 112 | 17% |
+| **Shami — L5 Summary** | | | | **6** | **6.02** | **168** | **20.6%** |
+```
+
+Note: Eco+ of 356 in G010 means Shami was 3.56× more economical than his teammates — an extreme outlier. The L5 summary Eco+ of 168 smooths this: consistently 68% better than teammates across 5 games. Bold Eco+ values (≥130) and bold Wkt% (≥35%) make standout performances pop.
+
+### Bowler summary table example — the Shami row, corrected
+```
+| 1 | Shami (RAF) | Death spec | 6.02 | **168** | 6 | 20.6% | **1.95** | 7.20 (T20 career, 95 ovr/yr) | +25% | Signal (est.) | Death 18-20 eco 7.2 | vs LHB eco 7.4 / 280 balls | ↑ | FORM SURGE (Strong): +25% eco improvement over 5 inn — credible pattern, raises LSG Death Bullish ceiling |
+```
+
+Note: the `+25%` in Δ vs Career is the career comparison (5-game avg eco vs career eco). The `Eco+ 168` is the team comparison (how Shami compares to teammates). These are different signals — Δ vs Career catches cross-time trends, Eco+ catches cross-section dominance.
+
+### Bowler summary table example — Form Dip
+```
+| 2 | Arshdeep (LAM) | PP specialist | 10.0 | 82 | 4 | 16% | 0.95 | 8.10 (T20 career, 75 ovr/yr) | -22% | Signal | PP 1-6 eco 8.5 | vs RHB eco 8.7 / 320 balls | ↓ | FORM DIP (Strong): -22% eco regression over 5 inn — PP exposure, reduces PBKS PP Neutral floor |
+```
+
+Note: Eco+ of 82 means Arshdeep is 18% more expensive than his teammates — the team comparison confirms the career comparison (Δ -22%). Both signals agree → high confidence in the form dip.

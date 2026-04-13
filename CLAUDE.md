@@ -176,6 +176,7 @@ When spawning a subagent, always provide:
 2. **The game folder path** — so the agent knows where to write its output
 3. **Upstream file paths** — explicit paths to every file the agent needs to read
 4. **The teams and venue** — extracted from Kushal's request or from context/schedule.md
+5. **The mandatory context files** — look up this agent's row in the `Context File Loading Rules by Agent` table (in the `<context_loading_rules>` section below) and list every file marked **MANDATORY**. These files define the schemas and metric definitions the agent must read before doing any work.
 
 Use this template when spawning each agent:
 
@@ -187,6 +188,17 @@ Your full instructions are below. Follow them exactly.
 Game folder: games/game-[NNN]-[TEAM1]-vs-[TEAM2]-[DATE]/
 Upstream files to read: [list of specific file paths]
 Context files to read: [list from agent's own context file loading rules]
+
+CRITICAL — CONTEXT LOADING RULES:
+Before doing ANY research or writing ANY output, you MUST read every context file listed above.
+Files marked MANDATORY (contracts, metrics frameworks) define the schemas and metric definitions
+you are required to follow. Your output will be validated against these files. If you skip them,
+your output will fail validation and need to be re-run.
+
+Read order:
+1. Contract and framework files (MANDATORY) — these define WHAT to write and HOW to derive metrics
+2. Upstream game files — these provide the data to work with
+3. Cricket/team context files — these provide domain background
 
 [FULL CONTENTS OF agents/[agent-name].md]
 ```
@@ -266,26 +278,30 @@ Record Kushal's responses verbatim in prediction.md under the appropriate sectio
 
 **Step 1 — Pitch Report Agent (Subagent)**
 1. Read agents/pitch-report-agent.md
-2. Spawn a subagent with the full agent prompt, game folder path, and context file paths
-3. When the subagent returns, validate the output (conditions-report.md exists, all 6 sections present)
-4. Report to Kushal: brief summary of conditions (pitch type, par score, dew assessment, toss advantage) + any UNAVAILABLE flags
+2. Look up Agent 1's row in the Context File Loading Rules table → gather its mandatory context file paths
+3. Spawn a subagent using the delegation template (including the CRITICAL — CONTEXT LOADING RULES block), with the full agent prompt, game folder path, and all context file paths
+4. When the subagent returns, validate the output (conditions-report.md exists, all 6 sections present)
+5. Report to Kushal: brief summary of conditions (pitch type, par score, dew assessment, toss advantage) + any UNAVAILABLE flags
 
 **Step 2 — Team Research Agent (Subagent)**
 1. Read agents/team-research-agent.md
-2. Spawn a subagent with the full agent prompt + path to conditions-report.md
-3. Validate output (team-analysis.md exists, all 8 sections present, XI confidence level)
-4. Report to Kushal: confirmed/probable XI for both teams, overseas slot count, any uncertainty flags
+2. Look up Agent 2's row in the Context File Loading Rules table → gather its mandatory context file paths
+3. Spawn a subagent using the delegation template, with the full agent prompt + path to conditions-report.md + all context file paths
+4. Validate output (team-analysis.md exists, all 8 sections present, XI confidence level)
+5. Report to Kushal: confirmed/probable XI for both teams, overseas slot count, any uncertainty flags
 
 **Step 3 — Player Research Agent (Subagent)**
 1. Read agents/player-research-agent.md
-2. Spawn a subagent with the full agent prompt + path to team-analysis.md
-3. Validate output (player-form-profiles.md exists, profiles for all XI players, Key Findings Summary)
-4. Report to Kushal: top form alerts, unknowns register highlights, key scenario flags
+2. Look up Agent 3's row in the Context File Loading Rules table → gather its mandatory context file paths (including **context/contracts/player-form-profiles.contract.md** and **context/frameworks/player-performance-metrics.md**)
+3. Spawn a subagent using the delegation template, with the full agent prompt + path to team-analysis.md + all context file paths
+4. Validate output (player-form-profiles.md exists, Last 5 Games detail tables present, SR+/Eco+/Impact columns populated, profiles for all XI players, Key Findings Summary)
+5. Report to Kushal: top form alerts (using Impact Score labels), unknowns register highlights, key scenario flags
 
 **Step 4 — Scenario Analysis Agent (Subagent)**
 1. Read agents/scenario-analysis-agent.md
-2. Spawn a subagent with the full agent prompt + paths to all 3 upstream files
-3. Validate output (scenario-analysis.md exists, both match scenarios present, all phases have B/N/Bear probabilities summing to ~100%)
+2. Look up Agent 4's row in the Context File Loading Rules table → gather its mandatory context file paths (including **context/contracts/player-form-profiles.contract.md**, **context/contracts/scenario-analysis.contract.md**, and **context/frameworks/player-performance-metrics.md**)
+3. Spawn a subagent using the delegation template, with the full agent prompt + paths to all 3 upstream files + all context file paths
+4. Validate output (scenario-analysis.md exists, both match scenarios present, all phases have B/N/Bear probabilities summing to ~100%)
 4. Report to Kushal: phase edge summary, players to watch, scenario seeds
 
 **Step 5 — Forecasting (Interactive — Main Thread)**
@@ -488,8 +504,8 @@ Each agent loads specific context files. This table is the authoritative referen
 |-------|----------------------|
 | 1. Pitch Report | context/cricket/pitch-types.md, context/cricket/ipl-venue-patterns.md, context/venues/[VENUE].md |
 | 2. Team Research | context/cricket/player-matchup-framework.md, context/cricket/ipl-phase-dynamics.md, context/teams/[TEAM1].md, context/teams/[TEAM2].md |
-| 3. Player Research | **context/contracts/player-form-profiles.contract.md (output schema — MANDATORY)**, context/cricket/player-matchup-framework.md, context/cricket/ipl-phase-dynamics.md, context/teams/[TEAM1].md, context/teams/[TEAM2].md, context/players/* (relevant) |
-| 4. Scenario Analysis | **context/contracts/player-form-profiles.contract.md (input schema — MANDATORY)**, **context/contracts/scenario-analysis.contract.md (output schema — MANDATORY)**, context/cricket/ipl-phase-dynamics.md, context/cricket/player-matchup-framework.md |
+| 3. Player Research | **context/contracts/player-form-profiles.contract.md (output schema — MANDATORY)**, **context/frameworks/player-performance-metrics.md (metric definitions — MANDATORY)**, context/cricket/player-matchup-framework.md, context/cricket/ipl-phase-dynamics.md, context/teams/[TEAM1].md, context/teams/[TEAM2].md, context/players/* (relevant) |
+| 4. Scenario Analysis | **context/contracts/player-form-profiles.contract.md (input schema — MANDATORY)**, **context/contracts/scenario-analysis.contract.md (output schema — MANDATORY)**, **context/frameworks/player-performance-metrics.md (metric interpretation — MANDATORY, esp. §7)**, context/cricket/ipl-phase-dynamics.md, context/cricket/player-matchup-framework.md |
 | 5. Forecasting | **context/contracts/scenario-analysis.contract.md (input schema — MANDATORY)**, **context/contracts/prediction.contract.md (output schema — MANDATORY)**, context/frameworks/forecasting-methods.md, context/frameworks/market-anchoring.md, context/frameworks/behavioral-pitfalls.md, context/frameworks/position-sizing.md, context/frameworks/calibration-and-brier.md |
 | 6. Debriefing | **context/contracts/prediction.contract.md (input schema — MANDATORY)**, context/frameworks/calibration-and-brier.md, context/teams/[TEAM1].md, context/teams/[TEAM2].md, context/venues/[VENUE].md, context/season-overview.md, all tracker files |
 

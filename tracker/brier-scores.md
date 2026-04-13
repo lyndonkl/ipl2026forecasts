@@ -27,3 +27,4 @@
 | 018 | CSK vs DC | 0.4225 | Medium | 0.2252 |
 | 019 | LSG vs GT | 0.1764 | Medium | 0.2226 |
 | 020 | MI vs RCB | 0.2970 | Medium | 0.2263 |
+| 021 | SRH vs RR | 0.5550 | Medium | 0.2629 |

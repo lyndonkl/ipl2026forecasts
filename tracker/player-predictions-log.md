@@ -159,3 +159,14 @@
 | 020 | Suyash Sharma (RCB, 2nd innings bowling MI) | Death bowler 2–3 wkts, eco 11–13 (expensive OK) | 2 wkts (Santner, Bumrah), eco 11.75 | YES — hit wicket ceiling and eco range; death execution as expected |
 | 020 | RCB First Innings Total (1st innings) | 180–210 runs (par) | 240 runs | NO — 30–60 runs above ceiling; form-spike clustering anomaly |
 | 020 | MI Chase Win Probability | 52.8% (Scenario A, locked) | Loss by 18 runs | PREDICTION WRONG — RCB's par-breaking total made chase unachievable |
+| 021 | Vaibhav Sooryavanshi (SRH, 1st innings batting) | PP elite form 30–50 range SR 150–180 | 0 off 1, SR 0 | NO — golden duck, form spike prediction completely wrong |
+| 021 | Ishan Kishan (SRH, 1st innings batting) | Anchor role 25–35 runs, SR 140–160 (regression from Game 001 peak) | 91 off 44, SR 206.8 | NO — exceeded ceiling by 56 runs; form spike not captured by regression model |
+| 021 | Heinrich Klaasen (SRH, 1st innings batting) | Middle-order accelerator 35–50 range SR 150–170 | 40 off 26, SR 153.8 | YES — in range; solid middle-order contribution |
+| 021 | Donovan Ferreira (RR, 2nd innings batting, chase) | Anchor 25–40 range, SR 140–160 | 69 off 44, SR 156.8 | NO — exceeded ceiling by 29 runs, form peak in difficult chase situation |
+| 021 | Ravindra Jadeja (RR, 2nd innings batting, chase) | Middle-order 20–35 range, SR 130–150 | 45 off 32, SR 140.6 | YES — in range, solid but couldn't anchor team |
+| 021 | Praful Hinge (SRH bowling, debut) | Not predicted (debutant, no pre-match data) | 4/34 in 3 overs (historic 3-wicket first over) | N/A — unknown unknown; elite debut performance |
+| 021 | Sakib Hussain (SRH bowling, debut) | Not predicted (debutant, no pre-match data) | 4/24 in 4 overs (elite figures on debut) | N/A — unknown unknown; elite debut performance |
+| 021 | Jofra Archer (RR bowling) | Death specialist 1–2 wkts, eco 7.5–8.5 | Unclear figures (RR collapse overshadowed bowling analysis) | UNCLEAR — did not appear as primary threat |
+| 021 | Ravi Bishnoi (RR bowling) | Spin dominance EM overs 1–3 wkts, eco 7.5–8.5 | Unclear figures (RR collapse overshadowed bowling analysis) | UNCLEAR — did not appear as primary threat |
+| 021 | SRH First Innings Total | 165–195 runs (par) | 216 runs | NO — 21–51 runs above ceiling; Kishan + Klaasen form peak not captured |
+| 021 | RR Chase Win Probability | 74.5% (Scenario B, locked) | Loss by 57 runs in 19 overs | PREDICTION CATASTROPHICALLY WRONG — debutant bowlers + Sooryavanshi collapse + form clustering |

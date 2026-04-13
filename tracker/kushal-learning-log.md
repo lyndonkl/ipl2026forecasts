@@ -1045,3 +1045,61 @@ Model treated each player independently (Padikkal Bullish 38%, Neutral 42%, Bear
 - Concentration risk discount (when to downweight multi-batter LR clusters).
 
 
+
+---
+
+## Game 021 — SRH vs RR, April 13, 2026
+
+**Match:** Sunrisers Hyderabad vs Rajasthan Royals at Rajiv Gandhi International Stadium, Hyderabad (Game 21 of IPL 2026)  
+**Prediction:** SRH 25.5% / RR 74.5% (Medium confidence)  
+**Actual Result:** SRH won by 57 runs (216/6 vs 159/10)  
+**Brier Score:** **0.5550** (catastrophic — worst of season)  
+**Trade:** 4× RR Yes at 56¢, cost $2.32, **lost $2.32**
+
+### What Happened
+
+RR won the toss and elected to bowl first. SRH scored 216/6 with Ishan Kishan 91*(44) dominating. RR collapsed to 159 all out in 19 overs, destroyed by debutant fast bowlers Praful Hinge (4/34, historic 3-wicket first over) and Sakib Hussain (4/24). RR's top 5 fell for 9 runs in 5 overs; Donovan Ferreira (69) and Ravindra Jadeja (45) salvaged some pride but couldn't mount a competitive chase.
+
+### Why My Prediction Was Wrong (Three-Layer Analysis)
+
+**Layer 1: Information Gap — Debutant Bowlers**
+- Praful Hinge and Sakib Hussain are **IPL debutants**. No pre-match form data, no economy benchmarks, no ball-by-ball history.
+- Our Scenario Analysis Agent modeled RR's bowling threats as Archer + Burger + Bishnoi based on prior history.
+- Neither debutant appeared in our model. They were essentially **unknown unknowns**.
+- **Could this have been caught?** YES, 50% forecastable. Squad lists should flag debutants with variance discount (±30 runs).
+- **Lesson:** When 2+ debutant bowlers in opposition XI, widen chase ranges by 25–40 runs.
+
+**Layer 2: Form-Ceiling Scenario Missing — Ishan Kishan**
+- Kishan was in surging form: 3 of last 5 games 40+.
+- Our model predicted first-innings 165–195, but Kishan 91*(44) took us to 216.
+- **Could this have been caught?** YES, 60% forecastable. Create "elite aggression" scenario (85+) when player has 3+ recent 40+ games.
+- **Lesson:** Form spikes need explicit ceiling scenarios, not just anchoring to baseline.
+
+**Layer 3: Market Divergence Not Calibrated — Our 74.5% vs Market 56¢**
+- Kalshi priced RR 56¢ (~58% after fees); our model 74.5% RR.
+- **Divergence:** 16.5pp, claimed edge of +16.5¢/contract.
+- At Pause Point 3, we should have asked: "Is Medium confidence justified with 16.5pp divergence?" Answer: NO.
+- **Could this have been caught?** YES, 70% forecastable. Market divergence >10pp at Medium confidence should trigger compression check.
+- **Lesson:** Max divergence at Medium confidence ~5–8pp; larger gaps suggest overconfidence in single-factor LR stacks.
+
+### What Surprised Me
+
+1. **Sooryavanshi golden duck (0 off 1):** Form peak reversed under pressure.
+2. **Hinge's 3-wicket first over:** IPL-first achievement; tail-risk event even with debutant variance.
+3. **RR's cascade collapse (9/5 in 5 overs):** Herd-mentality effect in lower order under elite bowling pressure.
+
+### Fixes Prioritized
+
+1. **Debutant flagging:** Team Research identifies all debuts; apply +30-run variance.
+2. **Form-ceiling scenarios:** When 3+ recent 40+ games, create explicit ceiling scenario.
+3. **Market divergence check:** At Pause Point 3, flag divergence >10pp as overconfidence.
+4. **Form clustering:** Track multi-player simultaneous peaks; if 3+ spikes, reduce LR credibility by 15–25%.
+
+### Calibration Status (Post-Game 021)
+
+**5-game rolling Brier (G017–G021):** 0.3335 (CRITICAL RED)  
+**20-game running average:** 0.2629 (exceeds 0.25)
+
+**Mandatory formal calibration review before Games 022+ proceed.**
+
+---
