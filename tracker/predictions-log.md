@@ -2,6 +2,7 @@
 
 ### Game Files
 - [Game 001: RCB vs SRH](../games/game-001-RCB-vs-SRH-2026-03-28/outcome.md) | [Game 002: MI vs KKR](../games/game-002-MI-vs-KKR-2026-03-29/outcome.md) | [Game 003: RR vs CSK](../games/game-003-RR-vs-CSK-2026-03-30/outcome.md) | [Game 004: PBKS vs GT](../games/game-004-PBKS-vs-GT-2026-03-31/outcome.md)
+- [Game 024: MI vs PBKS](../games/game-024-MI-vs-PBKS-2026-04-16/prediction.md)
 - [Brier Scores](brier-scores.md) | [Player Predictions](player-predictions-log.md) | [Kalshi Trades](kalshi-trades-log.md) | [Learning Log](kushal-learning-log.md)
 
 | Game # | Teams | Date | My Prediction | Market Odds | Winner | Correct | Brier | Confidence |
@@ -28,3 +29,5 @@
 | 020 | MI vs RCB | 2026-04-12 | MI 54.5% / RCB 45.5% | MI 53¢ / RCB 47¢ (Kalshi) | RCB (by 18 runs) | NO | 0.2970 | Medium |
 | 021 | SRH vs RR | 2026-04-13 | SRH 25.5% / RR 74.5% | RR 56¢ (Kalshi) | SRH (by 57 runs) | NO | 0.5550 | Medium |
 | 022 | CSK vs KKR | 2026-04-14 | CSK 52.2% / KKR 47.8% | CSK 54¢ / KKR 46¢ (Kalshi) | CSK (by 32 runs) | YES | 0.2285 | Low |
+| 023 | RCB vs LSG | 2026-04-15 | RCB 68.0% / LSG 32.0% | RCB 61¢ / LSG 39¢ (Kalshi) | RCB (by 5 wkts) | YES | 0.1024 | High |
+| 024 | MI vs PBKS | 2026-04-16 | MI 54.6% / PBKS 45.4% | MI 54¢ / PBKS 46¢ (Kalshi, +2¢ fees) | — | — | — | Medium |

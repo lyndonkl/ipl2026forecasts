@@ -170,3 +170,19 @@
 | 021 | Ravi Bishnoi (RR bowling) | Spin dominance EM overs 1–3 wkts, eco 7.5–8.5 | Unclear figures (RR collapse overshadowed bowling analysis) | UNCLEAR — did not appear as primary threat |
 | 021 | SRH First Innings Total | 165–195 runs (par) | 216 runs | NO — 21–51 runs above ceiling; Kishan + Klaasen form peak not captured |
 | 021 | RR Chase Win Probability | 74.5% (Scenario B, locked) | Loss by 57 runs in 19 overs | PREDICTION CATASTROPHICALLY WRONG — debutant bowlers + Sooryavanshi collapse + form clustering |
+| 023 | Phil Salt (RCB) | Powerplay SR 160–190, 30–50 runs | 12 off 8, SR 150 | NO — form surge didn't sustain; early exit vs Avesh Khan |
+| 023 | Virat Kohli (RCB Impact Player) | Form surge +139 SR+, 40–60 runs SR 145–180 | 49 off 34, SR 144 | YES — form surge confirmed via aggressive intent (3 boundaries one over vs Shami); hit predicted range; SR close to L5 166 |
+| 023 | Rajat Patidar (RCB captain) | Form surge extreme, SR 207, 25–40 runs | 27 off 13, SR 207 | YES — exceeded ceiling, elite form confirmed; maintained 5-game acceleration (31→63→48→53→27 swing) |
+| 023 | Jitesh Sharma (RCB wk) | Finisher role, 15–30 runs SR 180–220 | 23 off 9, SR 255 | YES (EXTREME SPIKE) — exceeded ceiling by 8 runs; elite death-overs finisher profile confirmed |
+| 023 | Tim David (RCB) | Finisher SR 200+, 20–40 runs | DNB (chase completed) | N/A — didn't bat (target reached 14.1 overs) |
+| 023 | Mitchell Marsh (LSG) | Opener stability, 20–35 runs SR 120–140 | 23 off 19, SR 121 | YES — in range, early stabilizer role confirmed |
+| 023 | Aiden Markram (LSG) | Opener aggression, 25–40 runs SR 130–160 | 28 off 26, SR 107 | YES (Conservative) — in run range (lower end); SR slower (107 vs 145 expected) due to pressure |
+| 023 | Rishabh Pant (LSG captain) | Form crisis concern, 25–45 runs SR 100–130 | 18 off 24, SR 75 | YES (Crisis Confirmed) — form dip materialized; 18 off 24 at SR 75 validates concern. Post-match elbow soreness noted. |
+| 023 | Nicholas Pooran (LSG) | Form crisis extreme, SR <90, 5–15 runs | 7 off 8, SR 87 | YES (EXTREME) — matched crisis band perfectly; early dismissal cascaded LSG collapse; vulnerability vs elite pace confirmed |
+| 023 | Abdul Samad (LSG) | Form surge, SR 150–170, 30–40 runs | 18 off 14, SR 128 | NO — form surge suppressed; expected 30-40 but constrained to 18 due to bowling pressure + position-dependent context |
+| 023 | Wanindu Hasaranga (LSG) | Dual-value AR, SR 180+, 15–30 runs | 8 off 9, SR 88 | NO — limited opportunity in collapse; early batting due to middle-order pressure negated finisher role |
+| 023 | Mohammed Shami (LSG new-ball) | Elite form (Eco+ 233), 1–2 wkts eco 7.0–8.0 | Kohli hit 3 consecutive boundaries (15 runs one over), no early breakthrough | NO — elite form did NOT translate to breakthrough; Kohli's form surge overwhelmed Shami's new-ball execution; genuine matchup volatility |
+| 023 | Bhuvneshwar Kumar (RCB pace) | Elite death specialist, 1–2 wkts eco 6.75–8.0 | 3 wickets for 27 runs (Eco 6.75) | YES (STRONG) — elite execution confirmed; dew advantage amplified effectiveness |
+| 023 | Rasikh Dar (RCB death specialist) | Impact sub recovery, 2–3 wkts eco 8.0–9.0 | 4 wickets for 24 runs (Eco 6.0) | YES (EXTREME) — elite performance materialized; overexposed flag proved incorrect; tail exposure inflated wicket tally |
+| 023 | RCB Chase Success | Win by 5+ wickets, 14–15 overs | Won by 5 wickets in 14.1 overs | YES (EXACT) — prediction precision confirmed; early finish validated dew advantage modeling |
+| 023 | LSG First Innings Total | 155–185 (underpar for Chinnaswamy) | 146 all out | YES (BEARISH Scenario) — heavily underpar; validates Bearish scenario prediction; Bhuvneshwar + Rasikh pressure mounting confirmed |

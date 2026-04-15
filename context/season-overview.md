@@ -25,25 +25,26 @@
 
 ---
 
-## Points Table (After Game 022)
+## Points Table (After Game 023)
 
 | Pos | Team | P | W | L | NR | Pts |
 |-----|------|---|---|---|----|----|
 | 1 | PBKS | 4 | 3 | 0 | 1 | 7 |
-| 2 | RCB | 4 | 3 | 1 | 0 | 6 |
+| 2 | RCB | 5 | 4 | 1 | 0 | 8 |
 | 3 | SRH | 5 | 3 | 2 | 0 | 6 |
 | 4 | RR | 4 | 2 | 2 | 0 | 4 |
 | 4 | DC | 4 | 2 | 2 | 0 | 4 |
 | 4 | GT | 4 | 2 | 2 | 0 | 4 |
 | 4 | CSK | 4 | 2 | 2 | 0 | 4 |
-| 8 | LSG | 3 | 1 | 2 | 0 | 2 |
+| 8 | LSG | 4 | 1 | 3 | 0 | 2 |
 | 8 | MI | 3 | 1 | 2 | 0 | 2 |
 | 10 | KKR | 4 | 0 | 3 | 1 | 1 |
 
-**Notes (through Game 022):**
-- **PBKS still sole leaders:** 3W-0L-1NR (7 points from 4 games). Unbeaten.
-- **SRH surge:** Beat RR by 57 runs (G021) to join RCB on 6 points (3rd on NRR).
-- **RR drop:** Lost to SRH (G021), now 2W-2L (4 pts) — mid-table congestion.
+**Notes (through Game 023):**
+- **RCB move to 2nd:** 4W-1L (8 points from 5 games). Strong form with excellent prediction calibration (Brier 0.1024).
+- **PBKS still sole leaders:** 3W-0L-1NR (7 points from 4 games). Unbeaten but with one NR.
+- **SRH steady:** 3W-2L (6 points). Mid-table position stable.
+- **LSG slip:** Lost to RCB by 5 wkts (G023), now 1W-3L (2 points). Form crisis (Pant, Pooran) cascading.
 - **CSK rising:** Back-to-back Chepauk wins (G018 vs DC, G022 vs KKR). Now 2W-2L (4 pts).
 - **KKR winless:** 0W-3L-1NR (1 pt, last place). Worst start in franchise history.
 
@@ -161,7 +162,8 @@ _Append new developments here throughout the tournament:_
 - **[Game 018 (Apr 11)](../games/game-018-CSK-vs-DC-2026-04-11/outcome.md):** CSK 212/2 beat DC 189 ao at [Chepauk](venues/chepauk.md) by 23 runs. **CSK's FIRST WIN of IPL 2026.** Sanju Samson 115*(56, SR 205, 15x4 4x6) — maiden CSK century, 4th IPL century overall. Gaikwad 28(32) steady, Short 35(18) explosive, Dube 18*(8) death surge. CSK won toss, batted first. DC chase: openers started well (61/0 after PP, Rahul 38 + Nissanka 24) but collapsed in middle overs. Stubbs 60(42) sole resistance. Miller underperformed 28(22) SR 127. Kuldeep/Axar spin advantage didn't materialize with 212 to chase. **CSK now 1-2 (2 pts, off bottom).** **DC now 2-2 (4 pts).**
 - **[Game 019 (Apr 12)](../games/game-019-LSG-vs-GT-2026-04-12/outcome.md):** GT 165/3 beat LSG 164/8 at [Ekana](venues/ekana.md) by 1 run. **Day match (3:30 PM, no dew).** Prasidh Krishna 4/28 MOTM — elite pace confirmed (2nd consecutive standout: 3/29 G004 + 4/28 G019). Buttler 60*(37) anchored chase, Gill 56(43) steady platform. LSG: Samad 42*(21) SR 200 (finisher ceiling rising), Hasaranga 24*(12) SR 200 (dual-value confirmed). Pant underperformed 18(24) SR 75 (afternoon heat + Rashid suppression). Pooran form crisis continued 8(11) SR 73. Worn pitch played slow — par 155–165 held. Ekana now 0/2 for bat-first wins in IPL 2026. **GT now 2-2 (4 pts, rising).** **LSG now 1-2 (2 pts, sliding).**
 
-### Week 5 (April 13–14)
+### Week 5 (April 13–15)
 
 - **[Game 021 (Apr 13)](../games/game-021-SRH-vs-RR-2026-04-13/outcome.md):** SRH beat RR by 57 runs. Major upset — our prediction was RR 74.5% (worst Brier of season: 0.5550). **SRH now 3-2 (6 pts).** **RR now 2-2 (4 pts).**
 - **[Game 022 (Apr 14)](../games/game-022-CSK-vs-KKR-2026-04-14/outcome.md):** CSK 192/5 beat KKR 160/7 at [Chepauk](venues/chepauk.md) by 32 runs. KKR won toss, bowled first (questionable on used pitch). Samson 48 (opener role stabilized), Brevis 41(29), Mhatre 38(17) SR 223. **Noor Ahmad 3/21 match-winner** — destroyed KKR EM phase with left-arm wrist-spin. Raghuvanshi collapsed vs spin. Powell 31* too late. Our prediction: CSK 52.2% (correct direction, underconfident). Brier: 0.2285. **CSK now 2-2 (4 pts, rising).** **KKR still winless: 0-3-1 (1 pt, last).**
+- **[Game 023 (Apr 15)](../games/game-023-RCB-vs-LSG-2026-04-15/outcome.md):** RCB 147/5 beat LSG 146 all out at [M. Chinnaswamy Stadium](venues/chinnaswamy.md) by 5 wickets in 14.1 overs. **Dominant RCB performance.** LSG massively underpar (146 vs par 190–200). Kohli 49(34) SR 144 form surge (hit Shami 3 consecutive boundaries one over), Patidar 27(13) SR 207 captain momentum, Jitesh Sharma 23*(9) SR 255 elite death finish. **Bowling:** Bhuvneshwar 3/27 elite new-ball, Rasikh Dar 4/24 elite death execution (tail exposure inflated tally). LSG collapse: Pant 18(24) SR 75 (form crisis confirmed), Pooran 7(8) SR 87 (early dismissal cascaded collapse), Samad 18(14) (form suppressed vs pressure). RCB chase completed 14.1 overs, 46 balls remaining. Dew onset visible final overs but didn't matter (RCB ahead of run-rate by overs 10-14). **Our prediction locked 68% RCB → correct. Brier: 0.1024 (excellent).** **RCB now 4W-1L (8 pts, move to 2nd).** **LSG now 1W-3L (2 pts, sliding).**

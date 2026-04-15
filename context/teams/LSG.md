@@ -181,4 +181,8 @@ LSG need to assess the Lucknow surface match-by-match.
 
 | Match # | Opponent | Result | Score | Key Performer | Notes |
 |---------|----------|--------|-------|---------------|-------|
-| | | | | | |
+| 005 (Game 005) | DC | Lost by 6 wkts | LSG 120/7, DC 124/5 | Pant 29*(28), Markram 34 | LSG collapse in death overs. Failed to build total. [Game file](../../games/game-005-LSG-vs-DC-2026-04-01/) |
+| 010 (Game 010) | SRH | Won by 5 wkts | SRH 156/9, LSG 160/5 | Pant 68*(50), Shami 2/9 MOTM | Form surge confirmed. Pant aggressive, Shami elite. [Game file](../../games/game-010-SRH-vs-LSG-2026-04-05/) |
+| 015 (Game 015) | KKR | Won by 3 wkts | KKR 181/4, LSG 182/7 | Hasaranga 19(9), Samad 42(28) | Chase success with 0 balls remaining. Dew advantage realized. [Game file](../../games/game-015-KKR-vs-LSG-2026-04-09/) |
+| 019 (Game 019) | GT | Lost by 1 run | GT 165/3, LSG 164/8 | Samad 42*(21), Hasaranga 24*(12) | Day match (no dew). Prasidh Krishna 4/28 MOTM. Close loss. [Game file](../../games/game-019-LSG-vs-GT-2026-04-12/) |
+| 023 (Game 023) | RCB (Chinnaswamy) | Lost by 5 wkts | LSG 146 all out, RCB 147/5 | Markram 28(26), Pant 18(24) | Massive underpar. LSG collapse vs RCB bowling (Bhuvneshwar 3/27, Rasikh Dar 4/24). Pant form crisis (SR 75), Pooran early exit (SR 87, 7 off 8). RCB chased 147 in 14.1 overs. LSG now 1W-4L (2 pts). [Game file](../../games/game-023-RCB-vs-LSG-2026-04-15/) |

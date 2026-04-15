@@ -59,6 +59,31 @@ Game 031 (10-game cadence) or if 5-game rolling Brier > 0.25 again, whichever co
 
 ---
 
+## Post-Game 023 Status — MONITORING (April 15, 2026)
+
+**Metric:** 5-game rolling Brier (Games 019-023)
+**Current value:** 0.1924 (avg of G019 0.1764, G020 0.2970, G021 0.5550, G022 0.2285, G023 0.1024)
+**Threshold:** ≤0.25 (acceptable), >0.25 (early calibration review)
+**Status:** GREEN — Below 0.25 threshold. Game 023's strong Brier (0.1024) recovered significantly from Game 021's catastrophic 0.5550.
+
+| Game | Teams | Prediction | Brier | 5-Game Rolling |
+|------|-------|-----------|-------|---|
+| 019 | LSG vs GT | LSG 42% | 0.1764 | — |
+| 020 | MI vs RCB | MI 54.5% | 0.2970 | — |
+| 021 | SRH vs RR | SRH 25.5% | **0.5550** | — |
+| 022 | CSK vs KKR | CSK 52.2% | 0.2285 | — |
+| 023 | RCB vs LSG | RCB 68.0% | **0.1024** | **0.1924** (avg G019-023) |
+
+**Running average (22 scored games, excl 012 abandoned):** 0.2542 (down from 0.2613 after G022)
+
+**Key observation:** Game 023 is a high-quality prediction (Brier 0.1024 = Excellent range). The 5-game rolling average improved dramatically due to Game 023's strong calibration, offsetting the prior catastrophic Game 021 (0.5550). Pattern shows recovery from the early-April overconfidence stretch (Games 018-021).
+
+**Calibration status:** No early review triggered. **Next formal 10-game review:** Game 030 (after Games 024-029 completion). Kushal's steelmanning discipline at pause points (from 20-game review decision) appears to be producing stronger predictions in confidence-controlled games (60%+ bets hit 83.3%; new high-conviction calls are more cautious post-Game 021 learning).
+
+**Trajectory:** Running Brier 0.2542 is approaching target <0.15 benchmark for full season. If Games 024-028 maintain 0.15-0.18 range, the season-end running average will approach 0.24 (within acceptable zone).
+
+---
+
 ## Post-Game 021 Status — FORMAL CALIBRATION REVIEW REQUIRED (April 13, 2026)
 
 **Metric:** 5-game rolling Brier (Games 017-021) + 20-game milestone

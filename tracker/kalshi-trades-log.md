@@ -32,6 +32,7 @@ Tracks all actual contract purchases, P&L, and running totals.
 | 020 | 2026-04-12 | PASS | — | — | — | — | — | MI 54.5% / RCB 45.5% | +1.5pp raw edge MI, ~−0.5¢ net after 2¢ fees → No positive edge | N/A | — | $0.00 |
 | 021 | 2026-04-13 | RR Yes | $0.56 | 4 | $2.24 | $0.08 | $2.32 | 74.5% | +16.5pp raw edge (RR at 74.5% vs market 58%), medium confidence | LOST | $0.00 | -$2.32 |
 | 022 | 2026-04-14 | PASS | — | — | — | — | — | CSK 52.2% / KKR 47.8% | +1.8pp raw edge (KKR at 47.8% vs market 46%), ~0¢ net after 7% fee. Edge vanishes after fees (low confidence) | N/A | — | $0.00 |
+| 023 | 2026-04-15 | RCB Yes | $0.61 | 1 | $0.61 | $0.02 | $0.63 | 68% | +7.0pp (RCB 68% model vs 61% market) | WON | $1.00 | +$0.39 |
 
 ## Running P&L
 
@@ -59,6 +60,7 @@ Tracks all actual contract purchases, P&L, and running totals.
 | 020 | $20.11 | $26.00 | +$5.89 | +29.3% (no trade, PASS) |
 | 021 | $22.43 | $26.00 | +$3.57 | +15.9% (4-contract loss; RR collapse unpredicted) |
 | 022 | $22.43 | $26.00 | +$3.57 | +15.9% (no trade, PASS; edge vanishes after fees) |
+| 023 | $23.06 | $27.00 | +$3.96 | +17.2% (1-contract win on +7pp edge; high-confidence thesis confirmed) |
 
 ## Game 005 Note
 

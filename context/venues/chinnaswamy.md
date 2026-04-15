@@ -48,6 +48,8 @@
 | Match # | Date | Teams | 1st Inn | 2nd Inn | Result | Key Performers | Pitch Notes |
 |---------|------|-------|---------|---------|--------|---------------|-------------|
 | 001 | Mar 28 | RCB vs SRH | SRH 201/9 (20 ov) | RCB 203/4 (15.4 ov) | RCB by 6 wkts | Kishan 80(38), Kohli 69*(38), Padikkal 61(26), Duffy 3/22 | Flat, true bounce. Fresh pitch showed no unusual behaviour. Dew irrelevant — chase finished in 15.4 overs. |
+| 011 | Apr 5 | RCB vs CSK | RCB 250/3 (20 ov) | CSK 207/10 (20 ov) | RCB by 43 runs | Salt 46(17), Padikkal 50(29), Patidar 48(14), David 70*(25), Bhuvneshwar 3/27 | Explosive batting: short boundaries rewarded power hitting. Tim David 8 sixes. RCB set par-breaking total (250 >> 210–215 par). CSK chase fell 43 runs short. Dew occurred but insufficient. |
+| 023 | Apr 15 | RCB vs LSG | LSG 146 all out (20 ov) | RCB 147/5 (14.1 ov) | RCB by 5 wkts | Kohli 49(34) SR 144, Patidar 27(13) SR 207, Jitesh 23*(9) SR 255, Bhuvneshwar 3/27, Rasikh Dar 4/24 | Dominant RCB performance. LSG massively underpar (146 vs par 190–200). RCB chase completed 14.1 overs, 46 balls remaining. Dew onset overs 15+ (visible final overs). Flat pitch rewarded aggressive batting. Par boundary confirmed: 200 NOT safe. |
 
 ### Match 001 Observations
 - **Powerplay:** SRH collapsed to 29/3 (Duffy's pace exploited early movement). RCB chased PP at ~73/1 (aggressive)
@@ -57,10 +59,11 @@
 - **Key learning:** 200 is NOT safe here. RCB chased 202 with 26 balls to spare. Par may be closer to 210-215 for a competitive total
 
 ### Running Venue Stats (IPL 2026)
-- Games played: 1
-- Average 1st innings: 201
-- Average 2nd innings: 203 (chase completed early)
-- Bat first wins: 0 | Chase wins: 1
-- Toss → field: 1/1 (100% so far)
-- Highest individual: Ishan Kishan 80(38)
-- Best bowling: Jacob Duffy 3/22
+- Games played: 3
+- Average 1st innings: (201 + 250 + 146) / 3 = 199 runs
+- Average 2nd innings: (203 + 207 + 147) / 3 = 186 runs
+- Bat first wins: 1 | Chase wins: 2
+- Toss → field: 3/3 (100% — toss winner bowls every time)
+- Highest individual: Tim David 70*(25, Game 011)
+- Best bowling: Rasikh Dar 4/24 (Game 023) — elite death execution
+- Key learning: Par score 210–215 minimum. Targets below 180 are underpar. 200 NOT safe. Dew onset ~8:00 PM (overs 15+) favors chaser. Aggressive batting rewarded at short boundaries.

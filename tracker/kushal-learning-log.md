@@ -242,6 +242,41 @@ Update every 5 games.*
 
 ---
 
+## Game 023 — RCB vs LSG (April 15, 2026)
+
+**Prediction:** RCB 68% / LSG 32% | **Result:** RCB won by 5 wickets (147/5 chasing 146 in 14.1 overs)
+**Brier score:** 0.1024 (Excellent)
+**Kalshi trade:** RCB Yes at 61¢ — WON. P&L: +$0.39
+**Running Brier (22 games):** Improved from 0.2613 → 0.2542
+
+### What I Noticed Live
+- **Toss & Pitch Strategy:** RCB won toss, chose to bowl first (dew-advantage strategy confirmed). Dew visible from overs 12+ of RCB chase (bowlers struggling grip).
+- **LSG Collapse:** Pooran form crisis (7 off 8, SR 87) confirmed. Pant inconsistent (18). Samad constrained (18 vs 30-40 expected). Middle-order pressure mounting cascaded into Rasikh Dar's death-overs dominance.
+- **RCB Form Surge:** Kohli 49(34) dominated Shami in PP. Hit 3 consecutive boundaries (15 runs one over). Form surge L5 prediction (166 SR) confirmed in behavior if not individual-game SR (144 vs 166).
+- **Patidar Captain Momentum:** 27(13) SR 207 sustained the 5-game acceleration pattern. RCB 60/1 after 6 overs (10 RPO), 135/4 by overs 14.
+
+### My Strongest Pre-Match Belief
+- **LSG underperformance (Bearish scenario):** Middle order collapse due to Pooran form crisis + Samad context (strong bowling opposition) would suppress total to 160 range. This proved correct: 146 all out.
+- **Toss advantage (bowl first, chase with dew):** RCB would win toss and bowl, then chase with dew advantage. This played out exactly: RCB bowled, chased in 14.1 overs with 46 balls spare.
+
+### What Surprised Me
+1. **Rasikh Dar elite performance (4/24):** Earlier flagged as "overexposed, workload risk" but player form profiles didn't distinguish workload-flag (durability for future games) vs current-form indicator. Rasikh bowled 4 overs (standard), faced tail exposure, and delivered elite 6.0 economy (vs 11.4 recent average). **Lesson: Workload flags ≠ form indicators.**
+2. **RCB PP compression too conservative:** Red-team adjusted RCB PP LR from 1.15 → 1.08 due to "Shami 2.71 Impact vs RCB PP edge." But Kohli's form surge (166.75 L5 SR +139) overpowered Shami's elite economy (+233 Eco+). Head-on elite-player matchups are high-variance; symmetric Impact offsets are wrong logic. This cost 3pp of probability (68% vs 71% if PP LR held 1.15).
+3. **Samad form-ceiling context-dependent:** Expected 30-40 runs, Samad scored 18. His form surge (42 vs KKR, 42 vs GT) applies when LSG bats first with long innings exposure. In chase position vs elite RCB bowling (overs 11+ arrival), form ceiling is suppressed. **Lesson: Add context filters to form projections.**
+
+### One Thing I'd Weight Differently Next Time
+**High-variance matchups (elite batter vs elite bowler) require volatility bands, not Impact-offset logic.** When Kohli (SR+ 139) faces Shami (Eco+ 233) with no prior matchup data, expand confidence interval and apply ±20% volatility to base LR rather than compression. The outcome is binary (one dominates), not averaging.
+
+### Bias I Caught in Myself
+- **Impact-offset overconfidence:** Treated Impact Score data as deterministic for phase LRs when matchups are inherently high-variance. Assumed symmetry (Shami's bowling advantage × Kohli's form disadvantage = compression) but didn't account for form-surge players overwhelming elite bowlers on specific nights.
+- **Workload-flag miscalibration:** Conflated durability risk (Rasikh's recent workload) with current-form depressor. Rasikh's elite performance reversed the "overexposed" pessimism.
+
+### Question I Want to Explore
+1. **Form clustering in small samples:** Is positive correlation in player performance real, or sampling noise? RCB had Kohli (49), Patidar (27), Jitesh (23) all hit form ceilings simultaneously. LSG had Pooran (7), Pant (18), Samad (18) all underperform together. Are these independent, or do team-level factors (pitch, opposition bowling pattern) cluster form outcomes?
+2. **Dew advantage materiality:** RCB's 10 RPO PP meant dew was never critical (chase would finish before overs 15+). Should we downweight dew advantage when early-phase scoring pace suggests early finish?
+
+---
+
 ## Game 008 — DC vs MI (April 4, 2026)
 
 **Prediction:** MI 58% / DC 42% | **Result:** DC won by 6 wickets (164/4 chasing 163)
