@@ -4,6 +4,7 @@
 - [Game 002 vs MI: Prediction](../../games/game-002-MI-vs-KKR-2026-03-29/prediction.md) | [Outcome](../../games/game-002-MI-vs-KKR-2026-03-29/outcome.md)
 - [Game 006 vs SRH: Prediction](../../games/game-006-KKR-vs-SRH-2026-04-02/prediction.md) | [Outcome](../../games/game-006-KKR-vs-SRH-2026-04-02/outcome.md)
 - [Game 015 vs LSG: Prediction](../../games/game-015-KKR-vs-LSG-2026-04-09/prediction.md) | [Outcome](../../games/game-015-KKR-vs-LSG-2026-04-09/outcome.md)
+- [Game 022 vs CSK: Prediction](../../games/game-022-CSK-vs-KKR-2026-04-14/prediction.md) | [Outcome](../../games/game-022-CSK-vs-KKR-2026-04-14/outcome.md)
 
 ## Basic Info
 
@@ -122,6 +123,39 @@ Kartik Tyagi, Saurabh Dubey (replacement for Harshit Rana)
 - Varun form recovery validated: expect him selected in future Eden Gardens/spin-favorable venues
 - Finisher role (Rinku) stable; consider him reliable 45–55 run option in death
 - Pace bowling remains unresolved without Rana; expect future weakness vs quality pace attacks
+
+## Game 022 Post-Match Analysis (KKR vs CSK, April 14, 2026)
+
+**Result:** KKR LOST to CSK by 32 runs (160/7 chasing 192)
+
+**Key Findings:**
+
+1. **EM-phase vulnerability to left-arm wrist-spin confirmed:**
+   - Noor Ahmad 3/21 in 4 overs destroyed KKR's middle order at Chepauk
+   - Raghuvanshi (who showed 168 SR in recent games) collapsed vs Noor specifically
+   - **Critical pattern:** KKR's RHB-heavy middle order (Raghuvanshi, Rinku, Green) is susceptible to quality left-arm wrist-spin on turning pitches
+   - **Flag for future predictions:** Weight left-arm wrist-spinners as individual high-impact factors vs KKR, not just "spin depth"
+
+2. **Toss decision questionable:**
+   - Rahane chose to bowl first on a used Chepauk pitch where bat-first advantage was +3-5%
+   - This gave CSK the preferred scenario (bat first, set total, defend with spin)
+   - KKR may not be making optimal toss decisions — monitor
+
+3. **Arora replacement performance better than expected:**
+   - Vaibhav Arora took key wickets (Mhatre caught) and bowled reasonably in death
+   - Kartik Tyagi also contributed — KKR's pace attack is NOT as gutted as pre-match assessment suggested
+   - **Adjustment:** When forecasting KKR pace bowling, don't assume baseline decline from missing Pathirana/Rana; check replacement form
+
+4. **Record: 0W-4L-1NR (1 point, last place):**
+   - KKR are winless through 5 games — worst start since franchise history
+   - Morale/confidence factor should be weighted in future predictions
+   - Bowling remains the structural problem, but EM-phase batting collapse is a new vulnerability
+
+**Next Match Priorities:**
+- If facing left-arm wrist-spinners on turning tracks, upgrade EM-phase CSK/opponent edge significantly
+- Monitor Raghuvanshi's form post-collapse — confidence may be shaken
+- Arora/Tyagi deserve more credit than "replacement-level" baseline
+
 | 8 | Prashant Solanki | Spin option |
 | 9 | Matheesha Pathirana | Right-arm fast (slingy yorkers) |
 | 10 | Mustafizur Rahman | Left-arm fast-medium (cutters) |
@@ -188,3 +222,5 @@ running. Low-scoring spin battles where Varun is match-winning.
 | 1 (Game 002) | MI | Lost by 6 wkts | 220/4 in 20 ov | Rahane 67(40), Raghuvanshi 51(29), Rinku 33*(21) | Batting strong (220) but bowling crisis confirmed — Arora, Muzarabani toothless. Varun 0/48. Tyagi impact sub. [Game file](../../games/game-002-MI-vs-KKR-2026-03-29/) |
 | 2 (Game 006) | SRH | Lost by 68 runs | 159/8 in 20 ov | SRH 226/8 (chase failed) | Chasing 227 at Eden Gardens; dew factor + pace bowling weakness. Middle-order collapse. [Game file](../../games/game-006-KKR-vs-SRH-2026-04-02/) |
 | 3 (Game 012) | PBKS | No Result (ABANDONED) | 25/2 in 3.4 ov | Rahane 8*(9), Raghuvanshi 7*(5), Allen 0(2), Green 3(4) | Rain interrupted KKR first innings. Rahane won toss and chose to BAT FIRST. Xavier Bartlett 2/9 in early wickets (Allen, Green). Match abandoned after 3.4 overs. KKR record: 0W-2L-1NR. [Game file](../../games/game-012-KKR-vs-PBKS-2026-04-06/) |
+| 4 (Game 015) | LSG | Lost by 3 wkts | KKR 181/4 → LSG 182/7 (20 ov) | Raghuvanshi 45(28), Rinku 18*(14) | Varun recovered (bowled Markram). Raghuvanshi dominant EM/LM. But KKR death bowling leaky (Arora/Muzarabani 9-10+ economy). LSG chased with 0 balls remaining. KKR record: 0W-3L-1NR. [Game file](../../games/game-015-KKR-vs-LSG-2026-04-09/) |
+| 5 (Game 022) | CSK (Chepauk) | Lost by 32 runs | CSK 192/5 → KKR 160/7 (20 ov) | Ramandeep 35, Powell 31* | **Rahane won toss, bowled first (questionable on used pitch).** KKR PP weak — Allen/Rahane didn't dominate. **EM-phase collapse: Noor Ahmad 3/21 destroyed middle order.** Raghuvanshi failed vs left-arm wrist-spin. Arora took key wickets (Mhatre) but overall bowling couldn't contain CSK 192. Powell 31* too late. KKR record: 0W-4L-1NR (bottom of table, 1 pt). [Game file](../../games/game-022-CSK-vs-KKR-2026-04-14/) |

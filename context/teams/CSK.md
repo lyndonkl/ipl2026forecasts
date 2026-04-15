@@ -3,6 +3,7 @@
 ### Game Files
 - [Game 003 vs RR: Prediction](../../games/game-003-RR-vs-CSK-2026-03-30/prediction.md) | [Outcome](../../games/game-003-RR-vs-CSK-2026-03-30/outcome.md)
 - [Game 018 vs DC: Prediction](../../games/game-018-CSK-vs-DC-2026-04-11/prediction.md) | [Outcome](../../games/game-018-CSK-vs-DC-2026-04-11/outcome.md)
+- [Game 022 vs KKR: Prediction](../../games/game-022-CSK-vs-KKR-2026-04-14/prediction.md) | [Outcome](../../games/game-022-CSK-vs-KKR-2026-04-14/outcome.md)
 
 ## Basic Info
 
@@ -121,6 +122,7 @@ on Chepauk's fresh-pitch green tops.
 | 003 | RR (Barsapara) | LOST by 8 wkts | CSK 127 ao (19.4) → RR 128/2 (12.1) | Overton 43(36), Kartik 18(15) | Collapsed 41/4 in PP. Samson 6(7), Gaikwad 6(11). Dube 6(4) dismissed Jadeja. Overton lone resistance. |
 | 011 | RCB (Chinnaswamy) | LOST by 43 runs | CSK 207/10 in 19.4 ov (chasing RCB 250/3) | Sarfaraz Khan 50 off 25 (unlikely hero), Prashant Veer 43 off 29 | Samson opened 9 (?) — pattern continues: 6 off 7 in G003, 9 in G011 (opening collapse repeating). Gaikwad likely early out. Sarfaraz + Prashant provided resistance but insufficient vs RCB 250. Dew occurred (overs 15–20) but couldn't overcome 43-run margin. CSK now 0–3 (last in table likely). [Game file](../../games/game-011-RCB-vs-CSK-2026-04-05/) |
 | 018 | DC (Chepauk) | **WON by 23 runs** | CSK 212/2 (20 ov) → DC 189 ao (19.2 ov) | **Sanju Samson 115* (56) SR 205** | **FIRST WIN of IPL 2026.** Samson's maiden CSK century, 4th IPL century overall (15x4, 4x6). Gaikwad 28(32) solid but slow. Short 35(18) explosive. Dube 18*(8) death finisher. CSK won toss, batted first. DC chase collapsed in middle overs vs CSK spin. CSK now 1-3 (2 pts). [Game file](../../games/game-018-CSK-vs-DC-2026-04-11/) |
+| 022 | KKR (Chepauk) | **WON by 32 runs** | CSK 192/5 (20 ov) → KKR 160/7 (20 ov) | **Noor Ahmad 3/21**, Samson 48, Brevis 41(29), Mhatre 38(17) | **2nd consecutive home win.** KKR won toss, bowled first. Samson opened effectively (48). Mhatre explosive (SR 223). Brevis strong at 3. **Noor Ahmad match-winner: 3/21 in 4 overs, destroyed KKR EM phase.** KKR chase never got going — Raghuvanshi collapsed vs Noor's left-arm wrist-spin. Powell 31* too late. CSK now 2-2 (4 pts). [Game file](../../games/game-022-CSK-vs-KKR-2026-04-14/) |
 
 ### Game 003 XI (Actual — MAJOR DIFFERENCES FROM PRE-SEASON PROJECTION)
 | # | Player | Role | Notes |
@@ -146,3 +148,11 @@ on Chepauk's fresh-pitch green tops.
 - **Opening partnership failed completely.** Samson and Gaikwad combined for 12 off 18 balls. Whether this was nerves (Samson vs old team) or Archer/Burger quality, it needs monitoring.
 - **Khaleel's PP bowling exposed.** Jaiswal H2H dominance (SR 200+) confirmed in practice.
 - **Sarfaraz Khan used as impact sub** — he's clearly in the plans as middle-order reinforcement.
+
+### CSK Mid-Season Assessment (Updated Apr 14, after Game 022)
+- **Record:** 2W-2L (4 pts). Two consecutive home wins at Chepauk (G018 vs DC, G022 vs KKR).
+- **Samson opening role stabilized:** 115*(56) in G018, 48 in G022. No longer failing as opener — form surge is real. Samson is CSK's most important batter.
+- **Noor Ahmad is a HIGH-IMPACT weapon at Chepauk:** 3/21 vs KKR in G022. Left-arm wrist-spin on used Chepauk pitches = match-winning. **Should be flagged individually in future EM-phase analysis, not bundled into "spin depth."**
+- **Brevis + Mhatre provide top-order aggression:** Brevis 41(29), Mhatre 38(17) SR 223 in G022. This pair can set aggressive tempos in PP/EM.
+- **Death fortress hypothesis tempered:** CSK scored only 25-30 in death overs in G022 despite favourable matchup (KKR pace weakened). LR 1.54 was overstated; ~1.20-1.30 more realistic.
+- **XI remains fluid:** Dhoni uncertain (calf strain G022), Pathirana-like overseas slots rotate. XI Confidence should default to LOW-MODERATE for CSK predictions.

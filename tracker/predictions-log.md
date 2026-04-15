@@ -27,3 +27,4 @@
 | 019 | LSG vs GT | 2026-04-12 | LSG 42% / GT 58% | LSG 47¢ / GT 53¢ (Kalshi) | GT (by 1 run) | YES | 0.1764 | Medium |
 | 020 | MI vs RCB | 2026-04-12 | MI 54.5% / RCB 45.5% | MI 53¢ / RCB 47¢ (Kalshi) | RCB (by 18 runs) | NO | 0.2970 | Medium |
 | 021 | SRH vs RR | 2026-04-13 | SRH 25.5% / RR 74.5% | RR 56¢ (Kalshi) | SRH (by 57 runs) | NO | 0.5550 | Medium |
+| 022 | CSK vs KKR | 2026-04-14 | CSK 52.2% / KKR 47.8% | CSK 54¢ / KKR 46¢ (Kalshi) | CSK (by 32 runs) | YES | 0.2285 | Low |

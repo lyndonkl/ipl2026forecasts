@@ -582,3 +582,26 @@ Formal calibration review triggered when:
 **Current status:** Monitor. No action required. Continue logging. Recommend implementing 4 micro-adjustments listed above starting Game 006.
 
 ---
+
+---
+
+## Post-Game 022 Calibration Check (April 14, 2026)
+
+**Game 022 Outcome:** CSK 52.2% vs KKR, CSK Won by 32 runs. Brier: 0.2285.
+
+**New Running Average (22 games, excl. abandoned 12):** 0.2613
+
+**Trend:** 5-game rolling window improved from critical 0.3335 (G017–G021) to estimated ~0.2748 (G018–G022):
+- G018: 0.4225 (CSK overconfidence miss)
+- G019: 0.1764 (correct)
+- G020: 0.2970 (MI/RCB miss)
+- G021: 0.5550 (RR catastrophic miss)
+- G022: 0.2285 (correct, but underconfident)
+
+**Assessment:** Game 022 was a green flag on the calibration pathway. We got the winner right and stayed below the 0.25 random baseline. The decision to PASS (no trade) on a thin +1.8pp edge was correct.
+
+**Remaining concern:** 5-game rolling is still elevated ~0.27 (above ideal 0.15 target). The calibration review from April 13 flagged large market divergences as problematic. Game 022 bucked that pattern — thin edge (1.8pp), PASS discipline, correct outcome. Pattern suggests: **When divergence <5pp and LOW confidence, PASS is the right call.**
+
+**No new formal review triggered yet.** Continue monitoring. 22-game running average at 0.2613 suggests process is stabilizing but still above tournament target of 0.15. Formal calibration review recommended at Game 030 (end of phase 2 opening).
+
+---

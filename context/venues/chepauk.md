@@ -70,6 +70,7 @@
 |---------|------|-------|---------|---------|--------|---------------|-------------|
 | 007 | Apr 3 | CSK vs PBKS | CSK 160 ao | PBKS 157/5 (18.4) | PBKS won by 5 wkts | Chahal 4-0-28-2 | Dry turning track; spin dominated middle overs. CSK middle-order collapse. |
 | 018 | Apr 11 | CSK vs DC | CSK 212/2 (20) | DC 189 ao (19.2) | CSK won by 23 runs | Samson 115*(56) | Used pitch, moderate turn. Samson dominated all phases. DC chase collapsed in middle overs. Dew moderate onset ~8:30pm but insufficient to rescue DC. |
+| 022 | Apr 14 | CSK vs KKR | CSK 192/5 (20) | KKR 160/7 (20) | CSK won by 32 runs | Noor Ahmad 3/21, Samson 48, Mhatre 38(17) | 3rd match on strip — dry turning track. **Noor Ahmad (left-arm wrist-spin) dominated EM phase.** KKR middle-order collapsed vs spin. Dew moderate-heavy onset ~8:30pm but CSK total (192) proved unassailable. Bat-first advantage confirmed on used pitch. |
 
 ### Last 5 IPL Games at Chepauk (Pre-2026)
 
@@ -85,9 +86,10 @@
 
 ### Running Venue Stats (IPL 2026)
 
-- Games played: 2 (Game 007, Game 018)
-- CSK home record at Chepauk (2026): 1W-1L (lost G007 vs PBKS, won G018 vs DC)
-- Average first innings score: 186 (CSK 160 in G007, CSK 212 in G018)
-- Bat-first record: 1W-1L (CSK batted first both times)
-- Pitch observations: Spin remains a factor but post-renovation surface plays better for batting than historical IPL averages. Par score revised upward to 175-195. Dew moderate, onset 8:30-9pm, not match-defining.
+- Games played: 3 (Game 007, Game 018, Game 022)
+- CSK home record at Chepauk (2026): 2W-1L (lost G007 vs PBKS, won G018 vs DC, won G022 vs KKR)
+- Average first innings score: 188 (CSK 160 in G007, CSK 212 in G018, CSK 192 in G022)
+- Bat-first record: 2W-1L (CSK batted first all three times)
+- Pitch observations: Spin remains a factor but post-renovation surface plays better for batting than historical IPL averages. Par score revised upward to 175-195. Dew moderate, onset 8:30-9pm, not match-defining. Used pitches (3rd match on strip) favour spin significantly — confirmed G022.
 - **Key learning (G018):** An in-form opener (Samson 115*) can neutralize Chepauk's spin reputation. 212 is achievable even on a used pitch.
+- **Key learning (G022):** Left-arm wrist-spin (Noor Ahmad 3/21) is a HIGH-IMPACT weapon on used Chepauk pitches. EM-phase bowling with quality wrist-spinners can collapse batting lineups. 192 proved unassailable when spin dominates the chase. Bat-first advantage on used pitch confirmed (+3-5%).

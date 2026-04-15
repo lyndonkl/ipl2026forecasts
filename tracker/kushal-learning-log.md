@@ -2,7 +2,7 @@
 
 ### Cross-Links
 - [Predictions Log](predictions-log.md) | [Brier Scores](brier-scores.md) | [Kalshi Trades](kalshi-trades-log.md)
-- Game outcomes: [001](../games/game-001-RCB-vs-SRH-2026-03-28/outcome.md) | [002](../games/game-002-MI-vs-KKR-2026-03-29/outcome.md) | [003](../games/game-003-RR-vs-CSK-2026-03-30/outcome.md) | [004](../games/game-004-PBKS-vs-GT-2026-03-31/outcome.md)
+- Game outcomes: [001](../games/game-001-RCB-vs-SRH-2026-03-28/outcome.md) | [002](../games/game-002-MI-vs-KKR-2026-03-29/outcome.md) | [003](../games/game-003-RR-vs-CSK-2026-03-30/outcome.md) | [004](../games/game-004-PBKS-vs-GT-2026-03-31/outcome.md) | [022](../games/game-022-CSK-vs-KKR-2026-04-14/outcome.md)
 - [Behavioral Pitfalls](../context/frameworks/behavioral-pitfalls.md) | [Calibration Framework](../context/frameworks/calibration-and-brier.md)
 
 This document tracks your personal growth as a forecaster across IPL 2026.
@@ -1101,5 +1101,62 @@ RR won the toss and elected to bowl first. SRH scored 216/6 with Ishan Kishan 91
 **20-game running average:** 0.2629 (exceeds 0.25)
 
 **Mandatory formal calibration review before Games 022+ proceed.**
+
+---
+
+## Game 022 — CSK vs KKR (April 14, 2026)
+
+**Prediction:** CSK 52.2% / KKR 47.8%, Confidence: LOW | **Result:** CSK won by 32 runs  
+**Brier score:** 0.2285  
+**Kalshi trade:** PASS (no trade)
+
+### What I noticed live
+
+[To be filled by Kushal if watched]
+
+Observation: CSK's opening pair (Sanju Samson 48, Dewald Brevis 41) set a strong tempo. Ayush Mhatre's aggressive 38*(17) boosted the total to 192/5. CSK's spinner Noor Ahmad emerged as the match-winner with 3/21, dismantling KKR's middle order in the EM phase. KKR's chase collapsed early (PP weak under CSK spin attack), deteriorated further in EM (Noor Ahmad's dominance), and finished at 160/7, a 32-run loss.
+
+### My strongest pre-match belief
+
+LOW confidence was assigned due to XI uncertainty (Dhoni calf strain, Pathirana absence) and both teams in poor form (CSK 1W–3L, KKR 0W–3L–1NR). The 52.2% prediction reflected near-neutral conviction — barely off 50/50. Market was priced CSK 54%, which I discounted to 52% as a gut skepticism on home-ground advantage given form context.
+
+### What surprised me
+
+1. **CSK's dominance (32-run margin):** Prediction at 52.2% implied a close match; actual outcome was decisive. CSK's EM-phase bowling (Noor Ahmad 3/21) was far more devastating than scenario predicted.
+
+2. **Noor Ahmad's match-winning performance:** He was modeled as part of "CSK spin depth" (Chahal + Noor + rotation), not individually flagged as a high-impact player. His 3/21 indicates left-arm wrist-spinners on turning pitches at Chepauk are match-defining, not just supporting.
+
+3. **KKR's EM-phase collapse:** Raghuvanshi (who posted 168 SR in recent games) struggled vs Noor Ahmad specifically. CSK's spin pair (Noor especially) proved more potent than form profiles suggested.
+
+4. **Toss decision swing:** KKR's Rahane won toss and elected to bowl (despite conditions favoring bat-first). This strategic choice removed the +3–5% toss advantage KKR could have pressed.
+
+### One thing I'd weight differently next time
+
+**Left-arm wrist-spinners on turning pitches deserve individual surface-matchup flagging.** In this case, Noor Ahmad on Chepauk's dry, turning track vs KKR's middle order (Raghuvanshi, Rinku, Green) created a mismatch that should be surfaced explicitly in Player Form Profiles and Scenario Analysis, not buried in "CSK spin depth."
+
+Proposed framework: Before EM-phase LR assignment, check:
+- Is the leading bowler a specialist type (LAS, leg-spinner, fast bowler) facing unfamiliar pitch behavior?
+- Does recent form show high impact on similar pitches?
+- Does opponent's middle-order have documented weakness vs this type?
+
+If 2+ flags hit, upgrade that LR segment by +0.10–0.20 and flag as "high-variance micro-edge."
+
+### Bias I caught in myself
+
+**Underconfidence on proven matchups:** We assigned LOW confidence due to "XI uncertainty," but once Samson (proven aggressive opener at Chepauk per G018) was confirmed, CSK's PP threat to KKR's defense was higher than we modeled. CSK's actual XI (Samson, Brevis, Mhatre) was well-suited to a dry pitch; we should have upgraded confidence to Medium once XI was locked.
+
+### Question I want to explore
+
+How should we weight **specialist bowler form vs. team-level spin depth?** In prior games (e.g., Game 018 CSK vs DC), we modeled "CSK's spin attack" as a unit. But individual performances (Chahal with steady breakthroughs vs. Noor Ahmad with explosive 3-wicket hauls) have very different surface-outcome impacts. Is there a way to pre-flag "breakout potential" for bowlers on specific pitches?
+
+### Calibration Reflection
+
+Game 022 returned a Brier of 0.2285, improving the 21-game average from 0.2629 to 0.2613. However, the prediction quality was mismatched: we got the winner right but assigned low confidence to a dominant match. **Better calibration would have been CSK 58–62% (Medium confidence)** given:
+- CSK's Chepauk form (212 vs DC in G018)
+- Samson's proven aggressive opening
+- Noor Ahmad's recent dominance on turning pitches
+- KKR's EM-phase vulnerability to left-arm wrist-spinners
+
+The LOW confidence flag for "XI uncertainty" was partly defensive; once XI locked, conviction should have upgraded. **Lesson: XI-dependent confidence discounts should reset once XI is confirmed, not persist through the match.**
 
 ---
