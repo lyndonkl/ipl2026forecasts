@@ -30,3 +30,5 @@
 | 021 | SRH vs RR | 0.5550 | Medium | 0.2629 |
 | 022 | CSK vs KKR | 0.2285 | Low | 0.2613 |
 | 023 | RCB vs LSG | 0.1024 | High | 0.2542 |
+| 024 | MI vs PBKS | 0.2982 | Medium | 0.2569 |
+| 025 | GT vs KKR | 0.1369 | Medium | 0.2404 |

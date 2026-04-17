@@ -5,6 +5,7 @@
 - [Game 006 vs SRH: Prediction](../../games/game-006-KKR-vs-SRH-2026-04-02/prediction.md) | [Outcome](../../games/game-006-KKR-vs-SRH-2026-04-02/outcome.md)
 - [Game 015 vs LSG: Prediction](../../games/game-015-KKR-vs-LSG-2026-04-09/prediction.md) | [Outcome](../../games/game-015-KKR-vs-LSG-2026-04-09/outcome.md)
 - [Game 022 vs CSK: Prediction](../../games/game-022-CSK-vs-KKR-2026-04-14/prediction.md) | [Outcome](../../games/game-022-CSK-vs-KKR-2026-04-14/outcome.md)
+- [Game 025 vs GT: Prediction](../../games/game-025-GT-vs-KKR-2026-04-17/prediction.md) | [Outcome](../../games/game-025-GT-vs-KKR-2026-04-17/outcome.md)
 
 ## Basic Info
 
@@ -224,3 +225,4 @@ running. Low-scoring spin battles where Varun is match-winning.
 | 3 (Game 012) | PBKS | No Result (ABANDONED) | 25/2 in 3.4 ov | Rahane 8*(9), Raghuvanshi 7*(5), Allen 0(2), Green 3(4) | Rain interrupted KKR first innings. Rahane won toss and chose to BAT FIRST. Xavier Bartlett 2/9 in early wickets (Allen, Green). Match abandoned after 3.4 overs. KKR record: 0W-2L-1NR. [Game file](../../games/game-012-KKR-vs-PBKS-2026-04-06/) |
 | 4 (Game 015) | LSG | Lost by 3 wkts | KKR 181/4 → LSG 182/7 (20 ov) | Raghuvanshi 45(28), Rinku 18*(14) | Varun recovered (bowled Markram). Raghuvanshi dominant EM/LM. But KKR death bowling leaky (Arora/Muzarabani 9-10+ economy). LSG chased with 0 balls remaining. KKR record: 0W-3L-1NR. [Game file](../../games/game-015-KKR-vs-LSG-2026-04-09/) |
 | 5 (Game 022) | CSK (Chepauk) | Lost by 32 runs | CSK 192/5 → KKR 160/7 (20 ov) | Ramandeep 35, Powell 31* | **Rahane won toss, bowled first (questionable on used pitch).** KKR PP weak — Allen/Rahane didn't dominate. **EM-phase collapse: Noor Ahmad 3/21 destroyed middle order.** Raghuvanshi failed vs left-arm wrist-spin. Arora took key wickets (Mhatre) but overall bowling couldn't contain CSK 192. Powell 31* too late. KKR record: 0W-4L-1NR (bottom of table, 1 pt). [Game file](../../games/game-022-CSK-vs-KKR-2026-04-14/) |
+| 6 (Game 025) | GT (Ahmedabad) | Lost by 5 wkts | KKR 180/10 → GT 181/5 (19.4 ov) | Green 79(55) lone hand | **Rahane golden duck (first ball).** Green 79 was sole meaningful contribution. Narine 0 (duck). Death collapse: last 6 wkts for 33. Rashid Khan dismissed Green final ball. GT chased comfortably — Gill 86*(50) MOTM. KKR record: 0W-5L-1NR (bottom of table). [Game file](../../games/game-025-GT-vs-KKR-2026-04-17/) |

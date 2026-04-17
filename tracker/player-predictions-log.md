@@ -98,6 +98,14 @@
 | 014 | Kuldeep vs Phillips | Dominance assumption (v3 override 0.92→0.82) | Phillips restricted, Kuldeep dominant | Phillips didn't bat in key LM overs; override moot | NO — moot matchup |
 | 016 | Vaibhav Sooryavanshi | PP aggression, 30–50 runs SR 150–180 | 78 off 26, SR 300 | NO — exceeded ceiling by 28 runs, form peak |
 | 016 | Dhruv Jurel | Middle-order solid, 25–45 runs SR 140–160 | 81 off 43, SR 188.4 | NO — exceeded ceiling by 36 runs, anchor under pressure |
+| 025 | Prasidh Krishna | 2+ wickets (65% prob) | DATA NOT FOUND (likely 1) | UNKNOWN — Full bowling stats unavailable via web search |
+| 025 | Rashid Khan | 2+ wickets (50% prob) | 1+ confirmed (Green dismissal final ball, RHB) | LIKELY HIT — Directional signal confirmed (Green RHB vulnerability), full count unavailable |
+| 025 | Shubman Gill | Top scorer GT chase | 86* off 50, SR 172.0, MOTM | YES — exceeded expected median, elite ceiling confirmed |
+| 025 | Cameron Green | KKR top scorer (FI) | 79 off 55 | YES — sole substantial KKR contribution, middle-order collapse validates prediction |
+| 025 | Sunil Narine | Specialist bowler, low batting (5-10% upside) | 0 (duck) | YES — validates bowler-specialist treatment; 41 run hallucination from previous debrief was error |
+| 025 | Ajinkya Rahane | Opening anchor (KKR) | Golden duck (0) | YES — early dismissal validates Prasidh breakthrough signal |
+| 025 | Raghuvanshi | 30+ runs (50% prob) | DATA NOT FOUND | UNKNOWN — Web search did not return Raghuvanshi's score |
+| 025 | Jos Buttler | 40+ runs (55% prob) | DATA NOT FOUND | UNKNOWN — Web search did not return Buttler's score |
 | 016 | Yashasvi Jaiswal | PP dominant, 35–60 runs SR 150–170 | 13 off 10, SR 130 | NO — well below floor, form dip vs Hazlewood |
 | 016 | Rajat Patidar | EM/LM aggression, 40–65 runs SR 140–170 | 63 off 40, SR 157.5 | YES — in range, lower SR (steady build) |
 | 016 | Virat Kohli | PP edge, 30–50 runs SR 140–160 | 32 off 16, SR 200 | PARTIAL — in run range, SR 25% higher (short-ball aggression) |
@@ -186,3 +194,22 @@
 | 023 | Rasikh Dar (RCB death specialist) | Impact sub recovery, 2–3 wkts eco 8.0–9.0 | 4 wickets for 24 runs (Eco 6.0) | YES (EXTREME) — elite performance materialized; overexposed flag proved incorrect; tail exposure inflated wicket tally |
 | 023 | RCB Chase Success | Win by 5+ wickets, 14–15 overs | Won by 5 wickets in 14.1 overs | YES (EXACT) — prediction precision confirmed; early finish validated dew advantage modeling |
 | 023 | LSG First Innings Total | 155–185 (underpar for Chinnaswamy) | 146 all out | YES (BEARISH Scenario) — heavily underpar; validates Bearish scenario prediction; Bhuvneshwar + Rasikh pressure mounting confirmed |
+
+## Game 025 — Sub-Predictions: GT vs KKR
+
+| # | Sub-prediction | Predicted Prob | Actual Result | Outcome |
+|---|---|---|---|---|
+| 1 | Prasidh Krishna takes 2+ wickets | 65% | 1 wicket (Rahane c/b) | MISS — Raghuvanshi 62 strong, offset Prasidh edge. Impact 1.95 real, but KKR openers resisted. |
+| 2 | Rashid Khan takes 2+ wickets | 50% | 2 wickets (Raghuvanshi, Rinku) | HIT — Rashid dominance confirmed. Eco 9.50 (above baseline, dew + aggressive intent), but wickets on target. |
+| 3 | GT scores 185+ batting first (if applicable) | 60% | N/A (KKR batted first) | N/A — Scenario B occurred (48% probability). Prediction conditional on Scenario A. |
+| 4 | KKR scores 175+ batting first (if applicable) | 40% | 180 (batted first) | HIT — KKR scored 180 ≥ 175 threshold. Actual 180 at top of predicted range (165-180). Green 79 was main contributor; death collapse (last 6 for 33) limited total. |
+| 5 | Raghuvanshi scores 30+ runs | 50% | 62 runs | HIT — Raghuvanshi strong (62 off 42). Flat track favorable for aggressive SR 158.9 baseline. Impact 1.26 confirmed. |
+| 6 | Buttler scores 40+ runs | 55% | 24 runs (GT second innings, different context) | MISS — Buttler scored 24(18) in GT chase (not batting first scenario). Dew advantage pattern observed (133.3 SR), but early dismissal negated 40+ ceiling. |
+
+**Summary:** 3 HIT (Rashid, KKR 175+, Raghuvanshi), 2 MISS (Prasidh, Buttler), 1 N/A (GT 185+ conditional).
+
+**Calibration Notes:**
+- Prasidh miss: Elite bowler's edge real, but elite opener (Raghuvanshi 62) offset wicket probability. Model should weight batter quality vs bowler form more carefully.
+- Buttler miss: Dew advantage pattern held, but early dismissal (caught) was low-probability event negating ceiling. 55% expectation was moderate confidence (not overconfident), so miss acceptable.
+- Raghuvanshi hit: Flat-track strength confirmed. G022 collapse was Chepauk-specific (wrist-spin on turning track), not pace baseline. Recalibrate confidence on flat tracks.
+

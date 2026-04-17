@@ -33,6 +33,7 @@ Tracks all actual contract purchases, P&L, and running totals.
 | 021 | 2026-04-13 | RR Yes | $0.56 | 4 | $2.24 | $0.08 | $2.32 | 74.5% | +16.5pp raw edge (RR at 74.5% vs market 58%), medium confidence | LOST | $0.00 | -$2.32 |
 | 022 | 2026-04-14 | PASS | — | — | — | — | — | CSK 52.2% / KKR 47.8% | +1.8pp raw edge (KKR at 47.8% vs market 46%), ~0¢ net after 7% fee. Edge vanishes after fees (low confidence) | N/A | — | $0.00 |
 | 023 | 2026-04-15 | RCB Yes | $0.61 | 1 | $0.61 | $0.02 | $0.63 | 68% | +7.0pp (RCB 68% model vs 61% market) | WON | $1.00 | +$0.39 |
+| 024 | 2026-04-16 | PASS | — | — | — | — | — | MI 54.6% / PBKS 45.4% | No edge MI side (−1.4pp), no edge PBKS side (−2.6pp after 2¢ fee). Market ~54¢ MI = ~56% breakeven. No positive edge. | PBKS (won) | — | $0.00 |
 
 ## Running P&L
 
@@ -114,3 +115,22 @@ Tracks all actual contract purchases, P&L, and running totals.
 - **Game 009:** Bought 2 contracts GT Yes at 50¢. Model at 56% GT vs market 50/50. Edge +6¢/contract base rate. Thesis: GT H2H dominance (6-2 all-time), decent bowling (Prasidh surging), home advantage. Market underweight H2H factor. Confidence: Medium (thin form samples, toss not yet decided). Quarterly Kelly: 2.1% of bankroll.
 - **Toss:** RR won toss, elected to bat first. XI alert: Shubman Gill absent (muscle spasm), Kumar Kushagra (21yo) replacement.
 - **Result:** RR WON by 6 runs. GT lost. 2 contracts × $0 payout = $0. Cost+fee ~$1.04. P&L: -$1.04. **Thesis failed due to XI change.** Edge calculation was sound ex-ante (56% vs 50% = +6pp) but hinged on Gill's participation. Post-toss, Gill's absence should have prompted trade cancellation or size reduction. Lesson: finalize trades only AFTER confirmed XI, not before toss.
+
+## Game 025 Note (CORRECTED after hallucination fix)
+
+- **Game 025:** Bought 2 contracts GT Yes at 59¢. Model at 63% GT vs market 59%. Edge +4¢/contract raw, ~3¢/contract net of fees. Thesis: Prasidh extreme form (Impact 1.95, +12%), Rashid dominance vs KKR RHB middle (Impact 1.36, +21%), GT home advantage (Ahmedabad flat), KKR pace bowling crisis (Rana out, Arora replacement). Confidence: MEDIUM (upstream scenario analysis contaminated with Mustafizur assumption, later corrected; H2H small sample 4 games). Kelly: 8.4% full Kelly (Kushal overrode Half Kelly 4.2% recommendation to size up to 2 contracts).
+- **Toss:** KKR won toss, elected to bat first (Scenario B, 48% probability). XI confirmed as predicted (no discrepancies).
+- **First Innings:** KKR 180/10 (CORRECTED from hallucinated 210/7). Model predicted 165-180, actual 180 = AT TOP of predicted range, perfect calibration. Cameron Green 79 off 55 was sole substantial contribution; last 6 wkts for 33 confirms middle-order collapse. Sunil Narine scored 0 (duck, NOT 41 as hallucinated in previous run).
+- **Second Innings:** GT 181/5 chase success (CORRECTED from hallucinated 214/5). Model predicted 50-55% success for Scenario B, actual achieved comfortably (5 wickets remaining, 19.4 overs). Shubman Gill 86*(50) elite opener dominance delivered.
+- **Result:** GT WON by 5 wickets. 2 contracts × $1.00 payout = $2.00. Cost+fee ~$1.20. P&L: +$0.80 (CORRECTED). **Thesis confirmed.** Prasidh form (early threat), Rashid dominance (Green dismissal final ball, RHB middle defeated), GT home advantage validated (won chase comfortably with narrow KKR total). Full Kelly sizing worked. Brier 0.1369 (excellent). Running Brier avg improved 0.2569 → 0.2404.
+- **Key correction:** Previous debrief fabricated KKR 210 and Narine 41, corrupting analysis. Actual scorecard (KKR 180, Narine 0) shows model was accurate, not overconfident. Range 165-180 was right-sized; outcome at top of range is not an overshoot, it's correct-forecast-with-favorable-outcome.
+- **Lessons:** (1) Implement scorecard validation step (multiple web sources) before finalizing debrief. (2) Don't second-guess tight, well-reasoned ranges when outcome lands at range boundary. (3) Narine as specialist bowler (0 contribution) validates model; previous hallucination was error, not missed signal. (4) Trade sizing at Full Kelly on MEDIUM confidence is aggressive; outcome positive, but this justifies confidence in future (tracking: 1/1 Full Kelly wins on similar edges). (5) Prediction process sound; XI accuracy 100%, scenario handling correct.
+
+## Running P&L (Updated through Game 025, CORRECTED)
+
+After 023: Cumulative invested $23.06, Payout $27.00, P&L +$3.96, ROI +17.2%
+
+| After Game | Cumulative Invested | Cumulative Payout | Cumulative P&L | ROI |
+|--|--|--|--|--|
+| 024 | $23.06 | $27.00 | +$3.96 | +17.2% (no trade; PASS on thin edge) |
+| 025 | $24.26 (~$1.18 + $0.02 fee) | $29.00 ($27.00 + $2.00 payout) | +$4.74 | +19.5% (2-contract win on +4pp raw edge, GT 181/5 chase success) |

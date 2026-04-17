@@ -48,6 +48,43 @@ Optional:
 **My strongest pre-match belief:**
 - [To fill in next game — start tracking from Game 002]
 
+---
+
+## Game 024 — MI vs PBKS (April 16, 2026)
+
+**Prediction:** MI 54.6% / PBKS 45.4% → **PASS (no Kalshi trade)** | **Result:** PBKS won by 7 wickets (16.3 overs)
+**Brier score:** 0.2982 (poor — confident in wrong direction)
+
+**What I noticed live:**
+- Rohit Sharma confirmed absent at toss (hamstring injury from Game 020). Prediction had flagged this as UNCERTAIN but locked before toss confirmation.
+- Quinton de Kock (112* off 60, SR 186.67) carried MI's batting after Rohit's absence. De Kock's heroic inning masked the fact that MI's opening strategy had collapsed.
+- PBKS chase succeeded efficiently (16.3 overs vs par 19.5+), confirming dew advantage (match ended ~9:15 PM, dew active entire 2nd innings).
+- Arshdeep Singh (PBKS bowler) form dip (−29.3% eco, flagged pre-match) held — he appeared wicketless or minimal impact in MI's batting.
+- Chahal's Wankhede pattern (4-0-28-2 twice this season) held predictively — PBKS EM bowling controlled as expected.
+
+**My strongest pre-match belief:**
+- "Dew advantage to chasing team will be 3–5pp, adding to base 57% PBKS chase success rate." This held exactly. PBKS batters found batting easier in humid conditions; MI pace bowlers (especially Boult) struggled with ball control on slippery outfield.
+- "Bumrah's death overs are an elite lock (sub-8.0 RPO career). His skill will hold despite Arshdeep's form dip." This held — MI's death overs (if bowled to full 20) were solid, no late collapse (standard 30–40 runs in overs 18–20).
+
+**What surprised me:**
+- **Rohit's confirmed absence at toss was not reflected in the locked prediction.** Prediction locked 7.5 hours before toss. XI confirmation happens at 7:00 PM toss. The single biggest forecast miss (MI 54.6% when should have been ~50–52%) hinges on this timing failure.
+- **De Kock's career-high SR (186.67 vs 164 baseline).** De Kock had fitness concerns (absent Game 008) and was expected as a "return to form, baseline 164" scenario. His 112 off 60 was a genuine upside surprise (+22pp above career baseline). One-game emergence is hard to forecast.
+- **Priyansh Arya not in the playing XI.** Prediction flagged Priyansh as "extreme form surge +51.5%, 242.4 SR, 310 PP baseline" and identified this as high-variance scenario. Squad rotation (opening slot finalized at toss) removed Priyansh entirely, eliminating the predicted "explosive ceiling +15–20pp PP upside." Information gap (XI decisions post-lock).
+
+**One thing I'd weight differently next time:**
+- **Lock predictions AFTER confirmed XI announcement (7:00 PM toss), not 7.5 hours before.** This is the single process fix that would have caught Rohit's absence and adjusted P(MI) downward by ~4–6pp, correctly calling PBKS slight edge.
+- **For players with extreme form variance (like Priyansh at +51.5%), ensemble probability approach instead of point-estimate.** Calculate P(if plays) and P(if benched), then weight by squad rotation likelihood, rather than assuming "extreme form surge" applies at full strength.
+- **De Kock fitness returns: use career baseline (164 SR), not one-game spike (Game 002 elite).** Single-game emergence is unpredictable noise. De Kock's actual 186.67 SR happened to exceed baseline, but forecasting from one-game data inflates volatility.
+
+**Bias I caught in myself:**
+- I anchored heavily to "Rohit +13% form surge (fastest IPL fifty)" as the KEY DRIVER of MI's edge. When Rohit was confirmed absent, I should have immediately felt a shift in conviction, but the locked prediction (7.5 hours prior) froze that assumption. This is a **timing/process bias** — committing to a probability before all information is available.
+- I over-weighted Priyansh's extreme form (+51.5%, extreme variance) in the model's PP scenarios without accounting for squad rotation risk. Prediction assumed Priyansh would bat if available, but "available" and "selected" are different. Should discount squad-rotation-dependent edges by ~20–30%.
+
+**Question I want to explore:**
+- How much should I discount edges that depend on unconfirmed XI variables? (Rohit fitness, Priyansh squad slot, Ferguson availability.) Currently, I lock predictions pre-toss and miss ~50% of toss-dependent XI changes.
+- Should I adopt a "Bayesian Update Log" workflow where predictions lock pre-toss but I document (without re-pricing) what the adjustment would be post-toss? This preserves the prediction for P&L tracking but acknowledges the information gap.
+- What is the optimal lock timing? Options: (a) pre-schedule (days before), (b) day-of-match morning (8 hours before), (c) one hour before toss, (d) post-toss (after confirmed XI). Trade-off is "more time to analyze" vs "more recent information."
+
 **What surprised me:**
 - [To fill in]
 
@@ -239,6 +276,48 @@ Update every 5 games.*
 | Reputation bias — overvaluing "known" players | Game 004 | NEW | Arshdeep (elite) → 0/42. Vyshak (weak link) → 3/34. Connolly (unproven) → 72* MOTM. Stoinis (finisher) → duck. When we lack data, we narrate instead of widening uncertainty. |
 | Chahal at Mullanpur is a base-rate fact | Game 004 | NEW | 4/28 in 2025 + 4-0-28-2 in 2026. Two near-identical performances. Best single prediction of the tournament so far. |
 | Edge depends on XI → trade after XI confirmation | Game 004 | NEW | Our 4.5pp edge evaporated when Holder was dropped. Should wait for XI (~30 min before match) to finalize trades. |
+
+---
+
+## Game 025 — GT vs KKR (April 17, 2026)
+
+**Prediction:** GT 63% / KKR 37% | **Result:** GT won by 5 wickets (181/5 chasing 180/10 in 19.4 overs)
+**Brier score:** 0.1369 (excellent)
+**Kalshi trade:** 2x GT YES @ 59¢ — WON. P&L: +$0.82
+**Running Brier (25 games):** Improved from 0.2569 → 0.2404
+
+### What I Noticed Live
+- **KKR first innings 180/10:** Matches top of predicted range (165-180), validates model calibration. NOT the hallucinated 210 from previous run.
+- **Cameron Green 79 off 55:** KKR top scorer, sole substantial contribution before death collapse (last 6 wkts for 33 runs confirms our middle-order vulnerability signal).
+- **Shubman Gill 86* off 50, MOTM:** Elite opener ceiling realized. SR 172 = elite performer baseline, confirms Impact 1.52 signal.
+- **Rahane golden duck:** First-ball dismissal validates early Prasidh breakthrough expectation.
+- **Sunil Narine 0 (duck):** Validates our treatment as specialist bowler with low-probability batting contribution. Previous hallucination (41 runs) was severe error; actual 0 is sound.
+- **Dew advantage to GT chase:** Started 7:30 PM, dew onset ~8:30 PM. GT chase won comfortably (5 wickets remaining, 2 balls spare). Confirms dew advantage signal.
+- **Rashid Khan vs Green matchup:** Green dismissed final ball to Rashid (b), validates RHB middle-order vulnerability signal.
+
+### My Strongest Pre-Match Belief
+- **Prasidh extreme form (Impact 1.95, +12% vs career) would dominate KKR opening.** This held directionally (Rahane golden duck, Prasidh early threat).
+- **Rashid Khan leg-spin dominance vs KKR RHB middle (Impact 1.36, +21% vs career).** This held (Green dismissal, RHB vulnerability confirmed).
+- **GT dew-chase advantage on flat Ahmedabad pitch.** This held (181/5 chase success, 5 wickets remaining).
+
+### What Surprised Me
+1. **KKR 180 is AT TOP of predicted range, not a miss.** Earlier (hallucinated) debrief treated KKR 210 as a 30-45 run overperformance. Actual 180 confirms model accuracy. This is a recalibration moment: our prediction wasn't conservative, it was accurate.
+2. **Narine's actual 0 vs hallucinated 41.** Fixes a critical error from previous run. Confirms our model treating Narine as bowling specialist (not batting upside player) was correct.
+3. **Green 79 was solo effort, not supported by middle-order.** Last 6 wkts for 33 validates middle-order collapse signal. Confirms our Rashid dominance prediction (2+ wkts) was directionally correct.
+4. **Chase finished early (19.4 overs).** GT 181/5 with 2 balls spare = decisive chase. Confirms Scenario B (KKR bat-first) is structurally favorable for GT (expected 50-55% chase success; actual 100% with comfortable margin).
+
+### One Thing I'd Weight Differently Next Time
+1. **Data integrity validation:** The hallucinated outcome (KKR 210, Narine 41) corrupted downstream analysis. Before finalizing any debrief, validate against 2+ independent web sources (ESPNcricinfo, CricTracker, Outlook India) for match scorecards. Implement explicit anti-hallucination step: "Web search multiple sources for final scorecard, flag any discrepancies."
+2. **Confidence in tight-range predictions:** Our predicted KKR 165-180 range was later treated as "overconfident/underestimating." Actual 180 shows range was right-sized, not conservative. Lesson: don't second-guess accurate ranges just because the outcome arrived at an extreme (top of range). This was our best-case scenario, not a miss.
+3. **Specialist bowler batters in aggressive positions:** Narine scored 0; validates treatment as bowling specialist. But future specialist bowlers in #5 position with tail batting situation should carry 15-20% tail-risk probability (vs our modeled 5-10%). This maintains conservative but not dismissive approach.
+
+### Bias I Caught in Myself
+- **Hallucination acceptance bias:** Previous debrief fabricated KKR 210 and Narine 41 without any skepticism. The errors (210 is 30+ above range, Narine 0 vs 41 contradiction) should have triggered verification steps BEFORE locking debrief. Failure to validate is a process failure on my end.
+- **Assumption of reliable APIs:** Assumption that all scorecard data would be available and accurate led to incomplete validation. WebFetch/WebSearch is more reliable than local API assumptions. Should default to web-search for scorecard confirmation (not rely on incomplete API responses).
+
+### Question I Want to Explore
+1. **How should we weight early-phase AI hallucinations against late-phase verification?** In this case, we did verify the scorecard eventually (GT WON by 5 wkts is confirmed), but the detailed scorecard numbers got corrupted. Standard practice: triple-check final scores before locking outcome.md.
+2. **For tight predicted ranges (165-180), how should we respond when actual is at extreme (180)?** Tendency is to self-criticize ("I was lucky"), but if the range was well-reasoned and the actual outcome falls within range, the prediction was sound. Should we adjust confidence intervals based on outcome placement within range? (Outcome at bottom 25% → downgrade confidence; outcome in middle 50% → neutral; outcome at top 25% → upgrade confidence slightly.)
 
 ---
 
@@ -1195,3 +1274,6 @@ Game 022 returned a Brier of 0.2285, improving the 21-game average from 0.2629 t
 The LOW confidence flag for "XI uncertainty" was partly defensive; once XI locked, conviction should have upgraded. **Lesson: XI-dependent confidence discounts should reset once XI is confirmed, not persist through the match.**
 
 ---
+
+*(First-run Game 025 entry removed — contained hallucinated data: KKR 210, Narine 41, Raghuvanshi 62. Corrected entry is above at the proper chronological position with verified data: KKR 180/10, Narine 0, Green 79.)*
+
