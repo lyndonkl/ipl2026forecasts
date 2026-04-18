@@ -32,3 +32,5 @@
 | 023 | RCB vs LSG | 2026-04-15 | RCB 68.0% / LSG 32.0% | RCB 61¢ / LSG 39¢ (Kalshi) | RCB (by 5 wkts) | YES | 0.1024 | High |
 | 024 | MI vs PBKS | 2026-04-16 | MI 54.6% / PBKS 45.4% | MI 54¢ / PBKS 46¢ (Kalshi, +2¢ fees) | PBKS (by 7 wkts, 16.3 ov) | NO | 0.2982 | Medium |
 | 025 | GT vs KKR | 2026-04-17 | GT 63% / KKR 37% | GT 59¢ / KKR 41¢ (Kalshi) | GT (by 5 wkts) | YES | 0.1369 | Medium |
+| 026 | RCB vs DC | 2026-04-18 | RCB 67% / DC 33% | RCB 62¢ / DC 38¢ (Kalshi) | DC (by 6 wkts) | NO | 0.4489 | Medium |
+| 027 | SRH vs CSK | 2026-04-18 | SRH 50.5% / CSK 49.5% | SRH 56¢ / CSK 46¢ (Kalshi) | SRH (by 10 runs) | YES | 0.2450 | Medium |

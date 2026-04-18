@@ -59,11 +59,12 @@
 - **Key learning:** 200 is NOT safe here. RCB chased 202 with 26 balls to spare. Par may be closer to 210-215 for a competitive total
 
 ### Running Venue Stats (IPL 2026)
-- Games played: 3
-- Average 1st innings: (201 + 250 + 146) / 3 = 199 runs
-- Average 2nd innings: (203 + 207 + 147) / 3 = 186 runs
-- Bat first wins: 1 | Chase wins: 2
-- Toss → field: 3/3 (100% — toss winner bowls every time)
+- Games played: 4
+- Average 1st innings: (201 + 250 + 146 + 175) / 4 = 193 runs
+- Average 2nd innings: (203 + 207 + 147 + 179) / 4 = 184 runs
+- Bat first wins: 1 | Chase wins: 3
+- Toss → field: 4/4 (100% — toss winner bowls every time)
 - Highest individual: Tim David 70*(25, Game 011)
 - Best bowling: Rasikh Dar 4/24 (Game 023) — elite death execution
-- Key learning: Par score 210–215 minimum. Targets below 180 are underpar. 200 NOT safe. Dew onset ~8:00 PM (overs 15+) favors chaser. Aggressive batting rewarded at short boundaries.
+- **Game 026 notes:** RCB 175/8 vs DC 179/4 (19.5 ov). Patidar captain collapse (12 off 13) drove underperformance. Expected par 190-210, actual 175 (−25-35 vs baseline). Afternoon 15:30 start (no dew) compressed chase window but DC handled cleanly. Home advantage (3-0 record) was vs weaker opponents (SRH, CSK, LSG). vs Quality DC, venue contribution ≈ +2-3pp not +5-8pp. Opponent-quality filter needed.
+- Key learning: Par score 210–215 minimum. Targets below 180 are underpar. 200 NOT safe. Dew onset ~8:00 PM (overs 15+) favors chaser. Aggressive batting rewarded at short boundaries. Home venue advantage dependent on opponent quality.

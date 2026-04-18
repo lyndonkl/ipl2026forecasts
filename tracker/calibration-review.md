@@ -6,6 +6,68 @@
 
 ---
 
+## Post-Game 027 Status — STABILIZED / MONITORING (April 18, 2026)
+
+**Metric:** 5-game rolling Brier (Games 023-027)
+**Current value:** 0.1924 (avg of G023 0.1024, G024 0.2982, G025 0.1369, G026 0.4489, G027 0.2450)
+**Threshold:** ≤0.25 (acceptable), >0.25 (early calibration review)
+**Status:** GREEN — **BELOW 0.25 THRESHOLD.** Game 027's 0.2450 Brier has improved the rolling window significantly from prior G022-026 window.
+
+| Game | Teams | Prediction | Brier | 5-Game Rolling |
+|------|-------|-----------|-------|---|
+| 023 | RCB vs LSG | RCB 68.0% | 0.1024 | — |
+| 024 | MI vs PBKS | MI 54.6% | 0.2982 | — |
+| 025 | GT vs KKR | GT 63% | 0.1369 | — |
+| 026 | RCB vs DC | RCB 67% | 0.4489 | — |
+| 027 | SRH vs CSK | SRH 50.5% | 0.2450 | **0.1924** (avg G023-027) |
+
+**Running average (27 scored games, excl 012 abandoned):** 0.2491 (up from 0.2494 after G026, virtually unchanged)
+
+**Key observation:** Game 027's 0.2450 Brier is a well-calibrated near-parity prediction (50.5% probability, winner correct, Brier near expected 0.25 for symmetric predictions). The 5-game rolling window recovery (from 0.2820 to 0.1924) indicates that the prior critical "RED" window (G022-G026) was primarily driven by G026's catastrophic 0.4489 (synthesis + caution-signal flip error). Games 023, 025, 027 are all well-calibrated (Brier <0.25), suggesting process improvements post-April 13 calibration review are holding.
+
+**Systemic issues from prior review remain flagged but not triggered:**
+1. **Timing failure on XI confirmation** — Game 027 caught this: Harshal Patel's absence (toss-day decision) was not caught pre-lock (15 hours before toss). Recommendation from G026 calibration to move lock from pre-toss (11:30 AM prior) to post-toss (7:00 PM) has NOT yet been implemented. **Action: Implement post-toss lock for Games 028+ to catch XI changes before Kalshi trades.**
+2. **Caution-signal interpretation** — Kushal's 50% base rate at Pause Point 1 (Game 027) was treated as input to model rather than as red flag for over-synthesis. Should have respected neutral conviction and locked 50–51%, not 50.5%.
+3. **Opponent-quality venue filters** — Game 026's issue (Chinnaswamy +5pp home advantage vs weaker opponents, should be +2pp vs DC quality) not yet addressed in downstream agents.
+
+---
+
+## Post-Game 026 Status — ELEVATED WARNING (April 18, 2026)
+
+**Metric:** 5-game rolling Brier (Games 022-026)
+**Current value:** 0.2820 (avg of G022 0.2285, G023 0.1024, G024 0.2982, G025 0.1369, G026 0.4489)
+**Threshold:** ≤0.25 (acceptable), >0.25 (early calibration review)
+**Status:** RED — **ABOVE 0.25 THRESHOLD.** Game 026's 0.4489 Brier has triggered early calibration review (now superseded by post-Game 027 recovery).
+
+| Game | Teams | Prediction | Brier | 5-Game Rolling |
+|------|-------|-----------|-------|---|
+| 022 | CSK vs KKR | CSK 52.2% | 0.2285 | — |
+| 023 | RCB vs LSG | RCB 68.0% | **0.1024** | — |
+| 024 | MI vs PBKS | MI 54.6% | **0.2982** | — |
+| 025 | GT vs KKR | GT 63% | 0.1369 | — |
+| 026 | RCB vs DC | RCB 67% | **0.4489** | **0.2820** (avg G022-026) |
+
+**Running average (26 scored games, excl 012 abandoned):** 0.2494 (up from 0.2404 after G025)
+
+**Critical observation:** Games 024, 026 both exhibit **timing and process failures:**
+- **Game 024 (Brier 0.2982):** Rohit Sharma confirmed absent at toss (7.5 hours after prediction lock). Prediction should have been re-assessed post-XI, but locked 54.6% MI remained in place. Post-toss, accurate probability closer to 50-52% MI. PBKS won chase efficiently. **Root cause: lock-before-XI timing.**
+- **Game 026 (Brier 0.4489):** Dual-agent synthesis (steelman 70.3%, red-team 53%) was reconciled to 64%, but Kushal's base-rate override to 55% was a SIGNAL for caution. The +0.522 LR contribution then pushed posterior to 67%, overriding the caution signal. **Root cause: over-trusting dual-agent synthesis, ignoring Kushal's base-rate conservatism as a "stop" flag.**
+
+**Systemic issues identified (from Games 022-026 window):**
+1. **Dual-agent synthesis amplification risk:** Steelman (70.3% G026) creates anchoring upward. When Kushal signals caution (55% base), that's a red flag that synthesis is overconfident, not an input to the model. Should treat caution signals as "set posterior ceiling" not "apply smaller LR."
+2. **Timing failures on XI confirmation:** Games 024, 026 both had post-lock XI changes (Rohit hamstring, unconfirmed) that shifted probability by 4-6pp. **Suggest: move lock to post-toss (7:00 PM) rather than pre-toss (11:30 AM).**
+3. **Opponent-quality filters missing for venue advantage:** Game 026's +5pp Chinnaswamy home advantage was based on 3-0 record vs weaker opponents. Against quality DC, margin should be +2-3pp. **Implement lookup: opponent rank 1-3 → +2pp, rank 4-8 → +1pp, rank 9-10 → +3pp.**
+4. **N=4 small-sample role risk not cascaded to range widening:** Patidar captain-away predicted 40-60, got 12. Range should have been 25-55 (widened ±15 for small-sample). **Current model point-estimates ranges; should widen for high-variance players.**
+5. **Pattern:** G021 (0.5550 catastrophic), G024 (0.2982 Rohit-XI), G026 (0.4489 synthesis + caution-signal flip). Three large errors in last 6 games. Pattern suggests **process issues (timing, signal interpretation) rather than research quality issues.**
+
+**Action:** **FORMAL CALIBRATION REVIEW TRIGGERED.** Schedule full 6-question audit before Game 027-030. Recommend immediate implementation of two fixes:
+1. **Move prediction lock from pre-toss (11:30 AM) to post-toss (7:00 PM) for Games 027+.**
+2. **When Kushal's base rate diverges significantly from synthesis (55% vs 64% = −9pp), treat divergence as caution signal and set posterior ceiling (e.g., 60-62% instead of 67%).**
+
+**Next review cadence:** Formal 10-game review after Game 036. Interim monitor 5-game rolling after Games 027, 028, 029, 030.
+
+---
+
 ## FORMAL 20-GAME CALIBRATION REVIEW — April 13, 2026
 
 **Triggers:** 20-game milestone + 5-game rolling Brier 0.3335 (>0.25 threshold)

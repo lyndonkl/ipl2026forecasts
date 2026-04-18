@@ -34,6 +34,9 @@ Tracks all actual contract purchases, P&L, and running totals.
 | 022 | 2026-04-14 | PASS | — | — | — | — | — | CSK 52.2% / KKR 47.8% | +1.8pp raw edge (KKR at 47.8% vs market 46%), ~0¢ net after 7% fee. Edge vanishes after fees (low confidence) | N/A | — | $0.00 |
 | 023 | 2026-04-15 | RCB Yes | $0.61 | 1 | $0.61 | $0.02 | $0.63 | 68% | +7.0pp (RCB 68% model vs 61% market) | WON | $1.00 | +$0.39 |
 | 024 | 2026-04-16 | PASS | — | — | — | — | — | MI 54.6% / PBKS 45.4% | No edge MI side (−1.4pp), no edge PBKS side (−2.6pp after 2¢ fee). Market ~54¢ MI = ~56% breakeven. No positive edge. | PBKS (won) | — | $0.00 |
+| 025 | 2026-04-17 | GT Yes | $0.59 | 2 | $1.18 | $0.02 | $1.20 | 63% | +4pp raw edge (GT 63% model vs 59% market); Full Kelly 8.4% (Kushal override from Half) | WON | $2.00 | +$0.80 |
+| 026 | 2026-04-18 | RCB Yes | $0.62 | 1 | $0.62 | $0.02 | $0.64 | 67% | +5pp (RCB 67% model vs 62% market); Half Kelly 6.58% on $14.43 bankroll → $0.95 stake → 1 contract | LOST | $0.00 | -$0.64 |
+| 027 | 2026-04-18 | CSK Yes | $0.46 | 2 | $0.92 | ~$0.02 | ~$0.94 | 49.5% | +4.5pp vs midpoint (SRH 56¢ overpriced; CSK value); User-chosen 2 contracts (sub-quarter-Kelly conservative) | LOST | $0.00 | -$0.94 |
 
 ## Running P&L
 
@@ -62,6 +65,10 @@ Tracks all actual contract purchases, P&L, and running totals.
 | 021 | $22.43 | $26.00 | +$3.57 | +15.9% (4-contract loss; RR collapse unpredicted) |
 | 022 | $22.43 | $26.00 | +$3.57 | +15.9% (no trade, PASS; edge vanishes after fees) |
 | 023 | $23.06 | $27.00 | +$3.96 | +17.2% (1-contract win on +7pp edge; high-confidence thesis confirmed) |
+| 024 | $23.06 | $27.00 | +$3.96 | +17.2% (no trade; PASS on thin edge) |
+| 025 | $24.26 | $29.00 | +$4.74 | +19.5% (2-contract win on +4pp raw edge, GT 181/5 chase success) |
+| 026 | $24.90 | $29.00 | +$4.10 | +16.5% (1-contract loss on +5pp edge; DC won by 6 wickets, thesis wrong) |
+| 027 | $25.84 (~$0.94 stake from Game 027) | $29.00 | +$3.16 | +12.2% (2-contract loss; SRH won, Kalshi CSK Yes lost; positive EV ex-ante on +4.5pp edge) |
 
 ## Game 005 Note
 
@@ -134,3 +141,14 @@ After 023: Cumulative invested $23.06, Payout $27.00, P&L +$3.96, ROI +17.2%
 |--|--|--|--|--|
 | 024 | $23.06 | $27.00 | +$3.96 | +17.2% (no trade; PASS on thin edge) |
 | 025 | $24.26 (~$1.18 + $0.02 fee) | $29.00 ($27.00 + $2.00 payout) | +$4.74 | +19.5% (2-contract win on +4pp raw edge, GT 181/5 chase success) |
+| 026 | _PENDING_ (trade placed $0.64 cost+fee pre-match) | _PENDING_ | _PENDING_ | Pre-match trade: 1 contract RCB Yes @ 62¢ (Half Kelly on $14.43 bankroll); +5pp edge on dual-agent pipeline model 67% |
+
+## Game 026 Note (Post-Match — Trade Result LOST)
+
+- **Game 026:** Trade placed 1 contract RCB Yes @ 62¢ (cost+fee $0.64). Model 67% RCB vs market 62¢ → +5pp raw edge. Half Kelly sizing: 6.58% of $14.43 bankroll = $0.95 stake → 1 contract. Confidence: MEDIUM.
+- **Pipeline protocol:** First game using dual-agent + synthesis pipeline (steelman via dialectical-mapping-steelmanning, red-team via deliberation-debate-red-teaming, synthesis agent reconciles). Applied at Steps 1-4 (research subagents) and Step 5 pre-flight; Kushal's 3 pause points ran normally against the synthesized view.
+- **Base rate construction:** Kushal anchored prior at 55% RCB (below synthesized 57% midpoint) after reviewing 2026 season records (RCB 4-1, 3-0 at Chinnaswamy; DC 2-2 with 2-0 chasing but 0-2 batting-first; H2H 0-0 this season). Surgical LR adjustments applied: RCB PP/Death batting LRs cut (Ngidi + Shami in form); DC PP/EM/LM/Death batting LRs raised (Rahul + Nissanka in form, DC less structurally bearish than analysis assumed). Aggregate Σ ln(LR) = +0.522 → posterior 67% RCB.
+- **Key structural view:** Afternoon 15:30 start reverses the night-game dew-chase advantage (BCCI 3:30 PM rule excludes dew-mitigation). Kohli ankle fitness + Hazlewood availability are the two highest-impact Bayesian update candidates post-toss.
+- **Match result:** DC WON by 6 wickets. RCB 175/8 in 20 overs. DC 179/4 in 19.5 overs. Toss: DC won, chose to field first (Scenario A).
+- **Trade outcome:** LOST $0.64. Thesis that 67% > 62% was incorrect. Actual probability closer to ~60% (Patidar captain collapse, DC chase execution underestimated). Brier score 0.4489 (bad; miscalibrated toward RCB). Root cause: Patidar N=4 small-sample risk underweighted (-25-40 run impact manifested as 12 off 13 actual vs 40-60 expected); home advantage treated as +5-8pp when quality mismatch (DC vs SRH/CSK/LSG) warranted +2-3pp only.
+- **Lessons:** (1) Dual-agent synthesis produced reasonable view (steelman 70.3%, red-team 53%, reconciled ~64%) but Kushal's override to 55% base rate followed by +0.522 LR contribution was overweight. (2) Patidar captain-away pressure should reduce confidence by 3-4pp when N=4 small-sample. (3) DC 2-0 chasing vs 0-2 batting-first should have indexed to DC's structural preference and execution edge. (4) Home venue advantage at Chinnaswamy (3-0 record) contaminated by weaker opponents; RCB vs quality DC warrants zero venue premium. (5) Afternoon dew elimination was correctly identified but downstream chase-success implications (DC should be 60-65% success, not 45-50%) were missed.

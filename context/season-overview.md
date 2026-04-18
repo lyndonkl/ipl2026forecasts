@@ -25,27 +25,27 @@
 
 ---
 
-## Points Table (After Game 025)
+## Points Table (After Game 026)
 
 | Pos | Team | P | W | L | NR | Pts |
 |-----|------|---|---|---|----|----|
 | 1 | PBKS | 4 | 3 | 0 | 1 | 7 |
-| 2 | RCB | 5 | 4 | 1 | 0 | 8 |
+| 2 | RCB | 6 | 4 | 2 | 0 | 8 |
+| 3 | DC | 5 | 3 | 2 | 0 | 6 |
 | 3 | SRH | 5 | 3 | 2 | 0 | 6 |
-| 4 | GT | 5 | 3 | 2 | 0 | 6 |
-| 5 | RR | 4 | 2 | 2 | 0 | 4 |
-| 5 | DC | 4 | 2 | 2 | 0 | 4 |
-| 5 | CSK | 4 | 2 | 2 | 0 | 4 |
+| 3 | GT | 5 | 3 | 2 | 0 | 6 |
+| 6 | RR | 4 | 2 | 2 | 0 | 4 |
+| 6 | CSK | 4 | 2 | 2 | 0 | 4 |
 | 8 | LSG | 4 | 1 | 3 | 0 | 2 |
 | 8 | MI | 3 | 1 | 2 | 0 | 2 |
 | 10 | KKR | 5 | 0 | 4 | 1 | 1 |
 
-**Notes (through Game 025):**
-- **RCB strong at 2nd:** 4W-1L (8 points from 5 games).
+**Notes (through Game 026):**
+- **RCB still 2nd:** 4W-2L (8 points from 6 games). First home loss at Chinnaswamy (vs DC). Prediction locked 67% RCB → Brier 0.4489 (worst calibration of season, miscalibrated toward RCB).
 - **PBKS still sole leaders:** 3W-0L-1NR (7 points from 4 games). Unbeaten but with one NR.
-- **GT rising:** Won Game 025 vs KKR by 5 wkts at home (Ahmedabad). Now 3W-2L (6 pts), up to 4th. Gill 86*(50) MOTM. Back-to-back wins (G014, G025).
-- **SRH steady:** 3W-2L (6 points). Mid-table.
-- **KKR crisis deepens:** Lost Game 025 to GT (180/10, Green 79 lone hand). Now 0W-4L-1NR (1 pt, dead last). Rahane golden duck, Narine 0. Worst start in franchise history continues.
+- **DC rising:** Won Game 026 vs RCB by 6 wickets. Now 3W-2L (6 pts, 3rd). Third chase win of season confirms chase-optimized structure + KL Rahul form peak.
+- **SRH, GT co-tied at 6 pts:** Both 3W-2L. Mid-table cluster. SRH still searching for consistency; GT back-to-back wins (G014, G025) slowing.
+- **KKR still in crisis:** 0W-4L-1NR (1 pt, dead last). Worst start in franchise history continues. Cameron Green elite (79 in losing Game 025), but middle-order collapse consistent pattern.
 
 ---
 

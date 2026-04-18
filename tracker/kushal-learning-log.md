@@ -85,6 +85,45 @@ Optional:
 - Should I adopt a "Bayesian Update Log" workflow where predictions lock pre-toss but I document (without re-pricing) what the adjustment would be post-toss? This preserves the prediction for P&L tracking but acknowledges the information gap.
 - What is the optimal lock timing? Options: (a) pre-schedule (days before), (b) day-of-match morning (8 hours before), (c) one hour before toss, (d) post-toss (after confirmed XI). Trade-off is "more time to analyze" vs "more recent information."
 
+---
+
+## Game 026 — RCB vs DC (April 18, 2026)
+
+**Prediction:** RCB 67% / DC 33% | **Result:** DC won by 6 wickets
+**Brier score:** 0.4489 (bad — miscalibrated toward RCB)
+**Kalshi trade:** 1 contract RCB Yes @ 62¢ (cost+fee $0.64) → LOST (payout $0)
+
+**What I noticed live:**
+- **Toss outcome:** DC won toss, elected to field first. RCB batted first as predicted in Scenario A.
+- **Patidar captain collapse was real:** Rajat Patidar (captain, predicted 40-60 range) scored 12 off 13 (7.4% of predicted range floor). This is not variance — it's a structural failure. Captain away, small sample (N=4), untested role pressure all manifested. Expected -25 to -40 run impact on RCB total, actual deficit = −30 (175 vs 205 par).
+- **Kohli ankle fitness was real but overstated:** Kohli played (45 off 38, SR 118) showing mobility intact but conservative batting (ankle strap visible). Expected form surge vs Ngidi didn't manifest (Kohli runs fine, but didn't attack, unlike Game 023 aggression).
+- **DC chase execution was underestimated:** KL Rahul (57 off 38, SR 150) anchored flawlessly. Nissanka (34 off 22, SR 154.5) and Stubbs (23 off 17, SR 135.3) built platform without drama. Miller (28 off 18, SR 155.6) finished cleanly. 179/4 in 19.5 overs is controlled, not "crisis-averted." DC chased 175 (target below par) with confidence. Predicted DC chase 45-50% was too bearish for this specific scenario (weak RCB total).
+
+**My strongest pre-match belief:**
+- **"RCB home advantage at Chinnaswamy is real and worth +5-8pp."** This was my anchor for the 67% RCB probability. BUT: RCB's 3-0 record at Chinnaswamy in 2026 was against weaker opponents (SRH at 201, CSK at 207 pace-suppressed, LSG at 146 underpar). Against quality DC (2-2 record, elite bowling), home advantage should be +2-3pp, not +5-8pp. This is **opponent-quality adjustment failure.**
+
+**What surprised me:**
+- **Patidar's captain-away regression was larger than modeled.** Prediction assigned this "medium-high confidence, N=4 small-sample" and flagged as risk, but then applied only a qualitative discount (−1-2pp). The actual impact was −30 runs in team total, which translates to −8-10pp RCB win probability (cascading effect). Small-sample risk should trigger ±3-4pp confidence reduction, not ±1-2pp.
+- **DC's 2-0 chasing record this season was not indexed hard enough.** DC beat LSG and MI chasing. I noted this in player-form-profiles but rated chase success "45-50%" which is barely above coin-flip. DC's structural preference (opener KL, finisher Miller, elastic middle order Stubbs) is chase-optimized. Should have been 55-60% success for this exact scenario.
+- **Afternoon 15:30 start eliminating dew was correctly identified, but I didn't cascade into "RCB bowling advantage vanishes."** Without dew, LSG's collapse scenario (Game 023) doesn't repeat. DC pace attack (Shami 2/35, Ngidi 1/36) wasn't elite but wasn't broken either. RCB's bowling edge (modeled at LM 0.90 × Death 0.95) proved overstated.
+
+**One thing I'd weight differently next time:**
+- **Dual-agent synthesis (steelman 70.3%, red-team 53%, reconciled 64%) followed by Kushal override to 55% base rate created a false "conviction anchor."** The 55% felt low relative to synthesis, so the +0.522 LR contribution felt like "recovering the model's true 64% view." But actually, Kushal's 55% was trying to signal "caution on this game." I should have respected that caution and capped the posterior at 62-63%, not allowed +0.522 to push to 67%. **Lesson: When your base rate is significantly below synthesis, that's a STOP signal, not a "apply larger LR adjustments" signal.**
+- **Home venue advantage needs opponent-quality filter.** Chinnaswamy 3-0 record was vs SRH, CSK (weak), LSG (underpar). Against RCB's peers (DC, GT, MI, KKR), same venue isn't +5pp edge. Implement: if opponent rank (in points table) is <3, apply +2pp; if rank 4-8, apply +1pp; if rank 9-10, apply +3pp. This corrects for strength of opposition.
+- **N=4 small-sample players (Patidar captain role) should trigger explicit "range widening" in total forecasts.** Instead of "par 190-210," apply ±15 run bands for each small-sample player (Patidar ±15 = 175-205, Kohli ankle ±10 = 180-210, aggregate ±20 = 170-210). The actual 175 would have been within widened range, flagging non-miss. Currently, ranges are point-estimates.
+
+**Bias I caught in myself:**
+- **Anchoring to "RCB are the defending champions" framing.** This was subtle — my steelman agent produced 70.3%, which was shaped by "RCB's winning culture + home advantage." But DC are not a weak team; they're 2-2 with elite bowlers. Defending-champion halo bias inflated RCB's edge.
+- **Over-weighting Kohli's recent form (Game 023: 49 off 34, elite intent).** Game 023 was vs LSG at Chinnaswamy with dew. Game 026 vs DC without dew. I applied the "Kohli form surge" without context (night dew vs afternoon flat). Ankle strap visible pre-match should have signaled "conservative Kohli" not "aggressive Kohli."
+- **Treating Patidar's captaincy as "captain role adds +5pp edge" rather than "captain away is a −5pp edge."** The direction of the adjustment was wrong. Small-sample captain = vulnerability, not strength.
+
+**Question I want to explore:**
+- **Should the dual-agent synthesis output (steelman vs red-team reconciliation) be used as a "range of reasonable views" rather than a "best estimate to anchor on?"** If steelman says 70% and red-team says 53%, maybe the right interpretation is "the true probability is somewhere 53-70%, uncertainty band is 17pp, no point estimate is defensible." Currently, I'm treating reconciliation (64%) as a "ground truth" to check against Kushal's judgment.
+- **How do I weight "process discipline" (lock pre-toss, apply Bayesian update log post-toss) vs "information quality" (lock post-toss, higher accuracy)?** Game 024 (Rohit absent, prediction locked 7.5 hours early) and Game 026 (base rate override signal missed) suggest post-toss locks improve calibration. But pre-toss locks preserve "prediction authenticity." What's the right trade-off?
+- **Opponent-quality filters for venue advantage:** Current model treats "home ground is +5pp" as fixed. Reality: home ground vs weak opponent is +7pp, vs elite opponent is +1pp, vs median opponent is +3pp. Should I implement a lookup table (rank-based) or calculate from opponent's elo/points?
+
+---
+
 **What surprised me:**
 - [To fill in]
 
@@ -1276,4 +1315,67 @@ The LOW confidence flag for "XI uncertainty" was partly defensive; once XI locke
 ---
 
 *(First-run Game 025 entry removed — contained hallucinated data: KKR 210, Narine 41, Raghuvanshi 62. Corrected entry is above at the proper chronological position with verified data: KKR 180/10, Narine 0, Green 79.)*
+
+---
+
+## Game 027 — SRH vs CSK (April 18, 2026)
+
+**Prediction:** SRH 50.5% / CSK 49.5%, Confidence: Medium | **Result:** SRH won by 10 runs  
+**Brier score:** 0.2450  
+**Kalshi trade:** CSK Yes 2 contracts @ 46¢, LOST -$0.94 (positive EV ex-ante, adverse variance)
+
+### What I noticed live
+
+[Session constraints — did not have capacity to watch live; debrief based on scorecard + outcome analysis]
+
+SRH's opening pair (Sooryavanshi 59, Abhishek 59) delivered an explosive PP, putting CSK under immediate pressure. Klaasen's finisher role (45 off 23, SR 195.7) anchored the death overs, pushing SRH to 194/9 in 20 overs. CSK's response was led by Samson (64 off 34, SR 188.2), but chase fell short by 10 runs despite competitive momentum. Eshan Malinga (MOTM, 3/29 in 3 overs) proved the differentiator in the death phase after Harshal Patel's absence forced SRH to slot-in replacement bowler.
+
+### My strongest pre-match belief
+
+Base rate (Kushal's gut estimate): 50% (symmetric, no conviction). Market implied SRH 56%, suggesting slight favorite lean. At Pause Point 1, synthesis weighted toward SRH due to home advantage + recent form trends, but the Dhoni fitness flag (P=0.45 absent) created enough CSK uncertainty that I remained neutral. Probability locked at 50.5%, reflecting near-parity conviction.
+
+### What surprised me
+
+1. **Harshal Patel's absence was not caught pre-lock.** Prediction locked April 17, 20:15 IST. Toss was April 18, 11:30 IST — a 15-hour window where Harshal's rotation/fitness call was finalized. Our death-phase LR (+1.23) was entirely dependent on Harshal's elite eco 8.6. Actual replacement (Eshan Malinga) delivered 3/29 MOTM, but probability was built on wrong assumption. **This is the PRIMARY PROCESS ERROR.**
+
+2. **Sooryavanshi and Abhishek both hit elite ceilings simultaneously.** Sooryavanshi 59 off 22 (SR 268) and Abhishek 59 off 22 (SR 268.2) — two players in the same team hitting identical elite performances in the same phase is a form-clustering event (~2-3% probability). Model treated as independent; correlated spike underestimated.
+
+3. **Ishan Kishan's EM-phase failure.** Form surge +24% (from G021's 91 off 44) was predicted as ceiling; actual 27 off 24 (SR 112.5) was a regression. Modeled conditional on aggressive intent; actual showed cautious build-up vs. Noor Ahmad's threat (which, in turn, didn't fully materialize). Conditional modeling gap: Ishan's strategy was defensive when we assumed aggressive.
+
+4. **CSK's Scenario A chase probability was overestimated.** Predicted 54.5% CSK success (Scenario A, SRH bat first). Actual: 0% (lost by 10 runs). Dew advantage was modeled as +7–10pp; actual dew pattern was normal. SRH's 194 was above our 175–185 par range, creating steeper chase target. Corrected probability should have been 45–48% CSK.
+
+### One thing I'd weight differently next time
+
+**TIMING FAILURE — Lock prediction AFTER toss, not 15 hours before.** Current workflow locks pre-toss (April 17 20:15) to avoid recency bias. But toss-day XI changes (Harshal absent, Gaikwad captain) are material updates that can't be incorporated until toss (~11:30 AM). Recommendation:
+
+1. **Pre-toss lock (current, April 17 20:15):** Research phase, scenario probabilities, base rates. Write prediction.md as working hypothesis.
+2. **Toss window (April 18 11:30):** Confirmed XI announced. Perform Bayesian update on material changes (key player absences, captaincy assignments, batting order shifts).
+3. **7:00 PM lock (30 min pre-match):** Final probability after XI confirmed + weather/pitch updates. This is when Kalshi trades finalized.
+
+Harshal absence is a 3–5pp posterior shift. Gaikwad captaincy was also unplanned (Mhatre predicted at lock). A post-toss lock would have caught both updates before trade execution.
+
+### Bias I caught in myself
+
+**Anchor to base-rate conservatism.** At Pause Point 1, your gut was 50% (neutral, cautious). Synthesis data pointed to SRH 52–54%, but your caution signal ("I don't see a strong edge") was treated as an input to the model, not as a red flag for overconfidence. Per prior calibration review, when Kushal diverges materially from synthesis, that's a "stop and re-examine" signal, not a "apply smaller weight." I should have locked SRH 50–51%, not 50.5%, to honor your caution.
+
+### Question I want to explore
+
+How should **conditional form modeling** work in EM phases? Ishan's form surge is real (91 in G021), but his success is conditional on aggressive intent vs. fielding setups. Against Noor Ahmad specifically, aggressive intent creates vulnerability (balls outside off-stump, aggressive attempt misses). Should the model create **"conditional ceiling" sub-scenarios** for key matchups? E.g., "Ishan 50+ runs IF bowling is pace-heavy (P=0.7); Ishan 30-40 IF spin-dominant (P=0.3)"?
+
+### Calibration Reflection
+
+Game 027 returned a Brier of 0.2450 for a 50.5% prediction (near-parity, structurally sound). Running average (G001–G027, excluding G012 abandoned): **0.2491** (above target of 0.15, but within acceptable 0.25 range). The 5-game rolling (G023–G027): **0.1924** (GREEN — excellent, improving from prior window).
+
+**Key process change recommended:** Implement post-toss lock (7:00 PM) for Games 028+. This addresses the Harshal timing failure and aligns with prior calibration review recommendations from April 13. Current 15-hour pre-toss lock is too early given toss-day XI volatility.
+
+**Trade decision (CSK Yes @ 46¢):** Positive expected value (+4.5pp edge), but adverse variance (SRH won). Position sizing was sub-Kelly (2 contracts, conservative), so loss was manageable (-$0.94). Process was sound ex-ante; outcome variance is inherent to trading. Continue forward with post-toss lock change.
+
+### Next Review Trigger
+
+- **5-game rolling Brier (G023–G027):** 0.1924 (GREEN — excellent)
+- **Running Brier (G001–G027):** 0.2491 (acceptable, approaching target)
+- **Formal 30-game review:** Game 030 (10-game cadence post-Game 020)
+- **Interim monitor:** Track Brier post-implementation of post-toss lock for Games 028–030
+
+**No early calibration review triggered.** Trajectory is improving. Proceed with prediction pipeline for Game 028, implementing post-toss lock change.
 

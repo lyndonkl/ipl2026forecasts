@@ -2,6 +2,7 @@
 
 ### Games at this venue
 - [Game 021: SRH vs RR (Apr 13)](../../games/game-021-SRH-vs-RR-2026-04-13/conditions-report.md)
+- [Game 027: SRH vs CSK (Apr 18)](../../games/game-027-SRH-vs-CSK-2026-04-18/conditions-report.md)
 
 ## Venue Profile
 - **Capacity:** ~55,000
@@ -55,4 +56,5 @@
 
 | Match # | Date | Teams | 1st Inn | 2nd Inn | Result | Key Performers | Pitch Notes |
 |---------|------|-------|---------|---------|--------|----------------|-------------|
-| 021 | Apr 13 | SRH vs RR | TBD | TBD | TBD | TBD | Flat, par 175-185, dew from ~ov 12 of 2nd innings |
+| 021 | Apr 13 | SRH vs RR | SRH 216/9 | RR 149/9 | SRH won by 57 runs | Ishan 91(44), Hinge 4/34 (debut) | Flat surface, par exceeded 175→216 via form clustering (Kishan elite ceiling). Dew moderate (as predicted). |
+| 027 | Apr 18 | SRH vs CSK | SRH 194/9 | CSK 184/8 | SRH won by 10 runs | Sooryavanshi 59(22) SR 268, Abhishek 59(22) SR 268, Samson 64(34) | Flat pitch, par ~185 with form clustering (both SRH openers hit elite ceilings). Dew minimal (vs predicted +7-10pp CSK edge). CSK chase fell 10 short. **Dew advantage overstated in Hyderabad model.** |

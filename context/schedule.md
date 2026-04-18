@@ -15,3 +15,7 @@
 | 023 | 2026-04-15 | RCB vs LSG | M. Chinnaswamy Stadium, Bengaluru |
 | 024 | 2026-04-16 | MI vs PBKS | Wankhede Stadium, Mumbai |
 | 025 | 2026-04-17 | GT vs KKR | Narendra Modi Stadium, Ahmedabad |
+| 026 | 2026-04-18 | RCB vs DC | M. Chinnaswamy Stadium, Bengaluru |
+| 027 | 2026-04-18 | SRH vs CSK | Rajiv Gandhi International Stadium, Hyderabad |
+
+_Schedule update 2026-04-17: appended fixtures for 2026-04-18 double-header (Games 026, 027) from ESPNcricinfo + IPLT20.com._

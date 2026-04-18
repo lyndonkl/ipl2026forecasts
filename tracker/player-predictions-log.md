@@ -213,3 +213,68 @@
 - Buttler miss: Dew advantage pattern held, but early dismissal (caught) was low-probability event negating ceiling. 55% expectation was moderate confidence (not overconfident), so miss acceptable.
 - Raghuvanshi hit: Flat-track strength confirmed. G022 collapse was Chepauk-specific (wrist-spin on turning track), not pace baseline. Recalibrate confidence on flat tracks.
 
+---
+
+## Game 026 Sub-Predictions: RCB vs DC
+
+| # | Sub-prediction | Predicted Prob / Range | Actual Result | Outcome |
+|---|---|---|---|---|
+| 1 | Virat Kohli top scorer RCB | 40-70 runs, SR 150-180 | 45 off 38, SR 118 | PARTIAL — in run range, but low SR (118 vs 145 baseline, −23% dip) |
+| 2 | Phil Salt powerplay aggression | 30-50 runs, SR 160-200 | 63 off 38, SR 165.8 | YES (EXCEEDED) — form surge confirmed; strong PP establishment before dismissal |
+| 3 | Rajat Patidar captain form | 40-60 runs, SR 140-170 | 12 off 13, SR 92 | NO — captain collapse; massive regression (expected 40-60, actual 12). Small-sample risk materialized. |
+| 4 | Tim David finisher form | 25-45 runs, SR 180-220 | 15 off 12, SR 125 | NO — below floor on run count; SR well below expected (125 vs 200 baseline, −37%). Late entry limited opportunity. |
+| 5 | KL Rahul opening anchor | 30-50 runs, SR 140-160 | 57 off 38, SR 150 | YES — exceeded ceiling by 7 runs; form surge confirmed (92 vs GT still fresh). SR at high-end expected (150 baseline confirmed). |
+| 6 | Pathum Nissanka aggressive opener (2nd) | 25-45 runs, SR 150-170 | 34 off 22, SR 154.5 | PARTIAL — in run range, SR confirmed; early dismissal limited ceiling. |
+| 7 | David Miller death finisher | 25-40 runs, SR 170-200 | 28 off 18, SR 155.6 | PARTIAL — in run range (low-end), SR below expected (155 vs 185 baseline, −16%). Age-related stamina visible? |
+| 8 | Tristan Stubbs middle-order power | 20-40 runs, SR 140-170 | 23 off 17, SR 135.3 | YES — in range, SR at floor (matching threshold). Modeled correctly. |
+| 9 | RCB First Innings Total | 180-210 runs | 175/8 in 20 overs | NO — 5 below floor; 25-35 runs below par. Patidar collapse cascaded. Expected 190-210; actual 175 reflects captain's failure and batting order shutdown. |
+| 10 | DC Chase Success Probability | 45-50% (Scenario A, RCB bats first) | Won by 6 wickets in 19.5 overs | YES (SCENARIO DIRECTION CORRECT) — chased successfully, but probability was underestimated. Actual success rate 100% (won match); Prediction 45-50% was bearish. |
+| 11 | Mohammed Shami elite form (Eco+ 233) | 1-2 wickets, eco 7.0-8.0 | 2/35 in 4 overs, eco 8.75 | PARTIAL — took 2 wickets (hit ceiling), economy at high-end expected (8.75 vs 7.0-8.0 range, slightly above). Expense visible but maintained threat. |
+| 12 | Lungi Ngidi in form | 1-2 wickets, eco 7.0-8.5 | 1/36 in 4 overs, eco 9.0 | PARTIAL — took 1 wicket (lower range), economy above expected (9.0 vs 7.0-8.5). RCB batting pressure reduced Ngidi effectiveness. |
+| 13 | Kuldeep Yadav flat-pitch constraint | 1-3 wickets, eco 8.0-9.5 (downweighted vs normal 6-7) | 2/42 in 4 overs, eco 10.50 | NO — exceeds eco ceiling (10.5 vs 8.0-9.5 range). Flat Chinnaswamy pitch negated spin; RCB batters were aggressive vs wrist-spin. |
+| 14 | DC Second Innings Chase Margin | Win by 5+ wickets, 18-19 overs remaining | Won by 6 wickets in 19.5 overs | YES — hit all targets (6 wkts > 5, 19.5 ov ≈ 19 ov, well within margin). Chase execution excellent. |
+
+**Summary (Game 026 sub-predictions):**
+- Hit rate: 7/14 predicted outcomes (50%)
+- Directional accuracy: 11/14 directions correct (79%)
+- Major miss: Patidar captain collapse (12 vs 40-60 expected) cascaded batting order shutdown
+- Surprise: KL Rahul form surge confirmed; continued high-SR anchoring (150 baseline validated)
+- Form validation: Salt form surge real; Miller age-related SR dip (155 vs 185) visible; Kohli anchor role (SR 118 vs 150) vs aggressive opener adjustments
+- Bowling calibration: Shami maintained elite threat (2 wickets confirmed); Kuldeep constraint +23% than expected (eco 10.5 vs range ceiling 9.5) validates flat-pitch modeling weakness; Ngidi form overestimated (1 wkt vs expected 1-2)
+
+**Calibration Insight:** Game 026 reveals asymmetric form prediction: elite openers (Salt, Rahul) and bowlers (Shami) confirmed; but middle-order captain role (Patidar) and all-rounder finisher role (Miller, David) underestimated pressure from team batting collapse. When lead batter underperforms catastrophically (Patidar 12 off 13, Kohli 45 with low SR), subsequent batters don't "wait for their turn" — they face exposed position and defensive batting. Prediction model treated roles independently; reality shows cascade effects.
+
+---
+
+## Game 027 Sub-Predictions: SRH vs CSK
+
+| # | Sub-prediction | Predicted Prob / Range | Actual Result | Outcome |
+|---|---|---|---|---|
+| 1 | Vaibhav Sooryavanshi (SRH, PP batting) | Elite form +35%, 25–50 runs SR 155–190 | 59 off 22, SR 268 | YES (EXCEEDED MASSIVELY) — form surge confirmed; elite SR ceiling realized; PP dominance established |
+| 2 | Abhishek Sharma (SRH, middle-order ceiling) | Form peak 264 SR (Game 023 basis), 30–50 runs | 59 off 22, SR 268.2 | YES (EXACT) — elite ceiling confirmed; form peak fully realized; dominant acceleration |
+| 3 | Ishan Kishan (SRH, EM phase) | Form surge +24% (G021: 91 off 44), 40–60 runs SR 150–180 | 27 off 24, SR 112.5 | NO — form surge didn't materialize; EM phase underperformed; slower build-up than expected |
+| 4 | Heinrich Klaasen (SRH, finisher) | Elite death specialist SR 175+, 30–50 runs | 45 off 23, SR 195.7 | YES — in run range (lower-end), SR elite confirmed; finisher role delivered |
+| 5 | Sanju Samson (CSK, opening) | Form surge +5% (Game 022: 40 off 15), 30–50 runs SR 140–170 | 64 off 34, SR 188.2 | YES (EXCEEDED) — form surge confirmed; aggressive opening established |
+| 6 | Ruturaj Gaikwad (CSK, opening/captain) | Form dip −18% (previous pattern), uncertain role | Captaincy role, not in original XI prediction (Mhatre predicted) | VOID — XI change; Gaikwad captain announcement late (toss-day decision) |
+| 7 | MS Dhoni (CSK, finisher) | Fitness uncertain (P=0.55 plays, 0.45 absent) | Absent (retirement, not 2026 active roster confirmed) | VOID — actually RETIRED from IPL; wasn't absent-fitness, structural absence |
+| 8 | Noor Ahmad (CSK, EM bowler) | Elite eco spike +25%, 1–3 wickets eco 6.5–8.0 | 1 wicket off 14 runs (4 overs, eco 3.5) | PARTIAL — took 1 wicket; eco elite (3.5 vs 6.5–8.0 range, 50% BETTER). Threat magnitude overestimated (1 wkt vs 1-3 ceiling, lower range). |
+| 9 | Eshan Malinga (CSK, death bowler, UNCONFIRMED) | Unknown impact (Harshal expected, NOT CONFIRMED) | 3/29 in 3 overs (MOTM) | YES (UNKNOWN→KNOWN) — Not predicted (Harshal expected, Malinga unconfirmed at lock). Actual elite performance materializes as unknown unknown. |
+| 10 | Harshal Patel (SRH, death specialist, CRITICAL ERROR) | Death-phase LR +1.23 thesis entirely dependent on Harshal elite eco 8.6 | Absent (rotation/fitness call, confirmed absent at toss) | VOID — PRIMARY ERROR. Prediction locked 15 hours before toss (April 17 20:15 IST, toss April 18 11:30 IST). Harshal absence was toss-day decision, not pre-match information. Death-phase LR should have been ~0.75–1.00, not +1.23. Impact: SRH posterior inflated 3–5pp. |
+| 11 | Scenario A: SRH 1st inn, CSK chase | CSK 54.5% chase success (predicted) | CSK lost (184/8 vs 195, 10 short) | NO — CSK underperformed chase. Predicted 54.5%; actual 0% (lost). Probability overestimation. Root cause: dew advantage overstated (+7–10pp), SRH 1st inn overshoot (194 vs 175–179 expected), Ishan EM failure captured but Noor threat misjudged. Corrected probability should have been 45–48% CSK. |
+| 12 | SRH 1st Innings Total (Scenario A, par) | 175–185 runs (central range) | 194/9 | YES (EXCEEDED) — 9 above ceiling; form clustering (Sooryavanshi 59 + Abhishek 59 + Klaasen 45) peaked simultaneously. Actual exceeded par but within tail-risk 15% upside. |
+| 13 | CSK 2nd Innings Chase Target | 165–190 par (par chase on flat pitch) | 195 target set (SRH 194/9) | YES (in range) — target at top of range; adequate pressure level; CSK failed to chase. |
+| 14 | Match Direction (Scenario A locked) | SRH 50.5% vs CSK 49.5% (near-parity) | SRH WON by 10 runs | YES — Direction correct (SRH favored, SRH won). Brier 0.2450 appropriate for near-parity prediction. |
+
+**Summary (Game 027 sub-predictions):**
+- Hit rate: 6/14 predicted outcomes (43%, lower than Game 025/026)
+- Directional accuracy: 10/14 directions correct (71%, consistent with G025/026 range)
+- PRIMARY ERROR: Harshal absence (toss-day, prediction locked 15 hours pre-toss)
+- SECONDARY ERROR: Scenario A probability overestimation (CSK 54.5% → should be 45–48%)
+- TERTIARY ERROR: Ishan EM surge prediction failed (form +24% didn't materialize)
+- UNKNOWN-UNKNOWN: Malinga elite debut (3/29 MOTM) was structurally unforecastable
+- Form Clustering: Sooryavanshi 59 + Abhishek 59 both hit elite ceilings; independent modeling underestimated 2-player correlation
+
+**Calibration Insight:** Game 027 reveals **timing failure (lock-before-XI decision)** as primary source of Harshal error. The 15-hour pre-toss lock captured an unknown unknown (Harshal absence) as a known in the death-phase LR. Post-hoc correction: implement post-toss lock (7:00 PM) as recommended in prior calibration reviews. Secondary issue: EM phase modeling treats scenarios independently; reality shows Ishan restraint (defensive vs Noor threat) was conditional on CSK bowling aggression (which didn't fully materialize). Noor's threat was modeled as standalone; actual required batter-specific vulnerability (Ishan aggression).
+
+**Recommendation:** Formal XI confirmation window: (1) Prediction locked pre-toss (research phase). (2) Confirmed XI available toss+30 min. (3) Bayesian update 7:00 PM (30 min pre-match). (4) Finalize trades post-update. Current lock-before-XI at 20:15 on April 17 for April 18 11:30 toss is 15 hours too early.
+
